@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ProjectDAPA.iml" filepath="$PROJECT_DIR$/ProjectDAPA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SE31 - Abalos.iml" filepath="$PROJECT_DIR$/SE31 - Abalos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
