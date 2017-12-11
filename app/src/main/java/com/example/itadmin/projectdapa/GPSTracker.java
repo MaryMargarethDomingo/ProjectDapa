@@ -19,13 +19,6 @@ import android.os.IBinder;
 import android.provider.Settings;
 import android.util.Log;
 
-/**
- * Create this Class from tutorial :
- * http://www.androidhive.info/2012/07/android-gps-location-manager-tutorial
- *
- * For Geocoder read this : http://stackoverflow.com/questions/472313/android-reverse-geocoding-getfromlocation
- *
- */
 
 public class GPSTracker extends Service implements LocationListener {
 
@@ -87,11 +80,6 @@ public class GPSTracker extends Service implements LocationListener {
 
                 Log.d(TAG, "Application use GPS Service");
 
-                /*
-                 * This provider determines location using
-                 * satellites. Depending on conditions, this provider may take a while to return
-                 * a location fix.
-                 */
 
                 provider_info = LocationManager.GPS_PROVIDER;
 
@@ -99,12 +87,6 @@ public class GPSTracker extends Service implements LocationListener {
                 this.isGPSTrackingEnabled = true;
 
                 Log.d(TAG, "Application use Network State to get GPS coordinates");
-
-                /*
-                 * This provider determines location based on
-                 * availability of cell tower and WiFi access points. Results are retrieved
-                 * by means of a network lookup.
-                 */
                 provider_info = LocationManager.NETWORK_PROVIDER;
 
             }

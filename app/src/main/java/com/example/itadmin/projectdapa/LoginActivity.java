@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        setTitle("ReCash");
+        setTitle("Project DAPA");
 
         progressDialog = new ProgressDialog(LoginActivity.this);
         progressDialog.setMessage("Loading...");

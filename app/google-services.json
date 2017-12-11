@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "757885707876",
-    "firebase_url": "https://se31-project-dapa.firebaseio.com",
-    "project_id": "se31-project-dapa",
-    "storage_bucket": "se31-project-dapa.appspot.com"
+    "project_number": "315884181658",
+    "firebase_url": "https://projectdapa-649e8.firebaseio.com",
+    "project_id": "projectdapa-649e8",
+    "storage_bucket": "projectdapa-649e8.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:757885707876:android:7556fbc9f78c8112",
+        "mobilesdk_app_id": "1:315884181658:android:7556fbc9f78c8112",
         "android_client_info": {
           "package_name": "com.example.itadmin.projectdapa"
         }
       },
       "oauth_client": [
         {
-          "client_id": "757885707876-afrd0j8nnm1m7nlnscdrlp1iqhfb4u8j.apps.googleusercontent.com",
+          "client_id": "315884181658-7f9pin7a12i7erdclqj5pdogbuf533ib.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.itadmin.projectdapa",
-            "certificate_hash": "f0fe6838ffd3cc9401101cac51977a3d020acc4b"
+            "certificate_hash": "28c3068ca90868b229c53750b6a6ec363d851512"
           }
         },
         {
-          "client_id": "757885707876-785io0of80ac6pm5buuer4u34cg76sm5.apps.googleusercontent.com",
+          "client_id": "315884181658-t3on8lajjfibia3eck3sdp0tu0vhlern.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAMBcH25kdJFdASdaFJw5nwjYyizwRPmGc"
+          "current_key": "AIzaSyCmzjRpPMsP6g3MzH89OA-W_RV0Ob8Kxhc"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "757885707876-785io0of80ac6pm5buuer4u34cg76sm5.apps.googleusercontent.com",
+              "client_id": "315884181658-t3on8lajjfibia3eck3sdp0tu0vhlern.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
