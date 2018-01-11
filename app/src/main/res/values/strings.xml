@@ -21,6 +21,11 @@
     <string name="tab_text_1">EMERGENCY</string>
     <string name="tab_text_2">NEWS</string>
     <string name="tab_text_3">SURVIVAL</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="email">Email</string>
+    <string name="minimum_password">Password too short, enter minimum 6 characters!</string>
+    <string name="auth_failed">Authentication failed, check your email and password or Sign up for a new account</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

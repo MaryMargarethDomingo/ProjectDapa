@@ -4,66 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.itadmin.projectdapa.LoginActivity">
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="2dp"
-            android:layout_centerVertical="true"
-            android:layout_toEndOf="@+id/orText"
-            android:background="#c0c0c0" />
-
-        <TextView
-            android:id="@+id/orText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:text="OR"
-            android:textColor="@android:color/white" />
-
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="2dp"
-            android:layout_centerVertical="true"
-            android:layout_toLeftOf="@+id/orText"
-            android:background="#c0c0c0" />
-
-    </RelativeLayout>
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/googleSignin"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+    tools:context="com.example.itadmin.projectdapa.SignupActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -83,7 +24,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/username"
+                android:id="@+id/username1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/email"
@@ -99,7 +40,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/password"
+                android:id="@+id/password1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:focusableInTouchMode="true"
@@ -119,24 +60,6 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/loginBTN"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_weight="1"
-                android:background="#017FFF"
-                android:onClick="signInOnClick"
-                android:text="Sign in"
-                android:textColor="#fff"
-                app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/password1" />
-
-            <Button
                 android:id="@+id/signupBTN"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -146,8 +69,8 @@
                 android:layout_marginTop="8dp"
                 android:layout_weight="1"
                 android:background="#017FFF"
-                android:onClick="signUpOnClick"
-                android:text="Sign Up"
+                android:onClick="signUp"
+                android:text="REGISTER"
                 android:textColor="#fff"
                 app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -158,7 +81,7 @@
     </LinearLayout>
 
     <ProgressBar
-        android:id="@+id/progressBar3"
+        android:id="@+id/progressBar2"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -171,5 +94,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="invisible" />
+        app:layout_constraintVertical_bias="0.302" />
 </android.support.constraint.ConstraintLayout>
