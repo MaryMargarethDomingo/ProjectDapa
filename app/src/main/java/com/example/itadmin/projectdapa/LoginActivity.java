@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -34,9 +35,10 @@ public class LoginActivity extends AppCompatActivity {
     private GoogleApiClient mGoogleApiClient;
     private FirebaseAuth mAuth;
     private ProgressDialog progressDialog;
-    private EditText username, password;
+    private EditText username, pass;
     private ProgressBar progressBar;
     private FirebaseAuth.AuthStateListener mAuthListener;
+    private Button loginBtn;
 
     final static int RC_SIGN_IN = 1;
 
@@ -56,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
         setTitle("Project DAPA");
 
         username = (EditText) findViewById(R.id.username);
-        password = (EditText) findViewById(R.id.password);
+        pass = (EditText) findViewById(R.id.password);
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar3);
 
@@ -104,44 +106,45 @@ public class LoginActivity extends AppCompatActivity {
                 signIn();
             }
         });
-    }
 
-    public void signInOnClick(View view){
-        String email = this.username.getText().toString().trim();
-        final String password = this.password.getText().toString();
+        loginBtn = (Button) findViewById(R.id.loginBTN);
+        loginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String email = username.getText().toString().trim();
+                final String password = pass.getText().toString();
 
-        if (TextUtils.isEmpty(email)) {
-            Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
-            return;
-        }
+                if (TextUtils.isEmpty(email)) {
+                    username.setError("Please Enter an email!");
+                    return;
+                }
 
-        if (TextUtils.isEmpty(password)) {
-            Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
-            return;
-        }
+                if (TextUtils.isEmpty(password)) {
+                    pass.setError("Please enter a Password!");
+                    return;
+                }
 
-        progressBar.setVisibility(View.VISIBLE);
+                progressBar.setVisibility(View.VISIBLE);
 
-        //authenticate user
-        mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        progressBar.setVisibility(View.GONE);
-                        if (!task.isSuccessful()) {
-                            // there was an error
-                            if (password.length() < 6) {
-                                username.setError(getString(R.string.minimum_password));
-                            } else {
-                                Toast.makeText(LoginActivity.this, getString(R.string.auth_failed), Toast.LENGTH_LONG).show();
+                //authenticate user
+                mAuth.signInWithEmailAndPassword(email, password)
+                        .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                progressBar.setVisibility(View.GONE);
+                                if (!task.isSuccessful()) {
+                                    // there was an error
+                                    Toast.makeText(LoginActivity.this, getString(R.string.auth_failed), Toast.LENGTH_LONG).show();
+                                    username.setError("Username or Password Wrong!!");
+                                } else {
+                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                }
                             }
-                        } else {
-                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                            startActivity(intent);
-                            finish();
-                        }
-                    }
-                });
+                        });
+            }
+        });
     }
 
     public void signUpOnClick(View view){
@@ -205,6 +208,10 @@ public class LoginActivity extends AppCompatActivity {
                         // ...
                     }
                 });
+    }
+
+    public void resetPassBtn(View view){
+        startActivity(new Intent(LoginActivity.this, ResetPasswordActivity.class));
     }
 
     private static final int LOCATION_REQUEST_CODE = 1;
