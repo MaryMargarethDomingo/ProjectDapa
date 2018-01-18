@@ -43,7 +43,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
         resetBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = emailText.getText().toString().trim();
+                final String email = emailText.getText().toString().trim();
 
                 if (TextUtils.isEmpty(email)) {
                     emailText.setError("Please Enter an email!");
@@ -56,7 +56,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(ResetPasswordActivity.this, "Instructions has been sent to your email to reset your password!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(ResetPasswordActivity.this, "Reset email instructions sent to " + email, Toast.LENGTH_LONG).show();
                                 } else {
                                     Toast.makeText(ResetPasswordActivity.this, "Failed to send email!", Toast.LENGTH_SHORT).show();
                                 }
