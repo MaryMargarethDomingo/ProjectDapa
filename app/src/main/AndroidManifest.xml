@@ -45,7 +45,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".session.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -54,12 +54,12 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".MyFirebaseInstanceIdService">
+        <service android:name=".session.MyFirebaseInstanceIdService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".MyFirebaseMessagingService">
+        <service android:name=".session.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
@@ -70,10 +70,10 @@
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".SignupActivity"
+            android:name=".session.SignupActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
-            android:name=".ResetPasswordActivity"
+            android:name=".session.ResetPasswordActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 

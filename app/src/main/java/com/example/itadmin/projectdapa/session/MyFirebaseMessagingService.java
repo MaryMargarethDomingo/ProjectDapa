@@ -1,4 +1,4 @@
-package com.example.itadmin.projectdapa;
+package com.example.itadmin.projectdapa.session;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -9,6 +9,8 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
 
+import com.example.itadmin.projectdapa.MainActivity;
+import com.example.itadmin.projectdapa.R;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 

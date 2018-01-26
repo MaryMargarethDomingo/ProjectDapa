@@ -1,4 +1,4 @@
-package com.example.itadmin.projectdapa;
+package com.example.itadmin.projectdapa.session;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -14,6 +14,8 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.itadmin.projectdapa.MainActivity;
+import com.example.itadmin.projectdapa.R;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
