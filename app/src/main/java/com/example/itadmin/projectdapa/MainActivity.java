@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.example.itadmin.projectdapa.maps.ListFragment;
+import com.google.android.gms.maps.MapFragment;
 
 public class MainActivity extends AppCompatActivity implements AHBottomNavigation.OnTabSelectedListener{
 
@@ -30,7 +31,6 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         bottomNavigation.setOnTabSelectedListener(this);
         this.createNavItems();
     }
-
     private void createNavItems()
     {
         //CREATE ITEMS

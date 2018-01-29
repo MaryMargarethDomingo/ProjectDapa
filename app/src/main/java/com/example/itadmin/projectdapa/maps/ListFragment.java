@@ -8,17 +8,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.itadmin.projectdapa.CrimeFragment;
 import com.example.itadmin.projectdapa.R;
 
 public class ListFragment extends Fragment {
 
-    Button btnHospital;
-    Button btnPolice;
-    Button btnFire;
-    Button btnVeterinary;
-    String type;
-    Bundle bundle = new Bundle();
+    private Button btnHospital;
+    private Button btnPolice;
+    private Button btnFire;
+    private Button btnVeterinary;
+    private String type;
+    private Bundle bundle = new Bundle();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -37,9 +36,12 @@ public class ListFragment extends Fragment {
         btnHospital.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                type = "police";
+                type = "hospital";
                 bundle.putString("place" , type);
+
                 MapsFragment newFragment = new MapsFragment();
+                newFragment.setArguments(bundle);
+
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
 
                 // Replace whatever is in the fragment_container view with this fragment,
@@ -57,7 +59,10 @@ public class ListFragment extends Fragment {
             public void onClick(View v) {
                 type = "fire_station";
                 bundle.putString("place" , type);
+
                 MapsFragment newFragment = new MapsFragment();
+                newFragment.setArguments(bundle);
+
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
 
                 // Replace whatever is in the fragment_container view with this fragment,
@@ -73,9 +78,12 @@ public class ListFragment extends Fragment {
         btnPolice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                type = "veterinary_care";
+                type = "police";
                 bundle.putString("place" , type);
+
                 MapsFragment newFragment = new MapsFragment();
+                newFragment.setArguments(bundle);
+
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
 
                 // Replace whatever is in the fragment_container view with this fragment,
@@ -91,9 +99,12 @@ public class ListFragment extends Fragment {
         btnVeterinary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                type = "veterinary";
+                type = "veterinary_care";
                 bundle.putString("place" , type);
+
                 MapsFragment newFragment = new MapsFragment();
+                newFragment.setArguments(bundle);
+
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
 
                 // Replace whatever is in the fragment_container view with this fragment,
@@ -106,43 +117,4 @@ public class ListFragment extends Fragment {
             }
         });
     }
-
-    /*public void onClick(View v){
-
-        Intent intentMapView = new Intent(this, MapsFragment.class);
-        String type;
-
-        switch (v.getId()){
-            case R.id.btnHospital :
-                type = "hospital";
-                intentMapView.putExtra("place" , type);
-                startActivity(intentMapView);
-
-                break;
-
-            case R.id.btnPolice :
-                type = "police";
-                intentMapView.putExtra("place" , type);
-                startActivity(intentMapView);
-
-                break;
-
-            case R.id.btnFire :
-                type = "fire_station";
-                intentMapView.putExtra("place" , type);
-                startActivity(intentMapView);
-
-                break;
-
-            case R.id.btnVeterinary :
-                type = "veterinary_care";
-                intentMapView.putExtra("place" , type);
-                startActivity(intentMapView);
-
-                break;
-
-        }
-
-    }*/
-
 }

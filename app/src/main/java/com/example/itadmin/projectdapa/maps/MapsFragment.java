@@ -7,13 +7,16 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.itadmin.projectdapa.R;
@@ -24,7 +27,9 @@ import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
@@ -44,6 +49,11 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     static double latitude;
     static double longitude;
     static String type;
+    private Button btnShowMap;
+    private Button btnListView;
+
+    private MapView mapView;
+    private GoogleMap googleMap;
 
     public static final int REQUEST_LOCATION_CODE = 99;
 
@@ -53,12 +63,55 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     }
 
     @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        SupportMapFragment supportMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
+        supportMapFragment.getMapAsync(this);
+    }
+
+    @Override
     public void onStart() {
         super.onStart();
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
             checkLocationPermission();
         }
+
+        btnShowMap = (Button) getView().findViewById(R.id.btnShowMap);
+        btnShowMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //type = getActivity().getIntent().getStringExtra("place");
+                type = "fire_station";
+
+                Object dataTransfer[] = new Object[2];
+                GetNearbyPlaces getNearbyPlaces = new GetNearbyPlaces();
+
+                mMap.clear();
+                String url1 = getUrl1();
+                dataTransfer[0] = mMap;
+                dataTransfer[1] = url1;
+
+                getNearbyPlaces.execute(dataTransfer);
+                Toast.makeText(getActivity(), "Showing nearby ", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnListView = (Button) getView().findViewById(R.id.btnListView);
+        btnListView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                btnListView = (Button) getView().findViewById(R.id.btnListView);
+                btnListView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        ListViewFragment listViewFragment = new ListViewFragment();
+                        getFragmentManager().beginTransaction().replace(R.id.listView, new ListFragment()).commit();
+                    }
+                });
+            }
+        });
     }
 
     @Override
@@ -73,6 +126,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                             buildGoogleApiClient();
                         }
                         mMap.setMyLocationEnabled(true);
+                        mMap.getUiSettings().setMyLocationButtonEnabled(true);
                     //permission denied
                     }else{
                         Toast.makeText(getActivity(), "Permission denied", Toast.LENGTH_LONG).show();
@@ -85,7 +139,9 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
+        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new
+                LatLng(14.599512, 120.984219), 0));
         //mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
 
         if(ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
@@ -137,23 +193,6 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
     }
 
-    /*public void onClick(View v){
-
-        Bundle place = getIntent().getExtras();
-        type = place.getString("place");
-
-        Object dataTransfer[] = new Object[2];
-        GetNearbyPlaces getNearbyPlaces = new GetNearbyPlaces();
-
-        mMap.clear();
-        String url1 = getUrl1();
-        dataTransfer[0] = mMap;
-        dataTransfer[1] = url1;
-
-        getNearbyPlaces.execute(dataTransfer);
-        Toast.makeText(getActivity(), "Showing nearby ", Toast.LENGTH_SHORT).show();
-
-    }*/
 
    /*GOOGLE PLACES TYPES:
     hospital
@@ -215,9 +254,4 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
     }
-
-    /*public void ListView(View v){
-        Intent intentListView = new Intent(this, ListViewFragment.class);
-        startActivity(intentListView);
-    }*/
 }
