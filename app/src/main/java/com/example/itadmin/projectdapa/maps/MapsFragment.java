@@ -32,6 +32,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -142,6 +143,10 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new
                 LatLng(14.599512, 120.984219), 6));
+
+        googleMap.setMapStyle(
+                MapStyleOptions.loadRawResourceStyle(
+                        getContext(), R.raw.style_json));
         //mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
 
         if(ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
