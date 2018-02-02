@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.example.itadmin.projectdapa.maps.ListFragment;
+import com.example.itadmin.projectdapa.maps.ListViewFragment;
 import com.google.android.gms.maps.MapFragment;
 
 public class MainActivity extends AppCompatActivity implements AHBottomNavigation.OnTabSelectedListener{
@@ -34,17 +35,18 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
     private void createNavItems()
     {
         //CREATE ITEMS
-        AHBottomNavigationItem crimeItem=new AHBottomNavigationItem("TAB 1", R.drawable.background);
-        AHBottomNavigationItem dramaItem=new AHBottomNavigationItem("TAB 2",R.drawable.background);
-        AHBottomNavigationItem docstem=new AHBottomNavigationItem("SURVIVAL",R.drawable.background);
+        AHBottomNavigationItem tab1=new AHBottomNavigationItem("TAB 1", R.drawable.mapsicon);
+        AHBottomNavigationItem tab2=new AHBottomNavigationItem("Weather",R.drawable.weathericon);
+        AHBottomNavigationItem tab3=new AHBottomNavigationItem("Survival",R.drawable.survivalicon);
 
         //ADD THEM to bar
-        bottomNavigation.addItem(crimeItem);
-        bottomNavigation.addItem(dramaItem);
-        bottomNavigation.addItem(docstem);
+        bottomNavigation.addItem(tab1);
+        bottomNavigation.addItem(tab2);
+        bottomNavigation.addItem(tab3);
 
         //set properties
-        bottomNavigation.setDefaultBackgroundColor(Color.parseColor("#FEFEFE"));
+        bottomNavigation.setDefaultBackgroundColor(Color.parseColor("#272727"));
+        bottomNavigation.setAccentColor(Color.parseColor("#F63D2B"));
 
         //set current item
         bottomNavigation.setCurrentItem(0);
@@ -60,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
             getSupportFragmentManager().beginTransaction().replace(R.id.content_id, listFragment).commit();
         }else  if (position==1)
         {
-            ListFragment listFragment = new ListFragment();
+            ListViewFragment listFragment = new ListViewFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.content_id, listFragment).commit();
         }else  if (position==2)
         {

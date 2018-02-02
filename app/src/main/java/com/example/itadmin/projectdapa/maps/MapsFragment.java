@@ -107,7 +107,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     @Override
                     public void onClick(View v) {
                         ListViewFragment listViewFragment = new ListViewFragment();
-                        getFragmentManager().beginTransaction().replace(R.id.listView, new ListFragment()).commit();
+                        getFragmentManager().beginTransaction().replace(R.id.mapsFragment, listViewFragment).commit();
                     }
                 });
             }
@@ -141,7 +141,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         mMap = googleMap;
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new
-                LatLng(14.599512, 120.984219), 0));
+                LatLng(14.599512, 120.984219), 6));
         //mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
 
         if(ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
