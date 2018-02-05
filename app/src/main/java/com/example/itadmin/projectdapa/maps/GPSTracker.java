@@ -200,8 +200,8 @@ public class GPSTracker extends Service implements LocationListener {
     }*/
 
     /**
-     * Get list of address by latitude and longitude
-     * @return null or List<Address>
+     * Get places of address by latitude and longitude
+     * @return null or Places<Address>
      */
     public List<Address> getGeocoderAddress(Context context) {
         if (location != null) {

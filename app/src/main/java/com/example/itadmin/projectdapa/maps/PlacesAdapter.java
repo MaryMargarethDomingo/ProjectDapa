@@ -13,16 +13,12 @@ import com.example.itadmin.projectdapa.R;
 import java.util.List;
 
 
-/**
- * Created by HI FREQUENCY on 1/19/2018.
- */
-
 public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.PlaceViewHolder> {
 
     List<Places> placesList;
 
-    public PlacesAdapter(Context context, List<Places> placesList){
-        this.placesList = placesList;
+    PlacesAdapter(List<Places> list){
+        this.placesList = list;
     }
 
     @Override

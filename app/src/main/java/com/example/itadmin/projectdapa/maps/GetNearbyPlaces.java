@@ -1,8 +1,12 @@
 package com.example.itadmin.projectdapa.maps;
 
+import android.content.Context;
 import android.os.AsyncTask;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 
+import com.example.itadmin.projectdapa.MainActivity;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
@@ -12,15 +16,14 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
-/**
- * Created by HI FREQUENCY on 12/15/2017.
- */
 
 public class GetNearbyPlaces extends AsyncTask<Object, String, String> {
 
     private String googlePlacesData1;
     private String googlePlacesData2;
     private GoogleMap mMap;
+    private Bundle bundle = new Bundle();
+    Context context = MainActivity.getContextOfApplication();
 
     @Override
     protected String doInBackground(Object... objects) {
@@ -34,6 +37,8 @@ public class GetNearbyPlaces extends AsyncTask<Object, String, String> {
         try {
             googlePlacesData1 = downloadURL.readURL(url1);
 
+            PreferenceManager.getDefaultSharedPreferences(context).edit()
+                    .putString("jsonData",googlePlacesData1).apply();
         } catch (IOException e) {
             e.printStackTrace();
         }

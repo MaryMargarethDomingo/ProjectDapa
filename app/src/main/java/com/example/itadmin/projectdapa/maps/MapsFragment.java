@@ -1,10 +1,13 @@
 package com.example.itadmin.projectdapa.maps;
 
 import android.Manifest;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Parcel;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -36,6 +39,9 @@ import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class MapsFragment extends Fragment implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
@@ -52,9 +58,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     static String type;
     private Button btnShowMap;
     private Button btnListView;
-
-    private MapView mapView;
-    private GoogleMap googleMap;
+    private Bundle bundle;
+    private String url1 = "";
 
     public static final int REQUEST_LOCATION_CODE = 99;
 
@@ -78,18 +83,21 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
             checkLocationPermission();
         }
 
+        bundle = this.getArguments();
+
         btnShowMap = (Button) getView().findViewById(R.id.btnShowMap);
         btnShowMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //type = getActivity().getIntent().getStringExtra("place");
-                type = "fire_station";
+                if(bundle != null){
+                    type = bundle.getString("place");
+                }
 
                 Object dataTransfer[] = new Object[2];
                 GetNearbyPlaces getNearbyPlaces = new GetNearbyPlaces();
 
                 mMap.clear();
-                String url1 = getUrl1();
+                url1 = getUrl1();
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url1;
 
@@ -102,15 +110,14 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         btnListView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
-                btnListView = (Button) getView().findViewById(R.id.btnListView);
-                btnListView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        ListViewFragment listViewFragment = new ListViewFragment();
-                        getFragmentManager().beginTransaction().replace(R.id.mapsFragment, listViewFragment).commit();
-                    }
-                });
+                bundle.putString("jsonData", prefs.getString("jsonData", ""));
+
+                ListViewFragment listViewFragment = new ListViewFragment();
+                listViewFragment.setArguments(bundle);
+                getFragmentManager().beginTransaction().replace(R.id.content_id, listViewFragment).commit();
             }
         });
     }
@@ -132,7 +139,6 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     }else{
                         Toast.makeText(getActivity(), "Permission denied", Toast.LENGTH_LONG).show();
                     }
-
                 }
         }
     }
@@ -213,11 +219,10 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                 + "location=" + latitude + "," + longitude
                 + "&radius=" + PROXIMITY_RADIUS
                 + "&type=" + type
-                //+ "&hasNextPage=true&nextPage()=true"
+                + "&hasNextPage=true&nextPage()=true"
                 + "&key="+"AIzaSyAI8AWBOjy-m-t281QDrwov3r2KImzc__A");
 
         Log.d("MapsFragment - getUrl","URL: " + googlePlaceUrl);
-
         return googlePlaceUrl;
     }
 

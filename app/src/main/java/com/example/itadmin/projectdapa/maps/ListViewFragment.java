@@ -1,33 +1,31 @@
 package com.example.itadmin.projectdapa.maps;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.itadmin.projectdapa.R;
-
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ListViewFragment extends Fragment {
 
     RecyclerView recyclerView;
+    private Bundle bundle = new Bundle();
+    private String jsonData;
+    private List<Places> list;
+    private PlacesAdapter adapter;
+    private Places places;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -38,83 +36,40 @@ public class ListViewFragment extends Fragment {
     public void onStart() {
         super.onStart();
 
-        Toast.makeText(getActivity(),"list view start", Toast.LENGTH_LONG);
+        Toast.makeText(getActivity(),"places view start", Toast.LENGTH_LONG);
+
+        bundle = this.getArguments();
+        jsonData = bundle.getString("jsonData");
 
         recyclerView = getView().findViewById(R.id.rv);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        new GetData().execute();
 
+        parseResult(jsonData);
     }
 
-    public class GetData extends AsyncTask<String, Void, Integer> {
+    private void parseResult(String result){
+        try {
+            JSONObject weatherJSON = new JSONObject(result);
+            list = new ArrayList<>();
 
-        private List<Places> placesList;
-        private PlacesAdapter placesAdapter;
+            JSONArray listArray = weatherJSON.getJSONArray("results");
+            String name = "";
+            String vicinity = "";
+            for(int ctr=0; ctr < listArray.length(); ctr++) {
+                JSONObject p = (JSONObject) listArray.get(ctr);
+                name = p.getString("name");
+                vicinity = p.getString("vicinity");
 
-        @Override
-        protected Integer doInBackground(String... strings) {
-
-            HttpURLConnection httpURLConnection;
-            int result = 0;
-
-            try {
-                URL url = new URL(MapsFragment.getUrl1());
-                httpURLConnection = (HttpURLConnection) url.openConnection();
-                int statusCode = httpURLConnection.getResponseCode();
-
-                BufferedReader br = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
-                StringBuilder sb = new StringBuilder();
-                String line;
-
-                while ((line = br.readLine()) != null) {
-                    sb.append(line);
-                }
-
-                Log.d("PARSER", MapsFragment.getUrl1());
-                Log.d("PARSER", sb.toString());
-                ParseResults(sb.toString());
-
-                if (statusCode == 200) {
-                    result = 1;
-                } else {
-                    result = 0;
-                }
-
-
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-
-            } catch (IOException e) {
-                e.printStackTrace();
+                places = new Places(name, vicinity);
+                list.add(places);
             }
-            return result;
+        }catch(JSONException jsone){
+            jsone.printStackTrace();
         }
 
-        @Override
-        protected void onPostExecute(Integer result) {
-            if (result == 1) {
-                placesAdapter = new PlacesAdapter(getActivity(), placesList);
-                recyclerView.setAdapter(placesAdapter);
+        adapter = new PlacesAdapter(list);
+        recyclerView.setAdapter(adapter);
 
-            } else {
-                Toast.makeText(getActivity(), "ERROR ON POST EXEUTE", Toast.LENGTH_LONG).show();
-            }
-
-        }
-
-        private void ParseResults(String result) {
-            try {
-
-                JSONObject json = new JSONObject(result);
-                placesList = new ArrayList<>();
-
-                Places places = new Places(json.getString("name"), json.getString("vicinity"));
-
-                placesList.add(places);
-
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
     }
 }
+

@@ -1,11 +1,10 @@
 package com.example.itadmin.projectdapa.maps;
 
 /**
- * Created by HI FREQUENCY on 1/19/2018.
+ * Created by Michael on 5 Feb 2018.
  */
 
 public class Places {
-
     private String name;
     private String vicinity;
 
@@ -13,7 +12,6 @@ public class Places {
         this.name = name;
         this.vicinity = vicinity;
     }
-
 
     public String getName() {
         return name;
@@ -30,5 +28,4 @@ public class Places {
     public void setVicinity(String vicinity) {
         this.vicinity = vicinity;
     }
-
 }

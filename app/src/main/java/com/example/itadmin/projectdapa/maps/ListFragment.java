@@ -37,6 +37,7 @@ public class ListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 type = "hospital";
+
                 bundle.putString("place" , type);
 
                 MapsFragment newFragment = new MapsFragment();

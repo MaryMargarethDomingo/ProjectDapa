@@ -10,9 +10,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-/**
- * Created by HI FREQUENCY on 12/15/2017.
- */
 
 class DataParser {
 
