@@ -50,7 +50,8 @@ import java.text.DecimalFormat;
 public class MapsFragment extends Fragment implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
-        LocationListener {
+        LocationListener,
+        GoogleMap.OnMarkerClickListener{
 
     private GoogleMap mMap;
     GoogleApiClient client;
@@ -185,7 +186,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
         }
 
-        mMap.setOnMarkerClickListener();
+        mMap.setOnMarkerClickListener(this);
     }
 
     protected synchronized void buildGoogleApiClient(){
