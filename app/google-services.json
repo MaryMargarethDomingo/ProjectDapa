@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "315884181658-q59360143a04b9f73hcqrg0kfgf5jf13.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.itadmin.projectdapa",
+            "certificate_hash": "3c8dbcd8ffa63c354c623f3530a9aab0544175b6"
+          }
+        },
+        {
           "client_id": "315884181658-7f9pin7a12i7erdclqj5pdogbuf533ib.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

@@ -38,7 +38,6 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.text.DecimalFormat;
-import java.util.List;
 
 public class MapsFragment extends Fragment implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
@@ -109,16 +108,24 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
             @Override
             public void onClick(View view) {
-                Object dataTransfer[] = new Object[3];
-                String url = getDirectionsUrl();
-                GetDirectionsData getDirectionsData = new GetDirectionsData();
-                dataTransfer[0] = mMap;
-                dataTransfer[1] = url;
-                dataTransfer[2] = new LatLng(endMarkerLat, endMarkerLng);
 
-                getDirectionsData.execute(dataTransfer);
+                if(endMarkerLng != 0 && endMarkerLat != 0){
 
-                getDistance();
+                    Object dataTransfer[] = new Object[3];
+                    String url = getDirectionsUrl();
+                    GetDirectionsData getDirectionsData = new GetDirectionsData();
+                    dataTransfer[0] = mMap;
+                    dataTransfer[1] = url;
+                    dataTransfer[2] = new LatLng(endMarkerLat, endMarkerLng);
+
+                    getDirectionsData.execute(dataTransfer);
+
+                    getDistance();
+
+                }else{
+                    Toast.makeText(getActivity(), "No place selected", Toast.LENGTH_LONG).show();
+                }
+
             }
         });
 
@@ -337,55 +344,58 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
 
             if(compoundButton == togHospital){
+
+                togPolice.setSelected(false);
+                togFire.setSelected(false);
+                togVet.setSelected(false);
+
                 mMap.clear();
                 type = "hospital";
                 showPins();
 
-                togPolice.setChecked(false);
-                togFire.setChecked(false);
-                togVet.setChecked(false);
+                endMarkerLng = 0;
+                endMarkerLat = 0;
 
-            }else{
-                mMap.clear();
-                type = null;
-            }
+            }else if(compoundButton == togPolice){
 
-            if(compoundButton == togPolice){
+                togHospital.setSelected(false);
+                togFire.setSelected(false);
+                togVet.setSelected(false);
+
+
                 mMap.clear();
                 type = "police";
                 showPins();
 
-                togHospital.setChecked(false);
-                togFire.setChecked(false);
-                togVet.setChecked(false);
+                endMarkerLng = 0;
+                endMarkerLat = 0;
 
-            }else{
-                mMap.clear();
-                type = null;
-            }
+            }else if(compoundButton == togFire){
 
-            if(compoundButton == togFire){
+                togHospital.setSelected(false);
+                togPolice.setSelected(false);
+                togVet.setSelected(false);
+
                 mMap.clear();
                 type = "fire_station";
                 showPins();
 
-                togHospital.setChecked(false);
-                togPolice.setChecked(false);
-                togVet.setChecked(false);
+                endMarkerLng = 0;
+                endMarkerLat = 0;
 
-            }else{
-                mMap.clear();
-                type = null;
-            }
 
-            if(compoundButton == togVet){
+            }else if(compoundButton == togVet){
+
+                togHospital.setSelected(false);
+                togPolice.setSelected(false);
+                togFire.setSelected(false);
+
                 mMap.clear();
                 type = "veterinary_care";
                 showPins();
 
-                togHospital.setChecked(false);
-                togPolice.setChecked(false);
-                togFire.setChecked(false);
+                endMarkerLng = 0;
+                endMarkerLat = 0;
 
             }else{
                 mMap.clear();
