@@ -6,21 +6,20 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Parcel;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import com.example.itadmin.projectdapa.R;
 import com.google.android.gms.common.ConnectionResult;
@@ -30,7 +29,6 @@ import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
@@ -39,13 +37,13 @@ import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import java.text.DecimalFormat;
 
 public class MapsFragment extends Fragment implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
-        LocationListener {
+        LocationListener,
+        GoogleMap.OnMarkerClickListener{
 
     private GoogleMap mMap;
     GoogleApiClient client;
@@ -56,16 +54,26 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     static double latitude;
     static double longitude;
     static String type;
-    private Button btnShowMap;
-    private Button btnListView;
-    private Bundle bundle;
-    private String url1 = "";
+
+    Bundle bundle = new Bundle();
+
+    Button btnGo;
+    Button btnListView;
+
+    private ToggleButton togHospital;
+    private ToggleButton togPolice;
+    private ToggleButton togFire;
+    private ToggleButton togVet;
+
+    static double endMarkerLat;
+    static double endMarkerLng;
 
     public static final int REQUEST_LOCATION_CODE = 99;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         return inflater.inflate(R.layout.fragment_maps, container, false);
+
     }
 
     @Override
@@ -76,8 +84,18 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     }
 
     @Override
-    public void onStart() {
+    public void onStart(){
         super.onStart();
+
+        togHospital = getView().findViewById(R.id.togHospital);
+        togPolice = getView().findViewById(R.id.togPolice);
+        togFire = getView().findViewById(R.id.togFire);
+        togVet = getView().findViewById(R.id.togVet);
+
+        togHospital.setOnCheckedChangeListener(changeChecker);
+        togPolice.setOnCheckedChangeListener(changeChecker);
+        togFire.setOnCheckedChangeListener(changeChecker);
+        togVet.setOnCheckedChangeListener(changeChecker);
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
             checkLocationPermission();
@@ -85,31 +103,37 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
         bundle = this.getArguments();
 
-        btnShowMap = (Button) getView().findViewById(R.id.btnShowMap);
-        btnShowMap.setOnClickListener(new View.OnClickListener() {
+        btnGo = getView().findViewById(R.id.btnGo);
+        btnGo.setOnClickListener(new View.OnClickListener() {
+
             @Override
-            public void onClick(View v) {
-                if(bundle != null){
-                    type = bundle.getString("place");
+            public void onClick(View view) {
+
+                if(endMarkerLng != 0 && endMarkerLat != 0){
+
+                    Object dataTransfer[] = new Object[3];
+                    String url = getDirectionsUrl();
+                    GetDirectionsData getDirectionsData = new GetDirectionsData();
+                    dataTransfer[0] = mMap;
+                    dataTransfer[1] = url;
+                    dataTransfer[2] = new LatLng(endMarkerLat, endMarkerLng);
+
+                    getDirectionsData.execute(dataTransfer);
+
+                    getDistance();
+
+                }else{
+                    Toast.makeText(getActivity(), "No place selected", Toast.LENGTH_LONG).show();
                 }
 
-                Object dataTransfer[] = new Object[2];
-                GetNearbyPlaces getNearbyPlaces = new GetNearbyPlaces();
-
-                mMap.clear();
-                url1 = getUrl1();
-                dataTransfer[0] = mMap;
-                dataTransfer[1] = url1;
-
-                getNearbyPlaces.execute(dataTransfer);
-                Toast.makeText(getActivity(), "Showing nearby ", Toast.LENGTH_SHORT).show();
             }
         });
 
-        btnListView = (Button) getView().findViewById(R.id.btnListView);
+        btnListView = getView().findViewById(R.id.btnListView);
         btnListView.setOnClickListener(new View.OnClickListener() {
+
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Bundle bundle = new Bundle();
                 SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
@@ -120,6 +144,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                 getFragmentManager().beginTransaction().replace(R.id.content_id, listViewFragment).commit();
             }
         });
+
     }
 
     @Override
@@ -134,11 +159,11 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                             buildGoogleApiClient();
                         }
                         mMap.setMyLocationEnabled(true);
-                        mMap.getUiSettings().setMyLocationButtonEnabled(true);
-                    //permission denied
+                        //permission denied
                     }else{
                         Toast.makeText(getActivity(), "Permission denied", Toast.LENGTH_LONG).show();
                     }
+
                 }
         }
     }
@@ -155,11 +180,13 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                         getContext(), R.raw.style_json));
         //mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
 
-        if(ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
+        if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             buildGoogleApiClient();
             mMap.setMyLocationEnabled(true);
+
         }
 
+        mMap.setOnMarkerClickListener(this);
     }
 
     protected synchronized void buildGoogleApiClient(){
@@ -179,8 +206,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         longitude = location.getLongitude();
         lastLocation = location;
 
-        Log.d("MapsFragment - oLC","Latitude: " + latitude);
-        Log.d("MapsFragment - oLC","Longitude: " + longitude);
+        Log.d("MapsActivity-Latitude","Latitude: " + latitude);
+        Log.d("MapsActivity-Longitude","Longitude: " + longitude);
 
         if(currentLocationMarker != null){
             currentLocationMarker.remove();
@@ -204,28 +231,6 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
     }
 
-
-   /*GOOGLE PLACES TYPES:
-    hospital
-    doctor
-    dentist
-    veterinary_care
-    police
-    fire_department*/
-
-    public static String getUrl1(){
-
-        String googlePlaceUrl = ("https://maps.googleapis.com/maps/api/place/nearbysearch/json?"
-                + "location=" + latitude + "," + longitude
-                + "&radius=" + PROXIMITY_RADIUS
-                + "&type=" + type
-                + "&hasNextPage=true&nextPage()=true"
-                + "&key="+"AIzaSyAI8AWBOjy-m-t281QDrwov3r2KImzc__A");
-
-        Log.d("MapsFragment - getUrl","URL: " + googlePlaceUrl);
-        return googlePlaceUrl;
-    }
-
     @Override
     public void onConnected(@Nullable Bundle bundle) {
 
@@ -240,21 +245,6 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         }
     }
 
-    public boolean checkLocationPermission(){
-        if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-
-            if(ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION )){
-                ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION_CODE);
-            }else{
-                ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION_CODE);
-            }
-            return false;
-
-        }else{
-            return true;
-        }
-    }
-
     @Override
     public void onConnectionSuspended(int i) {
 
@@ -264,4 +254,166 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
     }
+
+//-------------------------------------------------- Check Permissions - Code --------------------------------------------------
+
+    public boolean checkLocationPermission(){
+        if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+
+            if(ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION )){
+                ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION_CODE);
+
+            }else{
+                ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION_CODE);
+
+            }
+            return false;
+
+        }else{
+            return true;
+        }
+    }
+
+//-------------------------------------------------- Places, Directions, Distance - Code --------------------------------------------------
+
+    public void showPins(){
+        Object dataTransfer[] = new Object[2];
+        GetNearbyPlaces getNearbyPlaces = new GetNearbyPlaces();
+
+        mMap.clear();
+        String url1 = getPlacesURL();
+        dataTransfer[0] = mMap;
+        dataTransfer[1] = url1;
+
+        getNearbyPlaces.execute(dataTransfer);
+        Toast.makeText(getActivity(), "Showing nearby " + type, Toast.LENGTH_SHORT).show();
+
+    }
+
+   /*GOOGLE PLACES TYPES:
+    hospital
+    doctor
+    dentist
+    veterinary_care
+    police
+    fire_station*/
+
+    public static String getPlacesURL(){
+
+        String googlePlaceUrl = ("https://maps.googleapis.com/maps/api/place/nearbysearch/json?"
+                + "location=" + latitude + "," + longitude
+                + "&radius=" + PROXIMITY_RADIUS
+                + "&type=" + type
+                //+ "&hasNextPage=true&nextPage()=true"
+                + "&key="+"AIzaSyAI8AWBOjy-m-t281QDrwov3r2KImzc__A");
+
+        Log.d("PLACES URL","URL: " + googlePlaceUrl);
+
+        return googlePlaceUrl;
+    }
+
+    public void getDistance(){
+        float results[] = new float[10];
+        Location.distanceBetween(latitude, longitude, endMarkerLat, endMarkerLng, results);
+
+        DecimalFormat distanceFormat = new DecimalFormat("#.##");
+        String strDistance = distanceFormat.format(results[0]/1000);
+
+        Toast.makeText(getActivity(), "Distance: " + strDistance + "KM", Toast.LENGTH_LONG).show();
+
+        //return results;
+    }
+
+    public static String getDirectionsUrl(){
+
+        String googleDirectionsUrl = "https://maps.googleapis.com/maps/api/directions/json?"
+                + "origin=" + latitude + "," + longitude
+                + "&destination=" + endMarkerLat + "," + endMarkerLng
+                + "&keys=AIzaSyAr6glfw4qPY6dkrrZoLWg0hDT9DCpAXkg";
+
+        Log.d("DIRECTIONS URL: ", googleDirectionsUrl);
+
+        return googleDirectionsUrl;
+    }
+
+//-------------------------------------------------- ToggleButton - Code --------------------------------------------------
+
+    CompoundButton.OnCheckedChangeListener changeChecker = new CompoundButton.OnCheckedChangeListener(){
+
+        @Override
+        public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+
+            if(compoundButton == togHospital){
+
+                togPolice.setSelected(false);
+                togFire.setSelected(false);
+                togVet.setSelected(false);
+
+                mMap.clear();
+                type = "hospital";
+                showPins();
+
+                endMarkerLng = 0;
+                endMarkerLat = 0;
+
+            }else if(compoundButton == togPolice){
+
+                togHospital.setSelected(false);
+                togFire.setSelected(false);
+                togVet.setSelected(false);
+
+
+                mMap.clear();
+                type = "police";
+                showPins();
+
+                endMarkerLng = 0;
+                endMarkerLat = 0;
+
+            }else if(compoundButton == togFire){
+
+                togHospital.setSelected(false);
+                togPolice.setSelected(false);
+                togVet.setSelected(false);
+
+                mMap.clear();
+                type = "fire_station";
+                showPins();
+
+                endMarkerLng = 0;
+                endMarkerLat = 0;
+
+
+            }else if(compoundButton == togVet){
+
+                togHospital.setSelected(false);
+                togPolice.setSelected(false);
+                togFire.setSelected(false);
+
+                mMap.clear();
+                type = "veterinary_care";
+                showPins();
+
+                endMarkerLng = 0;
+                endMarkerLat = 0;
+
+            }else{
+                mMap.clear();
+                type = null;
+            }
+
+        }
+    };
+
+//-------------------------------------------------- Marker click - METHODS --------------------------------------------------
+
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+
+        endMarkerLat = marker.getPosition().latitude;
+        endMarkerLng = marker.getPosition().longitude;
+
+        return false;
+    }
+
 }
