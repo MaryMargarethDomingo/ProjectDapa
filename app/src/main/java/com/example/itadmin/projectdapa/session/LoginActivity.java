@@ -187,7 +187,7 @@ public class LoginActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                            /* Log.v("Sign in", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Intent intent = new Intent(MainActivity.this, NavActivity.class);
+                            Intent intent = new Intent(WeatherFragment.this, NavActivity.class);
                             Bundle bundle = new Bundle();
                             bundle.putString("url", mAuth.getCurrentUser().getPhotoUrl().toString());
                             bundle.putString("name", mAuth.getCurrentUser().getDisplayName());
@@ -248,7 +248,7 @@ public class LoginActivity extends AppCompatActivity {
             case LOCATION_REQUEST_CODE:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
                     /*//run intent
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, WeatherFragment.class);
                     startActivity(intent);*/
                 }else {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

@@ -13,6 +13,7 @@ import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.example.itadmin.projectdapa.maps.MapsFragment;
 import com.example.itadmin.projectdapa.session.LoginActivity;
+import com.example.itadmin.projectdapa.weather.activities.WeatherFragment;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity implements AHBottomNavigation.OnTabSelectedListener{
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
     private AHBottomNavigation bottomNavigation;
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
     public static Context contextOfApplication;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,8 +71,8 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
             getSupportFragmentManager().beginTransaction().replace(R.id.content_id, mapsFragment).commit();
         }else  if (position==1)
         {
-            MapsFragment mapsFragment = new MapsFragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.content_id, mapsFragment).commit();
+            WeatherFragment weatherFragment = new WeatherFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_id, weatherFragment).commit();
         }else  if (position==2)
         {
             MapsFragment mapsFragment = new MapsFragment();
@@ -101,4 +103,6 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
     public static Context getContextOfApplication(){
         return contextOfApplication;
     }
+
+
 }
