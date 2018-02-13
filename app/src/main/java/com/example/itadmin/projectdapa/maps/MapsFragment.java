@@ -36,6 +36,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
 
 import java.text.DecimalFormat;
 
@@ -109,16 +110,17 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
             @Override
             public void onClick(View view) {
 
+                GetDirectionsData getDirectionsData = new GetDirectionsData();
+                Object dataTransferDuration[];
+
                 if(endMarkerLng != 0 && endMarkerLat != 0){
 
-                    Object dataTransfer[] = new Object[3];
-                    String url = getDirectionsUrl();
-                    GetDirectionsData getDirectionsData = new GetDirectionsData();
-                    dataTransfer[0] = mMap;
-                    dataTransfer[1] = url;
-                    dataTransfer[2] = new LatLng(endMarkerLat, endMarkerLng);
+                    dataTransferDuration = new Object[2];
+                    String durationUrl = getDirectionsUrl();
+                    dataTransferDuration[0] = mMap;
+                    dataTransferDuration[1] = durationUrl;
 
-                    getDirectionsData.execute(dataTransfer);
+                    getDirectionsData.execute(dataTransferDuration);
 
                     getDistance();
 
@@ -319,7 +321,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         DecimalFormat distanceFormat = new DecimalFormat("#.##");
         String strDistance = distanceFormat.format(results[0]/1000);
 
-        Toast.makeText(getActivity(), "Distance: " + strDistance + "KM", Toast.LENGTH_LONG).show();
+        Toast.makeText(getActivity(), "Distance: " + strDistance + "KM" +
+                "\n" + "Estimated duration: " + GetDirectionsData.duration , Toast.LENGTH_LONG).show();
 
         //return results;
     }

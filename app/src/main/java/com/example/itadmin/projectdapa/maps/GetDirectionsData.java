@@ -10,6 +10,7 @@ import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.maps.android.PolyUtil;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 /**
  * Created by HI FREQUENCY on 2/4/2018.
@@ -18,10 +19,8 @@ import java.io.IOException;
 public class GetDirectionsData extends AsyncTask<Object, String, String> {
 
     GoogleMap mMap;
-    String url;
     String googleDirectionsData;
-    String duration;
-    String distance;
+    static String duration;
 
     @Override
     protected String doInBackground(Object... objects) {
@@ -62,17 +61,23 @@ public class GetDirectionsData extends AsyncTask<Object, String, String> {
 
     @Override
     protected void onPostExecute(String s) {
+        HashMap<String, String> durationMap;
         String[] directionsList;
+
         DataParser dataParser = new DataParser();
+        durationMap = dataParser.parseDuration(s);
         directionsList = dataParser.parseDirections(s);
+
+        duration = durationMap.get("duration");
         displayDirections(directionsList);
+
+        Log.d("DURATION: ", duration);
 
     }
 
     public void displayDirections(String[] directionsList){
 
         int count = directionsList.length;
-        Polyline polylineFinal = null;
         PolylineOptions options;
 
         for(int i = 0; i < count; i++){
@@ -83,9 +88,8 @@ public class GetDirectionsData extends AsyncTask<Object, String, String> {
             options.geodesic(true);
             options.addAll(PolyUtil.decode(directionsList[i]));
 
-            polylineFinal = mMap.addPolyline(options);
+            mMap.addPolyline(options);
         }
 
-        polylineFinal.remove();
     }
 }

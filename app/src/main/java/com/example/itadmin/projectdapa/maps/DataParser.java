@@ -122,9 +122,7 @@ class DataParser {
 
     }
 
-//--------------------------------------------- (Duration, distance) ---------------------------------------------
-
-    /*public HashMap<String, String> parseDirections(String jsonData){
+    public HashMap<String, String> parseDuration (String jsonData){
 
         JSONArray jsonArray = null;
         JSONObject jsonObject;
@@ -139,9 +137,8 @@ class DataParser {
         }
 
         return getDuration(jsonArray);
-    }*/
+    }
 
-//--------------------------------------------- ********** ---------------------------------------------
 
     public String[] parseDirections(String jsonData){
 
