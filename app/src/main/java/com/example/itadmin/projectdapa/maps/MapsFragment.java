@@ -140,9 +140,9 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                 bundle.putString("jsonData", prefs.getString("jsonData", ""));
 
-                SwipeListViewFragment swipeListViewFragment = new SwipeListViewFragment();
-                swipeListViewFragment.setArguments(bundle);
-                getFragmentManager().beginTransaction().replace(R.id.content_id, swipeListViewFragment).commit();
+                ListViewFragment listViewFragment = new ListViewFragment();
+                listViewFragment.setArguments(bundle);
+                getFragmentManager().beginTransaction().replace(R.id.content_id, listViewFragment).commit();
             }
         });
 

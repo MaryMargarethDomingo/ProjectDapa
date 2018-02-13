@@ -50,7 +50,7 @@ public class SwipeListViewFragment extends Fragment {
         placesList.add("DAPA");
         placesList.add("DAPA");
 
-        ArrayAdapter adapter = new ArrayAdapter(getActivity(), R.layout.sample_listlayout);
+        ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1);
         swipeMenuListView.setAdapter(adapter);
 
         SwipeMenuCreator creator = new SwipeMenuCreator() {
