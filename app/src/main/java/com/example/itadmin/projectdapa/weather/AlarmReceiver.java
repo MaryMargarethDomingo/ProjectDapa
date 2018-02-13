@@ -17,10 +17,8 @@ import android.os.SystemClock;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import com.example.itadmin.projectdapa.MainActivity;
 import com.example.itadmin.projectdapa.R;
-import com.example.itadmin.projectdapa.weather.activities.WeatherFragment;
-import com.example.itadmin.projectdapa.weather.models.Weather;
+import com.example.itadmin.projectdapa.weather.fragments.WeatherFragment;
 
 import org.json.JSONException;
 import org.json.JSONObject;
