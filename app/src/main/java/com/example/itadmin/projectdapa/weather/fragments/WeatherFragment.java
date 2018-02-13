@@ -24,6 +24,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.text.InputType;
@@ -133,7 +134,7 @@ public class WeatherFragment extends Fragment implements LocationListener {
         todaySunset = (TextView) view.findViewById(R.id.todaySunset);
         lastUpdate = (TextView) view.findViewById(R.id.lastUpdate);
         todayIcon = (TextView) view.findViewById(R.id.todayIcon);
-        //weatherFont = Typeface.createFromAsset(getActivity().getAssets(), "fonts/weather.ttf");
+        weatherFont = ResourcesCompat.getFont(getContext(), R.font.weather);
         todayIcon.setTypeface(weatherFont);
 
         // Initialize viewPager
