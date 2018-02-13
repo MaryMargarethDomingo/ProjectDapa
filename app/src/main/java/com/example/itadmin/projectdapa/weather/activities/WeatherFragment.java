@@ -92,7 +92,7 @@ public class WeatherFragment extends Fragment implements LocationListener {
     TabLayout tabLayout;
     private FragmentActivity myContext;
 
-    View appView;
+    public View appView;
 
     LocationManager locationManager;
     ProgressDialog progressDialog;
@@ -136,7 +136,7 @@ public class WeatherFragment extends Fragment implements LocationListener {
         todaySunset = (TextView) view.findViewById(R.id.todaySunset);
         lastUpdate = (TextView) view.findViewById(R.id.lastUpdate);
         todayIcon = (TextView) view.findViewById(R.id.todayIcon);
-//        weatherFont = Typeface.createFromAsset(getActivity().getAssets(), "fonts/weather.ttf");
+        //weatherFont = Typeface.createFromAsset(getActivity().getAssets(), "fonts/weather.ttf");
         todayIcon.setTypeface(weatherFont);
 
         // Initialize viewPager
@@ -145,16 +145,14 @@ public class WeatherFragment extends Fragment implements LocationListener {
 
         destroyed = false;
 
-        /*initMappings();
+        initMappings();
 
         // Preload data from cache
         preloadWeather();
         updateLastUpdateTime();
 
         // Set autoupdater
-        AlarmReceiver.setRecurringAlarm(getActivity());*/
-
-
+        AlarmReceiver.setRecurringAlarm(getActivity());
 
         return view;
     }
@@ -219,15 +217,15 @@ public class WeatherFragment extends Fragment implements LocationListener {
         }
     }
 
-    private void getTodayWeather() {
+    public void getTodayWeather() {
         new WeatherFragment.TodayWeatherTask(getContext(), (WeatherFragment) WeatherFragment.this, progressDialog).execute();
     }
 
-    private void getLongTermWeather() {
+    public void getLongTermWeather() {
         new WeatherFragment.LongTermWeatherTask(getContext(), (WeatherFragment) WeatherFragment.this, progressDialog).execute();
     }
 
-    private void searchCities() {
+    public void searchCities() {
         AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
         alert.setTitle(this.getString(R.string.search_title));
         final EditText input = new EditText(getActivity());
@@ -591,7 +589,7 @@ public class WeatherFragment extends Fragment implements LocationListener {
         viewPager.setCurrentItem(currentPage, false);
     }
 
-    private boolean isNetworkAvailable() {
+    public boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();

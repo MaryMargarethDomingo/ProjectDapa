@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -21,6 +22,8 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
     private AHBottomNavigation bottomNavigation;
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
     public static Context contextOfApplication;
+    private WeatherFragment weatherFragment = new WeatherFragment();
+    private MapsFragment mapsFragment = new MapsFragment();
 
 
     @Override
@@ -30,13 +33,16 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
 
         contextOfApplication = getApplicationContext();
 
+        //if not logged in, go to loginActivity
         if(mAuth.getCurrentUser() == null){
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
         }
 
+        //Show toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //Create Bottom Navigation
         bottomNavigation= findViewById(R.id.myBottomNavigation_ID);
         bottomNavigation.setOnTabSelectedListener(this);
         this.createNavItems();
@@ -67,15 +73,12 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         //show fragment
         if (position==0)
         {
-            MapsFragment mapsFragment = new MapsFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.content_id, mapsFragment).commit();
         }else  if (position==1)
         {
-            WeatherFragment weatherFragment = new WeatherFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.content_id, weatherFragment).commit();
         }else  if (position==2)
         {
-            MapsFragment mapsFragment = new MapsFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.content_id, mapsFragment).commit();
         }
         return true;
@@ -91,7 +94,18 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if(id == R.id.action_logout){
+        if (id == R.id.action_refresh) {
+            if (weatherFragment.isNetworkAvailable()) {
+                weatherFragment.getTodayWeather();
+                weatherFragment.getLongTermWeather();
+            } else {
+                Snackbar.make(weatherFragment.appView, getString(R.string.msg_connection_not_available), Snackbar.LENGTH_LONG).show();
+            }
+            return true;
+        }else if (id == R.id.action_search) {
+            weatherFragment.searchCities();
+            return true;
+        }else if(id == R.id.action_logout){
             mAuth.signOut();
 
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
