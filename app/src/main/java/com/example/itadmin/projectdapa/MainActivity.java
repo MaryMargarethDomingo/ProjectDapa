@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
     public static Context contextOfApplication;
     public WeatherFragment weatherFragment = new WeatherFragment();
     private MapsFragment mapsFragment = new MapsFragment();
+    private int tabPosition;
 
 
     @Override
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         contextOfApplication = getApplicationContext();
 
         //if not logged in, go to loginActivity
-        if(mAuth.getCurrentUser() == null){
+        if (mAuth.getCurrentUser() == null) {
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
         }
 
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         setSupportActionBar(toolbar);
 
         //Create Bottom Navigation
-        bottomNavigation= findViewById(R.id.myBottomNavigation_ID);
+        bottomNavigation = findViewById(R.id.myBottomNavigation_ID);
         bottomNavigation.setOnTabSelectedListener(this);
         this.createNavItems();
     }
@@ -70,15 +71,13 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
 
     @Override
     public boolean onTabSelected(int position, boolean wasSelected) {
+        tabPosition = position;
         //show fragment
-        if (position==0)
-        {
+        if (position==0) {
             getSupportFragmentManager().beginTransaction().replace(R.id.content_id, mapsFragment).commit();
-        }else  if (position==1)
-        {
+        }else  if (position==1) {
             getSupportFragmentManager().beginTransaction().replace(R.id.content_id, weatherFragment).commit();
-        }else  if (position==2)
-        {
+        }else  if (position==2) {
             getSupportFragmentManager().beginTransaction().replace(R.id.content_id, mapsFragment).commit();
         }
         return true;
@@ -86,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main2, menu);
+            getMenuInflater().inflate(R.menu.menu_main2, menu);
         return true;
     }
 

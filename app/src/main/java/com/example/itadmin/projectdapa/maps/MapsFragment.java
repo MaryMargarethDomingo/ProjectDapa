@@ -140,9 +140,9 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                 bundle.putString("jsonData", prefs.getString("jsonData", ""));
 
-                SwipeListViewFragment swipeListViewFragment = new SwipeListViewFragment();
-                swipeListViewFragment.setArguments(bundle);
-                getFragmentManager().beginTransaction().replace(R.id.content_id, swipeListViewFragment).commit();
+                ListViewFragment listViewFragment = new ListViewFragment();
+                listViewFragment.setArguments(bundle);
+                getFragmentManager().beginTransaction().replace(R.id.content_id, listViewFragment).addToBackStack(null).commit();
             }
         });
 
@@ -160,6 +160,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                             buildGoogleApiClient();
                         }
                         mMap.setMyLocationEnabled(true);
+                        mMap.setPadding(0,100,0,0);
                         //permission denied
                     }else{
                         Toast.makeText(getActivity(), "Permission denied", Toast.LENGTH_LONG).show();
@@ -207,6 +208,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         longitude = location.getLongitude();
         lastLocation = location;
 
+
         Log.d("MapsActivity-Latitude","Latitude: " + latitude);
         Log.d("MapsActivity-Longitude","Longitude: " + longitude);
 
@@ -215,6 +217,10 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         }
 
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
+
+        //save lat lng for auto set of location of weather
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        prefs.edit().putFloat("lat", (float) latitude).putFloat("lng", (float) longitude).commit();
 
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(latLng);

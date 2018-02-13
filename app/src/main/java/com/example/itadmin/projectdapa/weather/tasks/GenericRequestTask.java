@@ -8,6 +8,7 @@ import android.preference.PreferenceManager;
 import android.support.design.widget.Snackbar;
 import android.text.TextUtils;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.example.itadmin.projectdapa.MainActivity;
 import com.example.itadmin.projectdapa.R;
@@ -55,6 +56,7 @@ public abstract class GenericRequestTask extends AsyncTask<String, String, TaskO
 
         String response = "";
         String[] coords = new String[]{};
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activity);
 
         if (params != null && params.length > 0) {
             final String zeroParam = params[0];
@@ -63,8 +65,13 @@ public abstract class GenericRequestTask extends AsyncTask<String, String, TaskO
                 // Actually we did nothing in this case :)
                 output.taskResult = TaskResult.SUCCESS;
             } else if ("coords".equals(zeroParam)) {
-                String lat = params[1];
-                String lon = params[2];
+                /*String lat = params[1];
+                String lon = params[2];*/
+
+                String lat = String.valueOf(prefs.getFloat("lat", Float.parseFloat(params[1])));
+                String lon = String.valueOf(prefs.getFloat("lng", Float.parseFloat(params[2])));
+                Toast.makeText(activity, "Latitude: " + lat + " Longitude: " + lon, Toast.LENGTH_LONG).show();
+
                 coords = new String[]{lat, lon};
             }
         }
