@@ -10,9 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.itadmin.projectdapa.MainActivity;
 import com.example.itadmin.projectdapa.R;
-import com.example.itadmin.projectdapa.weather.activities.WeatherFragment;
+import com.example.itadmin.projectdapa.weather.fragments.WeatherFragment;
 import com.example.itadmin.projectdapa.weather.models.Weather;
 import com.example.itadmin.projectdapa.weather.models.WeatherViewHolder;
 import com.example.itadmin.projectdapa.weather.utils.UnitConvertor;
@@ -112,8 +111,8 @@ public class WeatherRecyclerAdapter extends RecyclerView.Adapter<WeatherViewHold
         }
         customViewHolder.itemDescription.setText(weatherItem.getDescription().substring(0, 1).toUpperCase() +
                 weatherItem.getDescription().substring(1) + rainString);
-        Typeface weatherFont = Typeface.createFromAsset(context.getAssets(), "fonts/weather.ttf");
-        customViewHolder.itemIcon.setTypeface(weatherFont);
+        //Typeface weatherFont = Typeface.createFromAsset(context.getAssets(), "fonts/weather.ttf");
+        //customViewHolder.itemIcon.setTypeface(weatherFont);
         customViewHolder.itemIcon.setText(weatherItem.getIcon());
         if (sp.getString("speedUnit", "m/s").equals("bft")) {
             customViewHolder.itemyWind.setText(context.getString(R.string.wind) + ": " +

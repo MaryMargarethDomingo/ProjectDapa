@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 
 import com.example.itadmin.projectdapa.MainActivity;
 import com.example.itadmin.projectdapa.R;
-import com.example.itadmin.projectdapa.weather.activities.WeatherFragment;
 
 public class RecyclerViewFragment extends Fragment {
 
@@ -27,8 +26,9 @@ public class RecyclerViewFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_recycler_view, container, false);
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        WeatherFragment mainActivity = (WeatherFragment) new WeatherFragment();
-        recyclerView.setAdapter(mainActivity.getAdapter(bundle.getInt("day")));
+
+        MainActivity mainActivity = (MainActivity) getActivity();
+        recyclerView.setAdapter(mainActivity.weatherFragment.getAdapter(bundle.getInt("day")));
         return view;
     }
 

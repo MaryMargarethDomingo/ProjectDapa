@@ -9,10 +9,9 @@ import android.support.design.widget.Snackbar;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.example.itadmin.projectdapa.MainActivity;
 import com.example.itadmin.projectdapa.R;
 import com.example.itadmin.projectdapa.weather.Constants;
-import com.example.itadmin.projectdapa.weather.activities.WeatherFragment;
+import com.example.itadmin.projectdapa.weather.fragments.WeatherFragment;
 
 import java.io.BufferedReader;
 import java.io.Closeable;

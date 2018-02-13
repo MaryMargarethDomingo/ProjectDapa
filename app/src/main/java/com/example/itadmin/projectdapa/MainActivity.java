@@ -14,7 +14,7 @@ import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.example.itadmin.projectdapa.maps.MapsFragment;
 import com.example.itadmin.projectdapa.session.LoginActivity;
-import com.example.itadmin.projectdapa.weather.activities.WeatherFragment;
+import com.example.itadmin.projectdapa.weather.fragments.WeatherFragment;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity implements AHBottomNavigation.OnTabSelectedListener{
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
     private AHBottomNavigation bottomNavigation;
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
     public static Context contextOfApplication;
-    private WeatherFragment weatherFragment = new WeatherFragment();
+    public WeatherFragment weatherFragment = new WeatherFragment();
     private MapsFragment mapsFragment = new MapsFragment();
 
 

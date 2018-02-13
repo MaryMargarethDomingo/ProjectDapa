@@ -1,4 +1,4 @@
-package com.example.itadmin.projectdapa.weather.activities;
+package com.example.itadmin.projectdapa.weather.fragments;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -9,8 +9,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.content.res.TypedArray;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.location.Location;
 import android.location.LocationListener;
@@ -33,7 +31,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -42,7 +39,6 @@ import com.example.itadmin.projectdapa.weather.AlarmReceiver;
 import com.example.itadmin.projectdapa.weather.Constants;
 import com.example.itadmin.projectdapa.weather.adapters.ViewPagerAdapter;
 import com.example.itadmin.projectdapa.weather.adapters.WeatherRecyclerAdapter;
-import com.example.itadmin.projectdapa.weather.fragments.RecyclerViewFragment;
 import com.example.itadmin.projectdapa.weather.models.Weather;
 import com.example.itadmin.projectdapa.weather.tasks.GenericRequestTask;
 import com.example.itadmin.projectdapa.weather.tasks.ParseResult;
