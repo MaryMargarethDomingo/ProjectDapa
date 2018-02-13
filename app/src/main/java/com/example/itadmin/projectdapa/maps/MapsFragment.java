@@ -36,7 +36,6 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.model.Polyline;
 
 import java.text.DecimalFormat;
 
@@ -141,9 +140,9 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                 bundle.putString("jsonData", prefs.getString("jsonData", ""));
 
-                ListViewFragment listViewFragment = new ListViewFragment();
-                listViewFragment.setArguments(bundle);
-                getFragmentManager().beginTransaction().replace(R.id.content_id, listViewFragment).commit();
+                SwipeListViewFragment swipeListViewFragment = new SwipeListViewFragment();
+                swipeListViewFragment.setArguments(bundle);
+                getFragmentManager().beginTransaction().replace(R.id.content_id, swipeListViewFragment).commit();
             }
         });
 
