@@ -1,10 +1,7 @@
 package com.example.itadmin.projectdapa.maps;
 
-import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
-import android.os.Build;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
