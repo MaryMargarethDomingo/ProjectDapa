@@ -9,6 +9,7 @@ import android.support.design.widget.Snackbar;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.example.itadmin.projectdapa.MainActivity;
 import com.example.itadmin.projectdapa.R;
 import com.example.itadmin.projectdapa.weather.Constants;
 import com.example.itadmin.projectdapa.weather.fragments.WeatherFragment;
@@ -29,10 +30,10 @@ public abstract class GenericRequestTask extends AsyncTask<String, String, TaskO
 
     ProgressDialog progressDialog;
     Context context;
-    WeatherFragment activity;
+    MainActivity activity;
     public int loading = 0;
 
-    public GenericRequestTask(Context context, WeatherFragment activity, ProgressDialog progressDialog) {
+    public GenericRequestTask(Context context, MainActivity activity, ProgressDialog progressDialog) {
         this.context = context;
         this.activity = activity;
         this.progressDialog = progressDialog;
@@ -88,7 +89,7 @@ public abstract class GenericRequestTask extends AsyncTask<String, String, TaskO
                     Log.i("Task", "done successfully");
                     output.taskResult = TaskResult.SUCCESS;
                     // Save date/time for latest successful result
-                    activity.saveLastUpdateTime(PreferenceManager.getDefaultSharedPreferences(context));
+                    activity.weatherFragment.saveLastUpdateTime(PreferenceManager.getDefaultSharedPreferences(context));
                 }
                 else if (urlConnection.getResponseCode() == 429) {
                     // Too many requests
@@ -138,22 +139,22 @@ public abstract class GenericRequestTask extends AsyncTask<String, String, TaskO
             case SUCCESS: {
                 ParseResult parseResult = output.parseResult;
                 if (ParseResult.CITY_NOT_FOUND.equals(parseResult)) {
-                    Snackbar.make(activity.getView().findViewById(android.R.id.content), context.getString(R.string.msg_city_not_found), Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(activity.findViewById(android.R.id.content), context.getString(R.string.msg_city_not_found), Snackbar.LENGTH_LONG).show();
                 } else if (ParseResult.JSON_EXCEPTION.equals(parseResult)) {
-                    Snackbar.make(activity.getView().findViewById(android.R.id.content), context.getString(R.string.msg_err_parsing_json), Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(activity.findViewById(android.R.id.content), context.getString(R.string.msg_err_parsing_json), Snackbar.LENGTH_LONG).show();
                 }
                 break;
             }
             case TOO_MANY_REQUESTS: {
-                Snackbar.make(activity.getView().findViewById(android.R.id.content), context.getString(R.string.msg_too_many_requests), Snackbar.LENGTH_LONG).show();
+                Snackbar.make(activity.findViewById(android.R.id.content), context.getString(R.string.msg_too_many_requests), Snackbar.LENGTH_LONG).show();
                 break;
             }
             case BAD_RESPONSE: {
-                Snackbar.make(activity.getView().findViewById(android.R.id.content), context.getString(R.string.msg_connection_problem), Snackbar.LENGTH_LONG).show();
+                Snackbar.make(activity.findViewById(android.R.id.content), context.getString(R.string.msg_connection_problem), Snackbar.LENGTH_LONG).show();
                 break;
             }
             case IO_EXCEPTION: {
-                Snackbar.make(activity.getView().findViewById(android.R.id.content), context.getString(R.string.msg_connection_not_available), Snackbar.LENGTH_LONG).show();
+                Snackbar.make(activity.findViewById(android.R.id.content), context.getString(R.string.msg_connection_not_available), Snackbar.LENGTH_LONG).show();
                 break;
             }
         }
@@ -187,11 +188,11 @@ public abstract class GenericRequestTask extends AsyncTask<String, String, TaskO
     }
 
     private void restorePreviousCity() {
-        if (!TextUtils.isEmpty(activity.recentCity)) {
+        if (!TextUtils.isEmpty(activity.weatherFragment.recentCity)) {
             SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(context).edit();
-            editor.putString("city", activity.recentCity);
+            editor.putString("city", activity.weatherFragment.recentCity);
             editor.commit();
-            activity.recentCity = "";
+            activity.weatherFragment.recentCity = "";
         }
     }
 
