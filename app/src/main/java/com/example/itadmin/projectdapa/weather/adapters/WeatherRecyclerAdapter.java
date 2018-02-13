@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.preference.PreferenceManager;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -111,8 +112,8 @@ public class WeatherRecyclerAdapter extends RecyclerView.Adapter<WeatherViewHold
         }
         customViewHolder.itemDescription.setText(weatherItem.getDescription().substring(0, 1).toUpperCase() +
                 weatherItem.getDescription().substring(1) + rainString);
-        //Typeface weatherFont = Typeface.createFromAsset(context.getAssets(), "fonts/weather.ttf");
-        //customViewHolder.itemIcon.setTypeface(weatherFont);
+        Typeface weatherFont = ResourcesCompat.getFont(context, R.font.weather);
+        customViewHolder.itemIcon.setTypeface(weatherFont);
         customViewHolder.itemIcon.setText(weatherItem.getIcon());
         if (sp.getString("speedUnit", "m/s").equals("bft")) {
             customViewHolder.itemyWind.setText(context.getString(R.string.wind) + ": " +
