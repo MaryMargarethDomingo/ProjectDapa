@@ -61,9 +61,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class WeatherFragment extends Fragment implements LocationListener {
     protected static final int MY_PERMISSIONS_ACCESS_FINE_LOCATION = 1;
 
@@ -110,11 +107,9 @@ public class WeatherFragment extends Fragment implements LocationListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.activity_scrolling, container, false);
-        //main
-        // Initialize the associated SharedPreferences file with default values
         PreferenceManager.setDefaultValues(getActivity(), R.xml.prefs, false);
 
-/*        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        /*SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
         getActivity().setTheme(theme = getTheme(prefs.getString("theme", "fresh")));
         boolean darkTheme = theme == R.style.AppTheme_NoActionBar_Dark ||
                 theme == R.style.AppTheme_NoActionBar_Classic_Dark;
@@ -124,21 +119,19 @@ public class WeatherFragment extends Fragment implements LocationListener {
 
         progressDialog = new ProgressDialog(getActivity());
 
-        // Initialize textboxes
-        todayTemperature = (TextView) view.findViewById(R.id.todayTemperature);
-        todayDescription = (TextView) view.findViewById(R.id.todayDescription);
-        todayWind = (TextView) view.findViewById(R.id.todayWind);
-        todayPressure = (TextView) view.findViewById(R.id.todayPressure);
-        todayHumidity = (TextView) view.findViewById(R.id.todayHumidity);
-        todaySunrise = (TextView) view.findViewById(R.id.todaySunrise);
-        todaySunset = (TextView) view.findViewById(R.id.todaySunset);
-        lastUpdate = (TextView) view.findViewById(R.id.lastUpdate);
-        todayIcon = (TextView) view.findViewById(R.id.todayIcon);
+        todayTemperature = view.findViewById(R.id.todayTemperature);
+        todayDescription = view.findViewById(R.id.todayDescription);
+        todayWind = view.findViewById(R.id.todayWind);
+        todayPressure = view.findViewById(R.id.todayPressure);
+        todayHumidity = view.findViewById(R.id.todayHumidity);
+        todaySunrise = view.findViewById(R.id.todaySunrise);
+        todaySunset = view.findViewById(R.id.todaySunset);
+        lastUpdate = view.findViewById(R.id.lastUpdate);
+        todayIcon = view.findViewById(R.id.todayIcon);
         weatherFont = ResourcesCompat.getFont(getContext(), R.font.weather);
         todayIcon.setTypeface(weatherFont);
 
-        // Initialize viewPager
-        viewPager = (ViewPager) view.findViewById(R.id.viewPager);
+        viewPager = view.findViewById(R.id.viewPager);
         tabLayout = (TabLayout) view.findViewById(R.id.tabs);
 
         destroyed = false;
@@ -167,7 +160,7 @@ public class WeatherFragment extends Fragment implements LocationListener {
             weatherRecyclerAdapter = new WeatherRecyclerAdapter(getActivity(), longTermTodayWeather);
         } else if (id == 1) {
             weatherRecyclerAdapter = new WeatherRecyclerAdapter(getActivity(), longTermTomorrowWeather);
-        } else {
+        } else  {
             weatherRecyclerAdapter = new WeatherRecyclerAdapter(getActivity(), longTermWeather);
         }
         return weatherRecyclerAdapter;

@@ -145,7 +145,6 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                 getFragmentManager().beginTransaction().replace(R.id.content_id, listViewFragment).addToBackStack(null).commit();
             }
         });
-
     }
 
     @Override
