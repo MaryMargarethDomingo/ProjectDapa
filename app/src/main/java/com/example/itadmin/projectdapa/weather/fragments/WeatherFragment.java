@@ -34,6 +34,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.itadmin.projectdapa.MainActivity;
 import com.example.itadmin.projectdapa.R;
 import com.example.itadmin.projectdapa.weather.AlarmReceiver;
 import com.example.itadmin.projectdapa.weather.Constants;
@@ -205,20 +206,20 @@ public class WeatherFragment extends Fragment implements LocationListener {
 
         String lastToday = sp.getString("lastToday", "");
         if (!lastToday.isEmpty()) {
-            new WeatherFragment.TodayWeatherTask(getContext(), WeatherFragment.this, progressDialog).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, "cachedResponse", lastToday);
+            new WeatherFragment.TodayWeatherTask(getContext(), (MainActivity) getActivity(), progressDialog).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, "cachedResponse", lastToday);
         }
         String lastLongterm = sp.getString("lastLongterm", "");
         if (!lastLongterm.isEmpty()) {
-            new WeatherFragment.LongTermWeatherTask(getContext(), WeatherFragment.this, progressDialog).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, "cachedResponse", lastLongterm);
+            new WeatherFragment.LongTermWeatherTask(getContext(), (MainActivity) getActivity(), progressDialog).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, "cachedResponse", lastLongterm);
         }
     }
 
     public void getTodayWeather() {
-        new WeatherFragment.TodayWeatherTask(getContext(), (WeatherFragment) WeatherFragment.this, progressDialog).execute();
+        new WeatherFragment.TodayWeatherTask(getContext(), (MainActivity) getActivity(), progressDialog).execute();
     }
 
     public void getLongTermWeather() {
-        new WeatherFragment.LongTermWeatherTask(getContext(), (WeatherFragment) WeatherFragment.this, progressDialog).execute();
+        new WeatherFragment.LongTermWeatherTask(getContext(), (MainActivity) getActivity(), progressDialog).execute();
     }
 
     public void searchCities() {
@@ -699,7 +700,7 @@ public class WeatherFragment extends Fragment implements LocationListener {
         Log.i("LOCATION (" + location.getProvider().toUpperCase() + ")", location.getLatitude() + ", " + location.getLongitude());
         double latitude = location.getLatitude();
         double longitude = location.getLongitude();
-        new WeatherFragment.ProvideCityNameTask(getContext(), (WeatherFragment) WeatherFragment.this, progressDialog).execute("coords", Double.toString(latitude), Double.toString(longitude));
+        new WeatherFragment.ProvideCityNameTask(getContext(), (MainActivity) getActivity(), progressDialog).execute("coords", Double.toString(latitude), Double.toString(longitude));
     }
 
     @Override
@@ -719,7 +720,7 @@ public class WeatherFragment extends Fragment implements LocationListener {
 
 
     class TodayWeatherTask extends GenericRequestTask {
-        public TodayWeatherTask(Context context, WeatherFragment activity, ProgressDialog progressDialog) {
+        public TodayWeatherTask(Context context, MainActivity activity, ProgressDialog progressDialog) {
             super(context, activity, progressDialog);
         }
 
@@ -752,7 +753,7 @@ public class WeatherFragment extends Fragment implements LocationListener {
     }
 
     class LongTermWeatherTask extends GenericRequestTask {
-        public LongTermWeatherTask(Context context, WeatherFragment activity, ProgressDialog progressDialog) {
+        public LongTermWeatherTask(Context context, MainActivity activity, ProgressDialog progressDialog) {
             super(context, activity, progressDialog);
         }
 
@@ -774,7 +775,7 @@ public class WeatherFragment extends Fragment implements LocationListener {
 
     class ProvideCityNameTask extends GenericRequestTask {
 
-        public ProvideCityNameTask(Context context, WeatherFragment activity, ProgressDialog progressDialog) {
+        public ProvideCityNameTask(Context context, MainActivity activity, ProgressDialog progressDialog) {
             super(context, activity, progressDialog);
         }
 
