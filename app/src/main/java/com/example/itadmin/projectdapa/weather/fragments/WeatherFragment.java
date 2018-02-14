@@ -537,6 +537,9 @@ public class WeatherFragment extends Fragment implements LocationListener {
         recyclerViewFragment.setArguments(bundle);
         viewPagerAdapter.addFragment(recyclerViewFragment, getString(R.string.later));
 
+        GraphFragment graphFragment = new GraphFragment();
+        viewPagerAdapter.addFragment(graphFragment, "Graph");
+
         int currentPage = viewPager.getCurrentItem();
 
         viewPagerAdapter.notifyDataSetChanged();

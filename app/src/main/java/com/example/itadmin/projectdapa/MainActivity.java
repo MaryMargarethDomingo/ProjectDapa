@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         return contextOfApplication;
     }
 
-    boolean doubleBackToExitPressedOnce = false;
+/*    boolean doubleBackToExitPressedOnce = false;
 
     @Override
     public void onBackPressed() {
@@ -138,5 +138,5 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
                 doubleBackToExitPressedOnce=false;
             }
         }, 2000);
-    }
+    }*/
 }
