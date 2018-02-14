@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://C:\Users\iac.student\Downloads\ProjectDAPA-testingTree\ProjectDAPA.iml" filepath="C:\Users\iac.student\Downloads\ProjectDAPA-testingTree\ProjectDAPA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProjectDAPA-testingTree.iml" filepath="$PROJECT_DIR$/ProjectDAPA-testingTree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <color name="colorPrimary">#313131</color>
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <color name="colorPrimaryDark">#272727</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="text_light">#ffffff</color>
+    <color name="text_dark">#000000</color>
+    <color name="tab_indicator">#ffffff</color>
+    <color name="splashBackground">#607d8b</color>
+
+    <color name="colorTintedBackground">#cdcdcd</color>
+    <color name="colorBackground">@android:color/transparent</color>
+</resources>

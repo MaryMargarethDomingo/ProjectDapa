@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "315884181658",
+    "firebase_url": "https://projectdapa-649e8.firebaseio.com",
+    "project_id": "projectdapa-649e8",
+    "storage_bucket": "projectdapa-649e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:315884181658:android:7556fbc9f78c8112",
+        "android_client_info": {
+          "package_name": "com.example.itadmin.projectdapa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "315884181658-7f9pin7a12i7erdclqj5pdogbuf533ib.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.itadmin.projectdapa",
+            "certificate_hash": "28c3068ca90868b229c53750b6a6ec363d851512"
+          }
+        },
+        {
+          "client_id": "315884181658-t3on8lajjfibia3eck3sdp0tu0vhlern.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmzjRpPMsP6g3MzH89OA-W_RV0Ob8Kxhc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "315884181658-t3on8lajjfibia3eck3sdp0tu0vhlern.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
