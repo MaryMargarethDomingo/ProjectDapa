@@ -22,6 +22,7 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.example.itadmin.projectdapa.R;
+import com.example.itadmin.projectdapa.maps.utils.SlidingListFragment;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
@@ -178,9 +179,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new
                 LatLng(14.599512, 120.984219), 6));
 
-        googleMap.setMapStyle(
-                MapStyleOptions.loadRawResourceStyle(
-                        getContext(), R.raw.style_json));
+        googleMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(getContext(), R.raw.amu_poly_style_boolean_alpha));
         //mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
 
         if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
@@ -432,7 +431,29 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         endMarkerLat = marker.getPosition().latitude;
         endMarkerLng = marker.getPosition().longitude;
 
+        toggleList();
+
         return false;
+    }
+
+//-------------------------------------------------- Drawer - CODE --------------------------------------------------
+
+    private static final String LIST_FRAGMENT_TAG = "list_fragment";
+
+    private void toggleList() {
+        Fragment f = getFragmentManager().findFragmentByTag(LIST_FRAGMENT_TAG);
+        if (f != null) {
+            getFragmentManager().popBackStack();
+        } else {
+            getFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.animator.slide_up,
+                            R.animator.slide_down,
+                            R.animator.slide_up,
+                            R.animator.slide_down)
+                    .add(R.id.mapsLinearLayout, SlidingListFragment.instantiate(getActivity(), SlidingListFragment.class.getName()),
+                            LIST_FRAGMENT_TAG
+                    ).addToBackStack(null).commit();
+        }
     }
 
 }
