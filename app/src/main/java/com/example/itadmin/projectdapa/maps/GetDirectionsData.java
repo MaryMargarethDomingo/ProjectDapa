@@ -78,6 +78,7 @@ public class GetDirectionsData extends AsyncTask<Object, String, String> {
     public void displayDirections(String[] directionsList){
 
         int count = directionsList.length;
+
         PolylineOptions options;
 
         for(int i = 0; i < count; i++){

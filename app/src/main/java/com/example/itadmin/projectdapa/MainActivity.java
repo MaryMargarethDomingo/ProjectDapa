@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
     private void createNavItems()
     {
         //CREATE ITEMS
-        AHBottomNavigationItem tab1=new AHBottomNavigationItem("TAB 1", R.drawable.mapsicon);
+        AHBottomNavigationItem tab1=new AHBottomNavigationItem("Maps", R.drawable.mapsicon);
         AHBottomNavigationItem tab2=new AHBottomNavigationItem("Weather",R.drawable.weathericon);
         AHBottomNavigationItem tab3=new AHBottomNavigationItem("Survival",R.drawable.survivalicon);
 
