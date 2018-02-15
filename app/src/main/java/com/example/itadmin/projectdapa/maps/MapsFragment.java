@@ -179,7 +179,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new
                 LatLng(14.599512, 120.984219), 6));
 
-        googleMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(getContext(), R.raw.amu_poly_style_boolean_alpha));
+        //googleMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(getContext(), R.raw.style_json));
         //mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
 
         if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
@@ -450,7 +450,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                             R.animator.slide_down,
                             R.animator.slide_up,
                             R.animator.slide_down)
-                    .add(R.id.mapsLinearLayout, SlidingListFragment.instantiate(getActivity(), SlidingListFragment.class.getName()),
+                    .add(R.id.content_id, SlidingListFragment.instantiate(getActivity(), SlidingListFragment.class.getName()),
                             LIST_FRAGMENT_TAG
                     ).addToBackStack(null).commit();
         }

@@ -22,9 +22,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include
-        android:id="@+id/includeID"
-        layout="@layout/content_main" />
+    <include layout="@layout/content_main" />
 
     <com.aurelhubert.ahbottomnavigation.AHBottomNavigation
         android:id="@+id/myBottomNavigation_ID"
