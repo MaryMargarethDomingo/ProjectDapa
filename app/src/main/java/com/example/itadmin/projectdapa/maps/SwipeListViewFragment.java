@@ -28,7 +28,7 @@ public class SwipeListViewFragment extends Fragment {
 
     private Bundle bundle = new Bundle();
     private String jsonData;
-    private ArrayList<String> placesList;
+    private ArrayList<Places> placesList;
     private Places places;
     private SwipeMenuListView swipeMenuListView;
     private PlacesAdapter adapter;
@@ -89,7 +89,7 @@ public class SwipeListViewFragment extends Fragment {
     private void parseResult(String result){
         try {
             JSONObject weatherJSON = new JSONObject(result);
-            placesList = new ArrayList<String>();
+            placesList = new ArrayList<Places>();
 
             JSONArray listArray = weatherJSON.getJSONArray("results");
             String name = "";
@@ -100,17 +100,16 @@ public class SwipeListViewFragment extends Fragment {
                 vicinity = p.getString("vicinity");
 
                 places = new Places(name, vicinity);
-                placesList.add(name);
+                placesList.add(places);
             }
         }catch(JSONException jsone){
             jsone.printStackTrace();
         }
 
-        /*adapter = new PlacesAdapter(placesList);
-        swipeMenuListView.setAdapter((ListAdapter) adapter);*/
+        //adapter = new PlacesAdapter(placesList);
 
         ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, placesList);
-        swipeMenuListView.setAdapter(adapter);
+        swipeMenuListView.setAdapter((ListAdapter) adapter);
 
     }
 
