@@ -4,10 +4,10 @@
     <color name="colorPrimary">#313131</color>
     <!--<color name="colorPrimaryDark">#303F9F</color>-->
     <color name="colorPrimaryDark">#272727</color>
-    <color name="colorAccent">#959494</color>
+    <color name="colorAccent">#FF4081</color>
 
     <color name="btn1">#9C9B9B</color>
-    <color name="btn2">#696969</color>
+    <color name="btn2">#9C9B9B</color>
     <color name="text_light">#ffffff</color>
     <color name="text_dark">#000000</color>
     <color name="tab_indicator">#ffffff</color>

@@ -68,7 +68,6 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
 
         //set current item
         bottomNavigation.setCurrentItem(0);
-
     }
 
     @Override
@@ -77,10 +76,13 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         //show fragment
         if (position==0) {
             getSupportFragmentManager().beginTransaction().replace(R.id.content_id, mapsFragment).commit();
+            getSupportActionBar().hide();
         }else  if (position==1) {
             getSupportFragmentManager().beginTransaction().replace(R.id.content_id, weatherFragment).commit();
+            getSupportActionBar().show();
         }else  if (position==2) {
             getSupportFragmentManager().beginTransaction().replace(R.id.content_id, mapsFragment).commit();
+            getSupportActionBar().hide();
         }
         return true;
     }
