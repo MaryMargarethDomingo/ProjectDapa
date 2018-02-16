@@ -74,10 +74,10 @@ public class SwipeListViewFragment extends Fragment {
             public boolean onMenuItemClick(int position, SwipeMenu menu, int index) {
                 switch (index) {
                     case 0:
-                        Toast.makeText(getActivity(), "you clicked call", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity(), "you clicked detailed view", Toast.LENGTH_LONG).show();
                         break;
                     case 1:
-                        Toast.makeText(getActivity(), "you clicked detailed view", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity(), "you clicked call", Toast.LENGTH_LONG).show();
                         break;
                 }
                 return false;
