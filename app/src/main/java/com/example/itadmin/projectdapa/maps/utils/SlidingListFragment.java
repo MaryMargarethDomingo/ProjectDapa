@@ -15,7 +15,7 @@ public class SlidingListFragment extends ListFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.sliding_fragment_layout, container, false);
+        return inflater.inflate(R.layout.maps_sliding_layout, container, false);
     }
 
     @Override
@@ -46,7 +46,7 @@ public class SlidingListFragment extends ListFragment {
             TextView result = (TextView) convertView;
             if (result == null) {
                 result = (TextView) LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.list_view_item, parent, false);
+                        .inflate(R.layout.maps_sliding_content, parent, false);
             }
             result.setText("My custom element #" + position);
 

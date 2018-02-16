@@ -11,7 +11,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTabHost;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -33,11 +32,9 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.text.DecimalFormat;
 
@@ -74,7 +71,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        return inflater.inflate(R.layout.fragment_maps, container, false);
+        return inflater.inflate(R.layout.maps_main, container, false);
 
     }
 
@@ -442,7 +439,19 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     private static final String LIST_FRAGMENT_TAG = "list_fragment";
 
     private void toggleList() {
-        Fragment f = getFragmentManager().findFragmentByTag(LIST_FRAGMENT_TAG);
+
+        getFragmentManager().beginTransaction()
+                .setCustomAnimations(R.animator.slide_up,
+                        R.animator.slide_down,
+                        R.animator.slide_up,
+                        R.animator.slide_down)
+                .add(R.id.map, SlidingListFragment
+                                .instantiate(getContext(), SlidingListFragment.class.getName()),
+                        LIST_FRAGMENT_TAG
+                ).addToBackStack(null).commit();
+
+        /*Fragment f = getFragmentManager().findFragmentByTag(LIST_FRAGMENT_TAG);
+
         if (f != null) {
             getFragmentManager().popBackStack();
         } else {
@@ -455,7 +464,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                                     .instantiate(getContext(), SlidingListFragment.class.getName()),
                             LIST_FRAGMENT_TAG
                     ).addToBackStack(null).commit();
-        }
+        }*/
     }
 
 }
