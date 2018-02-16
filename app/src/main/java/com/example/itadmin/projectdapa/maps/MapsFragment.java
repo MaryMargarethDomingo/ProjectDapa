@@ -22,6 +22,7 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.example.itadmin.projectdapa.R;
+import com.example.itadmin.projectdapa.maps.utils.SlidingListFragment;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
@@ -120,8 +121,10 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     dataTransferDuration[1] = durationUrl;
 
                     getDirectionsData.execute(dataTransferDuration);
-
                     getDistance();
+
+                    showPins();
+                    mMap.clear();
 
                 }else{
                     Toast.makeText(getActivity(), "No place selected", Toast.LENGTH_LONG).show();
@@ -154,9 +157,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new
                 LatLng(14.599512, 120.984219), 6));
 
-        googleMap.setMapStyle(
-                MapStyleOptions.loadRawResourceStyle(
-                        getContext(), R.raw.style_json));
+        //googleMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(getContext(), R.raw.style_json));
         //mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
 
         if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
@@ -292,7 +293,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         dataTransfer[1] = url1;
 
         getNearbyPlaces.execute(dataTransfer);
-        Toast.makeText(getActivity(), "Showing nearby " + type, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getActivity(), "Showing nearby " + type, Toast.LENGTH_SHORT).show();
 
     }
 
@@ -338,7 +339,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                 + "&destination=" + endMarkerLat + "," + endMarkerLng
                 + "&keys=AIzaSyAr6glfw4qPY6dkrrZoLWg0hDT9DCpAXkg";
 
-        Log.d("DIRECTIONS URL: ", googleDirectionsUrl);
+        Log.d("DIRECTIONS URL: ", "URL" + googleDirectionsUrl);
 
         return googleDirectionsUrl;
     }
@@ -350,65 +351,75 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         @Override
         public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
 
-            if(compoundButton == togHospital){
+            if (isChecked) {
+                if (compoundButton == togHospital) {
 
-                togPolice.setSelected(false);
-                togFire.setSelected(false);
-                togVet.setSelected(false);
+                    togPolice.setChecked(false);
+                    togFire.setChecked(false);
+                    togVet.setChecked(false);
 
-                mMap.clear();
-                type = "hospital";
-                showPins();
+                    mMap.clear();
+                    type = "hospital";
+                    showPins();
 
-                endMarkerLng = 0;
-                endMarkerLat = 0;
+                    endMarkerLat = 0;
+                    endMarkerLng = 0;
 
-            }else if(compoundButton == togPolice){
+                    Toast.makeText(getActivity(), "Showing nearby hospitals", Toast.LENGTH_LONG).show();
 
-                togHospital.setSelected(false);
-                togFire.setSelected(false);
-                togVet.setSelected(false);
+                }
 
+                if (compoundButton == togPolice) {
 
-                mMap.clear();
-                type = "police";
-                showPins();
+                    togHospital.setChecked(false);
+                    togFire.setChecked(false);
+                    togVet.setChecked(false);
 
-                endMarkerLng = 0;
-                endMarkerLat = 0;
+                    mMap.clear();
+                    type = "police";
+                    showPins();
 
-            }else if(compoundButton == togFire){
+                    endMarkerLat = 0;
+                    endMarkerLng = 0;
 
-                togHospital.setSelected(false);
-                togPolice.setSelected(false);
-                togVet.setSelected(false);
+                    Toast.makeText(getActivity(), "Showing nearby police stations", Toast.LENGTH_LONG).show();
 
-                mMap.clear();
-                type = "fire_station";
-                showPins();
+                }
 
-                endMarkerLng = 0;
-                endMarkerLat = 0;
+                if (compoundButton == togFire) {
 
+                    togHospital.setChecked(false);
+                    togPolice.setChecked(false);
+                    togVet.setChecked(false);
 
-            }else if(compoundButton == togVet){
+                    mMap.clear();
+                    type = "fire_department";
+                    showPins();
 
-                togHospital.setSelected(false);
-                togPolice.setSelected(false);
-                togFire.setSelected(false);
+                    endMarkerLat = 0;
+                    endMarkerLng = 0;
 
-                mMap.clear();
-                type = "veterinary_care";
-                showPins();
+                    Toast.makeText(getActivity(), "Showing nearby fire stations", Toast.LENGTH_LONG).show();
+                }
 
-                endMarkerLng = 0;
-                endMarkerLat = 0;
+                if (compoundButton == togVet) {
 
-            }else{
-                mMap.clear();
-                type = null;
+                    togHospital.setChecked(false);
+                    togPolice.setChecked(false);
+                    togFire.setChecked(false);
+
+                    mMap.clear();
+                    type = "veterinary_care";
+                    showPins();
+
+                    endMarkerLat = 0;
+                    endMarkerLng = 0;
+
+                    Toast.makeText(getActivity(), "Showing nearby veterinary clinics", Toast.LENGTH_LONG).show();
+
+                }
+
             }
-
         }
     };
 
@@ -420,7 +431,29 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         endMarkerLat = marker.getPosition().latitude;
         endMarkerLng = marker.getPosition().longitude;
 
+        toggleList();
+
         return false;
+    }
+
+//-------------------------------------------------- Drawer - CODE --------------------------------------------------
+
+    private static final String LIST_FRAGMENT_TAG = "list_fragment";
+
+    private void toggleList() {
+        Fragment f = getFragmentManager().findFragmentByTag(LIST_FRAGMENT_TAG);
+        if (f != null) {
+            getFragmentManager().popBackStack();
+        } else {
+            getFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.animator.slide_up,
+                            R.animator.slide_down,
+                            R.animator.slide_up,
+                            R.animator.slide_down)
+                    .add(R.id.content_id, SlidingListFragment.instantiate(getActivity(), SlidingListFragment.class.getName()),
+                            LIST_FRAGMENT_TAG
+                    ).addToBackStack(null).commit();
+        }
     }
 
 }
