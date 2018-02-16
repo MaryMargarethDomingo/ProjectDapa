@@ -394,7 +394,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     togVet.setChecked(false);
 
                     mMap.clear();
-                    type = "fire_department";
+                    type = "fire_station";
                     showPins();
 
                     endMarkerLat = 0;
