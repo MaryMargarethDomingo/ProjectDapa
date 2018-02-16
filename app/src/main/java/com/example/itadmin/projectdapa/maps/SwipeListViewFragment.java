@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
 import android.widget.Toast;
 import android.support.v4.app.Fragment;
 
@@ -15,42 +16,37 @@ import com.baoyz.swipemenulistview.SwipeMenuItem;
 import com.baoyz.swipemenulistview.SwipeMenuListView;
 import com.example.itadmin.projectdapa.R;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
 import static android.graphics.Color.rgb;
 
 public class SwipeListViewFragment extends Fragment {
 
-    public SwipeListViewFragment() {
-        // Required empty public constructor
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-    }
+    private Bundle bundle = new Bundle();
+    private String jsonData;
+    private ArrayList<String> placesList;
+    private Places places;
+    private SwipeMenuListView swipeMenuListView;
+    private PlacesAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_listview, container, false);
+        return inflater.inflate(R.layout.fragment_swipelistview, container, false);
     }
 
     @Override
-    public void onStart(){
+    public void onStart() {
         super.onStart();
 
-        SwipeMenuListView swipeMenuListView = getView().findViewById(R.id.swipeMenuLayout);
+        swipeMenuListView = getView().findViewById(R.id.listView);
+        bundle = this.getArguments();
+        jsonData = bundle.getString("jsonData");
 
-        ArrayList<String> placesList = new ArrayList<>();
-        placesList.add("DAPA");
-        placesList.add("DAPA");
-        placesList.add("DAPA");
-        placesList.add("DAPA");
-        placesList.add("DAPA");
-
-        ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1);
-        swipeMenuListView.setAdapter(adapter);
+        parseResult(jsonData);
 
         SwipeMenuCreator creator = new SwipeMenuCreator() {
 
@@ -90,6 +86,32 @@ public class SwipeListViewFragment extends Fragment {
 
     }
 
+    private void parseResult(String result){
+        try {
+            JSONObject weatherJSON = new JSONObject(result);
+            placesList = new ArrayList<String>();
 
+            JSONArray listArray = weatherJSON.getJSONArray("results");
+            String name = "";
+            String vicinity = "";
+            for(int ctr=0; ctr < listArray.length(); ctr++) {
+                JSONObject p = (JSONObject) listArray.get(ctr);
+                name = p.getString("name");
+                vicinity = p.getString("vicinity");
+
+                places = new Places(name, vicinity);
+                placesList.add(name);
+            }
+        }catch(JSONException jsone){
+            jsone.printStackTrace();
+        }
+
+        /*adapter = new PlacesAdapter(placesList);
+        swipeMenuListView.setAdapter((ListAdapter) adapter);*/
+
+        ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, placesList);
+        swipeMenuListView.setAdapter(adapter);
+
+    }
 
 }

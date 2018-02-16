@@ -140,33 +140,11 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                 bundle.putString("jsonData", prefs.getString("jsonData", ""));
 
-                ListViewFragment listViewFragment = new ListViewFragment();
+                SwipeListViewFragment listViewFragment = new SwipeListViewFragment();
                 listViewFragment.setArguments(bundle);
                 getFragmentManager().beginTransaction().replace(R.id.content_id, listViewFragment).addToBackStack(null).commit();
             }
         });
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-
-        switch (requestCode){
-            case REQUEST_LOCATION_CODE:
-                if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                    // i grant you my permission
-                    if(ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
-                        if(client == null){
-                            buildGoogleApiClient();
-                        }
-                        mMap.setMyLocationEnabled(true);
-                        mMap.setPadding(0,100,0,0);
-                        //permission denied
-                    }else{
-                        Toast.makeText(getActivity(), "Permission denied", Toast.LENGTH_LONG).show();
-                    }
-
-                }
-        }
     }
 
     @Override
@@ -277,6 +255,28 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
         }else{
             return true;
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+
+        switch (requestCode){
+            case REQUEST_LOCATION_CODE:
+                if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                    // i grant you my permission
+                    if(ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
+                        if(client == null){
+                            buildGoogleApiClient();
+                        }
+                        mMap.setMyLocationEnabled(true);
+                        mMap.setPadding(0,100,0,0);
+                        //permission denied
+                    }else{
+                        Toast.makeText(getActivity(), "Permission denied", Toast.LENGTH_LONG).show();
+                    }
+
+                }
         }
     }
 
