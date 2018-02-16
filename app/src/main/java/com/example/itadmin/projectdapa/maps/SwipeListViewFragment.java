@@ -106,9 +106,9 @@ public class SwipeListViewFragment extends Fragment {
             jsone.printStackTrace();
         }
 
-        //adapter = new PlacesAdapter(placesList);
+        adapter = new PlacesAdapter(getActivity(), R.layout.cardview, placesList);
 
-        ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, placesList);
+        //ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, placesList);
         swipeMenuListView.setAdapter((ListAdapter) adapter);
 
     }
