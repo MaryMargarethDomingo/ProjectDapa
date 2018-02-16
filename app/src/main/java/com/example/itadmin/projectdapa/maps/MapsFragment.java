@@ -11,6 +11,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTabHost;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -441,7 +442,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     private static final String LIST_FRAGMENT_TAG = "list_fragment";
 
     private void toggleList() {
-        Fragment f = getFragmentManager().findFragmentByTag(LIST_FRAGMENT_TAG);
+        Fragment f = getFragmentManager().findFragmentById(R.id.slidingRelativeLayout);
+        SlidingListFragment slidingListFragment = new SlidingListFragment();
         if (f != null) {
             getFragmentManager().popBackStack();
         } else {
@@ -450,8 +452,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                             R.animator.slide_down,
                             R.animator.slide_up,
                             R.animator.slide_down)
-                    .add(R.id.content_id, SlidingListFragment.instantiate(getActivity(), SlidingListFragment.class.getName()),
-                            LIST_FRAGMENT_TAG
+                    .add(R.id.content_id, slidingListFragment
                     ).addToBackStack(null).commit();
         }
     }
