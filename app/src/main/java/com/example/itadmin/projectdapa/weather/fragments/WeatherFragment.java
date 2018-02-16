@@ -106,7 +106,7 @@ public class WeatherFragment extends Fragment implements LocationListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.activity_scrolling, container, false);
+        view = inflater.inflate(R.layout.weather_scrolling, container, false);
         PreferenceManager.setDefaultValues(getActivity(), R.xml.prefs, false);
 
         /*SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());

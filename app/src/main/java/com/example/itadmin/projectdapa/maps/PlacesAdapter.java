@@ -1,6 +1,5 @@
 package com.example.itadmin.projectdapa.maps;
 
-import android.content.ClipData;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,8 +35,8 @@ public class PlacesAdapter extends ArrayAdapter<Places> {
         Places p = getItem(position);
 
         if (p != null) {
-            TextView tt1 = (TextView) v.findViewById(R.id.txtPlace);
-            TextView tt2 = (TextView) v.findViewById(R.id.txtVicinity);
+            TextView tt1 = v.findViewById(R.id.txtPlace);
+            TextView tt2 = v.findViewById(R.id.txtVicinity);
 
             if (tt1 != null) {
                 tt1.setText(p.getName());
