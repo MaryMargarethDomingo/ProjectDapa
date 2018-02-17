@@ -16,6 +16,8 @@ import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.example.itadmin.projectdapa.maps.MapsFragment;
 import com.example.itadmin.projectdapa.session.LoginActivity;
+import com.example.itadmin.projectdapa.survival.SurvivalBean;
+import com.example.itadmin.projectdapa.survival.SurvivalFragment;
 import com.example.itadmin.projectdapa.weather.fragments.WeatherFragment;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
     public static Context contextOfApplication;
     public WeatherFragment weatherFragment = new WeatherFragment();
     private MapsFragment mapsFragment = new MapsFragment();
+    private SurvivalFragment survivalFragment = new SurvivalFragment();
     private int tabPosition;
 
 
@@ -81,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
             getSupportFragmentManager().beginTransaction().replace(R.id.content_id, weatherFragment).commit();
             getSupportActionBar().show();
         }else  if (position==2) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.content_id, mapsFragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_id, survivalFragment).commit();
             getSupportActionBar().hide();
         }
         return true;

@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.itadmin.projectdapa.MainActivity;
+import com.example.itadmin.projectdapa.R;
+
 import java.util.List;
 
 /**
@@ -16,6 +19,8 @@ import java.util.List;
 
 public class SurvivalRecyclerViewAdapter extends RecyclerView.Adapter<SurvivalRecyclerViewAdapter.MyViewHolder> {
     private List<SurvivalBean> survivalDis;
+    private SurvivalCheckBoxFragment survivalCheckBoxFragment = new SurvivalCheckBoxFragment();
+
 
     SurvivalRecyclerViewAdapter(List<SurvivalBean> survivalDis){
         this.survivalDis = survivalDis;
@@ -52,9 +57,7 @@ public class SurvivalRecyclerViewAdapter extends RecyclerView.Adapter<SurvivalRe
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
-                    Intent intent = new Intent(view.getContext(), SurvivalCheckBoxActivity.class);
-                    view.getContext().startActivity(intent);
+                    ((MainActivity) view.getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.content_id, survivalCheckBoxFragment).addToBackStack(null).commit();
 
                 }
             });

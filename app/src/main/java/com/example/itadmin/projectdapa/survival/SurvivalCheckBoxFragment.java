@@ -3,6 +3,7 @@ package com.example.itadmin.projectdapa.survival;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,15 +15,22 @@ import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.itadmin.projectdapa.MainActivity;
+import com.example.itadmin.projectdapa.R;
+
 import java.util.ArrayList;
 
-public class SurvivalCheckBoxActivity extends Activity {
+public class SurvivalCheckBoxFragment extends Fragment {
     MyCustomAdapter dataAdapter = null;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.survival_checklist);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+        return inflater.inflate(R.layout.survival_checklist, container, false);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
 
         displayListView();
         checkButtonClick();
@@ -83,15 +91,15 @@ public class SurvivalCheckBoxActivity extends Activity {
         disaster = new DisasterBean("Multi-tool",false);
         disasterList.add(disaster);
 
-        dataAdapter = new MyCustomAdapter(this,R.layout.survival_info, disasterList);
-        ListView listView = findViewById(R.id.listView1);
+        dataAdapter = new MyCustomAdapter(getActivity(),R.layout.survival_info, disasterList);
+        ListView listView = getView().findViewById(R.id.listView1);
         listView.setAdapter(dataAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             public void onItemClick(AdapterView<?> parent, View view, int position, long id){
                 DisasterBean disaster = (DisasterBean) parent.getItemAtPosition(position);
-                Toast.makeText(getApplicationContext(),"Clicked on Row: " + disaster.getName(),Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.contextOfApplication,"Clicked on Row: " + disaster.getName(),Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -120,7 +128,7 @@ public class SurvivalCheckBoxActivity extends Activity {
 
             if (convertView == null){
 
-                LayoutInflater vi = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                LayoutInflater vi = (LayoutInflater) MainActivity.contextOfApplication.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 convertView = vi.inflate(R.layout.survival_info, null);
 
                 holder = new ViewHolder();
@@ -134,7 +142,7 @@ public class SurvivalCheckBoxActivity extends Activity {
                         CheckBox cb = (CheckBox) v;
                         DisasterBean disaster = (DisasterBean) cb.getTag();
 
-                        Toast.makeText(getApplicationContext(), "Clicked on Checkbox: " + cb.getText() ,Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.contextOfApplication, "Clicked on Checkbox: " + cb.getText() ,Toast.LENGTH_LONG).show();
                         disaster.setSelected(cb.isChecked());
                     }
                 });
@@ -158,7 +166,7 @@ public class SurvivalCheckBoxActivity extends Activity {
 
     private void checkButtonClick() {
 
-        Button myButton = findViewById(R.id.findSelected);
+        Button myButton = getView().findViewById(R.id.findSelected);
 
         myButton.setOnClickListener(new View.OnClickListener()
         {
@@ -180,7 +188,7 @@ public class SurvivalCheckBoxActivity extends Activity {
                     }
                 }
 
-                Toast.makeText(getApplicationContext(),responseText, Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.contextOfApplication,responseText, Toast.LENGTH_LONG).show();
             }
         });
     }
