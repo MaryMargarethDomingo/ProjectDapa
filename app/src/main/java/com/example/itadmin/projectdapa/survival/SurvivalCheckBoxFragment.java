@@ -99,7 +99,7 @@ public class SurvivalCheckBoxFragment extends Fragment {
 
             public void onItemClick(AdapterView<?> parent, View view, int position, long id){
                 DisasterBean disaster = (DisasterBean) parent.getItemAtPosition(position);
-                Toast.makeText(MainActivity.contextOfApplication,"Clicked on Row: " + disaster.getName(),Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(),"Clicked on Row: " + disaster.getName(),Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -142,7 +142,7 @@ public class SurvivalCheckBoxFragment extends Fragment {
                         CheckBox cb = (CheckBox) v;
                         DisasterBean disaster = (DisasterBean) cb.getTag();
 
-                        Toast.makeText(MainActivity.contextOfApplication, "Clicked on Checkbox: " + cb.getText() ,Toast.LENGTH_LONG).show();
+                        Toast.makeText(getContext(), "Clicked on Checkbox: " + cb.getText() ,Toast.LENGTH_LONG).show();
                         disaster.setSelected(cb.isChecked());
                     }
                 });
@@ -188,7 +188,7 @@ public class SurvivalCheckBoxFragment extends Fragment {
                     }
                 }
 
-                Toast.makeText(MainActivity.contextOfApplication,responseText, Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(),responseText, Toast.LENGTH_LONG).show();
             }
         });
     }

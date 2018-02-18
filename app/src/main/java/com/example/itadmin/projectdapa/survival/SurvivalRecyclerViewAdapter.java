@@ -1,11 +1,13 @@
 package com.example.itadmin.projectdapa.survival;
 
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.itadmin.projectdapa.MainActivity;
 import com.example.itadmin.projectdapa.R;
@@ -19,11 +21,12 @@ import java.util.List;
 
 public class SurvivalRecyclerViewAdapter extends RecyclerView.Adapter<SurvivalRecyclerViewAdapter.MyViewHolder> {
     private List<SurvivalBean> survivalDis;
-    private YoutubeFragment youtubeFragment = new YoutubeFragment();
+    private YoutubeFragment youtubeFragment;
+    private FragmentManager fragmentManager;
 
-
-    SurvivalRecyclerViewAdapter(List<SurvivalBean> survivalDis){
+    SurvivalRecyclerViewAdapter(List<SurvivalBean> survivalDis, FragmentManager fragmentManager){
         this.survivalDis = survivalDis;
+        this.fragmentManager = fragmentManager;
     }
 
     @Override
@@ -36,6 +39,13 @@ public class SurvivalRecyclerViewAdapter extends RecyclerView.Adapter<SurvivalRe
     public void onBindViewHolder(SurvivalRecyclerViewAdapter.MyViewHolder holder, int position) {
         holder.list.setText(survivalDis.get(position).getList());
         holder.image.setBackgroundResource(survivalDis.get(position).getImage());
+        holder.image.setOnClickListener(view -> inflate(holder.getAdapterPosition()));
+    }
+
+    public void inflate(int position){
+        Toast.makeText(MainActivity.contextOfApplication, "Index: " + position, Toast.LENGTH_LONG).show();
+        youtubeFragment = new YoutubeFragment(position);
+        fragmentManager.beginTransaction().replace(R.id.content_id, youtubeFragment).addToBackStack(null).commit();
     }
 
     @Override
@@ -53,13 +63,16 @@ public class SurvivalRecyclerViewAdapter extends RecyclerView.Adapter<SurvivalRe
             super(itemView);
             list = itemView.findViewById(R.id.list);
             image = itemView.findViewById(R.id.image);
-
+            /*
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    ((MainActivity) view.getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.content_id, youtubeFragment).addToBackStack(null).commit();
+                    Toast.makeText(MainActivity.contextOfApplication, "Index: " +, Toast.LENGTH_LONG).show();
+                    //youtubeFragment = new YoutubeFragment(index);
+                    //((MainActivity) view.getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.content_id, youtubeFragment).addToBackStack(null).commit();
+
                 }
-            });
+            });*/
 
         }
     }

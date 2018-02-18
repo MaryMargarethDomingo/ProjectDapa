@@ -1,7 +1,6 @@
 package com.example.itadmin.projectdapa.survival.Youtube;
 
 import android.app.Activity;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -29,6 +28,29 @@ public class YoutubeFragment extends Fragment {
     private String linkFlood = "43M5mZuzHF8";
     private String linkTsunami = "m7EDddq9ftQ";
     private String linkVolcano = "Z-w_z9yobpE";
+    private String chosen = "";
+
+    public YoutubeFragment(int index){
+        switch (index){
+            case 0:
+                chosen = linkEarthquake;
+                break;
+            case 1:
+                chosen = linkTyphoon;
+                break;
+            case 2:
+                chosen = linkFlood;
+                break;
+            case 3:
+                chosen = linkTsunami;
+                break;
+            case 4:
+                chosen = linkVolcano;
+                break;
+            default:
+                chosen = linkEarthquake;
+        }
+    }
 
     @Override
     public void onAttach(Activity activity) {
@@ -55,7 +77,7 @@ public class YoutubeFragment extends Fragment {
                 if (!b) {
                     YPlayer = youTubePlayer;
                     YPlayer.setFullscreen(false);
-                    YPlayer.loadVideo(linkEarthquake);
+                    YPlayer.loadVideo(chosen);
                     YPlayer.play();
                 }
             }

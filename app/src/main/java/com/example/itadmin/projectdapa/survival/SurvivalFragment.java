@@ -34,7 +34,7 @@ public class SurvivalFragment extends Fragment {
         survivalDis = new ArrayList<>();
         recyclerView = getView().findViewById(R.id.recyclerView);
         
-        recyclerViewAdapter = new SurvivalRecyclerViewAdapter(survivalDis);
+        recyclerViewAdapter = new SurvivalRecyclerViewAdapter(survivalDis, getFragmentManager());
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         
         recyclerView.setLayoutManager(layoutManager);
@@ -51,19 +51,19 @@ public class SurvivalFragment extends Fragment {
         survivalDis.add(_survivalDis);
 
         _survivalDis = new SurvivalBean("Earthquake",R.drawable.earthquake);
-        survivalDis.add(_survivalDis);
+        survivalDis.add(0, _survivalDis);
 
         _survivalDis = new SurvivalBean("Typhoon",R.drawable.rain);
-        survivalDis.add(_survivalDis);
+        survivalDis.add(1, _survivalDis);
 
         _survivalDis = new SurvivalBean("Flood",R.drawable.flood);
-        survivalDis.add(_survivalDis);
+        survivalDis.add(2, _survivalDis);
 
         _survivalDis = new SurvivalBean("Tsunami",R.drawable.tsunami);
-        survivalDis.add(_survivalDis);
+        survivalDis.add(3, _survivalDis);
         
         _survivalDis = new SurvivalBean("Volcanic Eruption",R.drawable.volcanic);
-        survivalDis.add(_survivalDis);
+        survivalDis.add(4, _survivalDis);
 
         recyclerViewAdapter.notifyDataSetChanged();
     }

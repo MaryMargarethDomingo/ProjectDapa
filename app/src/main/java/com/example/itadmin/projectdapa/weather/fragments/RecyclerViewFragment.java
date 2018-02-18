@@ -23,8 +23,8 @@ public class RecyclerViewFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         Bundle bundle = this.getArguments();
-        View view = inflater.inflate(R.layout.fragment_recycler_view, container, false);
-        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
+        View view = inflater.inflate(R.layout.fragment_weather_recycler_view, container, false);
+        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.weatherRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         MainActivity mainActivity = (MainActivity) getActivity();
