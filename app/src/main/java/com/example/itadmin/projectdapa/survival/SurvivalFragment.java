@@ -2,7 +2,6 @@ package com.example.itadmin.projectdapa.survival;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -14,7 +13,6 @@ import com.example.itadmin.projectdapa.R;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.zip.Inflater;
 
 public class SurvivalFragment extends Fragment {
 
@@ -55,7 +53,7 @@ public class SurvivalFragment extends Fragment {
         _survivalDis = new SurvivalBean("Earthquake",R.drawable.earthquake);
         survivalDis.add(_survivalDis);
 
-        _survivalDis = new SurvivalBean("Rainstorm",R.drawable.rain);
+        _survivalDis = new SurvivalBean("Typhoon",R.drawable.rain);
         survivalDis.add(_survivalDis);
 
         _survivalDis = new SurvivalBean("Flood",R.drawable.flood);
