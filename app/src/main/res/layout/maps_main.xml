@@ -1,86 +1,88 @@
-<RelativeLayout
+<LinearLayout
 
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <fragment
-        android:id="@+id/map"
-        android:name="com.google.android.gms.maps.SupportMapFragment"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        tools:context="com.example.priyanka.mapsdemo.MapsActivity" />
-
-    <Button
-        android:id="@+id/btnListView"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="52dp"
-        android:onClick="ListView"
-        android:text="Listview" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnGo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btnListView"
-        android:layout_alignParentEnd="true"
-        android:onClick="onClick"
-        android:text="Go" />
+        <ToggleButton
+            android:id="@+id/togHospital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:text="hospital"
+            android:textOff="Hospital"
+            android:textOn="Hospital" />
+
+        <ToggleButton
+            android:id="@+id/togPolice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="police"
+            android:textOff="Police"
+            android:textOn="Police" />
+
+        <ToggleButton
+            android:id="@+id/togFire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="fire_department"
+            android:textOff="Fire Dept."
+            android:textOn="Fire Dept." />
+
+        <ToggleButton
+            android:id="@+id/togVet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="veterinary_care"
+            android:textOff="Veterinary"
+            android:textOn="Veterinary" />
+
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <LinearLayout
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            tools:context="com.example.priyanka.mapsdemo.MapsActivity" />
 
-            <ToggleButton
-                android:id="@+id/togHospital"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:checked="false"
-                android:text="hospital"
-                android:textOff="Hospital"
-                android:textOn="Hospital" />
+        <Button
+            android:id="@+id/btnListView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="52dp"
+            android:onClick="ListView"
+            android:text="Listview" />
 
-            <ToggleButton
-                android:id="@+id/togPolice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="police"
-                android:textOff="Police"
-                android:textOn="Police" />
-
-            <ToggleButton
-                android:id="@+id/togFire"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="fire_department"
-                android:textOff="Fire Dept."
-                android:textOn="Fire Dept." />
-
-            <ToggleButton
-                android:id="@+id/togVet"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="veterinary_care"
-                android:textOff="Veterinary"
-                android:textOn="Veterinary" />
-
-        </LinearLayout>
+        <Button
+            android:id="@+id/btnGo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnListView"
+            android:layout_alignParentEnd="true"
+            android:onClick="onClick"
+            android:text="Go" />
 
     </RelativeLayout>
 
-</RelativeLayout>
+</LinearLayout>
