@@ -1,6 +1,5 @@
 package com.example.itadmin.projectdapa.survival;
 
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +9,7 @@ import android.widget.TextView;
 
 import com.example.itadmin.projectdapa.MainActivity;
 import com.example.itadmin.projectdapa.R;
+import com.example.itadmin.projectdapa.survival.Youtube.YoutubeFragment;
 
 import java.util.List;
 
@@ -19,7 +19,7 @@ import java.util.List;
 
 public class SurvivalRecyclerViewAdapter extends RecyclerView.Adapter<SurvivalRecyclerViewAdapter.MyViewHolder> {
     private List<SurvivalBean> survivalDis;
-    private SurvivalCheckBoxFragment survivalCheckBoxFragment = new SurvivalCheckBoxFragment();
+    private YoutubeFragment youtubeFragment = new YoutubeFragment();
 
 
     SurvivalRecyclerViewAdapter(List<SurvivalBean> survivalDis){
@@ -57,8 +57,7 @@ public class SurvivalRecyclerViewAdapter extends RecyclerView.Adapter<SurvivalRe
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    ((MainActivity) view.getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.content_id, survivalCheckBoxFragment).addToBackStack(null).commit();
-
+                    ((MainActivity) view.getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.content_id, youtubeFragment).addToBackStack(null).commit();
                 }
             });
 

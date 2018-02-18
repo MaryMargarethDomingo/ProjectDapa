@@ -4,23 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.itadmin.projectdapa.survival.Youtube.YoutubeActivity">
+    tools:context="com.example.itadmin.projectdapa.survival.Youtube.YoutubeFragment">
 
-    <com.google.android.youtube.player.YouTubePlayerView
+   <!-- <com.google.android.youtube.player.YouTubePlayerView
         android:id="@+id/youtube_view"
         android:layout_width="match_parent"
         android:layout_height="441dp">
+    </com.google.android.youtube.player.YouTubePlayerView>-->
 
-
-    </com.google.android.youtube.player.YouTubePlayerView>
+    <fragment
+        android:id="@+id/youtube_view"
+        android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <Button
         android:id="@+id/btnPlay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="44dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:text="Play"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="126dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
