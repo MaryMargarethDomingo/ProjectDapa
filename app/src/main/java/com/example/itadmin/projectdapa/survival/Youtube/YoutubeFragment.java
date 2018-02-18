@@ -52,8 +52,6 @@ public class YoutubeFragment extends Fragment {
                 if (!b) {
                     YPlayer = youTubePlayer;
                     YPlayer.setFullscreen(false);
-                    YPlayer.loadVideo("Iuea4NzqMfI");
-                    YPlayer.play();
                 }
             }
 
@@ -66,9 +64,6 @@ public class YoutubeFragment extends Fragment {
         return rootView;
     }
 
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
-    }
+
 
 }

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ProjectDAPA.iml" filepath="$PROJECT_DIR$/ProjectDAPA.iml" />
       <module fileurl="file://C:\Users\HI FREQUENCY\Documents\Programming\Android Studio\THESIS - Project DAPA\ProjectDAPA.iml" filepath="C:\Users\HI FREQUENCY\Documents\Programming\Android Studio\THESIS - Project DAPA\ProjectDAPA.iml" />
-      <module fileurl="file://$PROJECT_DIR$/THESIS - Project DAPA.iml" filepath="$PROJECT_DIR$/THESIS - Project DAPA.iml" />
       <module fileurl="file://C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\THESIS - Project DAPA.iml" filepath="C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\THESIS - Project DAPA.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
