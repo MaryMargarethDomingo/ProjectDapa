@@ -47,8 +47,8 @@ public class YoutubeFragment extends Fragment {
             case 4:
                 chosen = linkVolcano;
                 break;
-            default:
-                chosen = linkEarthquake;
+            /*default:
+                chosen = linkEarthquake;*/
         }
     }
 
