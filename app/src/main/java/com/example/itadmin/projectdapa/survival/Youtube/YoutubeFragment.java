@@ -17,6 +17,14 @@ public class YoutubeFragment extends Fragment {
     private YouTubePlayerView youtubePlayerView;
     private YouTubePlayer.OnInitializedListener onInitializedListener;
 
+    private String apiKey = "AIzaSyBvSLp9j1nAV4CPRprUZkWLO-1_Gt_45Xk";
+
+    private String linkEarthquake = "BLEPakj1YTY";
+    private String linkTyphoon = "xHRbnuB9F1I";
+    private String linkFlood = "43M5mZuzHF8";
+    private String linkTsunami = "m7EDddq9ftQ";
+    private String linkVolcano = "Z-w_z9yobpE";
+
     Button button;
 
     @Override
@@ -32,7 +40,7 @@ public class YoutubeFragment extends Fragment {
         onInitializedListener = new YouTubePlayer.OnInitializedListener() {
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
-                youTubePlayer.loadVideo("Iuea4NzqMfI");
+                youTubePlayer.loadVideo(linkEarthquake);
                 youtubePlayerView.initialize("AIzaSyBvSLp9j1nAV4CPRprUZkWLO-1_Gt_45Xk", onInitializedListener);
             }
 
@@ -45,7 +53,7 @@ public class YoutubeFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                youtubePlayerView.initialize("AIzaSyBvSLp9j1nAV4CPRprUZkWLO-1_Gt_45Xk", onInitializedListener);
+                youtubePlayerView.initialize(apiKey, onInitializedListener);
             }
         });
     }
