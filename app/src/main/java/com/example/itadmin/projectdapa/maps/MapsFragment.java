@@ -363,8 +363,6 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     endMarkerLat = 0;
                     endMarkerLng = 0;
 
-                    mMap.animateCamera(CameraUpdateFactory.zoomBy(1));
-
                     Toast.makeText(getActivity(), "Showing nearby hospitals", Toast.LENGTH_LONG).show();
 
                 }
@@ -381,8 +379,6 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     endMarkerLat = 0;
                     endMarkerLng = 0;
-
-                    mMap.animateCamera(CameraUpdateFactory.zoomBy(1));
 
                     Toast.makeText(getActivity(), "Showing nearby police stations", Toast.LENGTH_LONG).show();
 
@@ -401,8 +397,6 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     endMarkerLat = 0;
                     endMarkerLng = 0;
 
-                    mMap.animateCamera(CameraUpdateFactory.zoomBy(1));
-
                     Toast.makeText(getActivity(), "Showing nearby fire stations", Toast.LENGTH_LONG).show();
                 }
 
@@ -419,12 +413,9 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     endMarkerLat = 0;
                     endMarkerLng = 0;
 
-                    mMap.animateCamera(CameraUpdateFactory.zoomBy(2));
-
                     Toast.makeText(getActivity(), "Showing nearby veterinary clinics", Toast.LENGTH_LONG).show();
 
                 }
-
             }
         }
     };
