@@ -9,44 +9,49 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:weightSum="4">
 
         <ToggleButton
             android:id="@+id/togHospital"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:checked="false"
             android:text="hospital"
             android:textOff="Hospital"
-            android:textOn="Hospital" />
+            android:textOn="Hospital"
+            android:textSize="10sp" />
 
         <ToggleButton
             android:id="@+id/togPolice"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="police"
             android:textOff="Police"
-            android:textOn="Police" />
+            android:textOn="Police"
+            android:textSize="10sp" />
 
         <ToggleButton
             android:id="@+id/togFire"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="fire_department"
             android:textOff="Fire Dept."
-            android:textOn="Fire Dept." />
+            android:textOn="Fire Dept."
+            android:textSize="10sp" />
 
         <ToggleButton
             android:id="@+id/togVet"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="veterinary_care"
             android:textOff="Veterinary"
-            android:textOn="Veterinary" />
+            android:textOn="Veterinary"
+            android:textSize="10sp" />
 
     </LinearLayout>
 

@@ -59,8 +59,6 @@ public class SlidingListFragment extends ListFragment {
             }
 
 
-
-
             return result;
         }
     }

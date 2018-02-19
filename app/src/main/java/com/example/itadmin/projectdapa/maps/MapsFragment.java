@@ -206,7 +206,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         currentLocationMarker = mMap.addMarker(markerOptions);*/
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-        mMap.animateCamera(CameraUpdateFactory.zoomBy(2));
+        mMap.animateCamera(CameraUpdateFactory.zoomBy(1));
 
         if(client != null){
             LocationServices.FusedLocationApi.removeLocationUpdates(client, this);
@@ -363,6 +363,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     endMarkerLat = 0;
                     endMarkerLng = 0;
 
+                    mMap.animateCamera(CameraUpdateFactory.zoomBy(1));
+
                     Toast.makeText(getActivity(), "Showing nearby hospitals", Toast.LENGTH_LONG).show();
 
                 }
@@ -379,6 +381,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     endMarkerLat = 0;
                     endMarkerLng = 0;
+
+                    mMap.animateCamera(CameraUpdateFactory.zoomBy(1));
 
                     Toast.makeText(getActivity(), "Showing nearby police stations", Toast.LENGTH_LONG).show();
 
@@ -397,6 +401,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     endMarkerLat = 0;
                     endMarkerLng = 0;
 
+                    mMap.animateCamera(CameraUpdateFactory.zoomBy(1));
+
                     Toast.makeText(getActivity(), "Showing nearby fire stations", Toast.LENGTH_LONG).show();
                 }
 
@@ -412,6 +418,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     endMarkerLat = 0;
                     endMarkerLng = 0;
+
+                    mMap.animateCamera(CameraUpdateFactory.zoomBy(2));
 
                     Toast.makeText(getActivity(), "Showing nearby veterinary clinics", Toast.LENGTH_LONG).show();
 
@@ -429,7 +437,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         endMarkerLat = marker.getPosition().latitude;
         endMarkerLng = marker.getPosition().longitude;
 
-        toggleList();
+        //toggleList();
 
         return false;
     }
@@ -456,14 +464,14 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
             getFragmentManager().popBackStack();
         } else {
             getFragmentManager().beginTransaction()
-                    .setCustomAnimations(R.animator.slide_up,
-                            R.animator.slide_down,
-                            R.animator.slide_up,
-                            R.animator.slide_down)
-                    .add(R.id.map, SlidingListFragment
-                                    .instantiate(getContext(), SlidingListFragment.class.getName()),
-                            LIST_FRAGMENT_TAG
-                    ).addToBackStack(null).commit();
+                .setCustomAnimations(R.animator.slide_up,
+                        R.animator.slide_down,
+                        R.animator.slide_up,
+                        R.animator.slide_down)
+                .add(R.id.map, SlidingListFragment
+                                .instantiate(getContext(), SlidingListFragment.class.getName()),
+                        LIST_FRAGMENT_TAG
+                ).addToBackStack(null).commit();
         }*/
     }
 
