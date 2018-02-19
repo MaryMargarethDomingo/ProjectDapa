@@ -49,7 +49,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     LocationRequest locationRequest;
     Location lastLocation;
     Marker currentLocationMarker;
-    static int PROXIMITY_RADIUS = 15 * 1000;
+    static int PROXIMITY_RADIUS = 2 * 1000;
     static double latitude;
     static double longitude;
     static String type;

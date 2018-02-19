@@ -48,7 +48,18 @@ public class SlidingListFragment extends ListFragment {
                 result = (TextView) LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.maps_sliding_content, parent, false);
             }
-            result.setText("My custom element #" + position);
+            if(position==0){
+                result.setText("Call");
+            }else if(position==1){
+                result.setText("Get Directions");
+            }else if(position==2){
+                result.setText("More Info");
+            }else{
+                result.setText("");
+            }
+
+
+
 
             return result;
         }
