@@ -428,7 +428,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         endMarkerLat = marker.getPosition().latitude;
         endMarkerLng = marker.getPosition().longitude;
 
-        //toggleList();
+        toggleList();
 
         return false;
     }
@@ -445,8 +445,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                         R.animator.slide_up,
                         R.animator.slide_down)
                 .add(R.id.map, SlidingListFragment
-                                .instantiate(getContext(), SlidingListFragment.class.getName()),
-                        LIST_FRAGMENT_TAG
+                                .instantiate(getContext(), SlidingListFragment.class.getName())
                 ).addToBackStack(null).commit();
 
         /*Fragment f = getFragmentManager().findFragmentByTag(LIST_FRAGMENT_TAG);

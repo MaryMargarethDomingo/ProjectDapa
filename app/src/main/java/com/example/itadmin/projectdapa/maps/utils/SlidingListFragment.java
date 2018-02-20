@@ -1,6 +1,7 @@
 package com.example.itadmin.projectdapa.maps.utils;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +11,7 @@ import android.widget.TextView;
 import com.example.itadmin.projectdapa.R;
 
 
-public class SlidingListFragment extends ListFragment {
+public class SlidingListFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -21,10 +22,10 @@ public class SlidingListFragment extends ListFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        setListAdapter(new MyListAdapter());
+        //setListAdapter(new MyListAdapter());
     }
 
-    private class MyListAdapter extends BaseAdapter {
+    /*private class MyListAdapter extends BaseAdapter {
 
         @Override
         public int getCount() {
@@ -61,5 +62,5 @@ public class SlidingListFragment extends ListFragment {
 
             return result;
         }
-    }
+    }*/
 }

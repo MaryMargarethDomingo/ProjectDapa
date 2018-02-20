@@ -12,6 +12,8 @@
     <color name="text_dark">#000000</color>
     <color name="tab_indicator">#ffffff</color>
     <color name="splashBackground">#607d8b</color>
+    <color name="yellow">#c2c200</color>
+
 
     <color name="colorTintedBackground">#cdcdcd</color>
     <color name="colorBackground">@android:color/transparent</color>
