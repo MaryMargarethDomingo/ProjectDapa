@@ -106,6 +106,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         btnGo.setOnClickListener(new View.OnClickListener() {
 
             @Override
+
             public void onClick(View view) {
 
                 GetDirectionsData getDirectionsData = new GetDirectionsData();
@@ -396,6 +397,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     endMarkerLat = 0;
                     endMarkerLng = 0;
+
 
                     Toast.makeText(getActivity(), "Showing nearby fire stations", Toast.LENGTH_LONG).show();
                 }
