@@ -51,19 +51,19 @@ public class SurvivalFragment extends Fragment {
         survivalDis.add(_survivalDis);
 
         _survivalDis = new SurvivalBean("Earthquake",R.drawable.earthquake);
-        survivalDis.add(0, _survivalDis);
+        survivalDis.add(_survivalDis);
 
         _survivalDis = new SurvivalBean("Typhoon",R.drawable.rain);
-        survivalDis.add(1, _survivalDis);
+        survivalDis.add(_survivalDis);
 
         _survivalDis = new SurvivalBean("Flood",R.drawable.flood);
-        survivalDis.add(2, _survivalDis);
+        survivalDis.add(_survivalDis);
 
         _survivalDis = new SurvivalBean("Tsunami",R.drawable.tsunami);
-        survivalDis.add(3, _survivalDis);
+        survivalDis.add(_survivalDis);
         
         _survivalDis = new SurvivalBean("Volcanic Eruption",R.drawable.volcanic);
-        survivalDis.add(4, _survivalDis);
+        survivalDis.add(_survivalDis);
 
         recyclerViewAdapter.notifyDataSetChanged();
     }

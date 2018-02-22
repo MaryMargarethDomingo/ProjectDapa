@@ -49,7 +49,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     LocationRequest locationRequest;
     Location lastLocation;
     Marker currentLocationMarker;
-    static int PROXIMITY_RADIUS = 15 * 1000;
+    static int PROXIMITY_RADIUS = 2 * 1000;
     static double latitude;
     static double longitude;
     static String type;
@@ -106,6 +106,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         btnGo.setOnClickListener(new View.OnClickListener() {
 
             @Override
+
             public void onClick(View view) {
 
                 GetDirectionsData getDirectionsData = new GetDirectionsData();
@@ -206,7 +207,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         currentLocationMarker = mMap.addMarker(markerOptions);*/
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-        mMap.animateCamera(CameraUpdateFactory.zoomBy(2));
+        mMap.animateCamera(CameraUpdateFactory.zoomBy(1));
 
         if(client != null){
             LocationServices.FusedLocationApi.removeLocationUpdates(client, this);
@@ -397,6 +398,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     endMarkerLat = 0;
                     endMarkerLng = 0;
 
+
                     Toast.makeText(getActivity(), "Showing nearby fire stations", Toast.LENGTH_LONG).show();
                 }
 
@@ -416,7 +418,6 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     Toast.makeText(getActivity(), "Showing nearby veterinary clinics", Toast.LENGTH_LONG).show();
 
                 }
-
             }
         }
     };
@@ -446,8 +447,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                         R.animator.slide_up,
                         R.animator.slide_down)
                 .add(R.id.map, SlidingListFragment
-                                .instantiate(getContext(), SlidingListFragment.class.getName()),
-                        LIST_FRAGMENT_TAG
+                                .instantiate(getContext(), SlidingListFragment.class.getName())
                 ).addToBackStack(null).commit();
 
         /*Fragment f = getFragmentManager().findFragmentByTag(LIST_FRAGMENT_TAG);
@@ -456,14 +456,14 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
             getFragmentManager().popBackStack();
         } else {
             getFragmentManager().beginTransaction()
-                    .setCustomAnimations(R.animator.slide_up,
-                            R.animator.slide_down,
-                            R.animator.slide_up,
-                            R.animator.slide_down)
-                    .add(R.id.map, SlidingListFragment
-                                    .instantiate(getContext(), SlidingListFragment.class.getName()),
-                            LIST_FRAGMENT_TAG
-                    ).addToBackStack(null).commit();
+                .setCustomAnimations(R.animator.slide_up,
+                        R.animator.slide_down,
+                        R.animator.slide_up,
+                        R.animator.slide_down)
+                .add(R.id.map, SlidingListFragment
+                                .instantiate(getContext(), SlidingListFragment.class.getName()),
+                        LIST_FRAGMENT_TAG
+                ).addToBackStack(null).commit();
         }*/
     }
 
