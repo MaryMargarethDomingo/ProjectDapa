@@ -30,6 +30,10 @@ public class YoutubeFragment extends Fragment {
     private String linkVolcano = "Z-w_z9yobpE";
     private String chosen = "";
 
+    public YoutubeFragment(){
+
+    }
+
     public YoutubeFragment(int index){
         switch (index){
             case 0:
