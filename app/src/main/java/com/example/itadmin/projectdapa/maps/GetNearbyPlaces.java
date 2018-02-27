@@ -1,12 +1,18 @@
 package com.example.itadmin.projectdapa.maps;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.ScaleDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
 import com.example.itadmin.projectdapa.MainActivity;
+import com.example.itadmin.projectdapa.R;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
@@ -23,6 +29,7 @@ public class GetNearbyPlaces extends AsyncTask<Object, String, String> {
     private String googlePlacesData2;
     private GoogleMap mMap;
     private Bundle bundle = new Bundle();
+    private MapsFragment mapsFragment = new MapsFragment();
     Context context = MainActivity.getContextOfApplication();
 
     @Override
@@ -71,8 +78,9 @@ public class GetNearbyPlaces extends AsyncTask<Object, String, String> {
             LatLng latLng = new LatLng( lat, lng);
             markerOptions.position(latLng);
             markerOptions.title(placeName + " : "+ vicinity);
-            markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE));
+            //markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE));
 
+            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.hospitalmarker));
             mMap.addMarker(markerOptions);
 
         }
