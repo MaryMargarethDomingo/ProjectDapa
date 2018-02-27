@@ -42,7 +42,7 @@ import android.widget.RelativeLayout;
                 return;
             }
 
-            float translationY = getHeight() * 0.60f;
+            float translationY = getHeight() * 2f;
             setTranslationY(translationY);
         }
 

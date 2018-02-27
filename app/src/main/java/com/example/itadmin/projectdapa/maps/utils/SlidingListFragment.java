@@ -9,9 +9,18 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 import com.example.itadmin.projectdapa.R;
+import com.example.itadmin.projectdapa.maps.MapsFragment;
 
 
-public class SlidingListFragment extends Fragment {
+public class  SlidingListFragment extends Fragment {
+
+    TextView placeNameText;
+    TextView vicinityText;
+    String placeName = MapsFragment.placeName;
+    String vicinity = MapsFragment.vicinity;
+
+    public SlidingListFragment(){
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -22,45 +31,14 @@ public class SlidingListFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        //setListAdapter(new MyListAdapter());
+
+        placeNameText = (TextView) getView().findViewById(R.id.placeName);
+        vicinityText = (TextView)  getView().findViewById(R.id.vicinity);
+
+        placeNameText.setText(placeName);
+        vicinityText.setText(vicinity);
+
+
     }
 
-    /*private class MyListAdapter extends BaseAdapter {
-
-        @Override
-        public int getCount() {
-            return 30;
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return null;
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return 0;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            TextView result = (TextView) convertView;
-            if (result == null) {
-                result = (TextView) LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.maps_sliding_content, parent, false);
-            }
-            if(position==0){
-                result.setText("Call");
-            }else if(position==1){
-                result.setText("Get Directions");
-            }else if(position==2){
-                result.setText("More Info");
-            }else{
-                result.setText("");
-            }
-
-
-            return result;
-        }
-    }*/
 }

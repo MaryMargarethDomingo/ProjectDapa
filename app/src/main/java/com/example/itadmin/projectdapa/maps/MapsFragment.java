@@ -102,7 +102,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
         bundle = this.getArguments();
 
-        btnGo = getView().findViewById(R.id.btnGo);
+        /*btnGo = getView().findViewById(R.id.btnGo);
         btnGo.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -146,7 +146,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                 listViewFragment.setArguments(bundle);
                 getFragmentManager().beginTransaction().replace(R.id.content_id, listViewFragment).addToBackStack(null).commit();
             }
-        });
+        });*/
     }
 
     @Override
@@ -166,6 +166,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         }
 
         mMap.setOnMarkerClickListener(this);
+        mMap.getUiSettings().setMapToolbarEnabled(false);
     }
 
     protected synchronized void buildGoogleApiClient(){
@@ -430,6 +431,11 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         endMarkerLat = marker.getPosition().latitude;
         endMarkerLng = marker.getPosition().longitude;
 
+        String[] titleArr = marker.getTitle().split(" : ");
+
+        placeName = titleArr[0];
+        vicinity = titleArr[1];
+
         toggleList();
 
         return false;
@@ -439,15 +445,20 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
     private static final String LIST_FRAGMENT_TAG = "list_fragment";
 
+    public static String placeName;
+    public static String vicinity;
+
     private void toggleList() {
+
+        SlidingListFragment slidingListFragment = new SlidingListFragment();
 
         getFragmentManager().beginTransaction()
                 .setCustomAnimations(R.animator.slide_up,
                         R.animator.slide_down,
                         R.animator.slide_up,
                         R.animator.slide_down)
-                .add(R.id.map, SlidingListFragment
-                                .instantiate(getContext(), SlidingListFragment.class.getName())
+                .add(R.id.map, slidingListFragment
+                                .instantiate(getContext(), slidingListFragment.getClass().getName())
                 ).addToBackStack(null).commit();
 
         /*Fragment f = getFragmentManager().findFragmentByTag(LIST_FRAGMENT_TAG);
