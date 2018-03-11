@@ -77,21 +77,25 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
     private void createNavItems()
     {
         //CREATE ITEMS
-        AHBottomNavigationItem tab1=new AHBottomNavigationItem("Maps", R.drawable.mapsicon);
-        AHBottomNavigationItem tab2=new AHBottomNavigationItem("Weather",R.drawable.weathericon);
-        AHBottomNavigationItem tab3=new AHBottomNavigationItem("Survival",R.drawable.survivalicon);
+        AHBottomNavigationItem tab1 = new AHBottomNavigationItem("Maps", R.drawable.mapsicon);
+        AHBottomNavigationItem tab2 = new AHBottomNavigationItem("Weather",R.drawable.weathericon);
+        AHBottomNavigationItem tab3 = new AHBottomNavigationItem("News",R.drawable.newsicon);
+        AHBottomNavigationItem tab4 = new AHBottomNavigationItem("Survival",R.drawable.survivalicon);
+        AHBottomNavigationItem tab5 = new AHBottomNavigationItem("Profile",R.drawable.profileicon);
 
         //ADD THEM to bar
         bottomNavigation.addItem(tab1);
         bottomNavigation.addItem(tab2);
         bottomNavigation.addItem(tab3);
+        bottomNavigation.addItem(tab4);
+        bottomNavigation.addItem(tab5);
 
         //set properties
         bottomNavigation.setDefaultBackgroundColor(Color.parseColor("#272727"));
         bottomNavigation.setAccentColor(Color.parseColor("#F63D2B"));
 
         //set current item
-        bottomNavigation.setCurrentItem(0);
+        bottomNavigation.setCurrentItem(2);
     }
 
     @Override
@@ -105,7 +109,13 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
             getSupportFragmentManager().beginTransaction().replace(R.id.content_id, weatherFragment).commit();
             getSupportActionBar().show();
         }else  if (position==2) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_id, mapsFragment).commit();
+            getSupportActionBar().hide();
+        }else  if (position==3) {
             getSupportFragmentManager().beginTransaction().replace(R.id.content_id, survivalFragment).commit();
+            getSupportActionBar().hide();
+        }else  if (position==4) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_id, mapsFragment).commit();
             getSupportActionBar().hide();
         }
         return true;
