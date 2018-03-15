@@ -69,7 +69,7 @@ public class PAGASAFragment extends Fragment {
         final TweetTimelineRecyclerViewAdapter adapter =
                 new TweetTimelineRecyclerViewAdapter.Builder(getContext())
                         .setTimeline(userTimeline)
-                        .setViewStyle(R.style.tw__TweetLightWithActionsStyle)
+                        .setViewStyle(R.style.tw__TweetDarkWithActionsStyle)
                         .setOnActionCallback(actionCallback)
                         .build();
 

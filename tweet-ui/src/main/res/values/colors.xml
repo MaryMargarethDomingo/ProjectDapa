@@ -24,7 +24,8 @@
     <color name="tw__tweet_light_container_bg_color">#ffffff</color>
     <color name="tw__tweet_light_primary_text_color">#292f33</color>
 
-    <color name="tw__tweet_dark_container_bg_color">#d9000000</color>
+    <!--<color name="tw__tweet_dark_container_bg_color">#d9000000</color>-->
+    <color name="tw__tweet_dark_container_bg_color">#313131</color>
     <color name="tw__tweet_dark_primary_text_color">#e1ffffff</color>
 
     <color name="tw__seekbar_thumb_outer_color">#4dffffff</color>
