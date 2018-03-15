@@ -16,12 +16,12 @@
         "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\tw__ic_play_default.png"
     },
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\356401d67a5a524a827f18c174daceaf\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
-    },
-    {
         "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_tw__ic_tweet_verified.png.flat",
         "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\tw__ic_tweet_verified.png"
+    },
+    {
+        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\356401d67a5a524a827f18c174daceaf\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_tw__action_heart_off_default.png.flat",
@@ -352,12 +352,12 @@
         "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\tw__action_heart_off_default.png"
     },
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\356401d67a5a524a827f18c174daceaf\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
-    },
-    {
         "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00008.png.flat",
         "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00008.png"
+    },
+    {
+        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\356401d67a5a524a827f18c174daceaf\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
         "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_custom_big.xml.flat",

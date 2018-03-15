@@ -12,12 +12,12 @@
         "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\356401d67a5a524a827f18c174daceaf\\res\\layout-v16\\notification_template_custom_big.xml"
     },
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_tw__ic_video_pause.png.flat",
-        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\tw__ic_video_pause.png"
-    },
-    {
         "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_notification_bg_normal.9.png.flat",
         "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\356401d67a5a524a827f18c174daceaf\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_tw__ic_video_pause.png.flat",
+        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\tw__ic_video_pause.png"
     },
     {
         "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_tw__ic_tweet_photo_error_dark.png.flat",
@@ -36,12 +36,12 @@
         "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\tw__ic_video_pause_pressed.png"
     },
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00037.png.flat",
-        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00037.png"
-    },
-    {
         "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_tw__ic_logo_default.png.flat",
         "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\tw__ic_logo_default.png"
+    },
+    {
+        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00037.png.flat",
+        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00037.png"
     },
     {
         "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00000.png.flat",
@@ -64,12 +64,12 @@
         "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\356401d67a5a524a827f18c174daceaf\\res\\layout\\notification_template_part_time.xml"
     },
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00044.png.flat",
-        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00044.png"
-    },
-    {
         "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_tw__ic_video_replay.png.flat",
         "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\tw__ic_video_replay.png"
+    },
+    {
+        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_tw__heart_animation_detail_60fps_00044.png.flat",
+        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\tw__heart_animation_detail_60fps_00044.png"
     },
     {
         "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_tw__ic_video_play_pressed.png.flat",
@@ -112,20 +112,20 @@
         "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\356401d67a5a524a827f18c174daceaf\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_tw__ic_retweet_light.png.flat",
-        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\tw__ic_retweet_light.png"
-    },
-    {
         "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_tw__ic_video_pause_pressed.png.flat",
         "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\tw__ic_video_pause_pressed.png"
     },
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_tw__action_heart_off_default.png.flat",
-        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\tw__action_heart_off_default.png"
+        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_tw__ic_retweet_light.png.flat",
+        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\tw__ic_retweet_light.png"
     },
     {
         "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v18_tw__quote_tweet_border.xml.flat",
         "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\bundles\\debug\\res\\drawable-v18\\tw__quote_tweet_border.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_tw__action_heart_off_default.png.flat",
+        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\tw__action_heart_off_default.png"
     },
     {
         "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_tw__ic_vine_badge.png.flat",

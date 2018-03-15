@@ -196,45 +196,6 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-it_values-it.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\bundles\\debug\\res\\values-it\\values-it.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "64",
-                        "endOffsets": "115"
-                    },
-                    "to": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "121",
-                        "endColumns": "64",
-                        "endOffsets": "181"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\bundles\\debug\\res\\values-it\\values-it.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,121,173",
-                        "endColumns": "65,51,49",
-                        "endOffsets": "116,168,218"
-                    },
-                    "to": {
-                        "startLines": "2,4,5",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,186,238",
-                        "endColumns": "65,51,49",
-                        "endOffsets": "116,233,283"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-da_values-da.arsc.flat",
             "map": [
                 {
@@ -269,6 +230,45 @@
                         "startOffsets": "116",
                         "endColumns": "65",
                         "endOffsets": "177"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-it_values-it.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\bundles\\debug\\res\\values-it\\values-it.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "64",
+                        "endOffsets": "115"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endColumns": "64",
+                        "endOffsets": "181"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\bundles\\debug\\res\\values-it\\values-it.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,121,173",
+                        "endColumns": "65,51,49",
+                        "endOffsets": "116,168,218"
+                    },
+                    "to": {
+                        "startLines": "2,4,5",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,186,238",
+                        "endColumns": "65,51,49",
+                        "endOffsets": "116,233,283"
                     }
                 }
             ]
@@ -627,45 +627,6 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-sr_values-sr.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\bundles\\debug\\res\\values-sr\\values-sr.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,116,168",
-                        "endColumns": "60,51,49",
-                        "endOffsets": "111,163,213"
-                    },
-                    "to": {
-                        "startLines": "2,4,5",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,187,239",
-                        "endColumns": "60,51,49",
-                        "endOffsets": "111,234,284"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\bundles\\debug\\res\\values-sr\\values-sr.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "70",
-                        "endOffsets": "121"
-                    },
-                    "to": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "116",
-                        "endColumns": "70",
-                        "endOffsets": "182"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-pl_values-pl.arsc.flat",
             "map": [
                 {
@@ -700,6 +661,45 @@
                         "startOffsets": "116",
                         "endColumns": "72",
                         "endOffsets": "184"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-sr_values-sr.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\bundles\\debug\\res\\values-sr\\values-sr.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,116,168",
+                        "endColumns": "60,51,49",
+                        "endOffsets": "111,163,213"
+                    },
+                    "to": {
+                        "startLines": "2,4,5",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,187,239",
+                        "endColumns": "60,51,49",
+                        "endOffsets": "111,234,284"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\bundles\\debug\\res\\values-sr\\values-sr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "70",
+                        "endOffsets": "121"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "116",
+                        "endColumns": "70",
+                        "endOffsets": "182"
                     }
                 }
             ]
@@ -759,45 +759,6 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-hr_values-hr.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\bundles\\debug\\res\\values-hr\\values-hr.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "73",
-                        "endOffsets": "124"
-                    },
-                    "to": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "116",
-                        "endColumns": "73",
-                        "endOffsets": "185"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\bundles\\debug\\res\\values-hr\\values-hr.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,116,168",
-                        "endColumns": "60,51,56",
-                        "endOffsets": "111,163,220"
-                    },
-                    "to": {
-                        "startLines": "2,4,5",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,190,242",
-                        "endColumns": "60,51,56",
-                        "endOffsets": "111,237,294"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-tr_values-tr.arsc.flat",
             "map": [
                 {
@@ -832,6 +793,45 @@
                         "startOffsets": "115",
                         "endColumns": "67",
                         "endOffsets": "178"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-hr_values-hr.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\bundles\\debug\\res\\values-hr\\values-hr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "73",
+                        "endOffsets": "124"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "116",
+                        "endColumns": "73",
+                        "endOffsets": "185"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\bundles\\debug\\res\\values-hr\\values-hr.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,116,168",
+                        "endColumns": "60,51,56",
+                        "endOffsets": "111,163,220"
+                    },
+                    "to": {
+                        "startLines": "2,4,5",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,190,242",
+                        "endColumns": "60,51,56",
+                        "endOffsets": "111,237,294"
                     }
                 }
             ]
