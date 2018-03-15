@@ -1,0 +1,47 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml:18:1-32:12
+INJECTED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml:18:1-32:12
+INJECTED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml:18:1-32:12
+INJECTED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml:18:1-32:12
+INJECTED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml:18:1-32:12
+INJECTED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml:18:1-32:12
+INJECTED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml:18:1-32:12
+	package
+		ADDED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml:19:11-49
+		INJECTED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml:18:1-32:12
+		INJECTED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml:18:1-32:12
+		INJECTED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml:18:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml:21:5-66
+	android:name
+		ADDED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml:21:22-64
+application
+ADDED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml:23:5-30:19
+activity#com.twitter.sdk.android.core.identity.OAuthActivity
+ADDED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml:25:9-28:45
+	android:excludeFromRecents
+		ADDED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml:27:19-52
+	android:exported
+		ADDED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml:28:19-43
+	android:configChanges
+		ADDED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml:26:19-65
+	android:name
+		ADDED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml:25:19-57
+uses-sdk
+INJECTED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\src\main\AndroidManifest.xml

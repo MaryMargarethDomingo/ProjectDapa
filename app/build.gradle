@@ -1,5 +1,22 @@
 apply plugin: 'com.android.application'
 
+buildscript {
+    dependencies {
+        classpath dependency.spoonGradlePlugin
+    }
+}
+
+//Load API Key information in from property file
+Properties props = new Properties()
+try {
+    props.load(file('twitter.properties').newDataInputStream())
+} catch (Exception ex) {
+    throw new GradleException("Missing twitter.properties, check the twitter.properties.sample file.")
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'spoon'
+
 android {
     compileSdkVersion 26
     buildToolsVersion "27.0.1"
@@ -21,7 +38,34 @@ android {
         targetCompatibility 1.8
         sourceCompatibility 1.8
     }
+
+    buildTypes {
+        debug {
+            resValue "string", "com.twitter.sdk.android.CONSUMER_KEY", "\"${props.getProperty("twitterConsumerKey")}\""
+            resValue "string", "com.twitter.sdk.android.CONSUMER_SECRET", "\"${props.getProperty("twitterConsumerSecret")}\""
+            resValue "bool", "com.twitter.sdk.android.TRACE_ENABLED", "true"
+            resValue "bool", "com.twitter.sdk.android.COLLECT_IDENTIFIERS_ENABLED", "true"
+            buildConfigField "String", "MOPUB_AD_UNIT_ID", "\"${props.getProperty("mopubAdUnitId")}\""
+        }
+        release {
+            resValue "string", "com.twitter.sdk.android.CONSUMER_KEY", "\"${props.getProperty("twitterConsumerKey")}\""
+            resValue "string", "com.twitter.sdk.android.CONSUMER_SECRET", "\"${props.getProperty("twitterConsumerSecret")}\""
+            resValue "bool", "com.twitter.sdk.android.TRACE_ENABLED", "false"
+            resValue "bool", "com.twitter.sdk.android.COLLECT_IDENTIFIERS_ENABLED", "true"
+            buildConfigField "String", "MOPUB_AD_UNIT_ID", "\"${props.getProperty("mopubAdUnitId")}\""
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt')
+        }
+    }
+
+    spoon {
+        if (project.hasProperty('spoonClassName')) {
+            className = project.spoonClassName
+        }
+    }
 }
+
+
 
 dependencies {
     implementation 'com.android.support:support-v4:26.1.0'
@@ -29,6 +73,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-maps:11.6.2'
     implementation 'com.google.android.gms:play-services-location:11.6.2'
     compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -50,6 +95,17 @@ dependencies {
     compile 'com.diogobernardino:williamchart:2.2'
     compile 'com.baoyz.swipemenulistview:library:1.3.0'
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
+
+//    twitter
+    implementation project(':twitter')
+    implementation project(':twitter-mopub')
+    implementation dependency.appCompat
+    implementation dependency.design
+    implementation dependency.okHttpInterceptor
+
+    androidTestCompile dependency.spoon
+    androidTestCompile dependency.espresso
+    androidTestCompile dependency.androidTestingSupport
 }
 
 apply plugin: 'com.google.gms.google-services'

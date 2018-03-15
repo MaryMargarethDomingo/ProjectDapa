@@ -4,7 +4,9 @@
     <color name="colorPrimary">#313131</color>
     <!--<color name="colorPrimaryDark">#303F9F</color>-->
     <color name="colorPrimaryDark">#272727</color>
-    <color name="colorAccent">#FF4081</color>
+    <!--<color name="colorAccent">#FF4081</color>-->
+    <color name="colorAccent">#55acee</color>
+
 
     <color name="btn1">#9C9B9B</color>
     <color name="btn2">#9C9B9B</color>
@@ -17,4 +19,8 @@
 
     <color name="colorTintedBackground">#cdcdcd</color>
     <color name="colorBackground">@android:color/transparent</color>
+
+    <color name="twitter_blue">#ff55acee</color>
+    <color name="twitter_dark">#ff292f33</color>
+    <color name="divider_gray">#ffe1e8ed</color>
 </resources>

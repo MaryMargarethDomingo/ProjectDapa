@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">ProjectDAPA</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_login">Sign in</string>
@@ -171,4 +171,22 @@
     <string name="rain">Rain</string>
     <string name="temperature">Temperature</string>
     <string name="action_graphs">Graphs</string>
+
+    <!--NEWS / TWITTER-->
+    <string name="twitter_app_name"
+        tools:ignore="UnusedResources">Twitter Sample</string>
+    <string name="kit_twittercore">Twitter Core</string>
+    <string name="kit_tweetcomposer">Tweet Composer</string>
+    <string name="kit_tweetui">Tweet Ui</string>
+
+    <!-- TweetComposer strings -->
+    <string name="twitter_composer">Twitter Composer</string>
+    <string name="twitter_kit_composer">TwitterKit Composer</string>
+
+    <!-- TweetUi strings -->
+    <string name="search_timeline_title">NDRRMC</string>
+    <string name="user_timeline_title">DOST - PAGASA</string>
+    <string name="user_recycler_view_timeline_title">DOST - PHIVOLCS</string>
+    <string name="collection_timeline_title">IMReady</string>
+    <string name="list_timeline_title">Walang Pasok</string>
 </resources>

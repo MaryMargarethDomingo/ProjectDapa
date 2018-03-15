@@ -1,0 +1,79 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-sk\\values-sk.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\bundles\\debug\\res\\values-sk\\values-sk.xml",
+                    "from": {
+                        "startLines": "2,6,10,14,15,16,17,18,19,20,21,22,23,24,25",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,189,326,459,519,594,658,707,752,805,887,1016,1104,1162,1238",
+                        "endLines": "5,9,13,14,15,16,17,18,19,20,21,22,23,24,25",
+                        "endColumns": "14,14,14,59,74,63,48,44,52,81,128,87,57,75,58",
+                        "endOffsets": "184,321,454,514,589,653,702,747,800,882,1011,1099,1157,1233,1292"
+                    },
+                    "to": {
+                        "startLines": "2,6,10,16,17,18,21,22,24,25,26,27,28,29,30",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,189,326,618,678,753,939,988,1085,1138,1220,1349,1437,1495,1571",
+                        "endLines": "5,9,13,16,17,18,21,22,24,25,26,27,28,29,30",
+                        "endColumns": "14,14,14,59,74,63,48,44,52,81,128,87,57,75,58",
+                        "endOffsets": "184,321,454,673,748,812,983,1028,1133,1215,1344,1432,1490,1566,1625"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\bundles\\debug\\res\\values-sk\\values-sk.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,113,165",
+                        "endColumns": "57,51,51",
+                        "endOffsets": "108,160,212"
+                    },
+                    "to": {
+                        "startLines": "15,20,23",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "560,887,1033",
+                        "endColumns": "57,51,51",
+                        "endOffsets": "613,934,1080"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\356401d67a5a524a827f18c174daceaf\\res\\values-sk\\values-sk.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "14",
+                        "startColumns": "4",
+                        "startOffsets": "459",
+                        "endColumns": "100",
+                        "endOffsets": "555"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\bundles\\debug\\res\\values-sk\\values-sk.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "69",
+                        "endOffsets": "120"
+                    },
+                    "to": {
+                        "startLines": "19",
+                        "startColumns": "4",
+                        "startOffsets": "817",
+                        "endColumns": "69",
+                        "endOffsets": "882"
+                    }
+                }
+            ]
+        }
+    ]
+}
