@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.example.itadmin.projectdapa.maps.MapsFragment;
+import com.example.itadmin.projectdapa.news.tweetui.TwitterFragment;
 import com.example.itadmin.projectdapa.session.LoginActivity;
 import com.example.itadmin.projectdapa.survival.SurvivalBean;
 import com.example.itadmin.projectdapa.survival.SurvivalFragment;
@@ -31,8 +32,8 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
     public WeatherFragment weatherFragment = new WeatherFragment();
     private MapsFragment mapsFragment = new MapsFragment();
     private SurvivalFragment survivalFragment = new SurvivalFragment();
+    private TwitterFragment twitterFragment = new TwitterFragment();
     private int tabPosition;
-    private DrawerLayout mDrawerLayout;
 
 
     @Override
@@ -41,24 +42,6 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         setContentView(R.layout.activity_main);
 
         contextOfApplication = getApplicationContext();
-        mDrawerLayout = findViewById(R.id.drawer_layout);
-
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(
-                new NavigationView.OnNavigationItemSelectedListener() {
-                    @Override
-                    public boolean onNavigationItemSelected(MenuItem menuItem) {
-                        // set item as selected to persist highlight
-                        menuItem.setChecked(true);
-                        // close drawer when item is tapped
-                        mDrawerLayout.closeDrawers();
-
-                        // Add code here to update the UI based on the item selected
-                        // For example, swap UI fragments here
-
-                        return true;
-                    }
-                });
 
         //if not logged in, go to loginActivity
         if (mAuth.getCurrentUser() == null) {
@@ -77,21 +60,25 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
     private void createNavItems()
     {
         //CREATE ITEMS
-        AHBottomNavigationItem tab1=new AHBottomNavigationItem("Maps", R.drawable.mapsicon);
-        AHBottomNavigationItem tab2=new AHBottomNavigationItem("Weather",R.drawable.weathericon);
-        AHBottomNavigationItem tab3=new AHBottomNavigationItem("Survival",R.drawable.survivalicon);
+        AHBottomNavigationItem tab1 = new AHBottomNavigationItem("Maps", R.drawable.mapsicon);
+        AHBottomNavigationItem tab2 = new AHBottomNavigationItem("Weather",R.drawable.weathericon);
+        AHBottomNavigationItem tab3 = new AHBottomNavigationItem("News",R.drawable.newsicon);
+        AHBottomNavigationItem tab4 = new AHBottomNavigationItem("Survival",R.drawable.survivalicon);
+        AHBottomNavigationItem tab5 = new AHBottomNavigationItem("Profile",R.drawable.profileicon);
 
         //ADD THEM to bar
         bottomNavigation.addItem(tab1);
         bottomNavigation.addItem(tab2);
         bottomNavigation.addItem(tab3);
+        bottomNavigation.addItem(tab4);
+        bottomNavigation.addItem(tab5);
 
         //set properties
         bottomNavigation.setDefaultBackgroundColor(Color.parseColor("#272727"));
         bottomNavigation.setAccentColor(Color.parseColor("#F63D2B"));
 
         //set current item
-        bottomNavigation.setCurrentItem(0);
+        bottomNavigation.setCurrentItem(2);
     }
 
     @Override
@@ -105,7 +92,13 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
             getSupportFragmentManager().beginTransaction().replace(R.id.content_id, weatherFragment).commit();
             getSupportActionBar().show();
         }else  if (position==2) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_id, twitterFragment).commit();
+            getSupportActionBar().hide();
+        }else  if (position==3) {
             getSupportFragmentManager().beginTransaction().replace(R.id.content_id, survivalFragment).commit();
+            getSupportActionBar().hide();
+        }else  if (position==4) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_id, mapsFragment).commit();
             getSupportActionBar().hide();
         }
         return true;

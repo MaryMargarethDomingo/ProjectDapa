@@ -1,0 +1,79 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-ms\\values-ms.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\bundles\\debug\\res\\values-ms\\values-ms.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "70",
+                        "endOffsets": "121"
+                    },
+                    "to": {
+                        "startLines": "19",
+                        "startColumns": "4",
+                        "startOffsets": "785",
+                        "endColumns": "70",
+                        "endOffsets": "851"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\bundles\\debug\\res\\values-ms\\values-ms.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,119,171",
+                        "endColumns": "63,51,48",
+                        "endOffsets": "114,166,215"
+                    },
+                    "to": {
+                        "startLines": "15,20,23",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "550,856,993",
+                        "endColumns": "63,51,48",
+                        "endOffsets": "609,903,1037"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\bundles\\debug\\res\\values-ms\\values-ms.xml",
+                    "from": {
+                        "startLines": "2,6,10,14,15,16,17,18,19,20,21,22,23,24,25,26,27",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,187,318,449,503,558,620,663,705,769,834,884,961,1073,1155,1212,1288",
+                        "endLines": "5,9,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27",
+                        "endColumns": "14,14,14,53,54,61,42,41,63,64,49,76,111,81,56,75,55",
+                        "endOffsets": "182,313,444,498,553,615,658,700,764,829,879,956,1068,1150,1207,1283,1339"
+                    },
+                    "to": {
+                        "startLines": "2,6,10,16,17,18,21,22,24,25,26,27,28,29,30,31,32",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,187,318,614,668,723,908,951,1042,1106,1171,1221,1298,1410,1492,1549,1625",
+                        "endLines": "5,9,13,16,17,18,21,22,24,25,26,27,28,29,30,31,32",
+                        "endColumns": "14,14,14,53,54,61,42,41,63,64,49,76,111,81,56,75,55",
+                        "endOffsets": "182,313,444,663,718,780,946,988,1101,1166,1216,1293,1405,1487,1544,1620,1676"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\356401d67a5a524a827f18c174daceaf\\res\\values-ms\\values-ms.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "14",
+                        "startColumns": "4",
+                        "startOffsets": "449",
+                        "endColumns": "100",
+                        "endOffsets": "545"
+                    }
+                }
+            ]
+        }
+    ]
+}

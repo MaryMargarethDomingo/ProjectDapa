@@ -23,7 +23,7 @@ public class SignupActivity extends AppCompatActivity {
     private EditText username, pass;
     private ProgressBar progressBar;
     private FirebaseAuth mAuth;
-    private Button signUpBtn;
+    private Button signUpBtn , backBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,7 @@ public class SignupActivity extends AppCompatActivity {
 
         username = (EditText) findViewById(R.id.username1);
         pass = (EditText) findViewById(R.id.password1);
+        backBtn = (Button) findViewById(R.id.btn_back);
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar2);
 
@@ -71,6 +72,13 @@ public class SignupActivity extends AppCompatActivity {
                                 }
                             }
                         });
+            }
+        });
+
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }
