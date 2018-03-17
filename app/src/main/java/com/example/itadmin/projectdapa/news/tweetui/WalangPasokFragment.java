@@ -44,7 +44,7 @@ public class WalangPasokFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.twitter_fragment_walang_pasok, container, false);
+        final View view = inflater.inflate(R.layout.twitter_timeline_recyclerview, container, false);
         final RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));

@@ -3,30 +3,34 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ProjectDAPA.iml" filepath="$PROJECT_DIR$/ProjectDAPA.iml" />
-      <module fileurl="file://C:\Users\it.admin.IACADEMYLOC\AndroidStudioProjects\ProjectDAPA\ProjectDAPA.iml" filepath="C:\Users\it.admin.IACADEMYLOC\AndroidStudioProjects\ProjectDAPA\ProjectDAPA.iml" />
       <module fileurl="file://C:\Users\HI FREQUENCY\Documents\Programming\Android Studio\THESIS - Project DAPA\ProjectDAPA.iml" filepath="C:\Users\HI FREQUENCY\Documents\Programming\Android Studio\THESIS - Project DAPA\ProjectDAPA.iml" />
       <module fileurl="file://C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\ProjectDAPA.iml" filepath="C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\ProjectDAPA.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/ProjectDAPA-app.iml" filepath="$PROJECT_DIR$/app/ProjectDAPA-app.iml" />
+      <module fileurl="file://C:\Users\it.admin.IACADEMYLOC\AndroidStudioProjects\ProjectDAPA\app\ProjectDAPA-app.iml" filepath="C:\Users\it.admin.IACADEMYLOC\AndroidStudioProjects\ProjectDAPA\app\ProjectDAPA-app.iml" />
       <module fileurl="file://C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\app\ProjectDAPA-app.iml" filepath="C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\app\ProjectDAPA-app.iml" />
       <module fileurl="file://C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\ProjectDAPA-testingTree.iml" filepath="C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\ProjectDAPA-testingTree.iml" />
       <module fileurl="file://C:\Users\iac.student\Downloads\ProjectDAPA-testingTree\THESIS - Project DAPA.iml" filepath="C:\Users\iac.student\Downloads\ProjectDAPA-testingTree\THESIS - Project DAPA.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\it.admin.IACADEMYLOC\AndroidStudioProjects\ProjectDAPA\app\app.iml" filepath="C:\Users\it.admin.IACADEMYLOC\AndroidStudioProjects\ProjectDAPA\app\app.iml" />
-
       <module fileurl="file://C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\THESIS - Project DAPA.iml" filepath="C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\THESIS - Project DAPA.iml" />
       <module fileurl="file://$PROJECT_DIR$/samples/samples.iml" filepath="$PROJECT_DIR$/samples/samples.iml" />
       <module fileurl="file://C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\samples\samples.iml" filepath="C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\samples\samples.iml" />
+      <module fileurl="file://C:\Users\it.admin.IACADEMYLOC\AndroidStudioProjects\ProjectDAPA\samples\samples.iml" filepath="C:\Users\it.admin.IACADEMYLOC\AndroidStudioProjects\ProjectDAPA\samples\samples.iml" />
       <module fileurl="file://$PROJECT_DIR$/samples/app/samples-app.iml" filepath="$PROJECT_DIR$/samples/app/samples-app.iml" />
+      <module fileurl="file://C:\Users\it.admin.IACADEMYLOC\AndroidStudioProjects\ProjectDAPA\samples\app\samples-app.iml" filepath="C:\Users\it.admin.IACADEMYLOC\AndroidStudioProjects\ProjectDAPA\samples\app\samples-app.iml" />
       <module fileurl="file://C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\samples\app\samples-app.iml" filepath="C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\samples\app\samples-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/tweet-composer/tweet-composer.iml" filepath="$PROJECT_DIR$/tweet-composer/tweet-composer.iml" />
       <module fileurl="file://C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\tweet-composer\tweet-composer.iml" filepath="C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\tweet-composer\tweet-composer.iml" />
+      <module fileurl="file://C:\Users\it.admin.IACADEMYLOC\AndroidStudioProjects\ProjectDAPA\tweet-composer\tweet-composer.iml" filepath="C:\Users\it.admin.IACADEMYLOC\AndroidStudioProjects\ProjectDAPA\tweet-composer\tweet-composer.iml" />
       <module fileurl="file://$PROJECT_DIR$/tweet-ui/tweet-ui.iml" filepath="$PROJECT_DIR$/tweet-ui/tweet-ui.iml" />
+      <module fileurl="file://C:\Users\it.admin.IACADEMYLOC\AndroidStudioProjects\ProjectDAPA\tweet-ui\tweet-ui.iml" filepath="C:\Users\it.admin.IACADEMYLOC\AndroidStudioProjects\ProjectDAPA\tweet-ui\tweet-ui.iml" />
       <module fileurl="file://C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\tweet-ui\tweet-ui.iml" filepath="C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\tweet-ui\tweet-ui.iml" />
       <module fileurl="file://$PROJECT_DIR$/twitter/twitter.iml" filepath="$PROJECT_DIR$/twitter/twitter.iml" />
+      <module fileurl="file://C:\Users\it.admin.IACADEMYLOC\AndroidStudioProjects\ProjectDAPA\twitter\twitter.iml" filepath="C:\Users\it.admin.IACADEMYLOC\AndroidStudioProjects\ProjectDAPA\twitter\twitter.iml" />
       <module fileurl="file://C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter\twitter.iml" filepath="C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter\twitter.iml" />
       <module fileurl="file://$PROJECT_DIR$/twitter-core/twitter-core.iml" filepath="$PROJECT_DIR$/twitter-core/twitter-core.iml" />
+      <module fileurl="file://C:\Users\it.admin.IACADEMYLOC\AndroidStudioProjects\ProjectDAPA\twitter-core\twitter-core.iml" filepath="C:\Users\it.admin.IACADEMYLOC\AndroidStudioProjects\ProjectDAPA\twitter-core\twitter-core.iml" />
       <module fileurl="file://C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\twitter-core.iml" filepath="C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-core\twitter-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/twitter-mopub/twitter-mopub.iml" filepath="$PROJECT_DIR$/twitter-mopub/twitter-mopub.iml" />
+      <module fileurl="file://C:\Users\it.admin.IACADEMYLOC\AndroidStudioProjects\ProjectDAPA\twitter-mopub\twitter-mopub.iml" filepath="C:\Users\it.admin.IACADEMYLOC\AndroidStudioProjects\ProjectDAPA\twitter-mopub\twitter-mopub.iml" />
       <module fileurl="file://C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-mopub\twitter-mopub.iml" filepath="C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\twitter-mopub\twitter-mopub.iml" />
     </modules>
   </component>

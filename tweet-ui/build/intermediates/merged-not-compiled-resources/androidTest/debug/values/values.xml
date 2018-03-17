@@ -16,7 +16,7 @@
     <color name="tw__tweet_action_color">#55acee</color>
     <color name="tw__tweet_action_dark_highlight_color">#667580</color>
     <color name="tw__tweet_action_light_highlight_color">#ebeef0</color>
-    <color name="tw__tweet_dark_container_bg_color">#d9000000</color>
+    <color name="tw__tweet_dark_container_bg_color">#313131</color>
     <color name="tw__tweet_dark_primary_text_color">#e1ffffff</color>
     <color name="tw__tweet_light_container_bg_color">#ffffff</color>
     <color name="tw__tweet_light_primary_text_color">#292f33</color>
@@ -317,6 +317,7 @@
         <item name="android:layout_gravity">bottom|left</item>
     </style>
     <style name="tw__TweetDarkStyle">
+        <!--<item name="tw__container_bg_color">@color/tw__tweet_dark_container_bg_color</item>-->
         <item name="tw__container_bg_color">@color/tw__tweet_dark_container_bg_color</item>
         <item name="tw__primary_text_color">@color/tw__tweet_dark_primary_text_color</item>
         <item name="tw__action_color">@color/tw__tweet_action_color</item>

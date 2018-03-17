@@ -189,4 +189,5 @@
     <string name="user_recycler_view_timeline_title">DOST - PHIVOLCS</string>
     <string name="collection_timeline_title">IMReady</string>
     <string name="list_timeline_title">Walang Pasok</string>
+    <string name="timeline_empty">No tweets :(</string>
 </resources>
