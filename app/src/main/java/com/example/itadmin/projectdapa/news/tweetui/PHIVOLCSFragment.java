@@ -17,13 +17,16 @@
 
 package com.example.itadmin.projectdapa.news.tweetui;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.itadmin.projectdapa.R;
 import com.example.itadmin.projectdapa.news.twittercore.TwitterCoreMainActivity;
@@ -32,20 +35,25 @@ import com.twitter.sdk.android.core.Result;
 import com.twitter.sdk.android.core.TwitterAuthException;
 import com.twitter.sdk.android.core.TwitterException;
 import com.twitter.sdk.android.core.models.Tweet;
+import com.twitter.sdk.android.tweetui.TimelineResult;
 import com.twitter.sdk.android.tweetui.TweetTimelineRecyclerViewAdapter;
 import com.twitter.sdk.android.tweetui.UserTimeline;
+
+import java.lang.ref.WeakReference;
 
 public class PHIVOLCSFragment extends Fragment {
 
     public static PHIVOLCSFragment newInstance() {
         return new PHIVOLCSFragment();
     }
+    final WeakReference<Activity> activityRef = new WeakReference<Activity>(getActivity());
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.twitter_timeline_recyclerview, container, false);
         final RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
+        final SwipeRefreshLayout swipeLayout = view.findViewById(R.id.swipe_layout);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
@@ -74,6 +82,43 @@ public class PHIVOLCSFragment extends Fragment {
                         .build();
 
         recyclerView.setAdapter(adapter);
+
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            boolean enableRefresh = false;
+            @Override
+            public void onScrollStateChanged(RecyclerView view, int scrollState) {}
+            @Override
+            public void onScrolled(RecyclerView view, int dx, int dy) {
+                if (recyclerView != null && recyclerView.getChildCount() > 0) {
+                    // check that the first item is visible and that its top matches the parent
+                    enableRefresh = recyclerView.getChildAt(0).getTop() >= 0;
+                } else {
+                    enableRefresh = false;
+                }
+                swipeLayout.setEnabled(enableRefresh);
+            }
+        });
+
+        // specify action to take on swipe refresh
+        swipeLayout.setOnRefreshListener(() -> {
+            swipeLayout.setRefreshing(true);
+            adapter.refresh(new Callback<TimelineResult<Tweet>>() {
+                @Override
+                public void success(Result<TimelineResult<Tweet>> result) {
+                    swipeLayout.setRefreshing(false);
+                }
+
+                @Override
+                public void failure(TwitterException exception) {
+                    swipeLayout.setRefreshing(false);
+                    final Activity activity = activityRef.get();
+                    if (activity != null && !activity.isFinishing()) {
+                        Toast.makeText(activity, exception.getMessage(),
+                                Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        });
 
         return view;
     }
