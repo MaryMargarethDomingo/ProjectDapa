@@ -39,7 +39,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".session.LoginActivity"
+            android:name=".session.controller.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,12 +48,12 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".session.MyFirebaseInstanceIdService">
+        <service android:name=".session.utility.MyFirebaseInstanceIdService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".session.MyFirebaseMessagingService">
+        <service android:name=".session.utility.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
@@ -64,10 +64,10 @@
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".session.SignupActivity"
+            android:name=".session.controller.SignupActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".session.ResetPasswordActivity"
+            android:name=".session.controller.ResetPasswordActivity"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 

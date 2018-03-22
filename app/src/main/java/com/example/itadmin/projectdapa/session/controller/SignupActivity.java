@@ -1,4 +1,4 @@
-package com.example.itadmin.projectdapa.session;
+package com.example.itadmin.projectdapa.session.controller;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;

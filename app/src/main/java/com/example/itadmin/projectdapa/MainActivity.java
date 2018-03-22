@@ -14,7 +14,7 @@ import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.example.itadmin.projectdapa.maps.controller.MapsFragment;
 import com.example.itadmin.projectdapa.news.controller.TwitterFragment;
-import com.example.itadmin.projectdapa.session.LoginActivity;
+import com.example.itadmin.projectdapa.session.controller.LoginActivity;
 import com.example.itadmin.projectdapa.survival.SurvivalFragment;
 import com.example.itadmin.projectdapa.weather.controller.WeatherFragment;
 import com.google.firebase.auth.FirebaseAuth;
