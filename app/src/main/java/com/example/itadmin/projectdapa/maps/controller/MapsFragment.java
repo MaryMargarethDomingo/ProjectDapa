@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -65,8 +66,9 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     private ToggleButton togFire;
     private ToggleButton togVet;
 
-    static double endMarkerLat;
-    static double endMarkerLng;
+    private static double endMarkerLat;
+    private static double endMarkerLng;
+    private BottomSheetDialogFragment bottomSheetDialogFragment = new PopUpMarkerFragment();
 
     public static final int REQUEST_LOCATION_CODE = 99;
 
@@ -425,6 +427,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     };
 
 //-------------------------------------------------- Marker click - METHODS --------------------------------------------------
+    public static String placeName;
+    public static String vicinity;
 
     @Override
     public boolean onMarkerClick(Marker marker) {
@@ -437,46 +441,10 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         placeName = titleArr[0];
         vicinity = titleArr[1];
 
-        toggleList();
+        bottomSheetDialogFragment.show(getActivity().getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
 
         return false;
     }
 
 //-------------------------------------------------- Drawer - CODE --------------------------------------------------
-
-    private static final String LIST_FRAGMENT_TAG = "list_fragment";
-
-    public static String placeName;
-    public static String vicinity;
-
-    private void toggleList() {
-
-        SlidingListFragment slidingListFragment = new SlidingListFragment();
-
-        getFragmentManager().beginTransaction()
-                .setCustomAnimations(R.animator.slide_up,
-                        R.animator.slide_down,
-                        R.animator.slide_up,
-                        R.animator.slide_down)
-                .add(R.id.map, slidingListFragment
-                                .instantiate(getContext(), slidingListFragment.getClass().getName())
-                ).addToBackStack(null).commit();
-
-        /*Fragment f = getFragmentManager().findFragmentByTag(LIST_FRAGMENT_TAG);
-
-        if (f != null) {
-            getFragmentManager().popBackStack();
-        } else {
-            getFragmentManager().beginTransaction()
-                .setCustomAnimations(R.animator.slide_up,
-                        R.animator.slide_down,
-                        R.animator.slide_up,
-                        R.animator.slide_down)
-                .add(R.id.map, SlidingListFragment
-                                .instantiate(getContext(), SlidingListFragment.class.getName()),
-                        LIST_FRAGMENT_TAG
-                ).addToBackStack(null).commit();
-        }*/
-    }
-
 }
