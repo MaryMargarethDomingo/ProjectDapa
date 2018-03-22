@@ -4,24 +4,19 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Handler;
-import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
-import com.example.itadmin.projectdapa.maps.MapsFragment;
-import com.example.itadmin.projectdapa.news.tweetui.TwitterFragment;
+import com.example.itadmin.projectdapa.maps.controller.MapsFragment;
+import com.example.itadmin.projectdapa.news.controller.TwitterFragment;
 import com.example.itadmin.projectdapa.session.LoginActivity;
-import com.example.itadmin.projectdapa.survival.SurvivalBean;
 import com.example.itadmin.projectdapa.survival.SurvivalFragment;
-import com.example.itadmin.projectdapa.weather.fragments.WeatherFragment;
+import com.example.itadmin.projectdapa.weather.controller.WeatherFragment;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity implements AHBottomNavigation.OnTabSelectedListener{
