@@ -173,8 +173,7 @@
     <string name="action_graphs">Graphs</string>
 
     <!--NEWS / TWITTER-->
-    <string name="twitter_app_name"
-        tools:ignore="UnusedResources">Twitter Sample</string>
+    <string name="twitter_app_name" tools:ignore="UnusedResources">Twitter Sample</string>
     <string name="kit_twittercore">Twitter Core</string>
     <string name="kit_tweetcomposer">Tweet Composer</string>
     <string name="kit_tweetui">Tweet Ui</string>

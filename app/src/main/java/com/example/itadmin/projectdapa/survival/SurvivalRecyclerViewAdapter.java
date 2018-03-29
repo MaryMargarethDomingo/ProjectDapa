@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.itadmin.projectdapa.R;
-import com.example.itadmin.projectdapa.survival.Youtube.YoutubeFragment;
+import com.example.itadmin.projectdapa.survival.survivalContent.SurvivalContentPagerEarthquake;
 
 import java.util.List;
 
@@ -19,8 +19,9 @@ import java.util.List;
 
 public class SurvivalRecyclerViewAdapter extends RecyclerView.Adapter<SurvivalRecyclerViewAdapter.MyViewHolder> {
     private List<SurvivalBean> survivalDis;
-    private YoutubeFragment youtubeFragment;
+    private SurvivalContentPagerEarthquake survivalContentPager;
     private FragmentManager fragmentManager;
+
 
     SurvivalRecyclerViewAdapter(List<SurvivalBean> survivalDis, FragmentManager fragmentManager){
         this.survivalDis = survivalDis;
@@ -43,13 +44,13 @@ public class SurvivalRecyclerViewAdapter extends RecyclerView.Adapter<SurvivalRe
     public void inflate(int position){
         //Toast.makeText(MainActivity.contextOfApplication, "Index: " + position, Toast.LENGTH_LONG).show();
 
-        if(position == 5){
+        if(position == 0){
             SurvivalCheckBoxFragment survivalCheckBoxFragment = new SurvivalCheckBoxFragment();
             fragmentManager.beginTransaction().replace(R.id.content_id, survivalCheckBoxFragment).addToBackStack(null).commit();
 
         }else{
-            youtubeFragment = new YoutubeFragment(position);
-            fragmentManager.beginTransaction().replace(R.id.content_id, youtubeFragment).addToBackStack(null).commit();
+            survivalContentPager = new SurvivalContentPagerEarthquake();
+            fragmentManager.beginTransaction().replace(R.id.content_id, survivalContentPager).addToBackStack(null).commit();
         }
 
 
