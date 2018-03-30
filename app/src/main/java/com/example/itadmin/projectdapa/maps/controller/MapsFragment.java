@@ -1,9 +1,11 @@
 package com.example.itadmin.projectdapa.maps.controller;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -19,6 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.ImageButton;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -37,6 +40,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
+import com.twitter.sdk.android.core.models.Image;
 
 import java.text.DecimalFormat;
 
@@ -58,8 +62,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
     Bundle bundle = new Bundle();
 
-    Button btnGo;
-    Button btnListView;
+    ImageButton btnGo;
+    ImageButton callButton;
 
     private ToggleButton togHospital;
     private ToggleButton togPolice;
@@ -105,11 +109,9 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
         bundle = this.getArguments();
 
-        /*btnGo = getView().findViewById(R.id.btnGo);
+        /*btnGo = getView().findViewById(R.id.popupDirections);
         btnGo.setOnClickListener(new View.OnClickListener() {
-
             @Override
-
             public void onClick(View view) {
 
                 GetDirectionsData getDirectionsData = new GetDirectionsData();
@@ -133,21 +135,20 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                 }
 
             }
-        });
+        });*/
 
-        btnListView = getView().findViewById(R.id.btnListView);
-        btnListView.setOnClickListener(new View.OnClickListener() {
+        /*callButton = getView().findViewById(R.id.popUpCall);
+        callButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                Bundle bundle = new Bundle();
-                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                callIntent.setData(Uri.parse("tel:9617219"));
 
-                bundle.putString("jsonData", prefs.getString("jsonData", ""));
-
-                SwipeListViewFragment listViewFragment = new SwipeListViewFragment();
-                listViewFragment.setArguments(bundle);
-                getFragmentManager().beginTransaction().replace(R.id.content_id, listViewFragment).addToBackStack(null).commit();
+                if (ActivityCompat.checkSelfPermission(getActivity(), android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    return;
+                }
+                startActivity(callIntent);
             }
         });*/
     }
@@ -347,6 +348,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         return googleDirectionsUrl;
     }
 
+
 //-------------------------------------------------- ToggleButton - Code --------------------------------------------------
 
     CompoundButton.OnCheckedChangeListener changeChecker = new CompoundButton.OnCheckedChangeListener(){
@@ -447,4 +449,5 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     }
 
 //-------------------------------------------------- Drawer - CODE --------------------------------------------------
+
 }
