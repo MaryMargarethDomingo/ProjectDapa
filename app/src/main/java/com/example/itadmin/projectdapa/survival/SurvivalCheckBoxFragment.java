@@ -1,7 +1,9 @@
 package com.example.itadmin.projectdapa.survival;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,7 +22,13 @@ import com.example.itadmin.projectdapa.R;
 import java.util.ArrayList;
 
 public class SurvivalCheckBoxFragment extends Fragment {
-    MyCustomAdapter dataAdapter = null;
+    private MyCustomAdapter dataAdapter = null;
+    private String[] items = {"Non-perishable food", "Drinking Water", "Medicines", "First aid kit",
+            "Clothes", "Flashlights", "Portable radio", "Batteries", "Lighter/matches", "Sanitation items",
+            "Extra Cash", "Whistle", "Important documents and ID's", "Family emergency contact information",
+            "Emergency blanket", "Map of the area", "Multi-tool"};
+    private SharedPreferences preferences;
+    private SharedPreferences.Editor editor;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -37,58 +45,20 @@ public class SurvivalCheckBoxFragment extends Fragment {
     }
 
     private void displayListView(){
+        preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        editor = preferences.edit();
         ArrayList<DisasterBean> disasterList = new ArrayList<DisasterBean>();
 
-        DisasterBean disaster = new DisasterBean("Non-perishable food",false);
-        disasterList.add(disaster);
+        for(int i=0; i<items.length; i++){
+            if(!preferences.contains(items[i])){
+                disasterList.add(new DisasterBean(items[i],false));
 
-        disaster = new DisasterBean("Drinking Water",false);
-        disasterList.add(disaster);
-
-        disaster = new DisasterBean("Medicines",false);
-        disasterList.add(disaster);
-
-        disaster = new DisasterBean("First aid kit",false);
-        disasterList.add(disaster);
-
-        disaster = new DisasterBean("Clothes",false);
-        disasterList.add(disaster);
-
-        disaster = new DisasterBean("Flashlights",false);
-        disasterList.add(disaster);
-
-        disaster = new DisasterBean("Portable radio",false);
-        disasterList.add(disaster);
-
-        disaster = new DisasterBean("Batteries",false);
-        disasterList.add(disaster);
-
-        disaster = new DisasterBean("Lighter/matches",false);
-        disasterList.add(disaster);
-
-        disaster = new DisasterBean("Sanitation items",false);
-        disasterList.add(disaster);
-
-        disaster = new DisasterBean("Extra Cash",false);
-        disasterList.add(disaster);
-
-        disaster = new DisasterBean("Whistle",false);
-        disasterList.add(disaster);
-
-        disaster = new DisasterBean("Important documents and ID's",false);
-        disasterList.add(disaster);
-
-        disaster = new DisasterBean("Family emergency contact information",false);
-        disasterList.add(disaster);
-
-        disaster = new DisasterBean("Emergency blanket",false);
-        disasterList.add(disaster);
-
-        disaster = new DisasterBean("Map of the area",false);
-        disasterList.add(disaster);
-
-        disaster = new DisasterBean("Multi-tool",false);
-        disasterList.add(disaster);
+                editor.putBoolean(items[i], false);
+                editor.apply();
+            }else{
+                disasterList.add(new DisasterBean(items[i], preferences.getBoolean(items[i], false)));
+            }
+        }
 
         dataAdapter = new MyCustomAdapter(getActivity(),R.layout.survival_info, disasterList);
         ListView listView = getView().findViewById(R.id.listView1);
@@ -143,6 +113,14 @@ public class SurvivalCheckBoxFragment extends Fragment {
 
                         Toast.makeText(getContext(), "Clicked on Checkbox: " + cb.getText() ,Toast.LENGTH_LONG).show();
                         disaster.setSelected(cb.isChecked());
+
+                        if(preferences.getBoolean(disaster.getName(), true)) {
+                            editor.putBoolean(disaster.getName(), false);
+                            editor.apply();
+                        }else{
+                            editor.putBoolean(disaster.getName(), true);
+                            editor.apply();
+                        }
                     }
                 });
 
