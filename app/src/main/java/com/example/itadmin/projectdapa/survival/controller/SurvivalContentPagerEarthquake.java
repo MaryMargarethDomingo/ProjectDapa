@@ -15,7 +15,7 @@
  *
  */
 
-package com.example.itadmin.projectdapa.survival.utility;
+package com.example.itadmin.projectdapa.survival.controller;
 
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -78,15 +78,15 @@ public class SurvivalContentPagerEarthquake extends Fragment {
         public Fragment getItem(int position) {
             switch (position) {
                 case PAGE_BEFORE:
-                   webViewEarthquake = new WebViewEarthquakeFragment();
+                   webViewEarthquake = new WebViewEarthquakeFragment(0);
                    return webViewEarthquake;
 
                 case PAGE_DURING:
-                    webViewEarthquake = new WebViewEarthquakeFragment();
+                    webViewEarthquake = new WebViewEarthquakeFragment(1);
                     return webViewEarthquake;
 
                 case PAGE_AFTER:
-                    webViewEarthquake = new WebViewEarthquakeFragment();
+                    webViewEarthquake = new WebViewEarthquakeFragment(2);
                     return webViewEarthquake;
 
                 default:

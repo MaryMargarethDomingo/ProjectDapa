@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.itadmin.projectdapa.R;
 import com.example.itadmin.projectdapa.survival.controller.SurvivalCheckBoxFragment;
+import com.example.itadmin.projectdapa.survival.controller.SurvivalContentPagerEarthquake;
 import com.example.itadmin.projectdapa.survival.model.SurvivalBean;
 
 import java.util.List;

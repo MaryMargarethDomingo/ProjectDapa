@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         bottomNavigation.setAccentColor(Color.parseColor("#F63D2B"));
 
         //set current item
-        bottomNavigation.setCurrentItem(2);
+        bottomNavigation.setCurrentItem(0);
     }
 
     @Override
