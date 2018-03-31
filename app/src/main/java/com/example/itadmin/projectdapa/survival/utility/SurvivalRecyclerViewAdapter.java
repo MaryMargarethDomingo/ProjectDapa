@@ -1,5 +1,6 @@
 package com.example.itadmin.projectdapa.survival.utility;
 
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,7 +11,11 @@ import android.widget.TextView;
 
 import com.example.itadmin.projectdapa.R;
 import com.example.itadmin.projectdapa.survival.controller.SurvivalCheckBoxFragment;
-import com.example.itadmin.projectdapa.survival.controller.SurvivalContentPagerEarthquake;
+import com.example.itadmin.projectdapa.survival.controller.survivalContentPagers.SurvivalContentPagerEarthquake;
+import com.example.itadmin.projectdapa.survival.controller.survivalContentPagers.SurvivalContentPagerFlood;
+import com.example.itadmin.projectdapa.survival.controller.survivalContentPagers.SurvivalContentPagerTsunami;
+import com.example.itadmin.projectdapa.survival.controller.survivalContentPagers.SurvivalContentPagerTyphoon;
+import com.example.itadmin.projectdapa.survival.controller.survivalContentPagers.SurvivalContentPagerVolcano;
 import com.example.itadmin.projectdapa.survival.model.SurvivalBean;
 
 import java.util.List;
@@ -21,7 +26,7 @@ import java.util.List;
 
 public class SurvivalRecyclerViewAdapter extends RecyclerView.Adapter<SurvivalRecyclerViewAdapter.MyViewHolder> {
     private List<SurvivalBean> survivalDis;
-    private SurvivalContentPagerEarthquake survivalContentPager;
+    private Fragment survivalContentPager;
     private FragmentManager fragmentManager;
 
 
@@ -46,15 +51,38 @@ public class SurvivalRecyclerViewAdapter extends RecyclerView.Adapter<SurvivalRe
     public void inflate(int position){
         //Toast.makeText(MainActivity.contextOfApplication, "Index: " + position, Toast.LENGTH_LONG).show();
 
-        if(position == 0){
-            SurvivalCheckBoxFragment survivalCheckBoxFragment = new SurvivalCheckBoxFragment();
-            fragmentManager.beginTransaction().replace(R.id.content_id, survivalCheckBoxFragment).addToBackStack(null).commit();
+        switch(position){
+            case 0:
+                SurvivalCheckBoxFragment survivalCheckBoxFragment = new SurvivalCheckBoxFragment();
+                fragmentManager.beginTransaction().replace(R.id.content_id, survivalCheckBoxFragment).addToBackStack(null).commit();
+                break;
 
-        }else{
-            survivalContentPager = new SurvivalContentPagerEarthquake();
-            fragmentManager.beginTransaction().replace(R.id.content_id, survivalContentPager).addToBackStack(null).commit();
+            case 1:
+                survivalContentPager = new SurvivalContentPagerEarthquake();
+                fragmentManager.beginTransaction().replace(R.id.content_id, survivalContentPager).addToBackStack(null).commit();
+                break;
+
+            case 2:
+                survivalContentPager = new SurvivalContentPagerTyphoon();
+                fragmentManager.beginTransaction().replace(R.id.content_id, survivalContentPager).addToBackStack(null).commit();
+                break;
+
+            case 3:
+                survivalContentPager = new SurvivalContentPagerFlood();
+                fragmentManager.beginTransaction().replace(R.id.content_id, survivalContentPager).addToBackStack(null).commit();
+                break;
+
+            case 4:
+                survivalContentPager = new SurvivalContentPagerTsunami();
+                fragmentManager.beginTransaction().replace(R.id.content_id, survivalContentPager).addToBackStack(null).commit();
+                break;
+
+            case 5:
+                survivalContentPager = new SurvivalContentPagerVolcano();
+                fragmentManager.beginTransaction().replace(R.id.content_id, survivalContentPager).addToBackStack(null).commit();
+                break;
+
         }
-
 
     }
 

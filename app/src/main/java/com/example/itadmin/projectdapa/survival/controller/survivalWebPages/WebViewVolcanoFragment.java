@@ -22,15 +22,15 @@ public class WebViewVolcanoFragment extends Fragment {
     public WebViewVolcanoFragment(int position){
         switch (position){
             case 0:
-                fileName = "earthquake_before.html";
+                fileName = "volcano_before.html";
                 break;
 
             case 1:
-                fileName = "earthquake_during.html";
+                fileName = "volcano_during.html";
                 break;
 
             case 3:
-                fileName = "earthquake_after.html";
+                fileName = "volcano_after.html";
                 break;
         }
     }

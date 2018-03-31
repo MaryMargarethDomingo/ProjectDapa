@@ -22,15 +22,15 @@ public class WebViewFloodFragment extends Fragment {
     public WebViewFloodFragment(int position){
         switch (position){
             case 0:
-                fileName = "earthquake_before.html";
+                fileName = "flood_before.html";
                 break;
 
             case 1:
-                fileName = "earthquake_during.html";
+                fileName = "flood_during.html";
                 break;
 
             case 3:
-                fileName = "earthquake_after.html";
+                fileName = "flood_after.html";
                 break;
         }
     }
