@@ -83,11 +83,11 @@ public class SurvivalContentPagerTsunami extends Fragment {
                    return webViewTsunamiFragment;
 
                 case PAGE_DURING:
-                    webViewTsunamiFragment = new WebViewTsunamiFragment(0);
+                    webViewTsunamiFragment = new WebViewTsunamiFragment(1);
                     return webViewTsunamiFragment;
 
                 case PAGE_AFTER:
-                    webViewTsunamiFragment = new WebViewTsunamiFragment(0);
+                    webViewTsunamiFragment = new WebViewTsunamiFragment(2);
                     return webViewTsunamiFragment;
 
                 default:

@@ -29,7 +29,7 @@ public class WebViewTsunamiFragment extends Fragment {
                 fileName = "tsunami_during.html";
                 break;
 
-            case 3:
+            case 2:
                 fileName = "tsunami_after.html";
                 break;
         }

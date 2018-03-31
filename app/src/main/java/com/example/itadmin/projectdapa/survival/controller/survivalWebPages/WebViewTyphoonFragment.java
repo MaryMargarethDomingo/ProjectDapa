@@ -29,7 +29,7 @@ public class WebViewTyphoonFragment extends Fragment {
                 fileName = "typhoon_during.html";
                 break;
 
-            case 3:
+            case 2:
                 fileName = "typhoon_after.html";
                 break;
         }

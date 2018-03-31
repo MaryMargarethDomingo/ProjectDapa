@@ -29,7 +29,7 @@ public class WebViewFloodFragment extends Fragment {
                 fileName = "flood_during.html";
                 break;
 
-            case 3:
+            case 2:
                 fileName = "flood_after.html";
                 break;
         }
@@ -46,6 +46,5 @@ public class WebViewFloodFragment extends Fragment {
 
         webView = getView().findViewById(R.id.webview1);
         webView.loadUrl("file:///android_asset/" + fileName);
-
     }
 }

@@ -83,11 +83,11 @@ public class SurvivalContentPagerFlood extends Fragment {
                    return webViewFloodFragment;
 
                 case PAGE_DURING:
-                    webViewFloodFragment = new WebViewFloodFragment(0);
+                    webViewFloodFragment = new WebViewFloodFragment(1);
                     return webViewFloodFragment;
 
                 case PAGE_AFTER:
-                    webViewFloodFragment = new WebViewFloodFragment(0);
+                    webViewFloodFragment = new WebViewFloodFragment(2);
                     return webViewFloodFragment;
 
                 default:

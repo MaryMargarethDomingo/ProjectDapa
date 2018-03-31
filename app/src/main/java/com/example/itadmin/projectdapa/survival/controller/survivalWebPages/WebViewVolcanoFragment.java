@@ -29,7 +29,7 @@ public class WebViewVolcanoFragment extends Fragment {
                 fileName = "volcano_during.html";
                 break;
 
-            case 3:
+            case 2:
                 fileName = "volcano_after.html";
                 break;
         }
