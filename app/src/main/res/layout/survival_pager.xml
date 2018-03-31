@@ -1,0 +1,32 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.itadmin.projectdapa.survival.controller.survivalContentPagers.SurvivalPagerFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnBefore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Before" />
+
+        <Button
+            android:id="@+id/btnDuring"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="During" />
+
+        <Button
+            android:id="@+id/btnAfter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="After" />
+    </LinearLayout>
+</FrameLayout>

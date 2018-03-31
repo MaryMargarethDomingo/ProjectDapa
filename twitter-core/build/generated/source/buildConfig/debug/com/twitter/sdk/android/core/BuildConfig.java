@@ -14,6 +14,7 @@ public final class BuildConfig {
   public static final String ARTIFACT_ID = "twitter-core";
   public static final String BUILD_NUMBER = "dev";
   public static final long BUILD_TIME = 1522507875980L;
+
   public static final String GROUP = "com.twitter.sdk.android";
   public static final String SCRIBE_ENDPOINT_OVERRIDE = "";
   public static final String SCRIBE_SEQUENCE = "";
