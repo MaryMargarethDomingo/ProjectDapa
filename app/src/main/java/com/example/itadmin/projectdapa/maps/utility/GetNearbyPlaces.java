@@ -2,13 +2,11 @@ package com.example.itadmin.projectdapa.maps.utility;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
 import com.example.itadmin.projectdapa.MainActivity;
 import com.example.itadmin.projectdapa.R;
-import com.example.itadmin.projectdapa.maps.controller.MapsFragment;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
@@ -21,11 +19,8 @@ import java.util.List;
 
 public class GetNearbyPlaces extends AsyncTask<Object, String, String> {
 
-    private String googlePlacesData1;
-    private String googlePlacesData2;
+    private String googlePlacesData;
     private GoogleMap mMap;
-    private Bundle bundle = new Bundle();
-    private MapsFragment mapsFragment = new MapsFragment();
     Context context = MainActivity.getContextOfApplication();
 
     @Override
@@ -38,16 +33,16 @@ public class GetNearbyPlaces extends AsyncTask<Object, String, String> {
 
         DownloadURL downloadURL = new DownloadURL();
         try {
-            googlePlacesData1 = downloadURL.readURL(url1);
+            googlePlacesData = downloadURL.readURL(url1);
 
             PreferenceManager.getDefaultSharedPreferences(context).edit()
-                    .putString("jsonData",googlePlacesData1).apply();
+                    .putString("jsonData", googlePlacesData).apply();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        Log.d("DATAAAA", googlePlacesData1);
-        return googlePlacesData1;
+        Log.d("DATAAAA", googlePlacesData);
+        return googlePlacesData;
 
     }
 

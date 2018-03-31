@@ -52,7 +52,7 @@ public class SurvivalContentPagerEarthquake extends Fragment {
 
         final FragmentManager fm = getActivity().getSupportFragmentManager();
         final FragmentPagerAdapter pagerAdapter = new TimelinePagerAdapter(fm, getResources());
-        final ViewPager viewPager = getView().findViewById(R.id.pager);
+        final ViewPager viewPager = getView().findViewById(R.id.pager1);
         viewPager.setAdapter(pagerAdapter);
 
         final TabLayout tabLayout = getView().findViewById(R.id.tab_layout);
