@@ -17,9 +17,6 @@ import com.example.itadmin.projectdapa.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import java.io.IOException;
-import java.net.URL;
-
 public class EditProfileFragment extends Fragment {
     private TextView email;
     private TextView phone;

@@ -121,6 +121,7 @@
                     android:layout_height="wrap_content"
 
                     android:text="Edit Profile"/>
+
                 <Button
                     android:textColor="#fff"
                     android:background="@drawable/buttonstylered"
