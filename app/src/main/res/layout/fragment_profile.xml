@@ -15,11 +15,12 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:orientation="vertical">
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_marginTop="45dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
+                android:id="@+id/profilePic"
                 android:src="@drawable/profileicon"/>
             <TextView
                 android:id="@+id/username"
@@ -95,13 +96,33 @@
         </LinearLayout>
     </LinearLayout>
 
-    <Button
-        android:textColor="#fff"
-        android:background="@drawable/buttonstyle"
-        android:layout_marginTop="0dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        android:text="Edit Profile"/>
+        <Button
+            android:textColor="#fff"
+            android:background="@drawable/buttonstyleblue"
+            android:id="@+id/editProfile"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="12dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Edit Profile"/>
+        <Button
+            android:textColor="#fff"
+            android:background="@drawable/buttonstylered"
+            android:id="@+id/logOut"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="12dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Log out"/>
+    </LinearLayout>
 </LinearLayout>
