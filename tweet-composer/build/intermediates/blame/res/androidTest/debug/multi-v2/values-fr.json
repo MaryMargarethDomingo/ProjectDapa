@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\projectdapa\\tweet-composer\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-fr\\values-fr.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\projectdapa\\twitter-core\\build\\intermediates\\bundles\\debug\\res\\values-fr\\values-fr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "71",
+                        "endOffsets": "122"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endColumns": "71",
+                        "endOffsets": "188"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\projectdapa\\tweet-composer\\build\\intermediates\\bundles\\debug\\res\\values-fr\\values-fr.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,121,173",
+                        "endColumns": "65,51,48",
+                        "endOffsets": "116,168,217"
+                    },
+                    "to": {
+                        "startLines": "2,4,5",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,193,245",
+                        "endColumns": "65,51,48",
+                        "endOffsets": "116,240,289"
+                    }
+                }
+            ]
+        }
+    ]
+}

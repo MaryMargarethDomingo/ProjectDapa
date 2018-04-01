@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
     private AHBottomNavigation bottomNavigation;
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
     public static Context contextOfApplication;
-    public WeatherFragment weatherFragment = new WeatherFragment();
+    public static WeatherFragment weatherFragment = new WeatherFragment();
     private MapsFragment mapsFragment = new MapsFragment();
     private SurvivalFragment survivalFragment = new SurvivalFragment();
     private TwitterFragment twitterFragment = new TwitterFragment();
@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.action_refresh) {
+        /*if (id == R.id.action_refresh) {
             if (weatherFragment.isNetworkAvailable()) {
                 weatherFragment.getTodayWeather();
                 weatherFragment.getLongTermWeather();
@@ -119,14 +119,14 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
                 Snackbar.make(weatherFragment.appView, getString(R.string.msg_connection_not_available), Snackbar.LENGTH_LONG).show();
             }
             return true;
-        }else if (id == R.id.action_search) {
+        }else */if (id == R.id.action_search) {
             weatherFragment.searchCities();
             return true;
-        }else if(id == R.id.action_logout){
+        }/*else if(id == R.id.action_logout){
             mAuth.signOut();
 
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
-        }
+        }*/
 
         return super.onOptionsItemSelected(item);
     }

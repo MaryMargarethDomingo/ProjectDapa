@@ -1,0 +1,79 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\projectdapa\\twitter\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-zh-rCN\\values-zh-rCN.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\projectdapa\\tweet-composer\\build\\intermediates\\bundles\\debug\\res\\values-zh-rCN\\values-zh-rCN.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,111,163",
+                        "endColumns": "55,51,45",
+                        "endOffsets": "106,158,204"
+                    },
+                    "to": {
+                        "startLines": "15,20,23",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "550,811,944",
+                        "endColumns": "55,51,45",
+                        "endOffsets": "601,858,985"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\356401d67a5a524a827f18c174daceaf\\res\\values-zh-rCN\\values-zh-rCN.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "14",
+                        "startColumns": "4",
+                        "startOffsets": "449",
+                        "endColumns": "100",
+                        "endOffsets": "545"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\projectdapa\\twitter-core\\build\\intermediates\\bundles\\debug\\res\\values-zh-rCN\\values-zh-rCN.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "56",
+                        "endOffsets": "107"
+                    },
+                    "to": {
+                        "startLines": "19",
+                        "startColumns": "4",
+                        "startOffsets": "754",
+                        "endColumns": "56",
+                        "endOffsets": "806"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\projectdapa\\tweet-ui\\build\\intermediates\\bundles\\debug\\res\\values-zh-rCN\\values-zh-rCN.xml",
+                    "from": {
+                        "startLines": "2,6,10,14,15,16,17,18,19,20,21,22,23,24,25,26,27",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,187,318,449,497,546,597,638,678,742,806,848,910,1014,1088,1137,1213",
+                        "endLines": "5,9,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27",
+                        "endColumns": "14,14,14,47,48,50,40,39,63,63,41,61,103,73,48,75,48",
+                        "endOffsets": "182,313,444,492,541,592,633,673,737,801,843,905,1009,1083,1132,1208,1257"
+                    },
+                    "to": {
+                        "startLines": "2,6,10,16,17,18,21,22,24,25,26,27,28,29,30,31,32",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,187,318,606,654,703,863,904,990,1054,1118,1160,1222,1326,1400,1449,1525",
+                        "endLines": "5,9,13,16,17,18,21,22,24,25,26,27,28,29,30,31,32",
+                        "endColumns": "14,14,14,47,48,50,40,39,63,63,41,61,103,73,48,75,48",
+                        "endOffsets": "182,313,444,649,698,749,899,939,1049,1113,1155,1217,1321,1395,1444,1520,1569"
+                    }
+                }
+            ]
+        }
+    ]
+}
