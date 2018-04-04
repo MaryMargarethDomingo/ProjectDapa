@@ -27,7 +27,7 @@ public class WebViewContentFragment extends Fragment {
     public void onStart() {
         super.onStart();
 
-        webView = getView().findViewById(R.id.webview1);
-        webView.loadUrl("file:///android_asset/" + args);
+       /* webView = getView().findViewById(R.id.webView);
+        webView.loadUrl("file:///android_asset/" + args);*/
     }
 }
