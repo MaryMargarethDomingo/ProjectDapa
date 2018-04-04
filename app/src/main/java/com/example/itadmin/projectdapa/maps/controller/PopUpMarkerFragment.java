@@ -1,24 +1,22 @@
 package com.example.itadmin.projectdapa.maps.controller;
 
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetDialogFragment;
-import android.support.v4.app.ActivityCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.itadmin.projectdapa.R;
-
 
 public class PopUpMarkerFragment extends BottomSheetDialogFragment {
 
     TextView placeNameText;
     TextView vicinityText;
+    TextView distanceText;
 
     ImageButton callButton;
 
@@ -33,9 +31,17 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
 
         placeNameText = view.findViewById(R.id.placeName);
         vicinityText = view.findViewById(R.id.vicinity);
+        distanceText = view.findViewById(R.id.distance);
 
         placeNameText.setText(MapsFragment.placeName);
         vicinityText.setText(MapsFragment.vicinity);
+        MapsFragment.getDistance();
+        distanceText.setText(MapsFragment.strDistance + " KM");
+
+        Log.d("POPUP MARKER DATA: ", MapsFragment.placeName);
+        Log.d("POPUP MARKER DATA: ", MapsFragment.vicinity);
+        Log.d("POPUP MARKER DATA: ", MapsFragment.strDistance);
+
 
         return view;
     }
@@ -45,16 +51,9 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
         super.onStart();
 
         callButton.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
-                Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:9617219"));
-
-                if (ActivityCompat.checkSelfPermission(getActivity(), android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                    return;
-                }
-                startActivity(callIntent);
+                Toast.makeText(getActivity(), "CLICKY CLICKY", Toast.LENGTH_LONG).show();
             }
         });
     }

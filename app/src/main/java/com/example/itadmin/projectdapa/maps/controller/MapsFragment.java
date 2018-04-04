@@ -57,11 +57,6 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
     Bundle bundle = new Bundle();
 
-    private ToggleButton togHospital;
-    private ToggleButton togPolice;
-    private ToggleButton togFire;
-    private ToggleButton togVet;
-
     private static double endMarkerLat;
     private static double endMarkerLng;
     private BottomSheetDialogFragment bottomSheetDialogFragment = new PopUpMarkerFragment();
@@ -279,6 +274,9 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
 //-------------------------------------------------- Places, Directions, Distance - Code --------------------------------------------------
 
+    public static String strDistance;
+    public static String estDuration;
+
     public void showPins(){
         Object dataTransfer[] = new Object[2];
         GetNearbyPlaces getNearbyPlaces = new GetNearbyPlaces();
@@ -315,17 +313,18 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         return googlePlaceUrl;
     }
 
-    public void getDistance(){
+    public static void getDistance(){
         float results[] = new float[10];
         Location.distanceBetween(latitude, longitude, endMarkerLat, endMarkerLng, results);
 
         DecimalFormat distanceFormat = new DecimalFormat("#.##");
-        String strDistance = distanceFormat.format(results[0]/1000);
+        strDistance = distanceFormat.format(results[0]/1000);
+        estDuration = GetDirectionsData.duration;
 
-        Toast.makeText(getActivity(), "Distance: " + strDistance + "KM" +
+        /*Toast.makeText(this, "Distance: " + strDistance + "KM" +
                 "\n" + "Estimated duration: " + GetDirectionsData.duration , Toast.LENGTH_LONG).show();
 
-        //return results;
+        //return results;*/
     }
 
     public static String getDirectionsUrl(){
@@ -342,6 +341,11 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
 
 //-------------------------------------------------- ToggleButton - Code --------------------------------------------------
+
+    private ToggleButton togHospital;
+    private ToggleButton togPolice;
+    private ToggleButton togFire;
+    private ToggleButton togVet;
 
     CompoundButton.OnCheckedChangeListener changeChecker = new CompoundButton.OnCheckedChangeListener(){
 
@@ -439,5 +443,9 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
         return false;
     }
+
+//-------------------------------------------------- test buttons - METHODS --------------------------------------------------
+
+
 
 }

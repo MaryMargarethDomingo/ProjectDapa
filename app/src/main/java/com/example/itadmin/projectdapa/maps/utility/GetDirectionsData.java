@@ -69,7 +69,7 @@ public class GetDirectionsData extends AsyncTask<Object, String, String> {
         duration = durationMap.get("duration");
         displayDirections(directionsList);
 
-        Log.d("DURATION: ", duration);
+        Log.d("DATA DURATION: ", duration);
 
     }
 
