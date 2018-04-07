@@ -25,8 +25,12 @@ public class ProfileFragment extends Fragment {
     private TextView phone;
     private TextView username;
     private ImageView image;
-    private Button editProfile;
+    private TextView editProfile;
     private Button logOut;
+    private Button settings;
+
+    private Button savedPlaces;
+    private Button savedContacts;
 
     @Override
     public void onStart(){
@@ -34,13 +38,17 @@ public class ProfileFragment extends Fragment {
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        username = (TextView) getView().findViewById(R.id.username);
-        email = (TextView) getView().findViewById(R.id.email);
-        phone = (TextView) getView().findViewById(R.id.phone);
+        username = getView().findViewById(R.id.username);
+        email = getView().findViewById(R.id.email);
+        phone = getView().findViewById(R.id.number);
         image = getView().findViewById(R.id.profilePic);
         editProfile = getView().findViewById(R.id.editProfile);
-        logOut = getView().findViewById(R.id.logOut);
 
+        savedPlaces = getView().findViewById(R.id.btnSavedPlaces);
+        savedContacts = getView().findViewById(R.id.btnSavedContacts);
+
+        settings = getView().findViewById(R.id.btnSettings);
+        logOut = getView().findViewById(R.id.btnLogout);
 
         username.setText(user.getDisplayName());
         email.setText(user.getEmail());
@@ -62,11 +70,19 @@ public class ProfileFragment extends Fragment {
 
         }
 
+        savedPlaces.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment savedPlacesFragment = new SavedPlacesFragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.content_id, savedPlacesFragment).addToBackStack(null).commit();
+
+            }
+        });
+
         editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Fragment editProfileFragment = new EditProfileFragment();
-
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.content_id, editProfileFragment).addToBackStack(null).commit();
             }
         });
