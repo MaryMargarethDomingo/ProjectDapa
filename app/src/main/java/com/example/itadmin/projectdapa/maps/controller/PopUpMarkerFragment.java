@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import com.example.itadmin.projectdapa.R;
 
+import java.util.Map;
+
 public class PopUpMarkerFragment extends BottomSheetDialogFragment {
 
     TextView placeNameText;
@@ -19,6 +21,8 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
     TextView distanceText;
 
     ImageButton callButton;
+    ImageButton directionButton;
+    ImageButton saveOfflineButton;
 
     public PopUpMarkerFragment(){
     }
@@ -28,6 +32,8 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
         View view = inflater.inflate(R.layout.maps_popup_marker_layout, container, false);
 
         callButton = view.findViewById(R.id.popUpCall);
+        directionButton = view.findViewById(R.id.popupDirections);
+        saveOfflineButton = view.findViewById(R.id.popupSave);
 
         placeNameText = view.findViewById(R.id.placeName);
         vicinityText = view.findViewById(R.id.vicinity);
@@ -53,8 +59,23 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
         callButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), "CLICKY CLICKY", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), "CLICKY CLICKY CALL", Toast.LENGTH_LONG).show();
             }
         });
+
+        directionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MapsFragment.showDirections();
+            }
+        });
+
+        saveOfflineButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(), "CLICKY CLICKY SAVE", Toast.LENGTH_LONG).show();
+            }
+        });
+
     }
 }

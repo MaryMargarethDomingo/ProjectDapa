@@ -46,7 +46,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         LocationListener,
         GoogleMap.OnMarkerClickListener{
 
-    private GoogleMap mMap;
+    private static GoogleMap mMap;
     GoogleApiClient client;
     LocationRequest locationRequest;
     Location lastLocation;
@@ -278,7 +278,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     public static String strDistance;
     public static String estDuration;
 
-    public void showPins(){
+    public static void showPins(){
         Object dataTransfer[] = new Object[2];
         GetNearbyPlaces getNearbyPlaces = new GetNearbyPlaces();
 
@@ -290,6 +290,23 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         getNearbyPlaces.execute(dataTransfer);
         //Toast.makeText(getActivity(), "Showing nearby " + type, Toast.LENGTH_SHORT).show();
 
+    }
+
+    public static void showDirections(){
+        GetDirectionsData getDirectionsData = new GetDirectionsData();
+        Object dataTransferDuration[];
+
+        dataTransferDuration = new Object[2];
+        String durationUrl = getDirectionsUrl();
+        dataTransferDuration[0] = mMap;
+        dataTransferDuration[1] = durationUrl;
+
+        getDirectionsData.execute(dataTransferDuration);
+        getDistance();
+
+        showPins();
+        mMap.clear();
+        
     }
 
    /*GOOGLE PLACES TYPES:
