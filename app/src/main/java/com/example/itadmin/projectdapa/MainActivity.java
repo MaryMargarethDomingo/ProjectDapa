@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
@@ -16,6 +18,7 @@ import com.example.itadmin.projectdapa.maps.controller.MapsFragment;
 import com.example.itadmin.projectdapa.news.controller.TwitterFragment;
 import com.example.itadmin.projectdapa.session.controller.LoginActivity;
 import com.example.itadmin.projectdapa.session.controller.ProfileFragment;
+import com.example.itadmin.projectdapa.session.utility.MovableFloatingActionButton;
 import com.example.itadmin.projectdapa.survival.controller.SurvivalFragment;
 import com.example.itadmin.projectdapa.weather.controller.WeatherFragment;
 import com.google.firebase.auth.FirebaseAuth;
@@ -31,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
     private TwitterFragment twitterFragment = new TwitterFragment();
     private ProfileFragment profileFragment = new ProfileFragment();
     private int tabPosition;
+    private MovableFloatingActionButton fab;
 
 
     @Override
@@ -53,6 +57,14 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         bottomNavigation = findViewById(R.id.myBottomNavigation_ID);
         bottomNavigation.setOnTabSelectedListener(this);
         this.createNavItems();
+
+        fab = findViewById(R.id.floatingActionButton);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "FAB CLICKED!", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
     private void createNavItems()
     {
