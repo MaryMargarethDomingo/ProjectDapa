@@ -49,13 +49,13 @@ public class SurvivalFragment extends Fragment {
 
     private void survList(){
 
-        SurvivalBean _survivalDis = new SurvivalBean("SURVIVAL KIT",R.drawable.survkit);
+        SurvivalBean _survivalDis = new SurvivalBean("SURVIVAL KIT",R.drawable.survival_kit);
         survivalDis.add(_survivalDis);
 
         _survivalDis = new SurvivalBean("Earthquake",R.drawable.earthquake);
         survivalDis.add(_survivalDis);
 
-        _survivalDis = new SurvivalBean("Typhoon",R.drawable.rain);
+        _survivalDis = new SurvivalBean("Typhoon",R.drawable.storm);
         survivalDis.add(_survivalDis);
 
         _survivalDis = new SurvivalBean("Flood",R.drawable.flood);
@@ -64,7 +64,7 @@ public class SurvivalFragment extends Fragment {
         _survivalDis = new SurvivalBean("Tsunami",R.drawable.tsunami);
         survivalDis.add(_survivalDis);
         
-        _survivalDis = new SurvivalBean("Volcanic Eruption",R.drawable.volcanic);
+        _survivalDis = new SurvivalBean("Volcanic Eruption",R.drawable.volcano);
         survivalDis.add(_survivalDis);
 
         recyclerViewAdapter.notifyDataSetChanged();
