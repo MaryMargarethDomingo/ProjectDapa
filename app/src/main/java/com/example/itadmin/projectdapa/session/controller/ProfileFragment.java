@@ -1,6 +1,5 @@
 package com.example.itadmin.projectdapa.session.controller;
 
-
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -74,7 +73,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Fragment savedPlacesFragment = new SavedPlacesFragment();
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.content_id, savedPlacesFragment).addToBackStack(null).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.profile, savedPlacesFragment).addToBackStack(null).commit();
 
             }
         });

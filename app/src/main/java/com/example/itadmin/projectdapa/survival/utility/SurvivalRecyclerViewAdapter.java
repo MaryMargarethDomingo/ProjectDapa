@@ -48,11 +48,11 @@ public class SurvivalRecyclerViewAdapter extends RecyclerView.Adapter<SurvivalRe
 
         if(position == 0){
             SurvivalCheckBoxFragment survivalCheckBoxFragment = new SurvivalCheckBoxFragment();
-            fragmentManager.beginTransaction().replace(R.id.checkListID, survivalCheckBoxFragment).addToBackStack(null).commit();
+            fragmentManager.beginTransaction().replace(R.id.content_id, survivalCheckBoxFragment).addToBackStack(null).commit();
 
         }else{
             SurvivalPagerFragment survivalPagerFragment = new SurvivalPagerFragment(position);
-            fragmentManager.beginTransaction().replace(R.id.webviewID, survivalPagerFragment).addToBackStack(null).commit();
+            fragmentManager.beginTransaction().replace(R.id.content_id, survivalPagerFragment).addToBackStack(null).commit();
         }
 
     }
