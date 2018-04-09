@@ -1,33 +1,15 @@
 package com.example.itadmin.projectdapa.survival.model;
 
 /**
- * Created by Mary Domingo on 16/02/2018.
+ * Created by Mary Domingo on 05/03/2018.
  */
 
 public class SurvivalBean {
-    private String list;
-    private int image;
+    public String mTitle;
+    public int mPicId;
 
-    public SurvivalBean(String list, int image) {
-        this.list = list;
-        this.image = image;
+    public SurvivalBean(String title, int picId){
+        mTitle = title;
+        mPicId = picId;
     }
-
-
-    public String getList() {
-        return list;
-    }
-
-    public void setList(String list) {
-        this.list = list;
-    }
-
-    public int getImage() {
-        return image;
-    }
-
-    public void setImage(int image) {
-        this.image = image;
-    }
-
 }

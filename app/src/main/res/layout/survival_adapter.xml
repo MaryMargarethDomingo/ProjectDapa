@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/carView"
-    android:layout_margin="8dp">
+    android:layout_margin="4dp"
+    android:background="@android:color/black"
+    card_view:cardCornerRadius="2dp">
 
-    <FrameLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/darker_gray">
+        android:padding="1dp">
 
-        <ImageView
-            android:id="@+id/image"
+        <ImageButton
+            android:id="@+id/ivPic"
             android:layout_width="match_parent"
-            android:layout_height="200dp"/>
+            android:layout_height="140dp"
+            android:scaleType="centerCrop"
+            android:clickable="true"
+            />
+
         <TextView
-            android:id="@+id/list"
+            android:id="@+id/tvTitle"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fontFamily="sans-serif-smallcaps"
-            android:gravity="bottom"
-            android:lines="2"
-            android:padding="5dp"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textColor="@android:color/background_light" />
-    </FrameLayout>
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivPic"
+            android:padding="2dp"
+            android:textSize="19dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            tools:text="This is the title" />
 
+    </RelativeLayout>
 </android.support.v7.widget.CardView>
