@@ -1,7 +1,11 @@
 package com.example.itadmin.projectdapa.maps.controller;
 
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetDialogFragment;
+import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,8 +15,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.itadmin.projectdapa.R;
-
-import java.util.Map;
 
 public class PopUpMarkerFragment extends BottomSheetDialogFragment {
 
@@ -59,7 +61,13 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
         callButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), "CLICKY CLICKY CALL", Toast.LENGTH_LONG).show();
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                callIntent.setData(Uri.parse("tel: API number here"));
+
+                if (ActivityCompat.checkSelfPermission(getActivity(), android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    return;
+                }
+                startActivity(callIntent);
             }
         });
 
