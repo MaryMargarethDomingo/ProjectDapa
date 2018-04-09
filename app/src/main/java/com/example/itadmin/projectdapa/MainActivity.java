@@ -83,19 +83,19 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         tabPosition = position;
         //show fragment
         if (position==0) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.content_id, mapsFragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.include2, mapsFragment).commit();
             getSupportActionBar().hide();
         }else  if (position==1) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.content_id, weatherFragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.include2, weatherFragment).commit();
             getSupportActionBar().show();
         }else  if (position==2) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.content_id, twitterFragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.include2, twitterFragment).commit();
             getSupportActionBar().hide();
         }else  if (position==3) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.content_id, survivalFragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.include2, survivalFragment).commit();
             getSupportActionBar().hide();
         }else  if (position==4) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.content_id, profileFragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.include2, profileFragment).commit();
             getSupportActionBar().hide();
         }
         return true;
