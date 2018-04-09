@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/checkListID"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="#ffeeeeee"
     android:gravity="center"
-    android:background="#ffeeeeee">
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="fill_parent"
@@ -13,12 +14,14 @@
         android:text="Survival Kit"
         android:textSize="20sp" />
 
-    <Button android:id="@+id/findSelected"
+    <Button
+        android:id="@+id/findSelected"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Find checked list" />
 
-    <ListView android:id="@+id/listView1"
+    <ListView
+        android:id="@+id/listView1"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" />
 </LinearLayout>

@@ -3,13 +3,11 @@ package com.example.itadmin.projectdapa.survival.controller.survivalContentPager
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
-import android.widget.CompoundButton;
-import android.widget.ToggleButton;
+import android.widget.Button;
 
 import com.example.itadmin.projectdapa.R;
 
@@ -17,9 +15,9 @@ public class SurvivalPagerFragment extends Fragment {
 
     private String fileName = "";
 
-    private ToggleButton togBefore;
-    private ToggleButton togDuring;
-    private ToggleButton togAfter;
+    private Button btnBefore;
+    private Button btnDuring;
+    private Button btnAfter;
 
     private WebView webView;
 
@@ -64,48 +62,35 @@ public class SurvivalPagerFragment extends Fragment {
         super.onStart();
 
         webView = getView().findViewById(R.id.webview1);
+        //webView.loadUrl("file:///android_asset/" + fileName + "before.html");
 
-        togBefore = getView().findViewById(R.id.togBefore);
-        togDuring = getView().findViewById(R.id.togDuring);
-        togAfter = getView().findViewById(R.id.togAfter);
+        btnBefore = getView().findViewById(R.id.btnBefore);
+        btnDuring = getView().findViewById(R.id.btnDuring);
+        btnAfter = getView().findViewById(R.id.btnAfter);
 
-        togBefore.setOnCheckedChangeListener(changeChecker);
-        togDuring.setOnCheckedChangeListener(changeChecker);
-        togAfter.setOnCheckedChangeListener(changeChecker);
+        btnBefore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                webView.loadUrl("file:///android_asset/" + fileName + "before.html");
+            }
+        });
 
-        Log.d("FILENAME: ", fileName);
+        btnDuring.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                webView.loadUrl("file:///android_asset/" + fileName + "during.html");
+            }
+        });
+
+        btnAfter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                webView.loadUrl("file:///android_asset/" + fileName + "after.html");
+            }
+        });
 
     }
 
-    CompoundButton.OnCheckedChangeListener changeChecker = new CompoundButton.OnCheckedChangeListener() {
 
-        @Override
-        public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-
-            if(isChecked){
-                if(compoundButton == togBefore){
-                    togDuring.setChecked(false);
-                    togAfter.setChecked(false);
-
-                    webView.loadUrl("file:///android_asset/" + fileName + "before.html");
-
-                }
-
-                if(compoundButton == togDuring){
-                    togBefore.setChecked(false);
-                    togAfter.setChecked(false);
-
-                    webView.loadUrl("file:///android_asset/" + fileName + "during.html");
-                }
-
-                if(compoundButton == togAfter){
-                    togBefore.setChecked(false);
-                    togDuring.setChecked(false);
-
-                    webView.loadUrl("file:///android_asset/" + fileName + "after.html");
-                }
-            }
-        }
-    };
 
 }

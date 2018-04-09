@@ -1,18 +1,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/webviewID"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     tools:context="com.example.itadmin.projectdapa.survival.controller.survivalWebPages.WebViewContentFragment">
-
-    <!-- TODO: Update blank fragment layout -->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:weightSum="3">
 
-        <ToggleButton
-            android:id="@+id/togBefore"
+        <Button
+            android:id="@+id/btnBefore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -21,29 +22,29 @@
             android:textOn="Before"
             tools:text="Before" />
 
-        <ToggleButton
-            android:id="@+id/togDuring"
+        <Button
+            android:id="@+id/btnDuring"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="ToggleButton"
+            android:text="During"
             android:textOff="During"
             android:textOn="During" />
 
-        <ToggleButton
-            android:id="@+id/togAfter"
+        <Button
+            android:id="@+id/btnAfter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="ToggleButton"
+            android:text="After"
             android:textOff="After"
             android:textOn="After" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:orientation="vertical">
 
