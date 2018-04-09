@@ -83,7 +83,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Fragment editProfileFragment = new EditProfileFragment();
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.content_id, editProfileFragment).addToBackStack(null).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.profile, editProfileFragment).addToBackStack(null).commit();
             }
         });
 
