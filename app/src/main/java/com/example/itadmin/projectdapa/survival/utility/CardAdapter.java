@@ -23,7 +23,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardViewHolder> {
     private Context context;
     private FragmentManager fragmentManager;
 
-    public CardAdapter(Context context, List<SurvivalBean> cardDataList, FragmentManager fragmentManager) {
+    public CardAdapter (Context context, List<SurvivalBean> cardDataList, FragmentManager fragmentManager) {
         this.cardDataList = cardDataList;
         this.context = context;
         this.fragmentManager = fragmentManager;

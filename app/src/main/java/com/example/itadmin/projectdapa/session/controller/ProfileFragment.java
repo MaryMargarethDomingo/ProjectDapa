@@ -73,7 +73,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Fragment savedPlacesFragment = new SavedPlacesFragment();
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.profile, savedPlacesFragment).addToBackStack(null).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.scrollView_account, savedPlacesFragment).addToBackStack(null).commit();
 
             }
         });
@@ -82,7 +82,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Fragment editProfileFragment = new EditProfileFragment();
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.profile, editProfileFragment).addToBackStack(null).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.scrollView_account, editProfileFragment).addToBackStack(null).commit();
             }
         });
 
