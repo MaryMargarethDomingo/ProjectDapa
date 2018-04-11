@@ -1,11 +1,15 @@
 package com.example.itadmin.projectdapa;
 
+import android.*;
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -65,13 +69,17 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:911"));
+                if(hasPhoneCallPermission()){
+                    Intent callIntent = new Intent(Intent.ACTION_CALL);
+                    callIntent.setData(Uri.parse("tel:911"));
 
-                if (ActivityCompat.checkSelfPermission(contextOfApplication, android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                    return;
+                    if (ActivityCompat.checkSelfPermission(contextOfApplication, android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                        return;
+                    }
+                    startActivity(callIntent);
+                }else{
+                    requestPhoneCallPermission();
                 }
-                startActivity(callIntent);
             }
         });
     }
@@ -176,4 +184,66 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
             }
         }, 2000);
     }*/
+
+
+//permissions
+    private static final int LOCATION_REQUEST_CODE = 1;
+    private static final int CALL_PHONE_CODE = 2;
+
+    private boolean hasPhoneCallPermission(){
+        int result = 0;
+
+        String[] permissions = new String[]{android.Manifest.permission.CALL_PHONE};
+
+        for(String permission: permissions){
+            result = checkCallingOrSelfPermission(permission);
+
+            if(result != PackageManager.PERMISSION_GRANTED){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private void requestPhoneCallPermission(){
+        String[] permissions = new String[]{android.Manifest.permission.CALL_PHONE};
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+            requestPermissions(permissions, CALL_PHONE_CODE);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+
+        switch (requestCode){
+            case LOCATION_REQUEST_CODE:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                    /*//run intent
+                    Intent intent = new Intent(LoginActivity.this, WeatherFragment.class);
+                    startActivity(intent);*/
+                }else {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        if (shouldShowRequestPermissionRationale(android.Manifest.permission.ACCESS_FINE_LOCATION)) {
+                            Toast.makeText(this, "Location Access Denied! Current location couldn't be found.", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+                break;
+            case CALL_PHONE_CODE:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                    /*//run intent
+                    Intent intent = new Intent(LoginActivity.this, WeatherFragment.class);
+                    startActivity(intent);*/
+                }else {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        if (shouldShowRequestPermissionRationale(Manifest.permission.CALL_PHONE)) {
+                            Toast.makeText(this, "Phone call permission Denied! Can't call!.", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+                break;
+
+        }
+    }
 }

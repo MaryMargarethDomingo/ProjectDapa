@@ -287,12 +287,24 @@ public class LoginActivity extends AppCompatActivity {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                         if (shouldShowRequestPermissionRationale(android.Manifest.permission.ACCESS_FINE_LOCATION)) {
                             Toast.makeText(this, "Location Access Denied! Current location couldn't be found.", Toast.LENGTH_SHORT).show();
-                        }else if(shouldShowRequestPermissionRationale(Manifest.permission.CALL_PHONE)){
+                        }
+                    }
+                }
+                break;
+            case CALL_PHONE_CODE:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                    /*//run intent
+                    Intent intent = new Intent(LoginActivity.this, WeatherFragment.class);
+                    startActivity(intent);*/
+                }else {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        if (shouldShowRequestPermissionRationale(Manifest.permission.CALL_PHONE)) {
                             Toast.makeText(this, "Phone call permission Denied! Can't call!.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
                 break;
+
         }
     }
 
