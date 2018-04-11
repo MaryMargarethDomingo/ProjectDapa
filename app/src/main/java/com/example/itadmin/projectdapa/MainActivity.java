@@ -68,6 +68,9 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //Set up Weather Notification Service
+        notification(savedInstanceState);
+
         //Create Bottom Navigation
         bottomNavigation = findViewById(R.id.myBottomNavigation_ID);
         bottomNavigation.setOnTabSelectedListener(this);
@@ -99,15 +102,13 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
                         .setNegativeButton(android.R.string.no, null).show();
             }
         });
-
-        notification(savedInstanceState);
     }
 
     private void notification(Bundle savedInstanceState) {
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
 
-        calendar.set(Calendar.HOUR_OF_DAY, 5); //starts at 0 //notif at 6 in the morning
+        calendar.set(Calendar.HOUR_OF_DAY, 6); //starts at 0 //notif at 6 in the morning
         calendar.set(Calendar.MINUTE, 0);
         calendar.set(Calendar.SECOND, 1);
 
