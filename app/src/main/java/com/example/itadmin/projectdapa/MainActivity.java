@@ -3,6 +3,7 @@ package com.example.itadmin.projectdapa;
 import android.*;
 import android.Manifest;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -12,6 +13,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -69,17 +71,26 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(hasPhoneCallPermission()){
-                    Intent callIntent = new Intent(Intent.ACTION_CALL);
-                    callIntent.setData(Uri.parse("tel:911"));
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("Call 911?")
+                        .setMessage("Do you really want to call 911?")
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
-                    if (ActivityCompat.checkSelfPermission(contextOfApplication, android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                        return;
-                    }
-                    startActivity(callIntent);
-                }else{
-                    requestPhoneCallPermission();
-                }
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                if(hasPhoneCallPermission()){
+                                    Intent callIntent = new Intent(Intent.ACTION_CALL);
+                                    callIntent.setData(Uri.parse("tel:911"));
+
+                                    if (ActivityCompat.checkSelfPermission(contextOfApplication, android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                                        return;
+                                    }
+                                    startActivity(callIntent);
+                                }else{
+                                    requestPhoneCallPermission();
+                                }
+                            }})
+                        .setNegativeButton(android.R.string.no, null).show();
             }
         });
     }

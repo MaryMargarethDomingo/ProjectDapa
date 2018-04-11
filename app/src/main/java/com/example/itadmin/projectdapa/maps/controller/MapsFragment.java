@@ -60,7 +60,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
     private static double endMarkerLat;
     private static double endMarkerLng;
-    private BottomSheetDialogFragment bottomSheetDialogFragment = new PopUpMarkerFragment();
+    private static BottomSheetDialogFragment bottomSheetDialogFragment = new PopUpMarkerFragment();
 
     public static final int REQUEST_LOCATION_CODE = 99;
 
@@ -306,6 +306,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
         showPins();
         mMap.clear();
+        bottomSheetDialogFragment.dismiss();
         
     }
 
