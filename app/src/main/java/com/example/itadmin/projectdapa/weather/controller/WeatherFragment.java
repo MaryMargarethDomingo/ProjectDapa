@@ -110,14 +110,6 @@ public class WeatherFragment extends Fragment implements LocationListener {
         view = inflater.inflate(R.layout.weather_scrolling, container, false);
         PreferenceManager.setDefaultValues(getActivity(), R.xml.prefs, false);
 
-        /*SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        getActivity().setTheme(theme = getTheme(prefs.getString("theme", "fresh")));
-        boolean darkTheme = theme == R.style.AppTheme_NoActionBar_Dark ||
-                theme == R.style.AppTheme_NoActionBar_Classic_Dark;
-        boolean blackTheme = theme == R.style.AppTheme_NoActionBar_Black ||
-                theme == R.style.AppTheme_NoActionBar_Classic_Black;
-        appView = view.findViewById(R.id.viewApp);*/
-
         progressDialog = new ProgressDialog(getActivity());
 
         todayTemperature = view.findViewById(R.id.todayTemperature);

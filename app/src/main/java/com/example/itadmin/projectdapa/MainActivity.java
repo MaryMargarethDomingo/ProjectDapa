@@ -2,6 +2,9 @@ package com.example.itadmin.projectdapa;
 
 import android.*;
 import android.Manifest;
+import android.annotation.SuppressLint;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -28,9 +31,12 @@ import com.example.itadmin.projectdapa.news.controller.TwitterFragment;
 import com.example.itadmin.projectdapa.session.controller.LoginActivity;
 import com.example.itadmin.projectdapa.session.controller.ProfileFragment;
 import com.example.itadmin.projectdapa.session.utility.MovableFloatingActionButton;
+import com.example.itadmin.projectdapa.session.utility.NotificationService;
 import com.example.itadmin.projectdapa.survival.controller.SurvivalFragment;
 import com.example.itadmin.projectdapa.weather.controller.WeatherFragment;
 import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity implements AHBottomNavigation.OnTabSelectedListener{
 
@@ -93,7 +99,26 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
                         .setNegativeButton(android.R.string.no, null).show();
             }
         });
+
+        notification(savedInstanceState);
     }
+
+    private void notification(Bundle savedInstanceState) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(System.currentTimeMillis());
+
+        calendar.set(Calendar.HOUR_OF_DAY, 5); //starts at 0 //notif at 6 in the morning
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 1);
+
+        Intent intent = new Intent(getApplicationContext(), NotificationService.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 100, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        if (savedInstanceState == null) {
+            AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+            alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 24 * 60 * 60 * 1000, pendingIntent);
+        }
+    }
+
     private void createNavItems()
     {
         //CREATE ITEMS
@@ -201,6 +226,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
     private static final int LOCATION_REQUEST_CODE = 1;
     private static final int CALL_PHONE_CODE = 2;
 
+    @SuppressLint("WrongConstant")
     private boolean hasPhoneCallPermission(){
         int result = 0;
 

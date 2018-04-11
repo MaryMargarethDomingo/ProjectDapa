@@ -30,12 +30,11 @@ public class ProfileFragment extends Fragment {
 
     private Button savedPlaces;
     private Button savedContacts;
+    public static FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
     @Override
     public void onStart(){
         super.onStart();
-
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
         username = getView().findViewById(R.id.username);
         email = getView().findViewById(R.id.email);
