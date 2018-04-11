@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
             @Override
             public void onClick(View v) {
                 Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:9617219"));
+                callIntent.setData(Uri.parse("tel:911"));
 
                 if (ActivityCompat.checkSelfPermission(contextOfApplication, android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     return;

@@ -6,10 +6,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
 import android.widget.Button;
 
 import com.example.itadmin.projectdapa.R;
+import com.example.itadmin.projectdapa.survival.controller.survivalWebPages.WebViewContentFragment;
 
 public class SurvivalPagerFragment extends Fragment {
 
@@ -19,7 +19,7 @@ public class SurvivalPagerFragment extends Fragment {
     private Button btnDuring;
     private Button btnAfter;
 
-    private WebView webView;
+    private WebViewContentFragment webViewContentFragment;
 
     public SurvivalPagerFragment() {    }
 
@@ -53,16 +53,13 @@ public class SurvivalPagerFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        return inflater.inflate(R.layout.survival_webview_content, container, false);
+        return inflater.inflate(R.layout.survival_pager, container, false);
 
     }
 
     @Override
     public void onStart() {
         super.onStart();
-
-        webView = getView().findViewById(R.id.webview1);
-        //webView.loadUrl("file:///android_asset/" + fileName + "before.html");
 
         btnBefore = getView().findViewById(R.id.btnBefore);
         btnDuring = getView().findViewById(R.id.btnDuring);
@@ -71,21 +68,36 @@ public class SurvivalPagerFragment extends Fragment {
         btnBefore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                webView.loadUrl("file:///android_asset/" + fileName + "before.html");
+                webViewContentFragment = new WebViewContentFragment();
+                Bundle args = new Bundle();
+                args.putString("filename", fileName + "before.html");
+                webViewContentFragment.setArguments(args);
+
+                getFragmentManager().beginTransaction().add(R.id.pagerID, webViewContentFragment).addToBackStack(null).commit();
             }
         });
 
         btnDuring.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                webView.loadUrl("file:///android_asset/" + fileName + "during.html");
+                webViewContentFragment = new WebViewContentFragment();
+                Bundle args = new Bundle();
+                args.putString("filename", fileName + "during.html");
+                webViewContentFragment.setArguments(args);
+
+                getFragmentManager().beginTransaction().add(R.id.pagerID, webViewContentFragment).addToBackStack(null).commit();
             }
         });
 
         btnAfter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                webView.loadUrl("file:///android_asset/" + fileName + "after.html");
+                webViewContentFragment = new WebViewContentFragment();
+                Bundle args = new Bundle();
+                args.putString("filename", fileName + "after.html");
+                webViewContentFragment.setArguments(args);
+
+                getFragmentManager().beginTransaction().add(R.id.pagerID, webViewContentFragment).addToBackStack(null).commit();
             }
         });
 

@@ -17,7 +17,7 @@ public class WebViewContentFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
 
-        args = getArguments().getString("state");
+        args = getArguments().getString("filename");
 
         return inflater.inflate(R.layout.survival_webview_content, container, false);
 
@@ -27,7 +27,7 @@ public class WebViewContentFragment extends Fragment {
     public void onStart() {
         super.onStart();
 
-       /* webView = getView().findViewById(R.id.webView);
-        webView.loadUrl("file:///android_asset/" + args);*/
+       webView = getView().findViewById(R.id.webview);
+        webView.loadUrl("file:///android_asset/" + args);
     }
 }

@@ -1,7 +1,11 @@
 package com.example.itadmin.projectdapa.maps.controller;
 
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetDialogFragment;
+import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +23,8 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
     TextView distanceText;
 
     ImageButton callButton;
+    ImageButton directionButton;
+    ImageButton saveOfflineButton;
 
     public PopUpMarkerFragment(){
     }
@@ -28,6 +34,8 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
         View view = inflater.inflate(R.layout.maps_popup_marker_layout, container, false);
 
         callButton = view.findViewById(R.id.popUpCall);
+        directionButton = view.findViewById(R.id.popupDirections);
+        saveOfflineButton = view.findViewById(R.id.popupSave);
 
         placeNameText = view.findViewById(R.id.placeName);
         vicinityText = view.findViewById(R.id.vicinity);
@@ -53,8 +61,29 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
         callButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), "CLICKY CLICKY", Toast.LENGTH_LONG).show();
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                callIntent.setData(Uri.parse("tel: API number here"));
+
+                if (ActivityCompat.checkSelfPermission(getActivity(), android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    return;
+                }
+                startActivity(callIntent);
             }
         });
+
+        directionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MapsFragment.showDirections();
+            }
+        });
+
+        saveOfflineButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(), "CLICKY CLICKY SAVE", Toast.LENGTH_LONG).show();
+            }
+        });
+
     }
 }
