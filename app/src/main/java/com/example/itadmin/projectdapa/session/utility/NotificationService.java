@@ -1,5 +1,6 @@
 package com.example.itadmin.projectdapa.session.utility;
 
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -10,7 +11,6 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.support.v4.app.NotificationCompat;
-import android.widget.Toast;
 
 import com.example.itadmin.projectdapa.MainActivity;
 import com.example.itadmin.projectdapa.R;
@@ -31,23 +31,26 @@ public class NotificationService extends BroadcastReceiver {
         PendingIntent pendingIntent = PendingIntent.getActivity(context,100, intent1, PendingIntent.FLAG_UPDATE_CURRENT);
 
         //get weather data
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.contextOfApplication);
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        String msg = "Hi " + ProfileFragment.user.getDisplayName().split(" ")[0] + "! Looks like there will be no rain today! Stay Safe!";
 
         if(preferences.getBoolean("willRain", false)){
-            NotificationCompat.Builder builder = new NotificationCompat.Builder(context).
+            Notification.Builder builder = new Notification.Builder(context).
                     setSmallIcon(R.mipmap.ic_launcher).
                     setContentIntent(pendingIntent).
-                    setContentText("Hi " + ProfileFragment.user.getDisplayName().split(" ")[0] + "! Looks like there will be no rain today! Stay Safe!").
+                    setContentText(msg).
                     setContentTitle("Project DAPA").
+                    setStyle(new Notification.BigTextStyle().bigText(msg)).
                     setSound(alarmSound).setAutoCancel(true);
 
             notificationManager.notify(100,builder.build());
         }else{
-            NotificationCompat.Builder builder = new NotificationCompat.Builder(context).
+            Notification.Builder builder = new Notification.Builder(context).
                     setSmallIcon(R.mipmap.ic_launcher).
                     setContentIntent(pendingIntent).
                     setContentText("Hi " + ProfileFragment.user.getDisplayName().split(" ")[0] + "! Look like there will be " + preferences.getString("rainString", "rain") + " today. Stay safe!").
                     setContentTitle("Project DAPA").
+                    setStyle(new Notification.BigTextStyle().bigText(msg)).
                     setSound(alarmSound).setAutoCancel(true);
 
             notificationManager.notify(100,builder.build());

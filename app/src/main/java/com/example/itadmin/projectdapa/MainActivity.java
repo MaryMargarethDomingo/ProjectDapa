@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
 
-        calendar.set(Calendar.HOUR_OF_DAY, 6); //starts at 0 //notif at 6 in the morning
+        calendar.set(Calendar.HOUR_OF_DAY, 6); //starts at 0 //notif at 6 in the morning/
         calendar.set(Calendar.MINUTE, 0);
         calendar.set(Calendar.SECOND, 1);
 
