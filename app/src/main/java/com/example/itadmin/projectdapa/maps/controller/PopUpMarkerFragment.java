@@ -1,9 +1,11 @@
 package com.example.itadmin.projectdapa.maps.controller;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
@@ -14,7 +16,9 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.itadmin.projectdapa.MainActivity;
 import com.example.itadmin.projectdapa.R;
+import com.example.itadmin.projectdapa.session.controller.ProfileFragment;
 
 public class PopUpMarkerFragment extends BottomSheetDialogFragment {
 
@@ -43,13 +47,7 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
 
         placeNameText.setText(MapsFragment.placeName);
         vicinityText.setText(MapsFragment.vicinity);
-        MapsFragment.getDistance();
         distanceText.setText(MapsFragment.strDistance + " KM");
-
-        Log.d("POPUP MARKER DATA: ", MapsFragment.placeName);
-        Log.d("POPUP MARKER DATA: ", MapsFragment.vicinity);
-        Log.d("POPUP MARKER DATA: ", MapsFragment.strDistance);
-
 
         return view;
     }
@@ -81,7 +79,18 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
         saveOfflineButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(), "CLICKY CLICKY SAVE", Toast.LENGTH_LONG).show();
+                SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+
+                if(preferences.getString("hospital1", "").equals(MapsFragment.placeName + ":" + MapsFragment.vicinity + ":" + MapsFragment.strDistance)){
+                    Toast.makeText(getContext(), "Already Saved!", Toast.LENGTH_SHORT).show();
+                }else{
+                    SharedPreferences.Editor editor = preferences.edit();
+
+                    editor.putString("hospital1", MapsFragment.placeName + ":" + MapsFragment.vicinity + ":" + MapsFragment.strDistance);
+                    editor.commit();
+                    
+                    Toast.makeText(getContext(), "Saved!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

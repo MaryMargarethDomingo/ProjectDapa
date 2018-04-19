@@ -13,7 +13,7 @@ import android.widget.RemoteViews;
 public class WidgetProvider extends AppWidgetProvider {
 
     // Retrieve the widget’s layout//
-    RemoteViews views = new RemoteViews(MainActivity.getContextOfApplication().getPackageName(), R.layout.appwidget);
+    //RemoteViews views = new RemoteViews(MainActivity.getContextOfApplication().getPackageName(), R.layout.appwidget);
     private static final String onClickTag = "onClickTag";
 
     @Override

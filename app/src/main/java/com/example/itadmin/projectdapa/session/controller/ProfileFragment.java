@@ -27,6 +27,7 @@ public class ProfileFragment extends Fragment {
     private TextView editProfile;
     private Button logOut;
     private Button settings;
+    public static Fragment savedPlacesFragment = new SavedPlacesFragment();
 
     private Button savedPlaces;
     private Button savedContacts;
@@ -71,7 +72,6 @@ public class ProfileFragment extends Fragment {
         savedPlaces.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment savedPlacesFragment = new SavedPlacesFragment();
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.include2, savedPlacesFragment).addToBackStack(null).commit();
 
             }

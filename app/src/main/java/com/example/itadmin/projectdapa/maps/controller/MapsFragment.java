@@ -100,49 +100,6 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         }
 
         bundle = this.getArguments();
-
-        /*btnGo = getView().findViewById(R.id.popupDirections);
-        btnGo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                GetDirectionsData getDirectionsData = new GetDirectionsData();
-                Object dataTransferDuration[];
-
-                if(endMarkerLng != 0 && endMarkerLat != 0){
-
-                    dataTransferDuration = new Object[2];
-                    String durationUrl = getDirectionsUrl();
-                    dataTransferDuration[0] = mMap;
-                    dataTransferDuration[1] = durationUrl;
-
-                    getDirectionsData.execute(dataTransferDuration);
-                    getDistance();
-
-                    showPins();
-                    mMap.clear();
-
-                }else{
-                    Toast.makeText(getActivity(), "No place selected", Toast.LENGTH_LONG).show();
-                }
-
-            }
-        });*/
-
-        /*callButton = getView().findViewById(R.id.popUpCall);
-        callButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:9617219"));
-
-                if (ActivityCompat.checkSelfPermission(getActivity(), android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                    return;
-                }
-                startActivity(callIntent);
-            }
-        });*/
     }
 
     @Override

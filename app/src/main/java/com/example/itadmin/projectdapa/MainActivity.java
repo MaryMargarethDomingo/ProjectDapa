@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
     private MapsFragment mapsFragment = new MapsFragment();
     private SurvivalFragment survivalFragment = new SurvivalFragment();
     private TwitterFragment twitterFragment = new TwitterFragment();
-    private ProfileFragment profileFragment = new ProfileFragment();
+    public static ProfileFragment profileFragment = new ProfileFragment();
     private int tabPosition;
     private MovableFloatingActionButton fab;
 
