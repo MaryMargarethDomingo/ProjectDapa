@@ -32,15 +32,14 @@ public class NotificationService extends BroadcastReceiver {
 
         //get weather data
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-        String msg = "Hi " + ProfileFragment.user.getDisplayName().split(" ")[0] + "! Looks like there will be no rain today! Stay Safe!";
 
         if(preferences.getBoolean("willRain", false)){
             Notification.Builder builder = new Notification.Builder(context).
                     setSmallIcon(R.mipmap.ic_launcher).
                     setContentIntent(pendingIntent).
-                    setContentText(msg).
+                    setContentText("Hi " + ProfileFragment.user.getDisplayName().split(" ")[0] + "! Looks like there will be no rain today! Stay Safe!").
                     setContentTitle("Project DAPA").
-                    setStyle(new Notification.BigTextStyle().bigText(msg)).
+                    setStyle(new Notification.BigTextStyle().bigText("Hi " + ProfileFragment.user.getDisplayName().split(" ")[0] + "! Looks like there will be no rain today! Stay Safe!")).
                     setSound(alarmSound).setAutoCancel(true);
 
             notificationManager.notify(100,builder.build());
@@ -48,9 +47,9 @@ public class NotificationService extends BroadcastReceiver {
             Notification.Builder builder = new Notification.Builder(context).
                     setSmallIcon(R.mipmap.ic_launcher).
                     setContentIntent(pendingIntent).
-                    setContentText("Hi " + ProfileFragment.user.getDisplayName().split(" ")[0] + "! Look like there will be " + preferences.getString("rainString", "rain") + " today. Stay safe!").
+                    setContentText("Hi " + ProfileFragment.user.getDisplayName().split(" ")[0] + "! Looks like there will be " + preferences.getString("rainString", "rain") + " today. Stay safe!").
                     setContentTitle("Project DAPA").
-                    setStyle(new Notification.BigTextStyle().bigText(msg)).
+                    setStyle(new Notification.BigTextStyle().bigText("Hi " + ProfileFragment.user.getDisplayName().split(" ")[0] + "! Looks like there will be " + preferences.getString("rainString", "rain") + " today. Stay safe!")).
                     setSound(alarmSound).setAutoCancel(true);
 
             notificationManager.notify(100,builder.build());

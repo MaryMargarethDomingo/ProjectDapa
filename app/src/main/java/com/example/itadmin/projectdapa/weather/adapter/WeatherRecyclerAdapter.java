@@ -56,9 +56,9 @@ public class WeatherRecyclerAdapter extends RecyclerView.Adapter<WeatherViewHold
         // Rain
         double rain = Double.parseDouble(weatherItem.getRain());
         String rainString = UnitConvertor.getRainString(rain, sp);
+        double wind;
 
         // Wind
-        double wind;
         try {
             wind = Double.parseDouble(weatherItem.getWind());
         } catch (Exception e) {

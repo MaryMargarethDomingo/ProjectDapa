@@ -138,6 +138,10 @@ public class WeatherFragment extends Fragment implements LocationListener {
         // Set autoupdater
         AlarmReceiver.setRecurringAlarm(getActivity());
 
+        //Set current location as weather location
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        saveLocation(sp.getString("currCity", Constants.DEFAULT_CITY));
+
         return view;
     }
 

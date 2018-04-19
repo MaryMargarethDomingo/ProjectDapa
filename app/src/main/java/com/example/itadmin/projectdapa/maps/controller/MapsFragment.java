@@ -3,6 +3,8 @@ package com.example.itadmin.projectdapa.maps.controller;
 import android.Manifest;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
@@ -39,6 +41,8 @@ import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 
 import java.text.DecimalFormat;
+import java.util.List;
+import java.util.Locale;
 
 public class MapsFragment extends Fragment implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
@@ -171,6 +175,30 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         client.connect();
     }
 
+    public String currentCity(double lat, double lng){
+        String currentCity = "";
+
+        Geocoder geocoder = new Geocoder(getActivity(), Locale.getDefault());
+        List<Address> addressList;
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        SharedPreferences.Editor editor = preferences.edit();
+
+        try{
+            addressList = geocoder.getFromLocation(lat, lng, 1);
+
+            if(addressList.size() > 0){
+                currentCity = addressList.get(0).getLocality();
+
+                editor.putString("currCity", currentCity);
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+        return currentCity;
+    }
+
     @Override
     public void onLocationChanged(Location location) {
 
@@ -187,6 +215,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         }
 
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
+        currentCity(latitude, longitude);
 
         //save lat lng for auto set of location of weather
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
