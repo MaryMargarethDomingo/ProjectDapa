@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.example.itadmin.projectdapa.R;
 
@@ -38,6 +39,8 @@ public class CallFragment extends Fragment {
                     return;
                 }
                 startActivity(callIntent);
+
+                Toast.makeText(getActivity(), "call", Toast.LENGTH_LONG).show();
             }
         });
 

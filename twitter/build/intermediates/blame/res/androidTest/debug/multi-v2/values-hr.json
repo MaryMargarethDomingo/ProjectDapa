@@ -1,0 +1,79 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-hr\\values-hr.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\bundles\\debug\\res\\values-hr\\values-hr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "73",
+                        "endOffsets": "124"
+                    },
+                    "to": {
+                        "startLines": "19",
+                        "startColumns": "4",
+                        "startOffsets": "840",
+                        "endColumns": "73",
+                        "endOffsets": "909"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\bundles\\debug\\res\\values-hr\\values-hr.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,116,168",
+                        "endColumns": "60,51,56",
+                        "endOffsets": "111,163,220"
+                    },
+                    "to": {
+                        "startLines": "15,20,23",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "560,914,1063",
+                        "endColumns": "60,51,56",
+                        "endOffsets": "616,961,1115"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\5cb5c03535868a16c968271f2b094fbb\\res\\values-hr\\values-hr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "14",
+                        "startColumns": "4",
+                        "startOffsets": "459",
+                        "endColumns": "100",
+                        "endOffsets": "555"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\bundles\\debug\\res\\values-hr\\values-hr.xml",
+                    "from": {
+                        "startLines": "2,6,10,14,15,16,17,18,19,20,21,22,23,24,25",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,189,326,459,539,614,678,725,775,835,916,1044,1130,1189,1265",
+                        "endLines": "5,9,13,14,15,16,17,18,19,20,21,22,23,24,25",
+                        "endColumns": "14,14,14,79,74,63,46,49,59,80,127,85,58,75,70",
+                        "endOffsets": "184,321,454,534,609,673,720,770,830,911,1039,1125,1184,1260,1331"
+                    },
+                    "to": {
+                        "startLines": "2,6,10,16,17,18,21,22,24,25,26,27,28,29,30",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,189,326,621,701,776,966,1013,1120,1180,1261,1389,1475,1534,1610",
+                        "endLines": "5,9,13,16,17,18,21,22,24,25,26,27,28,29,30",
+                        "endColumns": "14,14,14,79,74,63,46,49,59,80,127,85,58,75,70",
+                        "endOffsets": "184,321,454,696,771,835,1008,1058,1175,1256,1384,1470,1529,1605,1676"
+                    }
+                }
+            ]
+        }
+    ]
+}
