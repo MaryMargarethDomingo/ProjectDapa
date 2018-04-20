@@ -1,4 +1,6 @@
 package com.example.itadmin.projectdapa.session.controller;
+import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -69,6 +71,13 @@ public class LoginActivity extends AppCompatActivity {
         }else{
             requestLocationPermission();
         }
+
+        if(hasPhoneCallPermission()){
+
+        }else{
+            requestPhoneCallPermission();
+        }
+
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -217,6 +226,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private static final int LOCATION_REQUEST_CODE = 1;
+    private static final int CALL_PHONE_CODE = 2;
 
     private boolean hasLocationPermission(){
         int result = 0;
@@ -233,11 +243,34 @@ public class LoginActivity extends AppCompatActivity {
         return true;
     }
 
+    private boolean hasPhoneCallPermission(){
+        int result = 0;
+
+        String[] permissions = new String[]{Manifest.permission.CALL_PHONE};
+
+        for(String permission: permissions){
+            result = checkCallingOrSelfPermission(permission);
+
+            if(result != PackageManager.PERMISSION_GRANTED){
+                return false;
+            }
+        }
+        return true;
+    }
+
     private void requestLocationPermission(){
         String[] permissions = new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION};
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
             requestPermissions(permissions, LOCATION_REQUEST_CODE);
+        }
+    }
+
+    private void requestPhoneCallPermission(){
+        String[] permissions = new String[]{Manifest.permission.CALL_PHONE};
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+            requestPermissions(permissions, CALL_PHONE_CODE);
         }
     }
 
@@ -258,6 +291,20 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 }
                 break;
+            case CALL_PHONE_CODE:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                    /*//run intent
+                    Intent intent = new Intent(LoginActivity.this, WeatherFragment.class);
+                    startActivity(intent);*/
+                }else {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        if (shouldShowRequestPermissionRationale(Manifest.permission.CALL_PHONE)) {
+                            Toast.makeText(this, "Phone call permission Denied! Can't call!.", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+                break;
+
         }
     }
 

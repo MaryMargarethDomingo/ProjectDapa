@@ -19,6 +19,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
@@ -109,14 +110,6 @@ public class WeatherFragment extends Fragment implements LocationListener {
         view = inflater.inflate(R.layout.weather_scrolling, container, false);
         PreferenceManager.setDefaultValues(getActivity(), R.xml.prefs, false);
 
-        /*SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        getActivity().setTheme(theme = getTheme(prefs.getString("theme", "fresh")));
-        boolean darkTheme = theme == R.style.AppTheme_NoActionBar_Dark ||
-                theme == R.style.AppTheme_NoActionBar_Classic_Dark;
-        boolean blackTheme = theme == R.style.AppTheme_NoActionBar_Black ||
-                theme == R.style.AppTheme_NoActionBar_Classic_Black;
-        appView = view.findViewById(R.id.viewApp);*/
-
         progressDialog = new ProgressDialog(getActivity());
 
         todayTemperature = view.findViewById(R.id.todayTemperature);
@@ -144,6 +137,10 @@ public class WeatherFragment extends Fragment implements LocationListener {
 
         // Set autoupdater
         AlarmReceiver.setRecurringAlarm(getActivity());
+
+        //Set current location as weather location
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        saveLocation(sp.getString("currCity", Constants.DEFAULT_CITY));
 
         return view;
     }
@@ -536,12 +533,6 @@ public class WeatherFragment extends Fragment implements LocationListener {
         RecyclerViewFragment recyclerViewFragment = new RecyclerViewFragment();
         recyclerViewFragment.setArguments(bundle);
         viewPagerAdapter.addFragment(recyclerViewFragment, getString(R.string.later));
-
-        Bundle bundleGraph = new Bundle();
-        GraphFragment graphFragment = new GraphFragment();
-        bundle.putInt("day", 2);
-        graphFragment.setArguments(bundleGraph);
-        viewPagerAdapter.addFragment(graphFragment, "Graph");
 
         int currentPage = viewPager.getCurrentItem();
 

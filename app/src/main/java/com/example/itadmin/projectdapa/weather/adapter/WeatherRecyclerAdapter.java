@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.itadmin.projectdapa.MainActivity;
 import com.example.itadmin.projectdapa.R;
 import com.example.itadmin.projectdapa.weather.controller.WeatherFragment;
 import com.example.itadmin.projectdapa.weather.model.Weather;
@@ -55,9 +56,9 @@ public class WeatherRecyclerAdapter extends RecyclerView.Adapter<WeatherViewHold
         // Rain
         double rain = Double.parseDouble(weatherItem.getRain());
         String rainString = UnitConvertor.getRainString(rain, sp);
+        double wind;
 
         // Wind
-        double wind;
         try {
             wind = Double.parseDouble(weatherItem.getWind());
         } catch (Exception e) {
@@ -65,6 +66,32 @@ public class WeatherRecyclerAdapter extends RecyclerView.Adapter<WeatherViewHold
             wind = 0;
         }
         wind = UnitConvertor.convertWind(wind, sp);
+
+
+        //save to sharedpref if it will rain today (will be displayed on notification)
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.contextOfApplication);
+        SharedPreferences.Editor editor = preferences.edit();
+        String rainDescription = weatherItem.getDescription().substring(0, 1).toUpperCase() +
+                weatherItem.getDescription().substring(1) + rainString;
+
+        if(wind >= 10){
+            String storm = UnitConvertor.getBeaufortName((int) wind);
+
+            editor.putString("rainString", storm);
+            editor.apply();
+
+            editor.putBoolean("willRain", true);
+            editor.apply();
+        }else if(rainDescription.toLowerCase().contains("rain")){
+            editor.putString("rainString", rainDescription);
+            editor.apply();
+
+            editor.putBoolean("willRain", true);
+            editor.apply();
+        }else{
+            editor.putBoolean("willRain", false);
+            editor.apply();
+        }
 
         // Pressure
         double pressure = UnitConvertor.convertPressure((float) Double.parseDouble(weatherItem.getPressure()), sp);

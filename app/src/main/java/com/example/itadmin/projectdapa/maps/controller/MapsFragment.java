@@ -3,6 +3,8 @@ package com.example.itadmin.projectdapa.maps.controller;
 import android.Manifest;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
@@ -17,7 +19,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -30,6 +31,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -39,6 +41,8 @@ import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 
 import java.text.DecimalFormat;
+import java.util.List;
+import java.util.Locale;
 
 public class MapsFragment extends Fragment implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
@@ -46,7 +50,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         LocationListener,
         GoogleMap.OnMarkerClickListener{
 
-    private GoogleMap mMap;
+    private static GoogleMap mMap;
     GoogleApiClient client;
     LocationRequest locationRequest;
     Location lastLocation;
@@ -58,17 +62,9 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
     Bundle bundle = new Bundle();
 
-    Button btnGo;
-    Button btnListView;
-
-    private ToggleButton togHospital;
-    private ToggleButton togPolice;
-    private ToggleButton togFire;
-    private ToggleButton togVet;
-
     private static double endMarkerLat;
     private static double endMarkerLng;
-    private BottomSheetDialogFragment bottomSheetDialogFragment = new PopUpMarkerFragment();
+    private static BottomSheetDialogFragment bottomSheetDialogFragment = new PopUpMarkerFragment();
 
     public static final int REQUEST_LOCATION_CODE = 99;
 
@@ -104,52 +100,6 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         }
 
         bundle = this.getArguments();
-
-        /*btnGo = getView().findViewById(R.id.btnGo);
-        btnGo.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-
-            public void onClick(View view) {
-
-                GetDirectionsData getDirectionsData = new GetDirectionsData();
-                Object dataTransferDuration[];
-
-                if(endMarkerLng != 0 && endMarkerLat != 0){
-
-                    dataTransferDuration = new Object[2];
-                    String durationUrl = getDirectionsUrl();
-                    dataTransferDuration[0] = mMap;
-                    dataTransferDuration[1] = durationUrl;
-
-                    getDirectionsData.execute(dataTransferDuration);
-                    getDistance();
-
-                    showPins();
-                    mMap.clear();
-
-                }else{
-                    Toast.makeText(getActivity(), "No place selected", Toast.LENGTH_LONG).show();
-                }
-
-            }
-        });
-
-        btnListView = getView().findViewById(R.id.btnListView);
-        btnListView.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                Bundle bundle = new Bundle();
-                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
-
-                bundle.putString("jsonData", prefs.getString("jsonData", ""));
-
-                SwipeListViewFragment listViewFragment = new SwipeListViewFragment();
-                listViewFragment.setArguments(bundle);
-                getFragmentManager().beginTransaction().replace(R.id.content_id, listViewFragment).addToBackStack(null).commit();
-            }
-        });*/
     }
 
     @Override
@@ -182,6 +132,30 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         client.connect();
     }
 
+    public String currentCity(double lat, double lng){
+        String currentCity = "";
+
+        Geocoder geocoder = new Geocoder(getActivity(), Locale.getDefault());
+        List<Address> addressList;
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        SharedPreferences.Editor editor = preferences.edit();
+
+        try{
+            addressList = geocoder.getFromLocation(lat, lng, 1);
+
+            if(addressList.size() > 0){
+                currentCity = addressList.get(0).getLocality();
+
+                editor.putString("currCity", currentCity);
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+        return currentCity;
+    }
+
     @Override
     public void onLocationChanged(Location location) {
 
@@ -198,6 +172,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         }
 
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
+        currentCity(latitude, longitude);
 
         //save lat lng for auto set of location of weather
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
@@ -210,8 +185,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
         currentLocationMarker = mMap.addMarker(markerOptions);*/
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-        mMap.animateCamera(CameraUpdateFactory.zoomBy(1));
+        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(latLng, 14);
+        mMap.animateCamera(cameraUpdate);
 
         if(client != null){
             LocationServices.FusedLocationApi.removeLocationUpdates(client, this);
@@ -286,7 +261,10 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
 //-------------------------------------------------- Places, Directions, Distance - Code --------------------------------------------------
 
-    public void showPins(){
+    public static String strDistance;
+    public static String estDuration;
+
+    public static void showPins(){
         Object dataTransfer[] = new Object[2];
         GetNearbyPlaces getNearbyPlaces = new GetNearbyPlaces();
 
@@ -298,6 +276,24 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         getNearbyPlaces.execute(dataTransfer);
         //Toast.makeText(getActivity(), "Showing nearby " + type, Toast.LENGTH_SHORT).show();
 
+    }
+
+    public static void showDirections(){
+        GetDirectionsData getDirectionsData = new GetDirectionsData();
+        Object dataTransferDuration[];
+
+        dataTransferDuration = new Object[2];
+        String durationUrl = getDirectionsUrl();
+        dataTransferDuration[0] = mMap;
+        dataTransferDuration[1] = durationUrl;
+
+        getDirectionsData.execute(dataTransferDuration);
+        getDistance();
+
+        showPins();
+        mMap.clear();
+        bottomSheetDialogFragment.dismiss();
+        
     }
 
    /*GOOGLE PLACES TYPES:
@@ -322,17 +318,18 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         return googlePlaceUrl;
     }
 
-    public void getDistance(){
+    public static void getDistance(){
         float results[] = new float[10];
         Location.distanceBetween(latitude, longitude, endMarkerLat, endMarkerLng, results);
 
         DecimalFormat distanceFormat = new DecimalFormat("#.##");
-        String strDistance = distanceFormat.format(results[0]/1000);
+        strDistance = distanceFormat.format(results[0]/1000);
+        estDuration = GetDirectionsData.duration;
 
-        Toast.makeText(getActivity(), "Distance: " + strDistance + "KM" +
+        /*Toast.makeText(this, "Distance: " + strDistance + "KM" +
                 "\n" + "Estimated duration: " + GetDirectionsData.duration , Toast.LENGTH_LONG).show();
 
-        //return results;
+        //return results;*/
     }
 
     public static String getDirectionsUrl(){
@@ -347,7 +344,13 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         return googleDirectionsUrl;
     }
 
+
 //-------------------------------------------------- ToggleButton - Code --------------------------------------------------
+
+    private ToggleButton togHospital;
+    private ToggleButton togPolice;
+    private ToggleButton togFire;
+    private ToggleButton togVet;
 
     CompoundButton.OnCheckedChangeListener changeChecker = new CompoundButton.OnCheckedChangeListener(){
 
@@ -446,5 +449,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         return false;
     }
 
-//-------------------------------------------------- Drawer - CODE --------------------------------------------------
+//-------------------------------------------------- test buttons - METHODS --------------------------------------------------
+
+
+
 }

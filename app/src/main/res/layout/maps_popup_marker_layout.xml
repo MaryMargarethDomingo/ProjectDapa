@@ -42,7 +42,7 @@
             android:text="Distance"
             android:textSize="12sp" />
 
-        <LinearLayout
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -50,7 +50,7 @@
             android:weightSum="3">
 
             <ImageButton
-                android:id="@+id/getDirections"
+                android:id="@+id/popupDirections"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_weight="1"
@@ -65,13 +65,13 @@
                 android:background="@android:color/holo_green_dark"
                 app:srcCompat="@android:drawable/ic_menu_call" />
 
-            <ImageButton
-                android:id="@+id/moreInfo"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:background="@android:color/holo_blue_dark"
-                app:srcCompat="@drawable/swipe_info" />
+        <ImageButton
+            android:id="@+id/popupSave"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_blue_dark"
+            app:srcCompat="@android:drawable/stat_sys_download" />
 
         </LinearLayout>
     </LinearLayout>
