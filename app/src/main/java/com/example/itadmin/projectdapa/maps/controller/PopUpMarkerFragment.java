@@ -1,14 +1,11 @@
 package com.example.itadmin.projectdapa.maps.controller;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.v4.app.ActivityCompat;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,9 +13,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.itadmin.projectdapa.MainActivity;
 import com.example.itadmin.projectdapa.R;
-import com.example.itadmin.projectdapa.session.controller.ProfileFragment;
+import com.example.itadmin.projectdapa.session.controller.SavedPlacesFragment;
 
 public class PopUpMarkerFragment extends BottomSheetDialogFragment {
 
@@ -79,7 +75,15 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
         saveOfflineButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+
+                SavedPlacesFragment savedPlacesFragment = new SavedPlacesFragment();
+                Bundle args = new Bundle();
+                args.putString("data", "loooooooooooooooooooooooooooool");
+                savedPlacesFragment.setArguments(args);
+
+                Toast.makeText(getContext(), "Saved!", Toast.LENGTH_SHORT).show();
+
+                /*SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
 
                 if(preferences.getString("hospital1", "").equals(MapsFragment.placeName + ":" + MapsFragment.vicinity + ":" + MapsFragment.strDistance)){
                     Toast.makeText(getContext(), "Already Saved!", Toast.LENGTH_SHORT).show();
@@ -90,7 +94,7 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
                     editor.commit();
                     
                     Toast.makeText(getContext(), "Saved!", Toast.LENGTH_SHORT).show();
-                }
+                }*/
             }
         });
 

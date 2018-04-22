@@ -3,21 +3,21 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ProjectDAPA.iml" filepath="$PROJECT_DIR$/ProjectDAPA.iml" />
-      <module fileurl="file://C:\Users\HI FREQUENCY\Documents\Programming\Android Studio\THESIS - Project DAPA\ProjectDAPA.iml" filepath="C:\Users\HI FREQUENCY\Documents\Programming\Android Studio\THESIS - Project DAPA\ProjectDAPA.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/ProjectDAPA-app.iml" filepath="$PROJECT_DIR$/app/ProjectDAPA-app.iml" />
-      <module fileurl="file://C:\Users\HI FREQUENCY\Documents\Programming\Android Studio\THESIS - Project DAPA\app\ProjectDAPA-app.iml" filepath="C:\Users\HI FREQUENCY\Documents\Programming\Android Studio\THESIS - Project DAPA\app\ProjectDAPA-app.iml" />
-      <module fileurl="file://C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\ProjectDAPA-testingTree.iml" filepath="C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\ProjectDAPA-testingTree.iml" />
-      <module fileurl="file://C:\Users\HI FREQUENCY\Documents\Programming\Android Studio\THESIS - Project DAPA\ProjectDapa.iml" filepath="C:\Users\HI FREQUENCY\Documents\Programming\Android Studio\THESIS - Project DAPA\ProjectDapa.iml" />
-      <module fileurl="file://C:\Users\HI FREQUENCY\Documents\Programming\Android Studio\THESIS - Project DAPA\app\ProjectDapa-app.iml" filepath="C:\Users\HI FREQUENCY\Documents\Programming\Android Studio\THESIS - Project DAPA\app\ProjectDapa-app.iml" />
-      <module fileurl="file://C:\Users\iac.student\Downloads\ProjectDAPA-testingTree\THESIS - Project DAPA.iml" filepath="C:\Users\iac.student\Downloads\ProjectDAPA-testingTree\THESIS - Project DAPA.iml" />
-      <module fileurl="file://C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\THESIS - Project DAPA.iml" filepath="C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\THESIS - Project DAPA.iml" />
-      <module fileurl="file://C:\Users\Michael\AndroidStudioProjects\projectdapa\THESIS - Project DAPA.iml" filepath="C:\Users\Michael\AndroidStudioProjects\projectdapa\THESIS - Project DAPA.iml" />
-      <module fileurl="file://C:\Users\Michael\AndroidStudioProjects\ProjectDapa\THESIS - Project DAPA.iml" filepath="C:\Users\Michael\AndroidStudioProjects\ProjectDapa\THESIS - Project DAPA.iml" />
-      <module fileurl="file://C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\app\THESIS - Project DAPA-app.iml" filepath="C:\Users\Michael\AndroidStudioProjects\ProjectDAPA\app\THESIS - Project DAPA-app.iml" />
-      <module fileurl="file://C:\Users\Michael\AndroidStudioProjects\projectdapa\app\THESIS - Project DAPA-app.iml" filepath="C:\Users\Michael\AndroidStudioProjects\projectdapa\app\THESIS - Project DAPA-app.iml" />
-      <module fileurl="file://C:\Users\Michael\AndroidStudioProjects\ProjectDapa\app\THESIS - Project DAPA-app.iml" filepath="C:\Users\Michael\AndroidStudioProjects\ProjectDapa\app\THESIS - Project DAPA-app.iml" />
-      <module fileurl="file://C:\Users\HI FREQUENCY\Documents\Programming\Android Studio\THESIS - Project DAPA\projectdapa.iml" filepath="C:\Users\HI FREQUENCY\Documents\Programming\Android Studio\THESIS - Project DAPA\projectdapa.iml" />
-      <module fileurl="file://C:\Users\HI FREQUENCY\Documents\Programming\Android Studio\THESIS - Project DAPA\app\projectdapa-app.iml" filepath="C:\Users\HI FREQUENCY\Documents\Programming\Android Studio\THESIS - Project DAPA\app\projectdapa-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../../Michael/AndroidStudioProjects/ProjectDAPA/ProjectDAPA-testingTree.iml" filepath="$PROJECT_DIR$/../../../../../Michael/AndroidStudioProjects/ProjectDAPA/ProjectDAPA-testingTree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProjectDapa.iml" filepath="$PROJECT_DIR$/ProjectDapa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/ProjectDapa-app.iml" filepath="$PROJECT_DIR$/app/ProjectDapa-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/THESIS - Project DAPA.iml" filepath="$PROJECT_DIR$/THESIS - Project DAPA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../../Michael/AndroidStudioProjects/projectdapa/THESIS - Project DAPA.iml" filepath="$PROJECT_DIR$/../../../../../Michael/AndroidStudioProjects/projectdapa/THESIS - Project DAPA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../../Michael/AndroidStudioProjects/ProjectDapa/THESIS - Project DAPA.iml" filepath="$PROJECT_DIR$/../../../../../Michael/AndroidStudioProjects/ProjectDapa/THESIS - Project DAPA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../../Michael/AndroidStudioProjects/ProjectDAPA/THESIS - Project DAPA.iml" filepath="$PROJECT_DIR$/../../../../../Michael/AndroidStudioProjects/ProjectDAPA/THESIS - Project DAPA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../../iac.student/Downloads/ProjectDAPA-testingTree/THESIS - Project DAPA.iml" filepath="$PROJECT_DIR$/../../../../../iac.student/Downloads/ProjectDAPA-testingTree/THESIS - Project DAPA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/THESIS - Project DAPA-app.iml" filepath="$PROJECT_DIR$/app/THESIS - Project DAPA-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../../Michael/AndroidStudioProjects/ProjectDapa/app/THESIS - Project DAPA-app.iml" filepath="$PROJECT_DIR$/../../../../../Michael/AndroidStudioProjects/ProjectDapa/app/THESIS - Project DAPA-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../../Michael/AndroidStudioProjects/projectdapa/app/THESIS - Project DAPA-app.iml" filepath="$PROJECT_DIR$/../../../../../Michael/AndroidStudioProjects/projectdapa/app/THESIS - Project DAPA-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../../Michael/AndroidStudioProjects/ProjectDAPA/app/THESIS - Project DAPA-app.iml" filepath="$PROJECT_DIR$/../../../../../Michael/AndroidStudioProjects/ProjectDAPA/app/THESIS - Project DAPA-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/projectdapa.iml" filepath="$PROJECT_DIR$/projectdapa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/projectdapa-app.iml" filepath="$PROJECT_DIR$/app/projectdapa-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/samples/samples.iml" filepath="$PROJECT_DIR$/samples/samples.iml" />
       <module fileurl="file://$PROJECT_DIR$/samples/app/samples-app.iml" filepath="$PROJECT_DIR$/samples/app/samples-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/tweet-composer/tweet-composer.iml" filepath="$PROJECT_DIR$/tweet-composer/tweet-composer.iml" />

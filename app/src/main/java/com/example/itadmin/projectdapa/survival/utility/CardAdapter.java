@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 
 import com.example.itadmin.projectdapa.R;
 import com.example.itadmin.projectdapa.survival.controller.SurvivalCheckBoxFragment;
-import com.example.itadmin.projectdapa.survival.controller.survivalContentPagers.SurvivalPagerFragment;
+import com.example.itadmin.projectdapa.survival.controller.SurvivalPagerFragment;
 import com.example.itadmin.projectdapa.survival.model.SurvivalBean;
 
 import java.util.List;

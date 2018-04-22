@@ -1,1 +1,1 @@
-[{"outputType":{"type":"AAPT_FRIENDLY_MERGED_MANIFESTS"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":1},"path":"AndroidManifest.xml","properties":{"packageId":"com.twitter.sdk.android.tweetui","split":""}}]
+[{"outputType":{"type":"AAPT_FRIENDLY_MERGED_MANIFESTS"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":1,"versionName":"3.2.0-SNAPSHOT","enabled":true,"outputFile":"tweet-ui-debug.aar","fullName":"debug","baseName":"debug"},"path":"AndroidManifest.xml","properties":{"packageId":"com.twitter.sdk.android.tweetui","split":""}}]
