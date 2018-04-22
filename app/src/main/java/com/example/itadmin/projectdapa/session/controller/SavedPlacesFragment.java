@@ -3,6 +3,7 @@ package com.example.itadmin.projectdapa.session.controller;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,9 +23,9 @@ public class SavedPlacesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View view = inflater.inflate(R.layout.fragment_saved_places, container, false);
 
-        args = getArguments().getString("data");
-
         hospital1 = view.findViewById(R.id.hospital1);
+
+        args = getArguments().getString("data");
 
         return view;
     }
@@ -34,6 +35,8 @@ public class SavedPlacesFragment extends Fragment {
         super.onStart();
 
         hospital1.setText(args);
+        Log.d("DATA RECEIVED", args);
+
     }
 
 }

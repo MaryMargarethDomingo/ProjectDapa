@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.v4.app.ActivityCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +26,8 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
     ImageButton callButton;
     ImageButton directionButton;
     ImageButton saveOfflineButton;
+
+    private SavedPlacesFragment savedPlacesFragment;
 
     public PopUpMarkerFragment(){
     }
@@ -76,12 +79,14 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
             @Override
             public void onClick(View view) {
 
-                SavedPlacesFragment savedPlacesFragment = new SavedPlacesFragment();
+                savedPlacesFragment = new SavedPlacesFragment();
                 Bundle args = new Bundle();
-                args.putString("data", "loooooooooooooooooooooooooooool");
+                args.putString("data", MapsFragment.placeName);
                 savedPlacesFragment.setArguments(args);
 
                 Toast.makeText(getContext(), "Saved!", Toast.LENGTH_SHORT).show();
+
+                getFragmentManager().beginTransaction().add(R.id.pagerID, savedPlacesFragment).addToBackStack(null).commit();
 
                 /*SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
 
