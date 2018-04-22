@@ -74,6 +74,81 @@
                     }
                 }
             ]
+        },
+        {
+            "outputFile": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-pl\\values-pl.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\bundles\\debug\\res\\values-pl\\values-pl.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,116,168",
+                        "endColumns": "60,51,48",
+                        "endOffsets": "111,163,212"
+                    },
+                    "to": {
+                        "startLines": "15,20,23",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "568,876,1021",
+                        "endColumns": "60,51,48",
+                        "endOffsets": "624,923,1065"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\bundles\\debug\\res\\values-pl\\values-pl.xml",
+                    "from": {
+                        "startLines": "2,6,10,14,15,16,17,18,19,20,21,22,23,24,25,26,27",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,197,334,467,522,576,641,689,734,799,864,920,996,1111,1199,1260,1336",
+                        "endLines": "5,9,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27",
+                        "endColumns": "14,14,14,54,53,64,47,44,64,64,55,75,114,87,60,75,63",
+                        "endOffsets": "192,329,462,517,571,636,684,729,794,859,915,991,1106,1194,1255,1331,1395"
+                    },
+                    "to": {
+                        "startLines": "2,6,10,16,17,18,21,22,24,25,26,27,28,29,30,31,32",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,197,334,629,684,738,928,976,1070,1135,1200,1256,1332,1447,1535,1596,1672",
+                        "endLines": "5,9,13,16,17,18,21,22,24,25,26,27,28,29,30,31,32",
+                        "endColumns": "14,14,14,54,53,64,47,44,64,64,55,75,114,87,60,75,63",
+                        "endOffsets": "192,329,462,679,733,798,971,1016,1130,1195,1251,1327,1442,1530,1591,1667,1731"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\bundles\\debug\\res\\values-pl\\values-pl.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "72",
+                        "endOffsets": "123"
+                    },
+                    "to": {
+                        "startLines": "19",
+                        "startColumns": "4",
+                        "startOffsets": "803",
+                        "endColumns": "72",
+                        "endOffsets": "871"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\5cb5c03535868a16c968271f2b094fbb\\res\\values-pl\\values-pl.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "14",
+                        "startColumns": "4",
+                        "startOffsets": "467",
+                        "endColumns": "100",
+                        "endOffsets": "563"
+                    }
+                }
+            ]
         }
     ]
 }
