@@ -21,6 +21,7 @@ public class GetNearbyPlaces extends AsyncTask<Object, String, String> {
 
     private String googlePlacesData;
     private GoogleMap mMap;
+    private String type;
     Context context = MainActivity.getContextOfApplication();
 
     @Override
@@ -30,6 +31,7 @@ public class GetNearbyPlaces extends AsyncTask<Object, String, String> {
 
         mMap = (GoogleMap) objects[0];
         url1 = (String) objects[1];
+        type = (String) objects[2];
 
         DownloadURL downloadURL = new DownloadURL();
         try {
@@ -71,7 +73,17 @@ public class GetNearbyPlaces extends AsyncTask<Object, String, String> {
             markerOptions.title(placeName + " : "+ vicinity);
             //markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE));
 
-            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.hospitalmarker));
+            if(type.equals("hospital")){
+                markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.hospitalmarker));
+            }else if(type.equals("police")){
+                markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.policemarker));
+            }else if(type.equals("fire_station")){
+                markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.firemarker));
+            }else if(type.equals("veterinary_care")){
+                markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.vetmarker));
+            }
+
+
             mMap.addMarker(markerOptions);
 
         }
