@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context="com.example.itadmin.projectdapa.survival.controller.survivalWebPages.WebViewContentFragment">
+    tools:context="com.example.itadmin.projectdapa.survival.controller.WebViewContentFragment">
 
     <WebView
         android:id="@+id/webview"
