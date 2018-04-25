@@ -46,6 +46,8 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
 
         placeNameText.setText(MapsFragment.placeName);
         vicinityText.setText(MapsFragment.vicinity);
+
+        MapsFragment.getDistance();
         distanceText.setText(MapsFragment.strDistance + " KM");
 
         return view;
