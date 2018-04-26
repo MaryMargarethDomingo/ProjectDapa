@@ -158,7 +158,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         database.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                for (DataSnapshot dsp : dataSnapshot.child("reports").getChildren()){
+                for (DataSnapshot dsp : dataSnapshot.getChildren()){
                     MarkerOptions markerOptions = new MarkerOptions();
                     markerOptions.position(new LatLng(Double.parseDouble(dsp.child("latitude").getValue().toString()),
                             Double.parseDouble(dsp.child("longitude").getValue().toString())));
