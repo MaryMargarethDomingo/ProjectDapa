@@ -121,7 +121,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                         reports = new Reports(latitude, longitude, user.getDisplayName().split(" ")[0], "Typhoon");
                     }
 
-                    database.setValue(reports);
+                    database.child(database.push().getKey()).setValue(reports);
 
                     Toast.makeText(getContext(), "Report clicked!", Toast.LENGTH_SHORT).show();
                 }
@@ -158,7 +158,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         database.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                for (DataSnapshot dsp : dataSnapshot.getChildren()){
+                for (DataSnapshot dsp : dataSnapshot.child("reports").getChildren()){
                     MarkerOptions markerOptions = new MarkerOptions();
                     markerOptions.position(new LatLng(Double.parseDouble(dsp.child("latitude").getValue().toString()),
                             Double.parseDouble(dsp.child("longitude").getValue().toString())));
