@@ -590,10 +590,10 @@ public final class R {
     public static final int tw__QuoteTweetContainer=0x7f0c000d;
     public static final int tw__QuoteTweetContainer_Compact=0x7f0c000e;
     public static final int tw__TweetActionButton=0x7f0c000f;
-    public static final int tw__TweetActionButtonBar=0x7f0c0012;
-    public static final int tw__TweetActionButtonBar_Compact=0x7f0c0013;
     public static final int tw__TweetActionButton_Heart=0x7f0c0010;
     public static final int tw__TweetActionButton_Share=0x7f0c0011;
+    public static final int tw__TweetActionButtonBar=0x7f0c0012;
+    public static final int tw__TweetActionButtonBar_Compact=0x7f0c0013;
     public static final int tw__TweetActionsDisabled=0x7f0c0014;
     public static final int tw__TweetActionsEnabled=0x7f0c0015;
     public static final int tw__TweetAvatar=0x7f0c0016;
@@ -603,8 +603,8 @@ public final class R {
     public static final int tw__TweetDarkWithActionsStyle=0x7f0c001a;
     public static final int tw__TweetFillWidth=0x7f0c001b;
     public static final int tw__TweetFullName=0x7f0c001c;
-    public static final int tw__TweetFullNameBase=0x7f0c001e;
     public static final int tw__TweetFullName_Compact=0x7f0c001d;
+    public static final int tw__TweetFullNameBase=0x7f0c001e;
     public static final int tw__TweetLightStyle=0x7f0c001f;
     public static final int tw__TweetLightWithActionsStyle=0x7f0c0020;
     public static final int tw__TweetMedia=0x7f0c0021;
@@ -692,62 +692,6 @@ public final class R {
         0x7f02000c, 0x7f02000d
       };
     /**
-     * Attributes that can be used with a FontFamilyFont.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #FontFamilyFont_font com.twitter.sdk.android.tweetui.test:font}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontStyle com.twitter.sdk.android.tweetui.test:fontStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontWeight com.twitter.sdk.android.tweetui.test:fontWeight}</code></td><td></td></tr>
-     * </table>
-     * @see #FontFamilyFont_font
-     * @see #FontFamilyFont_fontStyle
-     * @see #FontFamilyFont_fontWeight
-     */
-    public static final int[] FontFamilyFont={
-        0x7f020007, 0x7f02000e, 0x7f02000f
-      };
-    /**
-     * <p>This symbol is the offset where the {@link com.twitter.sdk.android.tweetui.test.R.attr#font}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.twitter.sdk.android.tweetui.test:font
-     */
-    public static final int FontFamilyFont_font=0;
-    /**
-     * <p>This symbol is the offset where the {@link com.twitter.sdk.android.tweetui.test.R.attr#fontStyle}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>italic</td><td>1</td><td></td></tr>
-     * <tr><td>normal</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.twitter.sdk.android.tweetui.test:fontStyle
-     */
-    public static final int FontFamilyFont_fontStyle=1;
-    /**
-     * <p>This symbol is the offset where the {@link com.twitter.sdk.android.tweetui.test.R.attr#fontWeight}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.twitter.sdk.android.tweetui.test:fontWeight
-     */
-    public static final int FontFamilyFont_fontWeight=2;
-    /**
      * <p>This symbol is the offset where the {@link com.twitter.sdk.android.tweetui.test.R.attr#fontProviderAuthority}
      * attribute's value can be found in the {@link #FontFamily} array.
      *
@@ -824,6 +768,62 @@ public final class R {
      */
     public static final int FontFamily_fontProviderQuery=5;
     /**
+     * Attributes that can be used with a FontFamilyFont.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #FontFamilyFont_font com.twitter.sdk.android.tweetui.test:font}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontStyle com.twitter.sdk.android.tweetui.test:fontStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontWeight com.twitter.sdk.android.tweetui.test:fontWeight}</code></td><td></td></tr>
+     * </table>
+     * @see #FontFamilyFont_font
+     * @see #FontFamilyFont_fontStyle
+     * @see #FontFamilyFont_fontWeight
+     */
+    public static final int[] FontFamilyFont={
+        0x7f020007, 0x7f02000e, 0x7f02000f
+      };
+    /**
+     * <p>This symbol is the offset where the {@link com.twitter.sdk.android.tweetui.test.R.attr#font}
+     * attribute's value can be found in the {@link #FontFamilyFont} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.twitter.sdk.android.tweetui.test:font
+     */
+    public static final int FontFamilyFont_font=0;
+    /**
+     * <p>This symbol is the offset where the {@link com.twitter.sdk.android.tweetui.test.R.attr#fontStyle}
+     * attribute's value can be found in the {@link #FontFamilyFont} array.
+     *
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>italic</td><td>1</td><td></td></tr>
+     * <tr><td>normal</td><td>0</td><td></td></tr>
+     * </table>
+     *
+     * @attr name com.twitter.sdk.android.tweetui.test:fontStyle
+     */
+    public static final int FontFamilyFont_fontStyle=1;
+    /**
+     * <p>This symbol is the offset where the {@link com.twitter.sdk.android.tweetui.test.R.attr#fontWeight}
+     * attribute's value can be found in the {@link #FontFamilyFont} array.
+     *
+     * <p>May be an integer value, such as "<code>100</code>".
+     *
+     * @attr name com.twitter.sdk.android.tweetui.test:fontWeight
+     */
+    public static final int FontFamilyFont_fontWeight=2;
+    /**
      * Attributes that can be used with a RecyclerView.
      * <p>Includes the following attributes:</p>
      * <table>
@@ -860,6 +860,23 @@ public final class R {
         0x7f020011, 0x7f020012, 0x7f020013
       };
     /**
+     * <p>This symbol is the offset where the {@link android.R.attr#orientation}
+     * attribute's value can be found in the {@link #RecyclerView} array.
+     *
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>horizontal</td><td>0</td><td></td></tr>
+     * <tr><td>vertical</td><td>1</td><td></td></tr>
+     * </table>
+     *
+     * @attr name android:orientation
+     */
+    public static final int RecyclerView_android_orientation=0;
+    /**
      * <p>This symbol is the offset where the {@link android.R.attr#descendantFocusability}
      * attribute's value can be found in the {@link #RecyclerView} array.
      *
@@ -877,23 +894,6 @@ public final class R {
      * @attr name android:descendantFocusability
      */
     public static final int RecyclerView_android_descendantFocusability=1;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#orientation}
-     * attribute's value can be found in the {@link #RecyclerView} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>horizontal</td><td>0</td><td></td></tr>
-     * <tr><td>vertical</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name android:orientation
-     */
-    public static final int RecyclerView_android_orientation=0;
     /**
      * <p>This symbol is the offset where the {@link com.twitter.sdk.android.tweetui.test.R.attr#fastScrollEnabled}
      * attribute's value can be found in the {@link #RecyclerView} array.

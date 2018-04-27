@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\values-km\\values-km.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\HI FREQUENCY\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\68ad202dbf6578af2bf32c72d604b789\\res\\values-km\\values-km.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-ui\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-km\\values-km.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\HI FREQUENCY\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\68ad202dbf6578af2bf32c72d604b789\\res\\values-km\\values-km.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}

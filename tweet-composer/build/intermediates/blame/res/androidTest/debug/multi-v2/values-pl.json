@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDapa\\tweet-composer\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-pl\\values-pl.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDapa\\twitter-core\\build\\intermediates\\bundles\\debug\\res\\values-pl\\values-pl.xml",
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDapa\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-pl\\values-pl.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDapa\\tweet-composer\\build\\intermediates\\bundles\\debug\\res\\values-pl\\values-pl.xml",
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDapa\\tweet-composer\\build\\intermediates\\packaged_res\\debug\\values-pl\\values-pl.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -35,45 +35,6 @@
                         "startOffsets": "55,189,241",
                         "endColumns": "60,51,48",
                         "endOffsets": "111,236,285"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-pl\\values-pl.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\bundles\\debug\\res\\values-pl\\values-pl.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,116,168",
-                        "endColumns": "60,51,48",
-                        "endOffsets": "111,163,212"
-                    },
-                    "to": {
-                        "startLines": "2,4,5",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,189,241",
-                        "endColumns": "60,51,48",
-                        "endOffsets": "111,236,285"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\bundles\\debug\\res\\values-pl\\values-pl.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "72",
-                        "endOffsets": "123"
-                    },
-                    "to": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "116",
-                        "endColumns": "72",
-                        "endOffsets": "184"
                     }
                 }
             ]

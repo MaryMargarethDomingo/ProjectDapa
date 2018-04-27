@@ -1,66 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-uk\\values-uk.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\bundles\\debug\\res\\values-uk\\values-uk.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,118,170",
-                        "endColumns": "62,51,51",
-                        "endOffsets": "113,165,217"
-                    },
-                    "to": {
-                        "startLines": "2,4,5",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,201,253",
-                        "endColumns": "62,51,51",
-                        "endOffsets": "113,248,300"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\bundles\\debug\\res\\values-uk\\values-uk.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "82",
-                        "endOffsets": "133"
-                    },
-                    "to": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "118",
-                        "endColumns": "82",
-                        "endOffsets": "196"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDapa\\tweet-composer\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-uk\\values-uk.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDapa\\twitter-core\\build\\intermediates\\bundles\\debug\\res\\values-uk\\values-uk.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "82",
-                        "endOffsets": "133"
-                    },
-                    "to": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "118",
-                        "endColumns": "82",
-                        "endOffsets": "196"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDapa\\tweet-composer\\build\\intermediates\\bundles\\debug\\res\\values-uk\\values-uk.xml",
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDapa\\tweet-composer\\build\\intermediates\\packaged_res\\debug\\values-uk\\values-uk.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -74,6 +18,23 @@
                         "startOffsets": "55,201,253",
                         "endColumns": "62,51,51",
                         "endOffsets": "113,248,300"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDapa\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-uk\\values-uk.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "82",
+                        "endOffsets": "133"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "118",
+                        "endColumns": "82",
+                        "endOffsets": "196"
                     }
                 }
             ]

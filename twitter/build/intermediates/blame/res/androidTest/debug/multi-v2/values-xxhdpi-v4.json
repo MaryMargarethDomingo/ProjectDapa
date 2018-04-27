@@ -4,22 +4,7 @@
             "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDapa\\twitter\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-xxhdpi-v4\\values-xxhdpi-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDapa\\twitter-core\\build\\intermediates\\bundles\\debug\\res\\values-xxhdpi-v4\\values-xxhdpi-v4.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "54",
-                        "endOffsets": "105"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-xxhdpi-v4\\values-xxhdpi-v4.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\bundles\\debug\\res\\values-xxhdpi-v4\\values-xxhdpi-v4.xml",
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDapa\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-xxhdpi-v4\\values-xxhdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

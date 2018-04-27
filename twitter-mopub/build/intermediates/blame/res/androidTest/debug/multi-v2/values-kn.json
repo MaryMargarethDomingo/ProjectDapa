@@ -1,25 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\twitter-mopub\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-kn\\values-kn.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\twitter-mopub\\build\\intermediates\\bundles\\debug\\res\\values-kn\\values-kn.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,127",
-                        "endColumns": "71,68",
-                        "endOffsets": "122,191"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDapa\\twitter-mopub\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-kn\\values-kn.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDapa\\twitter-mopub\\build\\intermediates\\bundles\\debug\\res\\values-kn\\values-kn.xml",
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDapa\\twitter-mopub\\build\\intermediates\\packaged_res\\debug\\values-kn\\values-kn.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

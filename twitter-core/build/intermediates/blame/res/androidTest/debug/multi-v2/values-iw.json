@@ -1,25 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-iw\\values-iw.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\bundles\\debug\\res\\values-iw\\values-iw.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "66",
-                        "endOffsets": "117"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDapa\\twitter-core\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-iw\\values-iw.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDapa\\twitter-core\\build\\intermediates\\bundles\\debug\\res\\values-iw\\values-iw.xml",
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDapa\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-iw\\values-iw.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

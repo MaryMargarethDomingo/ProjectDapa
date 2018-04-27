@@ -12,6 +12,7 @@ import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomSheetDialogFragment;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -24,6 +25,7 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.example.itadmin.projectdapa.R;
+import com.example.itadmin.projectdapa.maps.model.Reports;
 import com.example.itadmin.projectdapa.maps.utility.GetDirectionsData;
 import com.example.itadmin.projectdapa.maps.utility.GetNearbyPlaces;
 import com.google.android.gms.common.ConnectionResult;
@@ -36,9 +38,18 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.text.DecimalFormat;
 import java.util.List;
@@ -56,22 +67,26 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     Location lastLocation;
     Marker currentLocationMarker;
     static int PROXIMITY_RADIUS = 2 * 1000;
-    static double latitude;
-    static double longitude;
+    static double latitude = 0;
+    static double longitude = 0;
     static String type;
 
     Bundle bundle = new Bundle();
 
     private static double endMarkerLat;
     private static double endMarkerLng;
+    private DatabaseReference database;
+    private FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    private FloatingActionButton fab;
     private static BottomSheetDialogFragment bottomSheetDialogFragment = new PopUpMarkerFragment();
 
     public static final int REQUEST_LOCATION_CODE = 99;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        return inflater.inflate(R.layout.maps_main, container, false);
+        database = FirebaseDatabase.getInstance().getReference("reports");
 
+        return inflater.inflate(R.layout.maps_main, container, false);
     }
 
     @Override
@@ -89,11 +104,30 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         togPolice = getView().findViewById(R.id.togPolice);
         togFire = getView().findViewById(R.id.togFire);
         togVet = getView().findViewById(R.id.togVet);
+        fab = getView().findViewById(R.id.floatingActionButton);
 
         togHospital.setOnCheckedChangeListener(changeChecker);
         togPolice.setOnCheckedChangeListener(changeChecker);
         togFire.setOnCheckedChangeListener(changeChecker);
         togVet.setOnCheckedChangeListener(changeChecker);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(latitude != 0 || longitude != 0){
+                    Reports reports;
+                    if(user.getDisplayName() == null){
+                        reports = new Reports(latitude, longitude, user.getEmail().split("@")[0], "Typhoon");
+                    }else{
+                        reports = new Reports(latitude, longitude, user.getDisplayName().split(" ")[0], "Typhoon");
+                    }
+
+                    database.child(database.push().getKey()).setValue(reports);
+
+                    Toast.makeText(getContext(), "Report clicked!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
             checkLocationPermission();
@@ -120,6 +154,25 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
         mMap.setOnMarkerClickListener(this);
         mMap.getUiSettings().setMapToolbarEnabled(false);
+
+        database.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot dsp : dataSnapshot.getChildren()){
+                    MarkerOptions markerOptions = new MarkerOptions();
+                    markerOptions.position(new LatLng(Double.parseDouble(dsp.child("latitude").getValue().toString()),
+                            Double.parseDouble(dsp.child("longitude").getValue().toString())));
+                    markerOptions.title(placeName + " : "+ vicinity);
+                    markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
+                    mMap.addMarker(markerOptions);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 
     protected synchronized void buildGoogleApiClient(){
@@ -265,13 +318,14 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     public static String estDuration;
 
     public static void showPins(){
-        Object dataTransfer[] = new Object[2];
+        Object dataTransfer[] = new Object[3];
         GetNearbyPlaces getNearbyPlaces = new GetNearbyPlaces();
 
         mMap.clear();
         String url1 = getPlacesURL();
         dataTransfer[0] = mMap;
         dataTransfer[1] = url1;
+        dataTransfer[2] = type;
 
         getNearbyPlaces.execute(dataTransfer);
         //Toast.makeText(getActivity(), "Showing nearby " + type, Toast.LENGTH_SHORT).show();
