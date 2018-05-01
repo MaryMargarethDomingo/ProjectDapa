@@ -31,6 +31,12 @@ public class PopUpReportMarkerFragment extends BottomSheetDialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.maps_popup_report_marker_layout, container, false);
 
+        description = view.findViewById(R.id.reportDescription);
+        distanceText = view.findViewById(R.id.reportDistance);
+        reporter = view.findViewById(R.id.reporter);
+        likeButton = view.findViewById(R.id.likeButton);
+
+
         return view;
     }
 
@@ -38,5 +44,11 @@ public class PopUpReportMarkerFragment extends BottomSheetDialogFragment {
     public void onStart(){
         super.onStart();
 
+        likeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
+            }
+        });
     }
 }

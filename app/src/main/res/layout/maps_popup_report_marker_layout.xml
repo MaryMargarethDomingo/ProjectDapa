@@ -33,10 +33,10 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/distance"
+                android:id="@+id/reportDistance"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="<distance> km away"
+                android:text="distance km away"
                 android:textColor="@color/cardview_light_background"
                 android:textSize="18sp" />
 
@@ -51,7 +51,7 @@
                 android:id="@+id/reporter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="reported by <reporter>"
+                android:text="reported by reporter"
                 android:textColor="@color/cardview_light_background"
                 android:textSize="12sp" />
         </LinearLayout>

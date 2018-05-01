@@ -8,6 +8,7 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -77,8 +78,9 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     private static double endMarkerLng;
     private DatabaseReference database;
     private FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-    private FloatingActionButton fab;
+    private FloatingActionButton reportFab;
     private static BottomSheetDialogFragment bottomSheetDialogFragment = new PopUpMarkerFragment();
+    private boolean justClicked = false;
 
     public static final int REQUEST_LOCATION_CODE = 99;
 
@@ -104,27 +106,35 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         togPolice = getView().findViewById(R.id.togPolice);
         togFire = getView().findViewById(R.id.togFire);
         togVet = getView().findViewById(R.id.togVet);
-        fab = getView().findViewById(R.id.floatingActionButton);
+        reportFab = getView().findViewById(R.id.floatingActionButton);
 
         togHospital.setOnCheckedChangeListener(changeChecker);
         togPolice.setOnCheckedChangeListener(changeChecker);
         togFire.setOnCheckedChangeListener(changeChecker);
         togVet.setOnCheckedChangeListener(changeChecker);
-        fab.setOnClickListener(new View.OnClickListener() {
+        reportFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(latitude != 0 || longitude != 0){
-                    Reports reports;
-                    if(user.getDisplayName() == null){
-                        reports = new Reports(latitude, longitude, user.getEmail().split("@")[0], "Typhoon");
-                    }else{
-                        reports = new Reports(latitude, longitude, user.getDisplayName().split(" ")[0], "Typhoon");
+                if(!justClicked){
+                    if(latitude != 0 || longitude != 0){
+                        Reports reports = new Reports(latitude, longitude, user.getEmail().split("@")[0], "Typhoon");
+                        database.child(database.push().getKey()).setValue(reports);
+
+                        Toast.makeText(getContext(), "Report clicked!", Toast.LENGTH_SHORT).show();
                     }
-
-                    database.child(database.push().getKey()).setValue(reports);
-
-                    Toast.makeText(getContext(), "Report clicked!", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(getContext(), "Reports just clicked! Please try again in few seconds", Toast.LENGTH_SHORT).show();
                 }
+
+                justClicked = true;
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        justClicked = false;
+                    }
+                }, 5000);
+
             }
         });
 
@@ -156,7 +166,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         mMap.getUiSettings().setMapToolbarEnabled(false);
 
         database.addValueEventListener(new ValueEventListener() {
-            @Override   
+            @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot dsp : dataSnapshot.getChildren()){
                     MarkerOptions markerOptions = new MarkerOptions();
