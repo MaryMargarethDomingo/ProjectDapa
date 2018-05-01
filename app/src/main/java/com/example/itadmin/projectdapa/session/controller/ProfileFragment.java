@@ -27,7 +27,6 @@ public class ProfileFragment extends Fragment {
     private TextView editProfile;
     private Button logOut;
     private Button settings;
-    public static Fragment savedPlacesFragment = new SavedPlacesFragment();
 
     private Button savedPlaces;
     private Button savedContacts;
@@ -72,8 +71,16 @@ public class ProfileFragment extends Fragment {
         savedPlaces.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.include2, savedPlacesFragment).addToBackStack(null).commit();
+                //getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.include2, savedPlacesFragment).addToBackStack(null).commit();
 
+            }
+        });
+
+        savedContacts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment savedContactsFragment = new SavedContactsFragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.include2, savedContactsFragment).addToBackStack(null).commit();
             }
         });
 
@@ -98,7 +105,6 @@ public class ProfileFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
-
         return view;
     }
 }
