@@ -123,7 +123,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                         Toast.makeText(getContext(), "Report clicked!", Toast.LENGTH_SHORT).show();
                     }
                 }else{
-                    Toast.makeText(getContext(), "Reports just clicked! Please try again in few seconds", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "You've just reported! Please try again in few seconds", Toast.LENGTH_SHORT).show();
                 }
 
                 justClicked = true;
