@@ -68,8 +68,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     Location lastLocation;
     Marker currentLocationMarker;
     static int PROXIMITY_RADIUS = 2 * 1000;
-    static double latitude = 0;
-    static double longitude = 0;
+    public static double latitude = 0;
+    public static double longitude = 0;
     static String type;
 
     Bundle bundle = new Bundle();
@@ -487,6 +487,11 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     Toast.makeText(getActivity(), "Showing nearby veterinary clinics", Toast.LENGTH_LONG).show();
 
+                }
+
+                if (compoundButton == null){
+                    mMap.clear();
+                    //add code for reports here
                 }
             }
         }
