@@ -4,13 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".session.controller.SavedContactsFragment">
 
 
-    <Button
-        android:id="@+id/btnAddContacts"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Add Contacts" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAddContacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add Contacts" />
+
+        <Button
+            android:id="@+id/btnSendSMS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Send SOS" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <TextView
+            android:id="@+id/contact1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No contact"
+            android:layout_weight="15"/>
+
+        <TextView
+            android:id="@+id/contact2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No contact"
+            android:layout_weight="15"/>
+
+        <TextView
+            android:id="@+id/contact3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No contact"
+            android:layout_weight="15"/>
+
+        <TextView
+            android:id="@+id/contact4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No contact"
+            android:layout_weight="15"/>
+
+        <TextView
+            android:id="@+id/contact5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No contact"
+            android:layout_weight="15"/>
+    </LinearLayout>
+
 </LinearLayout>
