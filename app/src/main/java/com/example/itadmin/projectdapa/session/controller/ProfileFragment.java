@@ -71,7 +71,8 @@ public class ProfileFragment extends Fragment {
         savedPlaces.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.include2, savedPlacesFragment).addToBackStack(null).commit();
+                Fragment savedPlacesFragment = new SavedPlacesFragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.include2, savedPlacesFragment).addToBackStack(null).commit();
 
             }
         });
