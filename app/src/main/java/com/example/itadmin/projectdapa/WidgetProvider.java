@@ -41,6 +41,7 @@ public class WidgetProvider extends AppWidgetProvider {
         Log.w("Widget", "Clicked button1 outside");
         Log.w("Widget", "Action: " + intent.getAction());
         Log.w("Widget", "Tag: " + onClickTag);
+
         if (onClickTag.equals(intent.getAction())){
             Log.w("Widget", "Clicked button1");
             Toast.makeText(context, "onclick called", Toast.LENGTH_LONG).show();

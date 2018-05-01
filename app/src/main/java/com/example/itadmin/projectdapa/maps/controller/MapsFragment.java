@@ -156,13 +156,12 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         mMap.getUiSettings().setMapToolbarEnabled(false);
 
         database.addValueEventListener(new ValueEventListener() {
-            @Override
+            @Override   
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot dsp : dataSnapshot.getChildren()){
                     MarkerOptions markerOptions = new MarkerOptions();
                     markerOptions.position(new LatLng(Double.parseDouble(dsp.child("latitude").getValue().toString()),
                             Double.parseDouble(dsp.child("longitude").getValue().toString())));
-                    markerOptions.title(placeName + " : "+ vicinity);
                     markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
                     mMap.addMarker(markerOptions);
                 }
@@ -498,13 +497,20 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         placeName = titleArr[0];
         vicinity = titleArr[1];
 
-        bottomSheetDialogFragment.show(getActivity().getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
+        if(isReportMarker()){
+
+        }else{
+            bottomSheetDialogFragment.show(getActivity().getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
+        }
+
 
         return false;
     }
 
-//-------------------------------------------------- test buttons - METHODS --------------------------------------------------
-
+//check if marker is a report
+    public boolean isReportMarker(){
+        return false;
+    }
 
 
 }
