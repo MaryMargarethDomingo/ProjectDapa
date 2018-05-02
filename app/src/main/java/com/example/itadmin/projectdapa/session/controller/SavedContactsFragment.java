@@ -10,7 +10,6 @@ import android.provider.ContactsContract;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
-import android.telephony.PhoneNumberUtils;
 import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -28,7 +27,6 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Locale;
 
 public class SavedContactsFragment extends Fragment {
 
@@ -189,6 +187,11 @@ public class SavedContactsFragment extends Fragment {
                     SmsManager.getDefault().sendTextMessage(recipient5, null, message, null, null);
                 }
 
+                if(contact1.getText().toString().matches("") && contact2.getText().toString().matches("") &&
+                        contact3.getText().toString().matches("") && contact4.getText().toString().matches("") && contact5.getText().toString().matches("")){
+                    Toast.makeText(getContext(), "No contacts available, add contacts first", Toast.LENGTH_LONG).show();
+                }
+
                 Log.d("CONTACTS - Recipient1: ", recipient1);
                 Log.d("CONTACTS - Recipient2: ", recipient2);
                 Log.d("CONTACTS - Recipient3: ", recipient3);
@@ -211,7 +214,6 @@ public class SavedContactsFragment extends Fragment {
                     Uri contactData = data.getData();
                     Cursor c = getActivity().getContentResolver().query(contactData, null, null, null, null);
                     if (c.moveToFirst()) {
-
 
                         String id = c.getString(c.getColumnIndexOrThrow(ContactsContract.Contacts._ID));
 
