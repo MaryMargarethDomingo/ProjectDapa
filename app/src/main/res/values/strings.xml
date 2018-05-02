@@ -7,6 +7,10 @@
     <string name="facebook_app_id">163563431144135</string>
     <string name="fb_login_protocol_scheme">fb163563431144135</string>
 
+    <!--Twitter Strings-->
+    <string name="twitter_consumer_key" translatable="false">3AbUTjCdI7lWBE6M0Nymjt4RY</string>
+    <string name="twitter_consumer_secret" translatable="false">1iEYAG57Yd5wC0Zu3IN2LvSDEqumdyDIVHlGOo4klpjvEE3tHp</string>
+
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
