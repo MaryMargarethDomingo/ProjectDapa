@@ -1,0 +1,188 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\values-hi\\values-hi.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-ui\\src\\main\\res\\values-hi\\strings.xml",
+                    "from": {
+                        "startLines": "20,21,22,23,24,25,26,27,28,29,30,31",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "752,812,875,943,988,1032,1079,1152,1273,1350,1411,1488",
+                        "endColumns": "58,61,66,43,42,45,71,119,75,59,75,56",
+                        "endOffsets": "806,869,937,982,1026,1073,1146,1267,1344,1405,1482,1540"
+                    },
+                    "to": {
+                        "startLines": "15,16,17,19,20,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "570,629,691,829,873,1045,1091,1163,1283,1359,1419,1495",
+                        "endColumns": "58,61,66,43,42,45,71,119,75,59,75,56",
+                        "endOffsets": "624,686,753,868,911,1086,1158,1278,1354,1414,1490,1547"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-hi\\values-hi.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "70",
+                        "endOffsets": "121"
+                    },
+                    "to": {
+                        "startLines": "18",
+                        "startColumns": "4",
+                        "startOffsets": "758",
+                        "endColumns": "70",
+                        "endOffsets": "824"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-ui\\src\\main\\res\\values-hi\\plurals.xml",
+                    "from": {
+                        "startLines": "20,24,28",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "752,896,1039",
+                        "endLines": "23,27,31",
+                        "endColumns": "14,14,14",
+                        "endOffsets": "890,1033,1172"
+                    },
+                    "to": {
+                        "startLines": "2,6,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,195,334",
+                        "endLines": "5,9,13",
+                        "endColumns": "14,14,14",
+                        "endOffsets": "190,329,464"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-ui\\src\\main\\res\\values-hi\\const_strings.xml",
+                    "from": {
+                        "startLines": "19,20",
+                        "startColumns": "4,4",
+                        "startOffsets": "698,763",
+                        "endColumns": "63,64",
+                        "endOffsets": "757,823"
+                    },
+                    "to": {
+                        "startLines": "21,22",
+                        "startColumns": "4,4",
+                        "startOffsets": "916,980",
+                        "endColumns": "63,64",
+                        "endOffsets": "975,1040"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\HI FREQUENCY\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\61afa0328d43040b91896ca5690580af\\res\\values-hi\\values-hi.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "14",
+                        "startColumns": "4",
+                        "startOffsets": "469",
+                        "endColumns": "100",
+                        "endOffsets": "565"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-ui\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hi\\values-hi.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-ui\\src\\main\\res\\values-hi\\strings.xml",
+                    "from": {
+                        "startLines": "20,21,22,23,24,25,26,27,28,29,30,31",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "752,812,875,943,988,1032,1079,1152,1273,1350,1411,1488",
+                        "endColumns": "58,61,66,43,42,45,71,119,75,59,75,56",
+                        "endOffsets": "806,869,937,982,1026,1073,1146,1267,1344,1405,1482,1540"
+                    },
+                    "to": {
+                        "startLines": "15,16,17,19,20,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "570,629,691,829,873,1045,1091,1163,1283,1359,1419,1495",
+                        "endColumns": "58,61,66,43,42,45,71,119,75,59,75,56",
+                        "endOffsets": "624,686,753,868,911,1086,1158,1278,1354,1414,1490,1547"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-hi\\values-hi.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "70",
+                        "endOffsets": "121"
+                    },
+                    "to": {
+                        "startLines": "18",
+                        "startColumns": "4",
+                        "startOffsets": "758",
+                        "endColumns": "70",
+                        "endOffsets": "824"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-ui\\src\\main\\res\\values-hi\\plurals.xml",
+                    "from": {
+                        "startLines": "20,24,28",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "752,896,1039",
+                        "endLines": "23,27,31",
+                        "endColumns": "14,14,14",
+                        "endOffsets": "890,1033,1172"
+                    },
+                    "to": {
+                        "startLines": "2,6,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,195,334",
+                        "endLines": "5,9,13",
+                        "endColumns": "14,14,14",
+                        "endOffsets": "190,329,464"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-ui\\src\\main\\res\\values-hi\\const_strings.xml",
+                    "from": {
+                        "startLines": "19,20",
+                        "startColumns": "4,4",
+                        "startOffsets": "698,763",
+                        "endColumns": "63,64",
+                        "endOffsets": "757,823"
+                    },
+                    "to": {
+                        "startLines": "21,22",
+                        "startColumns": "4,4",
+                        "startOffsets": "916,980",
+                        "endColumns": "63,64",
+                        "endOffsets": "975,1040"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\HI FREQUENCY\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\61afa0328d43040b91896ca5690580af\\res\\values-hi\\values-hi.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "14",
+                        "startColumns": "4",
+                        "startOffsets": "469",
+                        "endColumns": "100",
+                        "endOffsets": "565"
+                    }
+                }
+            ]
+        }
+    ]
+}
