@@ -43,6 +43,12 @@ import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.auth.TwitterAuthProvider;
+import com.twitter.sdk.android.core.Callback;
+import com.twitter.sdk.android.core.Result;
+import com.twitter.sdk.android.core.TwitterException;
+import com.twitter.sdk.android.core.TwitterSession;
+import com.twitter.sdk.android.core.identity.TwitterLoginButton;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -57,6 +63,7 @@ public class LoginActivity extends AppCompatActivity {
     private ProgressDialog progressDialog;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private CallbackManager callbackManager;
+    private TwitterLoginButton twitterLoginButton;
 
     final static int RC_SIGN_IN = 1;
 
@@ -107,9 +114,9 @@ public class LoginActivity extends AppCompatActivity {
         callbackManager = CallbackManager.Factory.create();
 
         // Register your callback//
-        LoginButton loginButton = findViewById(R.id.facebookSignin);
-        loginButton.setReadPermissions("email", "public_profile");
-        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+        LoginButton fbLoginButton = findViewById(R.id.facebookSignin);
+        fbLoginButton.setReadPermissions("email", "public_profile");
+        fbLoginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
                     @Override
                     public void onSuccess(LoginResult loginResult) {
                         handleFacebookAccessToken(loginResult.getAccessToken());
@@ -125,6 +132,22 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Sorry! There was an error! Please try again!", Toast.LENGTH_LONG).show();
                         progressDialog.dismiss();
                     }
+        });
+
+        twitterLoginButton = findViewById(R.id.twitterLoginButton);
+        twitterLoginButton.setCallback(new Callback<TwitterSession>() {
+            @Override
+            public void success(Result<TwitterSession> result) {
+                Log.d("twitterLoginButton", "twitterLogin:success" + result);
+                handleTwitterSession(result.data);
+            }
+
+            @Override
+            public void failure(TwitterException exception) {
+                Log.w("twitterLoginButton", "twitterLogin:failure", exception);
+                Toast.makeText(LoginActivity.this, "Authentication failed.",
+                        Toast.LENGTH_SHORT).show();
+            }
         });
 
         mGooglebtn = (SignInButton)findViewById(R.id.googleSignin);
@@ -149,6 +172,35 @@ public class LoginActivity extends AppCompatActivity {
                 signIn();
             }
         });
+    }
+
+    private void handleTwitterSession(TwitterSession session) {
+        Log.d("TwitterLoginButton", "handleTwitterSession:" + session);
+
+        AuthCredential credential = TwitterAuthProvider.getCredential(
+                session.getAuthToken().token,
+                session.getAuthToken().secret);
+
+        mAuth.signInWithCredential(credential)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d("TwitterLoginButton", "signInWithCredential:success");
+                            /*FirebaseUser user = mAuth.getCurrentUser();
+                            updateUI(user);*/
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Log.w("TwitterLoginButton", "signInWithCredential:failure", task.getException());
+                            Toast.makeText(LoginActivity.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+                            //updateUI(null);
+                        }
+
+                        // ...
+                    }
+                });
     }
 
     private void handleFacebookAccessToken(AccessToken token) {
@@ -186,6 +238,7 @@ public class LoginActivity extends AppCompatActivity {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         callbackManager.onActivityResult(requestCode, resultCode, data);
         super.onActivityResult(requestCode, resultCode, data);
+        //twitterLoginButton.onActivityResult(requestCode, resultCode, data);
 
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
         if (requestCode == RC_SIGN_IN) {

@@ -2,10 +2,12 @@ package com.example.itadmin.projectdapa.session.controller;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.provider.ContactsContract;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
@@ -48,14 +50,17 @@ public class SavedContactsFragment extends Fragment {
     private TextView contact4;
     private TextView contact5;
 
-    String cNumber;
-    String message = "";
+    private String cNumber;
+    private String message = "";
 
-    String recipient1;
-    String recipient2;
-    String recipient3;
-    String recipient4;
-    String recipient5;
+    private String recipient1;
+    private String recipient2;
+    private String recipient3;
+    private String recipient4;
+    private String recipient5;
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor editor;
+
 
     public static FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -63,6 +68,9 @@ public class SavedContactsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View view = inflater.inflate(R.layout.fragment_saved_contacts, container, false);
+
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        editor = sharedPreferences.edit();
 
         addContacts = view.findViewById(R.id.btnAddContacts);
         sendSMS = view.findViewById(R.id.btnSendSMS);
@@ -78,6 +86,12 @@ public class SavedContactsFragment extends Fragment {
         contact3 = view.findViewById(R.id.contact3);
         contact4 = view.findViewById(R.id.contact4);
         contact5 = view.findViewById(R.id.contact5);
+
+        contact1.setText(sharedPreferences.getString("contact1", "No Contact"));
+        contact2.setText(sharedPreferences.getString("contact2", "No Contact"));
+        contact3.setText(sharedPreferences.getString("contact3", "No Contact"));
+        contact4.setText(sharedPreferences.getString("contact4", "No Contact"));
+        contact5.setText(sharedPreferences.getString("contact5", "No Contact"));
 
         return view;
     }
@@ -106,14 +120,19 @@ public class SavedContactsFragment extends Fragment {
         btnDeleteContact1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                editor.putString("contact1", "No Contact");
+                editor.commit();
                 contact1.setText("No Contact");
                 Toast.makeText(getActivity(), "Contact deleted", Toast.LENGTH_LONG).show();
+
             }
         });
 
         btnDeleteContact2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                editor.putString("contact2", "No Contact");
+                editor.commit();
                 contact2.setText("No Contact");
                 Toast.makeText(getActivity(), "Contact deleted", Toast.LENGTH_LONG).show();
             }
@@ -123,6 +142,8 @@ public class SavedContactsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 contact3.setText("No Contact");
+                editor.putString("contact3", "No Contact");
+                editor.commit();
                 Toast.makeText(getActivity(), "Contact deleted", Toast.LENGTH_LONG).show();
             }
         });
@@ -131,6 +152,8 @@ public class SavedContactsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 contact4.setText("No Contact");
+                editor.putString("contact4", "No Contact");
+                editor.commit();
                 Toast.makeText(getActivity(), "Contact deleted", Toast.LENGTH_LONG).show();
             }
         });
@@ -139,6 +162,8 @@ public class SavedContactsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 contact5.setText("No Contact");
+                editor.putString("contact5", "No Contact");
+                editor.commit();
                 Toast.makeText(getActivity(), "Contact deleted", Toast.LENGTH_LONG).show();
             }
         });
@@ -230,26 +255,28 @@ public class SavedContactsFragment extends Fragment {
                         String name = c.getString(c.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
 
                         if(contact1.getText().toString().matches("No contact")){
+                            editor.putString("contact1", name + ": \n" + cNumber);
                             contact1.setText(name + ": \n" + cNumber);
                         }
-
                         if(contact2.getText().toString().matches("No contact")){
+                            editor.putString("contact2", name + ": \n" + cNumber);
                             contact2.setText(name + ": \n" + cNumber);
                         }
-
                         if(contact3.getText().toString().matches("No contact")){
+                            editor.putString("contact3", name + ": \n" + cNumber);
                             contact3.setText(name + ": \n" + cNumber);
                         }
-
                         if(contact4.getText().toString().matches("No contact")){
+                            editor.putString("contact4", name + ": \n" + cNumber);
                             contact4.setText(name + ": \n" + cNumber);
 
                         }
-
                         if(contact5.getText().toString().matches("No contact")) {
+                            editor.putString("contact5", name + ": \n" + cNumber);
                             contact5.setText(name + ": \n" + cNumber);
                         }
 
+                        editor.commit();
                         break;
                     }
                 }
