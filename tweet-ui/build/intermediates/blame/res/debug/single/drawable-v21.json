@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\HI FREQUENCY\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\61afa0328d43040b91896ca5690580af\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\tw__like_action.xml",
+        "source": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-ui\\src\\main\\res\\drawable-v21\\tw__like_action.xml"
+    }
+]

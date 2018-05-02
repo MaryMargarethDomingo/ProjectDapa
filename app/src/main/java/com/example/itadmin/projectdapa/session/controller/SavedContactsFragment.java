@@ -11,12 +11,13 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.telephony.SmsManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.itadmin.projectdapa.R;
 import com.example.itadmin.projectdapa.maps.controller.MapsFragment;
@@ -28,8 +29,15 @@ public class SavedContactsFragment extends Fragment {
 
     public  final int PICK_CONTACT = 123;
 
-    private Button addContacts;
+    private ImageButton addContacts;
     private Button sendSMS;
+
+    private ImageButton btnDeleteContact1;
+    private ImageButton btnDeleteContact2;
+    private ImageButton btnDeleteContact3;
+    private ImageButton btnDeleteContact4;
+    private ImageButton btnDeleteContact5;
+
 
     private TextView contact1;
     private TextView contact2;
@@ -53,6 +61,12 @@ public class SavedContactsFragment extends Fragment {
 
         addContacts = view.findViewById(R.id.btnAddContacts);
         sendSMS = view.findViewById(R.id.btnSendSMS);
+
+        btnDeleteContact1 = view.findViewById(R.id.btnDeleteContact1);
+        btnDeleteContact2 = view.findViewById(R.id.btnDeleteContact2);
+        btnDeleteContact3 = view.findViewById(R.id.btnDeleteContact3);
+        btnDeleteContact4 = view.findViewById(R.id.btnDeleteContact4);
+        btnDeleteContact5 = view.findViewById(R.id.btnDeleteContact5);
 
         contact1 = view.findViewById(R.id.contact1);
         contact2 = view.findViewById(R.id.contact2);
@@ -84,6 +98,46 @@ public class SavedContactsFragment extends Fragment {
             }
         });
 
+        btnDeleteContact1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                contact1.setText("No Contact");
+                Toast.makeText(getActivity(), "Contact deleted", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        btnDeleteContact2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                contact2.setText("No Contact");
+                Toast.makeText(getActivity(), "Contact deleted", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        btnDeleteContact3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                contact3.setText("No Contact");
+                Toast.makeText(getActivity(), "Contact deleted", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        btnDeleteContact4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                contact4.setText("No Contact");
+                Toast.makeText(getActivity(), "Contact deleted", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        btnDeleteContact5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                contact5.setText("No Contact");
+                Toast.makeText(getActivity(), "Contact deleted", Toast.LENGTH_LONG).show();
+            }
+        });
+
         Date dateAndTime = Calendar.getInstance().getTime();
 
         message = "SOS! I need help!\n" +
@@ -93,24 +147,26 @@ public class SavedContactsFragment extends Fragment {
                 "Time: " + dateAndTime + "\n" +
                 "\n\n-Sent from Project DAPA";
 
-        recipient1 = contact1.getText().subSequence(contact1.getText().length() - 16, contact1.getText().length()).toString()
-                .replace(" ", "").replaceAll("[()]]", "");
-
-        recipient2 = contact1.getText().subSequence(contact1.getText().length() - 16, contact1.getText().length()).toString()
-                .replace(" ", "").replaceAll("[()]]", "");
-
-        recipient3 = contact1.getText().subSequence(contact1.getText().length() - 16, contact1.getText().length()).toString()
-                .replace(" ", "").replaceAll("[()]]", "");
-
-        recipient4 = contact1.getText().subSequence(contact1.getText().length() - 16, contact1.getText().length()).toString()
-                .replace(" ", "").replaceAll("[()]]", "");
-
-        recipient5 = contact1.getText().subSequence(contact1.getText().length() - 16, contact1.getText().length()).toString()
-                .replace(" ", "").replaceAll("[()]]", "");
 
         sendSMS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                recipient1 = contact1.getText().subSequence(contact1.getText().length() - 16, contact1.getText().length()).toString()
+                        .replace(" ", "").replaceAll("[()]]", "");
+
+                recipient2 = contact1.getText().subSequence(contact1.getText().length() - 16, contact1.getText().length()).toString()
+                        .replace(" ", "").replaceAll("[()]]", "");
+
+                recipient3 = contact1.getText().subSequence(contact1.getText().length() - 16, contact1.getText().length()).toString()
+                        .replace(" ", "").replaceAll("[()]]", "");
+
+                recipient4 = contact1.getText().subSequence(contact1.getText().length() - 16, contact1.getText().length()).toString()
+                        .replace(" ", "").replaceAll("[()]]", "");
+
+                recipient5 = contact1.getText().subSequence(contact1.getText().length() - 16, contact1.getText().length()).toString()
+                        .replace(" ", "").replaceAll("[()]]", "");
+
                 SmsManager.getDefault().sendTextMessage(contact1.getText().subSequence(contact1.getText().length() - 11, contact1.getText().length()).toString(),
                         null, message, null, null);
 
@@ -119,7 +175,7 @@ public class SavedContactsFragment extends Fragment {
                 SmsManager.getDefault().sendTextMessage(recipient3, null, message, null, null);
                 SmsManager.getDefault().sendTextMessage(recipient5, null, message, null, null);
 
-                Log.d("SMS!!!", message);
+                Toast.makeText(getContext(), "SOS message sent", Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -152,19 +208,19 @@ public class SavedContactsFragment extends Fragment {
                         String name = c.getString(c.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
 
                         if(contact1.getText().toString().matches("No contact")){
-                            contact1.setText(name + ": " + cNumber);
+                            contact1.setText(name + ": \n" + cNumber);
 
                         }else if(contact2.getText().toString().matches("No contact")){
-                            contact2.setText(name + ": " + cNumber);
+                            contact2.setText(name + ": \n" + cNumber);
 
                         }else if(contact3.getText().toString().matches("No contact")){
-                            contact3.setText(name + ": " + cNumber);
+                            contact3.setText(name + ": \n" + cNumber);
 
                         }else if(contact4.getText().toString().matches("No contact")){
-                            contact4.setText(name + ": " + cNumber);
+                            contact4.setText(name + ": \n" + cNumber);
 
                         }else if(contact5.getText().toString().matches("No contact")) {
-                            contact5.setText(name + ": " + cNumber);
+                            contact5.setText(name + ": \n" + cNumber);
 
                         }
 

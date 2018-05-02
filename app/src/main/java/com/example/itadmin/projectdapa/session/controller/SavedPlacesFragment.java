@@ -33,10 +33,25 @@ public class SavedPlacesFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+        View view = inflater.inflate(R.layout.fragment_saved_places, container, false);
 
-        args = getArguments().getString("data");
+        hospital1 = view.findViewById(R.id.hospital1);
+        hospital2 = view.findViewById(R.id.hospital2);
+        hospital3 = view.findViewById(R.id.hospital3);
 
-        return inflater.inflate(R.layout.fragment_saved_places, container, false);
+        police1 = view.findViewById(R.id.police1);
+        police2 = view.findViewById(R.id.police2);
+        police3 = view.findViewById(R.id.police3);
+
+        fire1 = view.findViewById(R.id.fireDept1);
+        fire1 = view.findViewById(R.id.fireDept2);
+        fire1 = view.findViewById(R.id.fireDept3);
+
+        vet1 = view.findViewById(R.id.vet1);
+        vet2 = view.findViewById(R.id.vet2);
+        vet3 = view.findViewById(R.id.vet3);
+        
+        return view;
 
     }
 
@@ -44,21 +59,7 @@ public class SavedPlacesFragment extends Fragment {
     public void onStart() {
         super.onStart();
 
-        hospital1 = getView().findViewById(R.id.hospital1);
-        hospital2 = getView().findViewById(R.id.hospital2);
-        hospital3 = getView().findViewById(R.id.hospital3);
-
-        police1 = getView().findViewById(R.id.police1);
-        police2 = getView().findViewById(R.id.police2);
-        police3 = getView().findViewById(R.id.police3);
-
-        fire1 = getView().findViewById(R.id.fireDept1);
-        fire1 = getView().findViewById(R.id.fireDept2);
-        fire1 = getView().findViewById(R.id.fireDept3);
-
-        vet1 = getView().findViewById(R.id.vet1);
-        vet2 = getView().findViewById(R.id.vet2);
-        vet3 = getView().findViewById(R.id.vet3);
+        args = getArguments().getString("data");
 
         hospital1.setText(args);
         Log.d("DATA RECEIVED", args);
