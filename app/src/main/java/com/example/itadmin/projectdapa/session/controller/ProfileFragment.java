@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.itadmin.projectdapa.R;
+import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import java.io.IOException;
@@ -97,6 +98,11 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
+
+                if(LoginManager.getInstance() != null){
+                    LoginManager.getInstance().logOut();
+                }
+
 
                 startActivity(new Intent(getActivity(), LoginActivity.class));
             }
