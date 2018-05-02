@@ -3,14 +3,16 @@ package com.example.itadmin.projectdapa.session.controller;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.database.Cursor;;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.telephony.PhoneNumberUtils;
 import android.telephony.SmsManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,9 +23,12 @@ import android.widget.Toast;
 
 import com.example.itadmin.projectdapa.R;
 import com.example.itadmin.projectdapa.maps.controller.MapsFragment;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 public class SavedContactsFragment extends Fragment {
 
@@ -53,6 +58,8 @@ public class SavedContactsFragment extends Fragment {
     String recipient3;
     String recipient4;
     String recipient5;
+
+    public static FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
 
     @Override
@@ -140,7 +147,7 @@ public class SavedContactsFragment extends Fragment {
 
         Date dateAndTime = Calendar.getInstance().getTime();
 
-        message = "SOS! I need help!\n" +
+        message = "SOS! " + user.getDisplayName() + " need help!\n" +
                 "Last recorded location: \n" +
                 "Latitude: " + MapsFragment.latitude + "\n" +
                 "Longitude: " + MapsFragment.longitude + "\n" +
@@ -152,28 +159,41 @@ public class SavedContactsFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                recipient1 = contact1.getText().subSequence(contact1.getText().length() - 16, contact1.getText().length()).toString()
-                        .replace(" ", "").replaceAll("[()]]", "");
+                if(!contact1.getText().toString().matches("")){
+                    recipient1 = contact1.getText().toString().replaceAll("[^0-9]", "");
 
-                recipient2 = contact1.getText().subSequence(contact1.getText().length() - 16, contact1.getText().length()).toString()
-                        .replace(" ", "").replaceAll("[()]]", "");
+                    SmsManager.getDefault().sendTextMessage(recipient1, null, message, null, null);
+                }
 
-                recipient3 = contact1.getText().subSequence(contact1.getText().length() - 16, contact1.getText().length()).toString()
-                        .replace(" ", "").replaceAll("[()]]", "");
+                if(!contact2.getText().toString().matches("")){
+                    recipient2 = contact2.getText().toString().replaceAll("[^0-9]", "");
 
-                recipient4 = contact1.getText().subSequence(contact1.getText().length() - 16, contact1.getText().length()).toString()
-                        .replace(" ", "").replaceAll("[()]]", "");
+                    SmsManager.getDefault().sendTextMessage(recipient2, null, message, null, null);
+                }
 
-                recipient5 = contact1.getText().subSequence(contact1.getText().length() - 16, contact1.getText().length()).toString()
-                        .replace(" ", "").replaceAll("[()]]", "");
+                if(!contact3.getText().toString().matches("")){
+                    recipient3 = contact3.getText().toString().replaceAll("[^0-9]", "");
 
-                SmsManager.getDefault().sendTextMessage(contact1.getText().subSequence(contact1.getText().length() - 11, contact1.getText().length()).toString(),
-                        null, message, null, null);
+                    SmsManager.getDefault().sendTextMessage(recipient3, null, message, null, null);
+                }
 
-                SmsManager.getDefault().sendTextMessage(recipient1, null, message, null, null);
-                SmsManager.getDefault().sendTextMessage(recipient2, null, message, null, null);
-                SmsManager.getDefault().sendTextMessage(recipient3, null, message, null, null);
-                SmsManager.getDefault().sendTextMessage(recipient5, null, message, null, null);
+                if(!contact4.getText().toString().matches("")){
+                    recipient4 = contact4.getText().toString().replaceAll("[^0-9]", "");
+
+                    SmsManager.getDefault().sendTextMessage(recipient4, null, message, null, null);
+                }
+
+                if(!contact5.getText().toString().matches("")){
+                    recipient5 = contact5.getText().toString().replaceAll("[^0-9]", "");
+
+                    SmsManager.getDefault().sendTextMessage(recipient5, null, message, null, null);
+                }
+
+                Log.d("CONTACTS - Recipient1: ", recipient1);
+                Log.d("CONTACTS - Recipient2: ", recipient2);
+                Log.d("CONTACTS - Recipient3: ", recipient3);
+                Log.d("CONTACTS - Recipient4: ", recipient4);
+                Log.d("CONTACTS - Recipient5: ", recipient5);
 
                 Toast.makeText(getContext(), "SOS message sent", Toast.LENGTH_LONG).show();
             }
@@ -209,19 +229,23 @@ public class SavedContactsFragment extends Fragment {
 
                         if(contact1.getText().toString().matches("No contact")){
                             contact1.setText(name + ": \n" + cNumber);
+                        }
 
-                        }else if(contact2.getText().toString().matches("No contact")){
+                        if(contact2.getText().toString().matches("No contact")){
                             contact2.setText(name + ": \n" + cNumber);
+                        }
 
-                        }else if(contact3.getText().toString().matches("No contact")){
+                        if(contact3.getText().toString().matches("No contact")){
                             contact3.setText(name + ": \n" + cNumber);
+                        }
 
-                        }else if(contact4.getText().toString().matches("No contact")){
+                        if(contact4.getText().toString().matches("No contact")){
                             contact4.setText(name + ": \n" + cNumber);
 
-                        }else if(contact5.getText().toString().matches("No contact")) {
-                            contact5.setText(name + ": \n" + cNumber);
+                        }
 
+                        if(contact5.getText().toString().matches("No contact")) {
+                            contact5.setText(name + ": \n" + cNumber);
                         }
 
                         break;
