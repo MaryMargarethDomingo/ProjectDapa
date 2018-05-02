@@ -25,7 +25,6 @@ public class ProfileFragment extends Fragment {
     private TextView phone;
     private TextView username;
     private ImageView image;
-    private TextView editProfile;
     private Button logOut;
     private Button settings;
 
@@ -41,7 +40,6 @@ public class ProfileFragment extends Fragment {
         email = getView().findViewById(R.id.email);
         phone = getView().findViewById(R.id.number);
         image = getView().findViewById(R.id.profilePic);
-        editProfile = getView().findViewById(R.id.editProfile);
 
         savedPlaces = getView().findViewById(R.id.btnSavedPlaces);
         savedContacts = getView().findViewById(R.id.btnSavedContacts);
@@ -83,14 +81,6 @@ public class ProfileFragment extends Fragment {
             public void onClick(View view) {
                 Fragment savedContactsFragment = new SavedContactsFragment();
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.include2, savedContactsFragment).addToBackStack(null).commit();
-            }
-        });
-
-        editProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Fragment editProfileFragment = new EditProfileFragment();
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.include2, editProfileFragment).addToBackStack(null).commit();
             }
         });
 
