@@ -26,7 +26,7 @@
     <com.google.android.gms.common.SignInButton
         android:id="@+id/googleSignin"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -34,8 +34,10 @@
     <com.facebook.login.widget.LoginButton
         android:id="@+id/facebookSignin"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_margin="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
