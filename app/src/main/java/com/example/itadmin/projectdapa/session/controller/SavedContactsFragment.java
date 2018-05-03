@@ -62,7 +62,7 @@ public class SavedContactsFragment extends Fragment {
     private SharedPreferences.Editor editor;
 
 
-    public static FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    private static FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
 
     @Override
@@ -182,46 +182,40 @@ public class SavedContactsFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                if(!contact1.getText().toString().matches("")){
+                if(!contact1.getText().toString().matches("No Contact")){
                     recipient1 = contact1.getText().toString().replaceAll("[^0-9]", "");
 
                     SmsManager.getDefault().sendTextMessage(recipient1, null, message, null, null);
                 }
 
-                if(!contact2.getText().toString().matches("")){
+                if(!contact2.getText().toString().matches("No Contact")){
                     recipient2 = contact2.getText().toString().replaceAll("[^0-9]", "");
 
                     SmsManager.getDefault().sendTextMessage(recipient2, null, message, null, null);
                 }
 
-                if(!contact3.getText().toString().matches("")){
+                if(!contact3.getText().toString().matches("No Contact")){
                     recipient3 = contact3.getText().toString().replaceAll("[^0-9]", "");
 
                     SmsManager.getDefault().sendTextMessage(recipient3, null, message, null, null);
                 }
 
-                if(!contact4.getText().toString().matches("")){
+                if(!contact4.getText().toString().matches("No Contact")){
                     recipient4 = contact4.getText().toString().replaceAll("[^0-9]", "");
 
                     SmsManager.getDefault().sendTextMessage(recipient4, null, message, null, null);
                 }
 
-                if(!contact5.getText().toString().matches("")){
+                if(!contact5.getText().toString().matches("No Contact")){
                     recipient5 = contact5.getText().toString().replaceAll("[^0-9]", "");
 
                     SmsManager.getDefault().sendTextMessage(recipient5, null, message, null, null);
                 }
 
-                if(contact1.getText().toString().matches("") && contact2.getText().toString().matches("") &&
-                        contact3.getText().toString().matches("") && contact4.getText().toString().matches("") && contact5.getText().toString().matches("")){
+                if(contact1.getText().toString().matches("No Contact") && contact2.getText().toString().matches("No Contact") &&
+                        contact3.getText().toString().matches("No Contact") && contact4.getText().toString().matches("No Contact") && contact5.getText().toString().matches("No Contact")){
                     Toast.makeText(getContext(), "No contacts available, add contacts first", Toast.LENGTH_LONG).show();
                 }
-
-                Log.d("CONTACTS - Recipient1: ", recipient1);
-                Log.d("CONTACTS - Recipient2: ", recipient2);
-                Log.d("CONTACTS - Recipient3: ", recipient3);
-                Log.d("CONTACTS - Recipient4: ", recipient4);
-                Log.d("CONTACTS - Recipient5: ", recipient5);
 
                 Toast.makeText(getContext(), "SOS message sent", Toast.LENGTH_LONG).show();
             }
@@ -254,24 +248,24 @@ public class SavedContactsFragment extends Fragment {
                         }
                         String name = c.getString(c.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
 
-                        if(contact1.getText().toString().matches("No contact")){
+                        if(contact1.getText().toString().matches("No Contact")){
                             editor.putString("contact1", name + ": \n" + cNumber);
                             contact1.setText(name + ": \n" + cNumber);
                         }
-                        if(contact2.getText().toString().matches("No contact")){
+                        if(contact2.getText().toString().matches("No Contact")){
                             editor.putString("contact2", name + ": \n" + cNumber);
                             contact2.setText(name + ": \n" + cNumber);
                         }
-                        if(contact3.getText().toString().matches("No contact")){
+                        if(contact3.getText().toString().matches("No Contact")){
                             editor.putString("contact3", name + ": \n" + cNumber);
                             contact3.setText(name + ": \n" + cNumber);
                         }
-                        if(contact4.getText().toString().matches("No contact")){
+                        if(contact4.getText().toString().matches("No Contact")){
                             editor.putString("contact4", name + ": \n" + cNumber);
                             contact4.setText(name + ": \n" + cNumber);
 
                         }
-                        if(contact5.getText().toString().matches("No contact")) {
+                        if(contact5.getText().toString().matches("No Contact")) {
                             editor.putString("contact5", name + ": \n" + cNumber);
                             contact5.setText(name + ": \n" + cNumber);
                         }
