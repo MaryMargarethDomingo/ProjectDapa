@@ -43,7 +43,6 @@ public class SavedContactsFragment extends Fragment {
     private ImageButton btnDeleteContact4;
     private ImageButton btnDeleteContact5;
 
-
     private TextView contact1;
     private TextView contact2;
     private TextView contact3;
@@ -257,21 +256,20 @@ public class SavedContactsFragment extends Fragment {
                         if(contact1.getText().toString().matches("No contact")){
                             editor.putString("contact1", name + ": \n" + cNumber);
                             contact1.setText(name + ": \n" + cNumber);
-                        }
-                        if(contact2.getText().toString().matches("No contact")){
+
+                        } else if(contact2.getText().toString().matches("No contact")){
                             editor.putString("contact2", name + ": \n" + cNumber);
                             contact2.setText(name + ": \n" + cNumber);
-                        }
-                        if(contact3.getText().toString().matches("No contact")){
+
+                        }else if(contact3.getText().toString().matches("No contact")){
                             editor.putString("contact3", name + ": \n" + cNumber);
                             contact3.setText(name + ": \n" + cNumber);
-                        }
-                        if(contact4.getText().toString().matches("No contact")){
+
+                        }else if(contact4.getText().toString().matches("No contact")){
                             editor.putString("contact4", name + ": \n" + cNumber);
                             contact4.setText(name + ": \n" + cNumber);
 
-                        }
-                        if(contact5.getText().toString().matches("No contact")) {
+                        }else if(contact5.getText().toString().matches("No contact")) {
                             editor.putString("contact5", name + ": \n" + cNumber);
                             contact5.setText(name + ": \n" + cNumber);
                         }
