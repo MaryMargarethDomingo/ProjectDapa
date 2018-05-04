@@ -82,10 +82,12 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     private DatabaseReference database;
     private FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     private FloatingActionButton reportFab;
-    private Animation show_fab_1 = AnimationUtils.loadAnimation(getActivity(), R.anim.reportfab_show);
-    private Animation hide_fab_1 = AnimationUtils.loadAnimation(getActivity(), R.anim.reportfab_hide);
+    private FloatingActionButton fab1;
+    private FloatingActionButton fab2;
+    private FloatingActionButton fab3;
+    private Animation show_fab_menu;
+    private Animation hide_fab_menu;
     private static BottomSheetDialogFragment bottomSheetDialogFragment = new PopUpMarkerFragment();
-    private boolean justClicked = false;
 
     public static final int REQUEST_LOCATION_CODE = 99;
 
@@ -104,6 +106,16 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     }
 
     @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        show_fab_menu = AnimationUtils.loadAnimation(getActivity().getApplication(), R.anim.reportfab_show);
+        hide_fab_menu = AnimationUtils.loadAnimation(getActivity().getApplication(), R.anim.reportfab_hide);
+    }
+
+        private boolean justClicked = false;
+
+    @Override
     public void onStart(){
         super.onStart();
 
@@ -112,6 +124,9 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         togFire = getView().findViewById(R.id.togFire);
         togVet = getView().findViewById(R.id.togVet);
         reportFab = getView().findViewById(R.id.floatingActionButton);
+        fab1 = getView().findViewById(R.id.fab_1);
+        fab2 = getView().findViewById(R.id.fab_2);
+        fab3 = getView().findViewById(R.id.fab_3);
 
         togHospital.setOnCheckedChangeListener(changeChecker);
         togPolice.setOnCheckedChangeListener(changeChecker);
@@ -120,7 +135,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         reportFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(isFabMenuDisplayed){
+                if(!isFabMenuDisplayed){
                     displayFabMenu();
                 }else{
                     hideFabMenu();
@@ -539,26 +554,26 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
 
     private boolean isFabMenuDisplayed = false;
-    private boolean displayFabMenu(){
-        FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) reportFab.getLayoutParams();
-        layoutParams.rightMargin += (int) (reportFab.getWidth() * 1.7);
-        layoutParams.bottomMargin += (int) (reportFab.getHeight() * 0.25);
-        reportFab.setLayoutParams(layoutParams);
-        reportFab.startAnimation(show_fab_1);
-        reportFab.setClickable(true);
+    private void displayFabMenu(){
+        FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) fab1.getLayoutParams();
+        layoutParams.rightMargin += (int) (fab1.getWidth() * 1.7);
+        layoutParams.bottomMargin += (int) (fab1.getHeight() * 0.25);
+        fab1.setLayoutParams(layoutParams);
+        fab1.startAnimation(show_fab_menu);
+        fab1.setClickable(true);
 
-        return isFabMenuDisplayed = true;
+        isFabMenuDisplayed = true;
     }
 
-    private boolean hideFabMenu(){
-        FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) reportFab.getLayoutParams();
-        layoutParams.rightMargin -= (int) (reportFab.getWidth() * 1.7);
-        layoutParams.bottomMargin -= (int) (reportFab.getHeight() * 0.25);
-        reportFab.setLayoutParams(layoutParams);
-        reportFab.startAnimation(hide_fab_1);
-        reportFab.setClickable(false);
+    private void hideFabMenu(){
+        FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) fab1.getLayoutParams();
+        layoutParams.rightMargin -= (int) (fab1.getWidth() * 1.7);
+        layoutParams.bottomMargin -= (int) (fab1.getHeight() * 0.25);
+        fab1.setLayoutParams(layoutParams);
+        fab1.startAnimation(hide_fab_menu);
+        fab1.setClickable(false);
 
-        return isFabMenuDisplayed = false;
+        isFabMenuDisplayed = false;
     }
 
 }
