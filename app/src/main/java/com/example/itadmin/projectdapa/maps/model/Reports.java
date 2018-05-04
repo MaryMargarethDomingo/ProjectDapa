@@ -8,17 +8,17 @@ public class Reports {
     private double latitude;
     private double longitude;
     private String username;
-    private String description;
+    private String disasterType;
 
     public Reports(){
 
     }
 
-    public Reports(double latitude, double longitude, String username, String description){
+    public Reports(double latitude, double longitude, String username, String disasterType){
         this.latitude = latitude;
         this.longitude = longitude;
         this.username = username;
-        this.description = description;
+        this.disasterType = disasterType;
     }
 
     public double getLatitude() {
@@ -45,11 +45,11 @@ public class Reports {
         this.username = username;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDisasterType() {
+        return disasterType;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDisasterType(String disasterType) {
+        this.disasterType = disasterType;
     }
 }

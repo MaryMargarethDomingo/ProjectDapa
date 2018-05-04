@@ -83,5 +83,7 @@
             android:clickable="true"
             app:srcCompat="@drawable/report" />
 
+        <include layout="@layout/maps_fab_report"/>
+
     </RelativeLayout>
 </LinearLayout>

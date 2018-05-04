@@ -21,7 +21,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.CompoundButton;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -79,6 +82,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     private DatabaseReference database;
     private FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     private FloatingActionButton reportFab;
+    private Animation show_fab_1 = AnimationUtils.loadAnimation(getActivity(), R.anim.reportfab_show);
+    private Animation hide_fab_1 = AnimationUtils.loadAnimation(getActivity(), R.anim.reportfab_hide);
     private static BottomSheetDialogFragment bottomSheetDialogFragment = new PopUpMarkerFragment();
     private boolean justClicked = false;
 
@@ -115,9 +120,14 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         reportFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!justClicked){
+                if(isFabMenuDisplayed){
+                    displayFabMenu();
+                }else{
+                    hideFabMenu();
+                }
+                /*if(!justClicked){
                     if(latitude != 0 || longitude != 0){
-                        Reports reports = new Reports(latitude, longitude, user.getEmail().split("@")[0], "Typhoon");
+                        Reports reports = new Reports(latitude, longitude, user.getEmail(), "Typhoon");
                         database.child(database.push().getKey()).setValue(reports);
 
                         Toast.makeText(getContext(), "Report clicked!", Toast.LENGTH_SHORT).show();
@@ -133,7 +143,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     public void run() {
                         justClicked = false;
                     }
-                }, 5000);
+                }, 5000);*/
 
             }
         });
@@ -523,9 +533,32 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     }
 
 //check if marker is a report
-    public boolean isReportMarker(){
+    private boolean isReportMarker(){
         return false;
     }
 
+
+    private boolean isFabMenuDisplayed = false;
+    private boolean displayFabMenu(){
+        FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) reportFab.getLayoutParams();
+        layoutParams.rightMargin += (int) (reportFab.getWidth() * 1.7);
+        layoutParams.bottomMargin += (int) (reportFab.getHeight() * 0.25);
+        reportFab.setLayoutParams(layoutParams);
+        reportFab.startAnimation(show_fab_1);
+        reportFab.setClickable(true);
+
+        return isFabMenuDisplayed = true;
+    }
+
+    private boolean hideFabMenu(){
+        FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) reportFab.getLayoutParams();
+        layoutParams.rightMargin -= (int) (reportFab.getWidth() * 1.7);
+        layoutParams.bottomMargin -= (int) (reportFab.getHeight() * 0.25);
+        reportFab.setLayoutParams(layoutParams);
+        reportFab.startAnimation(hide_fab_1);
+        reportFab.setClickable(false);
+
+        return isFabMenuDisplayed = false;
+    }
 
 }

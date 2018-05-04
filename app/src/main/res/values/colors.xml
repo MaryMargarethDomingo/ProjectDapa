@@ -7,6 +7,8 @@
     <!--<color name="colorAccent">#FF4081</color>-->
     <color name="colorAccent">#55acee</color>
 
+    <color name="colorFAB">#6c6fff</color>
+
     <color name="gradientStart">#70bbf4</color>
     <color name="gradientEnd">#1a95f4</color>
 

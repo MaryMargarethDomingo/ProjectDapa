@@ -251,7 +251,7 @@ public class SavedContactsFragment extends Fragment {
                             editor.putString("contact1", name + ": \n" + cNumber);
                             contact1.setText(name + ": \n" + cNumber);
 
-                        } else if(contact2.getText().toString().matches("No contact")){
+                        }else if(contact2.getText().toString().matches("No contact")){
                             editor.putString("contact2", name + ": \n" + cNumber);
                             contact2.setText(name + ": \n" + cNumber);
 
