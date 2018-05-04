@@ -8,6 +8,7 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -20,7 +21,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.CompoundButton;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -67,8 +71,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     Location lastLocation;
     Marker currentLocationMarker;
     static int PROXIMITY_RADIUS = 2 * 1000;
-    static double latitude = 0;
-    static double longitude = 0;
+    public static double latitude = 0;
+    public static double longitude = 0;
     static String type;
 
     Bundle bundle = new Bundle();
@@ -77,7 +81,12 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     private static double endMarkerLng;
     private DatabaseReference database;
     private FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-    private FloatingActionButton fab;
+    private FloatingActionButton reportFab;
+    private FloatingActionButton fab1;
+    private FloatingActionButton fab2;
+    private FloatingActionButton fab3;
+    private Animation show_fab_menu;
+    private Animation hide_fab_menu;
     private static BottomSheetDialogFragment bottomSheetDialogFragment = new PopUpMarkerFragment();
 
     public static final int REQUEST_LOCATION_CODE = 99;
@@ -97,6 +106,16 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     }
 
     @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        show_fab_menu = AnimationUtils.loadAnimation(getActivity().getApplication(), R.anim.reportfab_show);
+        hide_fab_menu = AnimationUtils.loadAnimation(getActivity().getApplication(), R.anim.reportfab_hide);
+    }
+
+        private boolean justClicked = false;
+
+    @Override
     public void onStart(){
         super.onStart();
 
@@ -104,27 +123,43 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         togPolice = getView().findViewById(R.id.togPolice);
         togFire = getView().findViewById(R.id.togFire);
         togVet = getView().findViewById(R.id.togVet);
-        fab = getView().findViewById(R.id.floatingActionButton);
+        reportFab = getView().findViewById(R.id.floatingActionButton);
+        fab1 = getView().findViewById(R.id.fab_1);
+        fab2 = getView().findViewById(R.id.fab_2);
+        fab3 = getView().findViewById(R.id.fab_3);
 
         togHospital.setOnCheckedChangeListener(changeChecker);
         togPolice.setOnCheckedChangeListener(changeChecker);
         togFire.setOnCheckedChangeListener(changeChecker);
         togVet.setOnCheckedChangeListener(changeChecker);
-        fab.setOnClickListener(new View.OnClickListener() {
+        reportFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(latitude != 0 || longitude != 0){
-                    Reports reports;
-                    if(user.getDisplayName() == null){
-                        reports = new Reports(latitude, longitude, user.getEmail().split("@")[0], "Typhoon");
-                    }else{
-                        reports = new Reports(latitude, longitude, user.getDisplayName().split(" ")[0], "Typhoon");
-                    }
-
-                    database.child(database.push().getKey()).setValue(reports);
-
-                    Toast.makeText(getContext(), "Report clicked!", Toast.LENGTH_SHORT).show();
+                if(!isFabMenuDisplayed){
+                    displayFabMenu();
+                }else{
+                    hideFabMenu();
                 }
+                /*if(!justClicked){
+                    if(latitude != 0 || longitude != 0){
+                        Reports reports = new Reports(latitude, longitude, user.getEmail(), "Typhoon");
+                        database.child(database.push().getKey()).setValue(reports);
+
+                        Toast.makeText(getContext(), "Report clicked!", Toast.LENGTH_SHORT).show();
+                    }
+                }else{
+                    Toast.makeText(getContext(), "You've just reported! Please try again in few seconds", Toast.LENGTH_SHORT).show();
+                }
+
+                justClicked = true;
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        justClicked = false;
+                    }
+                }, 5000);*/
+
             }
         });
 
@@ -162,7 +197,6 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     MarkerOptions markerOptions = new MarkerOptions();
                     markerOptions.position(new LatLng(Double.parseDouble(dsp.child("latitude").getValue().toString()),
                             Double.parseDouble(dsp.child("longitude").getValue().toString())));
-                    markerOptions.title(placeName + " : "+ vicinity);
                     markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
                     mMap.addMarker(markerOptions);
                 }
@@ -479,6 +513,11 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     Toast.makeText(getActivity(), "Showing nearby veterinary clinics", Toast.LENGTH_LONG).show();
 
                 }
+
+                if (compoundButton == null){
+                    mMap.clear();
+                    //add code for reports here
+                }
             }
         }
     };
@@ -498,13 +537,43 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         placeName = titleArr[0];
         vicinity = titleArr[1];
 
-        bottomSheetDialogFragment.show(getActivity().getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
+        if(isReportMarker()){
+
+        }else{
+            bottomSheetDialogFragment.show(getActivity().getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
+        }
+
 
         return false;
     }
 
-//-------------------------------------------------- test buttons - METHODS --------------------------------------------------
+//check if marker is a report
+    private boolean isReportMarker(){
+        return false;
+    }
 
 
+    private boolean isFabMenuDisplayed = false;
+    private void displayFabMenu(){
+        FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) fab1.getLayoutParams();
+        layoutParams.rightMargin += (int) (fab1.getWidth() * 1.7);
+        layoutParams.bottomMargin += (int) (fab1.getHeight() * 0.25);
+        fab1.setLayoutParams(layoutParams);
+        fab1.startAnimation(show_fab_menu);
+        fab1.setClickable(true);
+
+        isFabMenuDisplayed = true;
+    }
+
+    private void hideFabMenu(){
+        FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) fab1.getLayoutParams();
+        layoutParams.rightMargin -= (int) (fab1.getWidth() * 1.7);
+        layoutParams.bottomMargin -= (int) (fab1.getHeight() * 0.25);
+        fab1.setLayoutParams(layoutParams);
+        fab1.startAnimation(hide_fab_menu);
+        fab1.setClickable(false);
+
+        isFabMenuDisplayed = false;
+    }
 
 }

@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.itadmin.projectdapa.R;
+import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import java.io.IOException;
@@ -24,10 +25,8 @@ public class ProfileFragment extends Fragment {
     private TextView phone;
     private TextView username;
     private ImageView image;
-    private TextView editProfile;
     private Button logOut;
     private Button settings;
-    public static Fragment savedPlacesFragment = new SavedPlacesFragment();
 
     private Button savedPlaces;
     private Button savedContacts;
@@ -41,7 +40,6 @@ public class ProfileFragment extends Fragment {
         email = getView().findViewById(R.id.email);
         phone = getView().findViewById(R.id.number);
         image = getView().findViewById(R.id.profilePic);
-        editProfile = getView().findViewById(R.id.editProfile);
 
         savedPlaces = getView().findViewById(R.id.btnSavedPlaces);
         savedContacts = getView().findViewById(R.id.btnSavedContacts);
@@ -72,16 +70,17 @@ public class ProfileFragment extends Fragment {
         savedPlaces.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Fragment savedPlacesFragment = new SavedPlacesFragment();
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.include2, savedPlacesFragment).addToBackStack(null).commit();
 
             }
         });
 
-        editProfile.setOnClickListener(new View.OnClickListener() {
+        savedContacts.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Fragment editProfileFragment = new EditProfileFragment();
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.include2, editProfileFragment).addToBackStack(null).commit();
+            public void onClick(View view) {
+                Fragment savedContactsFragment = new SavedContactsFragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.include2, savedContactsFragment).addToBackStack(null).commit();
             }
         });
 
@@ -89,6 +88,11 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
+
+                if(LoginManager.getInstance() != null){
+                    LoginManager.getInstance().logOut();
+                }
+
 
                 startActivity(new Intent(getActivity(), LoginActivity.class));
             }
@@ -98,7 +102,6 @@ public class ProfileFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
-
         return view;
     }
 }

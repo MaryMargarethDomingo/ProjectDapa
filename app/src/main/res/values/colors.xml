@@ -7,15 +7,19 @@
     <!--<color name="colorAccent">#FF4081</color>-->
     <color name="colorAccent">#55acee</color>
 
+    <color name="colorFAB">#6c6fff</color>
+
     <color name="gradientStart">#70bbf4</color>
     <color name="gradientEnd">#1a95f4</color>
 
+    <color name="callBackground">#60D73C</color>
     <color name="btn1">#9C9B9B</color>
     <color name="btn2">#9C9B9B</color>
     <color name="text_light">#ffffff</color>
     <color name="text_dark">#000000</color>
     <color name="tab_indicator">#ffffff</color>
-    <color name="splashBackground">#607d8b</color>
+    <!--<color name="splashBackground">#607d8b</color>-->
+    <color name="splashBackground">#7e1414</color>
     <color name="yellow">#c2c200</color>
 
 
