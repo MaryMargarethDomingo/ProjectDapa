@@ -1,29 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDapa\\twitter\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v21\\values-v21.xml",
+            "outputFile": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\twitter\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDapa\\tweet-composer\\build\\intermediates\\packaged_res\\debug\\values-v21\\values-v21.xml",
-                    "from": {
-                        "startLines": "2,8",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,468",
-                        "endLines": "7,13",
-                        "endColumns": "12,12",
-                        "endOffsets": "463,882"
-                    },
-                    "to": {
-                        "startLines": "6,12",
-                        "startColumns": "4,4",
-                        "startOffsets": "354,767",
-                        "endLines": "11,17",
-                        "endColumns": "12,12",
-                        "endOffsets": "762,1181"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\18c9d0a472371d05c282b1bad367c708\\res\\values-v21\\values-v21.xml",
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\711b5641e991c96e1bcc9f1480b8ef2c\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -42,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDapa\\tweet-ui\\build\\intermediates\\packaged_res\\debug\\values-v21\\values-v21.xml",
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\packaged_res\\debug\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,5",
                         "startColumns": "4,4",
@@ -58,6 +39,25 @@
                         "endLines": "20,35",
                         "endColumns": "12,12",
                         "endOffsets": "1349,2501"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\packaged_res\\debug\\values-v21\\values-v21.xml",
+                    "from": {
+                        "startLines": "2,8",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,468",
+                        "endLines": "7,13",
+                        "endColumns": "12,12",
+                        "endOffsets": "463,882"
+                    },
+                    "to": {
+                        "startLines": "6,12",
+                        "startColumns": "4,4",
+                        "startOffsets": "354,767",
+                        "endLines": "11,17",
+                        "endColumns": "12,12",
+                        "endOffsets": "762,1181"
                     }
                 }
             ]

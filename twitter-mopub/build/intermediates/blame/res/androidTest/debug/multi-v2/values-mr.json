@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDapa\\twitter-mopub\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-mr\\values-mr.xml",
+            "outputFile": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\twitter-mopub\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-mr\\values-mr.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDapa\\twitter-mopub\\build\\intermediates\\packaged_res\\debug\\values-mr\\values-mr.xml",
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\AndroidStudioProjects\\ProjectDAPA\\twitter-mopub\\build\\intermediates\\packaged_res\\debug\\values-mr\\values-mr.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
