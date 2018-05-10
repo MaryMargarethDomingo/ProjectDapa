@@ -18,7 +18,8 @@ public class SurvivalPagerFragment extends Fragment {
     private Button btnDuring;
     private Button btnAfter;
 
-    private WebViewContentFragment webViewContentFragment;
+    private WebViewContentFragment webViewContentFragment = new WebViewContentFragment();
+    Bundle args = new Bundle();
 
     public SurvivalPagerFragment() {    }
 
@@ -47,7 +48,6 @@ public class SurvivalPagerFragment extends Fragment {
                 break;
         }
 
-
     }
 
     @Override
@@ -67,8 +67,6 @@ public class SurvivalPagerFragment extends Fragment {
         btnBefore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                webViewContentFragment = new WebViewContentFragment();
-                Bundle args = new Bundle();
                 args.putString("filename", fileName + "before.html");
                 webViewContentFragment.setArguments(args);
 
@@ -79,8 +77,6 @@ public class SurvivalPagerFragment extends Fragment {
         btnDuring.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                webViewContentFragment = new WebViewContentFragment();
-                Bundle args = new Bundle();
                 args.putString("filename", fileName + "during.html");
                 webViewContentFragment.setArguments(args);
 
@@ -91,8 +87,6 @@ public class SurvivalPagerFragment extends Fragment {
         btnAfter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                webViewContentFragment = new WebViewContentFragment();
-                Bundle args = new Bundle();
                 args.putString("filename", fileName + "after.html");
                 webViewContentFragment.setArguments(args);
 

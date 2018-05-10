@@ -61,7 +61,13 @@ public class SavedPlacesFragment extends Fragment {
 
         args = getArguments().getString("data");
 
-        hospital1.setText(args);
+        if(args.equals("")){
+
+        }else{
+            hospital1.setText(args);
+        }
+
+
         Log.d("DATA RECEIVED", args);
 
     }

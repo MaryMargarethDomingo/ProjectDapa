@@ -50,7 +50,7 @@ public class NotificationService extends BroadcastReceiver {
                     setContentText("Hi " + ProfileFragment.user.getDisplayName().split(" ")[0] + "! Looks like there will be " + preferences.getString("rainString", "rain") + " today. Stay safe!").
                     setContentTitle("Project DAPA").
                     setStyle(new Notification.BigTextStyle().bigText("Hi " + ProfileFragment.user.getDisplayName().split(" ")[0] + "! Looks like there will be " + preferences.getString("rainString", "rain") + " today. Stay safe!")).
-                    setSound(alarmSound).setAutoCancel(true);
+                    setSound(alarmSound).setAutoCancel(true).setShowWhen(true);
 
             notificationManager.notify(100,builder.build());
         }
