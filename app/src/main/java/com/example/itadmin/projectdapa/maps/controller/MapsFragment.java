@@ -85,8 +85,12 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     private FloatingActionButton fab1;
     private FloatingActionButton fab2;
     private FloatingActionButton fab3;
-    private Animation show_fab_menu;
-    private Animation hide_fab_menu;
+    private Animation show_fab1_menu;
+    private Animation hide_fab1_menu;
+    private Animation show_fab2_menu;
+    private Animation hide_fab2_menu;
+    private Animation show_fab3_menu;
+    private Animation hide_fab3_menu;
     private static BottomSheetDialogFragment bottomSheetDialogFragment = new PopUpMarkerFragment();
 
     public static final int REQUEST_LOCATION_CODE = 99;
@@ -109,8 +113,13 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        show_fab_menu = AnimationUtils.loadAnimation(getActivity().getApplication(), R.anim.reportfab_show);
-        hide_fab_menu = AnimationUtils.loadAnimation(getActivity().getApplication(), R.anim.reportfab_hide);
+        show_fab1_menu = AnimationUtils.loadAnimation(getActivity().getApplication(), R.anim.reportfab1_show);
+        hide_fab1_menu = AnimationUtils.loadAnimation(getActivity().getApplication(), R.anim.reportfab1_hide);
+        show_fab2_menu = AnimationUtils.loadAnimation(getActivity().getApplication(), R.anim.reportfab2_show);
+        hide_fab2_menu = AnimationUtils.loadAnimation(getActivity().getApplication(), R.anim.reportfab2_hide);
+        show_fab3_menu = AnimationUtils.loadAnimation(getActivity().getApplication(), R.anim.reportfab3_show);
+        hide_fab3_menu = AnimationUtils.loadAnimation(getActivity().getApplication(), R.anim.reportfab3_hide);
+
     }
 
         private boolean justClicked = false;
@@ -555,23 +564,56 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
     private boolean isFabMenuDisplayed = false;
     private void displayFabMenu(){
-        FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) fab1.getLayoutParams();
-        layoutParams.rightMargin += (int) (fab1.getWidth() * 1.7);
-        layoutParams.bottomMargin += (int) (fab1.getHeight() * 0.25);
-        fab1.setLayoutParams(layoutParams);
-        fab1.startAnimation(show_fab_menu);
+        FrameLayout.LayoutParams layoutParams1 = (FrameLayout.LayoutParams) fab1.getLayoutParams();
+        FrameLayout.LayoutParams layoutParams2 = (FrameLayout.LayoutParams) fab2.getLayoutParams();
+        FrameLayout.LayoutParams layoutParams3 = (FrameLayout.LayoutParams) fab3.getLayoutParams();
+
+        layoutParams1.rightMargin += (int) (fab1.getWidth() * 1.75);
+        layoutParams1.bottomMargin += (int) (fab1.getHeight() * -0.25);
+
+        layoutParams2.rightMargin += (int) (fab2.getWidth() * 1.25);
+        layoutParams2.bottomMargin += (int) (fab2.getHeight() * 1.25);
+
+        layoutParams3.rightMargin += (int) (fab3.getWidth() * -0.25);
+        layoutParams3.bottomMargin += (int) (fab3.getHeight() * 1.75);
+
+        fab1.setLayoutParams(layoutParams1);
+        fab1.startAnimation(show_fab1_menu);
         fab1.setClickable(true);
+
+        fab2.setLayoutParams(layoutParams2);
+        fab2.startAnimation(show_fab2_menu);
+        fab2.setClickable(true);
+
+        fab3.setLayoutParams(layoutParams3);
+        fab3.startAnimation(show_fab3_menu);
+        fab3.setClickable(true);
 
         isFabMenuDisplayed = true;
     }
 
     private void hideFabMenu(){
-        FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) fab1.getLayoutParams();
-        layoutParams.rightMargin -= (int) (fab1.getWidth() * 1.7);
-        layoutParams.bottomMargin -= (int) (fab1.getHeight() * 0.25);
-        fab1.setLayoutParams(layoutParams);
-        fab1.startAnimation(hide_fab_menu);
+        FrameLayout.LayoutParams layoutParams1 = (FrameLayout.LayoutParams) fab1.getLayoutParams();
+        FrameLayout.LayoutParams layoutParams2 = (FrameLayout.LayoutParams) fab2.getLayoutParams();
+        FrameLayout.LayoutParams layoutParams3 = (FrameLayout.LayoutParams) fab3.getLayoutParams();
+
+        layoutParams1.rightMargin -= (int) (fab1.getWidth() * 1.75);
+        layoutParams1.bottomMargin -= (int) (fab1.getHeight() * -0.25);
+        fab1.setLayoutParams(layoutParams1);
+        fab1.startAnimation(hide_fab1_menu);
         fab1.setClickable(false);
+
+        layoutParams2.rightMargin -= (int) (fab2.getWidth() * 1.25);
+        layoutParams2.bottomMargin -= (int) (fab2.getHeight() * 1.25);
+        fab2.setLayoutParams(layoutParams2);
+        fab2.startAnimation(hide_fab2_menu);
+        fab2.setClickable(false);
+
+        layoutParams3.rightMargin -= (int) (fab3.getWidth() * -0.25);
+        layoutParams3.bottomMargin -= (int) (fab3.getHeight() * 1.75);
+        fab3.setLayoutParams(layoutParams3);
+        fab3.startAnimation(hide_fab3_menu);
+        fab3.setClickable(false);
 
         isFabMenuDisplayed = false;
     }
