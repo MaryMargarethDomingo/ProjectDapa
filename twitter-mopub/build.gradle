@@ -19,7 +19,6 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
-    buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
         versionCode 1
@@ -64,6 +63,7 @@ android {
         unitTests.returnDefaultValues = true
         unitTests.includeAndroidResources true
     }
+    buildToolsVersion '27.0.3'
 }
 
 dependencies {
