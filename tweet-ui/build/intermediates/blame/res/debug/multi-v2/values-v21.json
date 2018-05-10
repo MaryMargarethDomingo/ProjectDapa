@@ -1,10 +1,29 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\values-v21\\values-v21.xml",
+            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\HI FREQUENCY\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\dd08b795d54a172a685470c8396aeb14\\res\\values-v21\\values-v21.xml",
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-v21\\themes.xml",
+                    "from": {
+                        "startLines": "18",
+                        "startColumns": "4",
+                        "startOffsets": "693",
+                        "endLines": "20",
+                        "endColumns": "12",
+                        "endOffsets": "859"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "354",
+                        "endLines": "8",
+                        "endColumns": "12",
+                        "endOffsets": "517"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\9442ffa5b8d5c494b8236908816471fc\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +42,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-ui\\src\\main\\res\\values-v21\\tw_tweet_text_styles.xml",
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-v21\\tw_tweet_text_styles.xml",
                     "from": {
                         "startLines": "20",
                         "startColumns": "4",
@@ -39,34 +58,34 @@
                         "endLines": "23",
                         "endColumns": "12",
                         "endOffsets": "1669"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-ui\\src\\main\\res\\values-v21\\themes.xml",
-                    "from": {
-                        "startLines": "18",
-                        "startColumns": "4",
-                        "startOffsets": "693",
-                        "endLines": "20",
-                        "endColumns": "12",
-                        "endOffsets": "859"
-                    },
-                    "to": {
-                        "startLines": "6",
-                        "startColumns": "4",
-                        "startOffsets": "354",
-                        "endLines": "8",
-                        "endColumns": "12",
-                        "endOffsets": "517"
                     }
                 }
             ]
         },
         {
-            "outputFile": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-ui\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
+            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\values-v21\\values-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\HI FREQUENCY\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\dd08b795d54a172a685470c8396aeb14\\res\\values-v21\\values-v21.xml",
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-v21\\themes.xml",
+                    "from": {
+                        "startLines": "18",
+                        "startColumns": "4",
+                        "startOffsets": "693",
+                        "endLines": "20",
+                        "endColumns": "12",
+                        "endOffsets": "859"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "354",
+                        "endLines": "8",
+                        "endColumns": "12",
+                        "endOffsets": "517"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\9442ffa5b8d5c494b8236908816471fc\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -85,7 +104,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-ui\\src\\main\\res\\values-v21\\tw_tweet_text_styles.xml",
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-v21\\tw_tweet_text_styles.xml",
                     "from": {
                         "startLines": "20",
                         "startColumns": "4",
@@ -101,25 +120,6 @@
                         "endLines": "23",
                         "endColumns": "12",
                         "endOffsets": "1669"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-ui\\src\\main\\res\\values-v21\\themes.xml",
-                    "from": {
-                        "startLines": "18",
-                        "startColumns": "4",
-                        "startOffsets": "693",
-                        "endLines": "20",
-                        "endColumns": "12",
-                        "endOffsets": "859"
-                    },
-                    "to": {
-                        "startLines": "6",
-                        "startColumns": "4",
-                        "startOffsets": "354",
-                        "endLines": "8",
-                        "endColumns": "12",
-                        "endOffsets": "517"
                     }
                 }
             ]

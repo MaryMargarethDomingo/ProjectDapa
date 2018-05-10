@@ -75,9 +75,12 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     static int PROXIMITY_RADIUS = 2 * 1000;
     public static double latitude = 0;
     public static double longitude = 0;
-    static String type;
+    public static String type;
 
-    Bundle bundle = new Bundle();
+    private Bundle bundle = new Bundle();
+
+    private SharedPreferences preferences;
+    private SharedPreferences.Editor editor;
 
     private static double endMarkerLat;
     private static double endMarkerLng;
@@ -140,6 +143,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         fab1 = getView().findViewById(R.id.fab_1);
         fab2 = getView().findViewById(R.id.fab_2);
         fab3 = getView().findViewById(R.id.fab_3);
+        preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        editor = preferences.edit();
 
         togHospital.setOnCheckedChangeListener(changeChecker);
         togPolice.setOnCheckedChangeListener(changeChecker);
@@ -511,8 +516,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     private ToggleButton togVet;
     private ToggleButton togReports;
 
+
     SavedPlacesFragment savedPlacesFragment = new SavedPlacesFragment();
-    Bundle place = new Bundle();
 
     CompoundButton.OnCheckedChangeListener changeChecker = new CompoundButton.OnCheckedChangeListener(){
 
@@ -536,9 +541,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     Toast.makeText(getActivity(), "Showing nearby hospitals", Toast.LENGTH_LONG).show();
 
-                    place.putString("place", type);
-                    savedPlacesFragment.setArguments(place);
-
+                    editor.putString("place", type).commit();
                 }
 
                 if (compoundButton == togPolice) {
@@ -557,8 +560,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     Toast.makeText(getActivity(), "Showing nearby police stations", Toast.LENGTH_LONG).show();
 
-                    place.putString("place", type);
-                    savedPlacesFragment.setArguments(place);
+                    editor.putString("place", type).commit();
 
                 }
 
@@ -578,8 +580,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     Toast.makeText(getActivity(), "Showing nearby fire stations", Toast.LENGTH_LONG).show();
 
-                    place.putString("place", type);
-                    savedPlacesFragment.setArguments(place);
+                    editor.putString("place", type).commit();
 
                 }
 
@@ -599,8 +600,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     Toast.makeText(getActivity(), "Showing nearby veterinary clinics", Toast.LENGTH_LONG).show();
 
-                    place.putString("place", type);
-                    savedPlacesFragment.setArguments(place);
+                    editor.putString("place", type).commit();
 
                 }
 
