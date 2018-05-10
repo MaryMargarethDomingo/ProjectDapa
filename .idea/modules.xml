@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ProjectDAPA.iml" filepath="$PROJECT_DIR$/ProjectDAPA.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/ProjectDAPA-app.iml" filepath="$PROJECT_DIR$/app/ProjectDAPA-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/THESIS - Project DAPA.iml" filepath="$PROJECT_DIR$/THESIS - Project DAPA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/THESIS - Project DAPA-app.iml" filepath="$PROJECT_DIR$/app/THESIS - Project DAPA-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/samples/samples.iml" filepath="$PROJECT_DIR$/samples/samples.iml" />
       <module fileurl="file://$PROJECT_DIR$/samples/app/samples-app.iml" filepath="$PROJECT_DIR$/samples/app/samples-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/tweet-composer/tweet-composer.iml" filepath="$PROJECT_DIR$/tweet-composer/tweet-composer.iml" />

@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__login_btn.xml",
+        "source": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\drawable\\tw__login_btn.xml"
+    },
+    {
+        "merged": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__login_btn_pressed.xml",
+        "source": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\drawable\\tw__login_btn_pressed.xml"
+    },
+    {
+        "merged": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__login_btn_default.xml",
+        "source": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\drawable\\tw__login_btn_default.xml"
+    },
+    {
+        "merged": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__btn_composer_tweet.xml",
+        "source": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-composer\\src\\main\\res\\drawable\\tw__btn_composer_tweet.xml"
+    },
+    {
+        "merged": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__login_btn_disabled.xml",
+        "source": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\drawable\\tw__login_btn_disabled.xml"
+    }
+]

@@ -32,6 +32,7 @@ import com.example.itadmin.projectdapa.R;
 import com.example.itadmin.projectdapa.maps.model.Reports;
 import com.example.itadmin.projectdapa.maps.utility.GetDirectionsData;
 import com.example.itadmin.projectdapa.maps.utility.GetNearbyPlaces;
+import com.example.itadmin.projectdapa.session.controller.SavedPlacesFragment;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
@@ -510,6 +511,9 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     private ToggleButton togVet;
     private ToggleButton togReports;
 
+    SavedPlacesFragment savedPlacesFragment = new SavedPlacesFragment();
+    Bundle place = new Bundle();
+
     CompoundButton.OnCheckedChangeListener changeChecker = new CompoundButton.OnCheckedChangeListener(){
 
         @Override
@@ -532,6 +536,9 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     Toast.makeText(getActivity(), "Showing nearby hospitals", Toast.LENGTH_LONG).show();
 
+                    place.putString("place", type);
+                    savedPlacesFragment.setArguments(place);
+
                 }
 
                 if (compoundButton == togPolice) {
@@ -550,6 +557,9 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     Toast.makeText(getActivity(), "Showing nearby police stations", Toast.LENGTH_LONG).show();
 
+                    place.putString("place", type);
+                    savedPlacesFragment.setArguments(place);
+
                 }
 
                 if (compoundButton == togFire) {
@@ -566,8 +576,11 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     endMarkerLat = 0;
                     endMarkerLng = 0;
 
-
                     Toast.makeText(getActivity(), "Showing nearby fire stations", Toast.LENGTH_LONG).show();
+
+                    place.putString("place", type);
+                    savedPlacesFragment.setArguments(place);
+
                 }
 
                 if (compoundButton == togVet) {
@@ -585,6 +598,9 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     endMarkerLng = 0;
 
                     Toast.makeText(getActivity(), "Showing nearby veterinary clinics", Toast.LENGTH_LONG).show();
+
+                    place.putString("place", type);
+                    savedPlacesFragment.setArguments(place);
 
                 }
 
