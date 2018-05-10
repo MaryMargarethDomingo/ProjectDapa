@@ -10,7 +10,7 @@
         android:layout_gravity="bottom|end"
         android:layout_marginBottom="35dp"
         android:layout_marginEnd="35dp"
-        android:src="@android:drawable/ic_menu_compass"
+        android:src="@drawable/earthquakeicon"
         android:visibility="invisible"
         app:backgroundTint="@color/colorFAB"
         app:fabSize="mini" />
@@ -22,7 +22,7 @@
         android:layout_gravity="bottom|end"
         android:layout_marginBottom="35dp"
         android:layout_marginEnd="35dp"
-        android:src="@android:drawable/ic_menu_myplaces"
+        android:src="@drawable/stormicon"
         android:visibility="invisible"
         app:backgroundTint="@color/colorFAB"
         app:fabSize="mini" />
@@ -34,7 +34,7 @@
         android:layout_gravity="bottom|end"
         android:layout_marginBottom="35dp"
         android:layout_marginEnd="35dp"
-        android:src="@android:drawable/ic_menu_share"
+        android:src="@drawable/landslideicon"
         android:visibility="invisible"
         app:backgroundTint="@color/colorFAB"
         app:fabSize="mini" />
