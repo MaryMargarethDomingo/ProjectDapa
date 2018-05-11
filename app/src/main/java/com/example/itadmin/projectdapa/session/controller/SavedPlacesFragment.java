@@ -44,8 +44,8 @@ public class SavedPlacesFragment extends Fragment {
         police3 = view.findViewById(R.id.police3);
 
         fire1 = view.findViewById(R.id.fireDept1);
-        fire1 = view.findViewById(R.id.fireDept2);
-        fire1 = view.findViewById(R.id.fireDept3);
+        fire2 = view.findViewById(R.id.fireDept2);
+        fire3 = view.findViewById(R.id.fireDept3);
 
         vet1 = view.findViewById(R.id.vet1);
         vet2 = view.findViewById(R.id.vet2);
@@ -59,8 +59,16 @@ public class SavedPlacesFragment extends Fragment {
     public void onStart() {
         super.onStart();
 
-        if(args != null){
-            args = getArguments().getString("data");
+        args = getArguments().getString("data");
+
+        if(args.equals("")){
+
+        }else{
+            hospital1.setText(args);
+        }
+
+
+        Log.d("DATA RECEIVED", args);
 
             hospital1.setText(args);
             Log.d("DATA RECEIVED", args);

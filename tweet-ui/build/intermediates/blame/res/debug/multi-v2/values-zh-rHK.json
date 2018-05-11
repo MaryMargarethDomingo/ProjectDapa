@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\values-zh-rHK\\values-zh-rHK.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\9442ffa5b8d5c494b8236908816471fc\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "101",
+                        "endOffsets": "152"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rHK\\values-zh-rHK.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\9442ffa5b8d5c494b8236908816471fc\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "101",
+                        "endOffsets": "152"
+                    }
+                }
+            ]
+        }
+    ]
+}

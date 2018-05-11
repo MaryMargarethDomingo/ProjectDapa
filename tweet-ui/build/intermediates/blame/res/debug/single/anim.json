@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\anim\\tw__slide_out.xml",
+        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\anim\\tw__slide_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\anim\\tw__accelerate_cubic.xml",
+        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\anim\\tw__accelerate_cubic.xml"
+    }
+]

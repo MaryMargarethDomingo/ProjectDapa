@@ -11,7 +11,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="4">
+        android:weightSum="5">
+
+        <ToggleButton
+            android:id="@+id/togReports"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reports"
+            android:textOff="Reports"
+            android:textOn="Reports"
+            android:textSize="10sp" />
 
         <ToggleButton
             android:id="@+id/togHospital"
@@ -77,11 +87,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
             android:layout_marginBottom="35dp"
-            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
             android:clickable="true"
-            app:srcCompat="@drawable/report" />
+            android:src="@drawable/report" />
 
         <include layout="@layout/maps_fab_report"/>
 

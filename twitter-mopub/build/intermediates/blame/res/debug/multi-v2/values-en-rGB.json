@@ -1,0 +1,48 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter-mopub\\build\\intermediates\\res\\merged\\debug\\values-en-rGB\\values-en-rGB.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter-mopub\\src\\main\\res\\values-en-rGB\\strings.xml",
+                    "from": {
+                        "startLines": "20,21",
+                        "startColumns": "4,4",
+                        "startOffsets": "752,824",
+                        "endColumns": "70,64",
+                        "endOffsets": "818,884"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,126",
+                        "endColumns": "70,64",
+                        "endOffsets": "121,186"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter-mopub\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rGB\\values-en-rGB.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter-mopub\\src\\main\\res\\values-en-rGB\\strings.xml",
+                    "from": {
+                        "startLines": "20,21",
+                        "startColumns": "4,4",
+                        "startOffsets": "752,824",
+                        "endColumns": "70,64",
+                        "endOffsets": "818,884"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,126",
+                        "endColumns": "70,64",
+                        "endOffsets": "121,186"
+                    }
+                }
+            ]
+        }
+    ]
+}

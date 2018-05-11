@@ -32,6 +32,7 @@ import com.example.itadmin.projectdapa.R;
 import com.example.itadmin.projectdapa.maps.model.Reports;
 import com.example.itadmin.projectdapa.maps.utility.GetDirectionsData;
 import com.example.itadmin.projectdapa.maps.utility.GetNearbyPlaces;
+import com.example.itadmin.projectdapa.session.controller.SavedPlacesFragment;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
@@ -56,6 +57,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -73,9 +75,12 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     static int PROXIMITY_RADIUS = 2 * 1000;
     public static double latitude = 0;
     public static double longitude = 0;
-    static String type;
+    public static String type;
 
-    Bundle bundle = new Bundle();
+    private Bundle bundle = new Bundle();
+
+    private SharedPreferences preferences;
+    private SharedPreferences.Editor editor;
 
     private static double endMarkerLat;
     private static double endMarkerLng;
@@ -85,9 +90,14 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     private FloatingActionButton fab1;
     private FloatingActionButton fab2;
     private FloatingActionButton fab3;
-    private Animation show_fab_menu;
-    private Animation hide_fab_menu;
+    private Animation show_fab1_menu;
+    private Animation hide_fab1_menu;
+    private Animation show_fab2_menu;
+    private Animation hide_fab2_menu;
+    private Animation show_fab3_menu;
+    private Animation hide_fab3_menu;
     private static BottomSheetDialogFragment bottomSheetDialogFragment = new PopUpMarkerFragment();
+    private static ArrayList<DataSnapshot> reports = new ArrayList<>();
 
     public static final int REQUEST_LOCATION_CODE = 99;
 
@@ -109,8 +119,13 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        show_fab_menu = AnimationUtils.loadAnimation(getActivity().getApplication(), R.anim.reportfab_show);
-        hide_fab_menu = AnimationUtils.loadAnimation(getActivity().getApplication(), R.anim.reportfab_hide);
+        show_fab1_menu = AnimationUtils.loadAnimation(getActivity().getApplication(), R.anim.reportfab1_show);
+        hide_fab1_menu = AnimationUtils.loadAnimation(getActivity().getApplication(), R.anim.reportfab1_hide);
+        show_fab2_menu = AnimationUtils.loadAnimation(getActivity().getApplication(), R.anim.reportfab2_show);
+        hide_fab2_menu = AnimationUtils.loadAnimation(getActivity().getApplication(), R.anim.reportfab2_hide);
+        show_fab3_menu = AnimationUtils.loadAnimation(getActivity().getApplication(), R.anim.reportfab3_show);
+        hide_fab3_menu = AnimationUtils.loadAnimation(getActivity().getApplication(), R.anim.reportfab3_hide);
+
     }
 
         private boolean justClicked = false;
@@ -123,15 +138,19 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         togPolice = getView().findViewById(R.id.togPolice);
         togFire = getView().findViewById(R.id.togFire);
         togVet = getView().findViewById(R.id.togVet);
+        togReports = getView().findViewById(R.id.togReports);
         reportFab = getView().findViewById(R.id.floatingActionButton);
         fab1 = getView().findViewById(R.id.fab_1);
         fab2 = getView().findViewById(R.id.fab_2);
         fab3 = getView().findViewById(R.id.fab_3);
+        preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        editor = preferences.edit();
 
         togHospital.setOnCheckedChangeListener(changeChecker);
         togPolice.setOnCheckedChangeListener(changeChecker);
         togFire.setOnCheckedChangeListener(changeChecker);
         togVet.setOnCheckedChangeListener(changeChecker);
+        togReports.setOnCheckedChangeListener(changeChecker);
         reportFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -140,9 +159,15 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                 }else{
                     hideFabMenu();
                 }
-                /*if(!justClicked){
+            }
+        });
+
+        fab1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!justClicked){
                     if(latitude != 0 || longitude != 0){
-                        Reports reports = new Reports(latitude, longitude, user.getEmail(), "Typhoon");
+                        Reports reports = new Reports(latitude, longitude, user.getEmail(), "Earthquake");
                         database.child(database.push().getKey()).setValue(reports);
 
                         Toast.makeText(getContext(), "Report clicked!", Toast.LENGTH_SHORT).show();
@@ -158,8 +183,57 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     public void run() {
                         justClicked = false;
                     }
-                }, 5000);*/
+                }, 5000);
+            }
+        });
 
+        fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!justClicked){
+                    if(latitude != 0 || longitude != 0){
+                        Reports reports = new Reports(latitude, longitude, user.getEmail(), "Storm");
+                        database.child(database.push().getKey()).setValue(reports);
+
+                        Toast.makeText(getContext(), "Report clicked!", Toast.LENGTH_SHORT).show();
+                    }
+                }else{
+                    Toast.makeText(getContext(), "You've just reported! Please try again in few seconds", Toast.LENGTH_SHORT).show();
+                }
+
+                justClicked = true;
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        justClicked = false;
+                    }
+                }, 5000);
+            }
+        });
+
+        fab3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!justClicked){
+                    if(latitude != 0 || longitude != 0){
+                        Reports reports = new Reports(latitude, longitude, user.getEmail(), "Landslide");
+                        database.child(database.push().getKey()).setValue(reports);
+
+                        Toast.makeText(getContext(), "Report clicked!", Toast.LENGTH_SHORT).show();
+                    }
+                }else{
+                    Toast.makeText(getContext(), "You've just reported! Please try again in few seconds", Toast.LENGTH_SHORT).show();
+                }
+
+                justClicked = true;
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        justClicked = false;
+                    }
+                }, 5000);
             }
         });
 
@@ -194,6 +268,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot dsp : dataSnapshot.getChildren()){
+                    reports.add(dsp);
                     MarkerOptions markerOptions = new MarkerOptions();
                     markerOptions.position(new LatLng(Double.parseDouble(dsp.child("latitude").getValue().toString()),
                             Double.parseDouble(dsp.child("longitude").getValue().toString())));
@@ -439,6 +514,10 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     private ToggleButton togPolice;
     private ToggleButton togFire;
     private ToggleButton togVet;
+    private ToggleButton togReports;
+
+
+    SavedPlacesFragment savedPlacesFragment = new SavedPlacesFragment();
 
     CompoundButton.OnCheckedChangeListener changeChecker = new CompoundButton.OnCheckedChangeListener(){
 
@@ -451,6 +530,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     togPolice.setChecked(false);
                     togFire.setChecked(false);
                     togVet.setChecked(false);
+                    togReports.setChecked(false);
 
                     mMap.clear();
                     type = "hospital";
@@ -461,6 +541,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     Toast.makeText(getActivity(), "Showing nearby hospitals", Toast.LENGTH_LONG).show();
 
+                    editor.putString("place", type).commit();
                 }
 
                 if (compoundButton == togPolice) {
@@ -468,6 +549,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     togHospital.setChecked(false);
                     togFire.setChecked(false);
                     togVet.setChecked(false);
+                    togReports.setChecked(false);
 
                     mMap.clear();
                     type = "police";
@@ -478,6 +560,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     Toast.makeText(getActivity(), "Showing nearby police stations", Toast.LENGTH_LONG).show();
 
+                    editor.putString("place", type).commit();
+
                 }
 
                 if (compoundButton == togFire) {
@@ -485,6 +569,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     togHospital.setChecked(false);
                     togPolice.setChecked(false);
                     togVet.setChecked(false);
+                    togReports.setChecked(false);
 
                     mMap.clear();
                     type = "fire_station";
@@ -493,8 +578,10 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     endMarkerLat = 0;
                     endMarkerLng = 0;
 
-
                     Toast.makeText(getActivity(), "Showing nearby fire stations", Toast.LENGTH_LONG).show();
+
+                    editor.putString("place", type).commit();
+
                 }
 
                 if (compoundButton == togVet) {
@@ -502,6 +589,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     togHospital.setChecked(false);
                     togPolice.setChecked(false);
                     togFire.setChecked(false);
+                    togReports.setChecked(false);
 
                     mMap.clear();
                     type = "veterinary_care";
@@ -512,11 +600,27 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     Toast.makeText(getActivity(), "Showing nearby veterinary clinics", Toast.LENGTH_LONG).show();
 
+                    editor.putString("place", type).commit();
+
                 }
 
-                if (compoundButton == null){
+                if (compoundButton == togReports){
+                    togHospital.setChecked(false);
+                    togPolice.setChecked(false);
+                    togFire.setChecked(false);
+                    togVet.setChecked(false);
+
                     mMap.clear();
-                    //add code for reports here
+
+                    for(DataSnapshot report: reports){
+                        MarkerOptions markerOptions = new MarkerOptions();
+                        markerOptions.position(new LatLng(Double.parseDouble(report.child("latitude").getValue().toString()),
+                                Double.parseDouble(report.child("longitude").getValue().toString())));
+                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
+                        mMap.addMarker(markerOptions);
+                    }
+
+                    Toast.makeText(getActivity(), "Showing reports", Toast.LENGTH_LONG).show();
                 }
             }
         }
@@ -555,23 +659,56 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
     private boolean isFabMenuDisplayed = false;
     private void displayFabMenu(){
-        FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) fab1.getLayoutParams();
-        layoutParams.rightMargin += (int) (fab1.getWidth() * 1.7);
-        layoutParams.bottomMargin += (int) (fab1.getHeight() * 0.25);
-        fab1.setLayoutParams(layoutParams);
-        fab1.startAnimation(show_fab_menu);
+        FrameLayout.LayoutParams layoutParams1 = (FrameLayout.LayoutParams) fab1.getLayoutParams();
+        FrameLayout.LayoutParams layoutParams2 = (FrameLayout.LayoutParams) fab2.getLayoutParams();
+        FrameLayout.LayoutParams layoutParams3 = (FrameLayout.LayoutParams) fab3.getLayoutParams();
+
+        layoutParams1.rightMargin += (int) (fab1.getWidth() * 1.75);
+        layoutParams1.bottomMargin += (int) (fab1.getHeight() * -0.25);
+
+        layoutParams2.rightMargin += (int) (fab2.getWidth() * 1.25);
+        layoutParams2.bottomMargin += (int) (fab2.getHeight() * 1.25);
+
+        layoutParams3.rightMargin += (int) (fab3.getWidth() * -0.25);
+        layoutParams3.bottomMargin += (int) (fab3.getHeight() * 1.75);
+
+        fab1.setLayoutParams(layoutParams1);
+        fab1.startAnimation(show_fab1_menu);
         fab1.setClickable(true);
+
+        fab2.setLayoutParams(layoutParams2);
+        fab2.startAnimation(show_fab2_menu);
+        fab2.setClickable(true);
+
+        fab3.setLayoutParams(layoutParams3);
+        fab3.startAnimation(show_fab3_menu);
+        fab3.setClickable(true);
 
         isFabMenuDisplayed = true;
     }
 
     private void hideFabMenu(){
-        FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) fab1.getLayoutParams();
-        layoutParams.rightMargin -= (int) (fab1.getWidth() * 1.7);
-        layoutParams.bottomMargin -= (int) (fab1.getHeight() * 0.25);
-        fab1.setLayoutParams(layoutParams);
-        fab1.startAnimation(hide_fab_menu);
+        FrameLayout.LayoutParams layoutParams1 = (FrameLayout.LayoutParams) fab1.getLayoutParams();
+        FrameLayout.LayoutParams layoutParams2 = (FrameLayout.LayoutParams) fab2.getLayoutParams();
+        FrameLayout.LayoutParams layoutParams3 = (FrameLayout.LayoutParams) fab3.getLayoutParams();
+
+        layoutParams1.rightMargin -= (int) (fab1.getWidth() * 1.75);
+        layoutParams1.bottomMargin -= (int) (fab1.getHeight() * -0.25);
+        fab1.setLayoutParams(layoutParams1);
+        fab1.startAnimation(hide_fab1_menu);
         fab1.setClickable(false);
+
+        layoutParams2.rightMargin -= (int) (fab2.getWidth() * 1.25);
+        layoutParams2.bottomMargin -= (int) (fab2.getHeight() * 1.25);
+        fab2.setLayoutParams(layoutParams2);
+        fab2.startAnimation(hide_fab2_menu);
+        fab2.setClickable(false);
+
+        layoutParams3.rightMargin -= (int) (fab3.getWidth() * -0.25);
+        layoutParams3.bottomMargin -= (int) (fab3.getHeight() * 1.75);
+        fab3.setLayoutParams(layoutParams3);
+        fab3.startAnimation(hide_fab3_menu);
+        fab3.setClickable(false);
 
         isFabMenuDisplayed = false;
     }

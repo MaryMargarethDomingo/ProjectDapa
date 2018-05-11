@@ -1,9 +1,11 @@
 package com.example.itadmin.projectdapa.maps.controller;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
@@ -19,15 +21,23 @@ import com.example.itadmin.projectdapa.session.controller.SavedPlacesFragment;
 
 public class PopUpMarkerFragment extends BottomSheetDialogFragment {
 
-    TextView placeNameText;
-    TextView vicinityText;
-    TextView distanceText;
+    private TextView placeNameText;
+    private TextView vicinityText;
+    private TextView distanceText;
 
-    ImageButton callButton;
-    ImageButton directionButton;
-    ImageButton saveOfflineButton;
+    private ImageButton callButton;
+    private ImageButton directionButton;
+    private ImageButton saveOfflineButton;
 
-    private SavedPlacesFragment savedPlacesFragment;
+    private static String savedHospital = "";
+    private static String savedPolice = "";
+    private static String savedFire = "";
+    private static String savedVet = "";
+
+    private SharedPreferences preferences;
+    private SharedPreferences.Editor editor;
+
+    private String args;
 
     public PopUpMarkerFragment(){
     }
@@ -49,6 +59,11 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
 
         MapsFragment.getDistance();
         distanceText.setText(MapsFragment.strDistance + " KM away");
+
+        preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        editor = preferences.edit();
+
+        args = preferences.getString("place", "");
 
         return view;
     }
@@ -80,28 +95,51 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
         saveOfflineButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(args.equals("hospital")){
+                    savedHospital = preferences.getString("savedHospital", "");
 
-                savedPlacesFragment = new SavedPlacesFragment();
-                Bundle args = new Bundle();
-                args.putString("data", MapsFragment.placeName);
-                savedPlacesFragment.setArguments(args);
+                    if(savedHospital.split(" ").length >= 0 && savedHospital.split(" ").length <= 3){
+                        savedHospital.concat(MapsFragment.placeName + "," + MapsFragment.vicinity + " ");
 
+                        editor.putString("savedHospital", savedHospital).commit();
+                    }else{
+                        Toast.makeText(getContext(), "Reached maximum amount of saved places for Hospitals", Toast.LENGTH_LONG).show();
+                    }
+
+                }else if(args.equals("police")){
+                    savedPolice = preferences.getString("savedPolice", "");
+
+                    if(savedPolice.split(" ").length >= 0 && savedPolice.split(" ").length <= 3){
+                        savedPolice.concat(MapsFragment.placeName + "," + MapsFragment.vicinity + " ");
+
+                        editor.putString("savedHospital", savedPolice).commit();
+                    }else{
+                        Toast.makeText(getContext(), "Reached maximum amount of saved places for Police", Toast.LENGTH_LONG).show();
+                    }
+
+                }else if(args.equals("fire_station")){
+                    savedFire = preferences.getString("savedFire", "");
+
+                    if(savedFire.split(" ").length >= 0 && savedFire.split(" ").length <= 3){
+                        savedFire.concat(MapsFragment.placeName + "," + MapsFragment.vicinity + " ");
+
+                        editor.putString("savedHospital", savedFire).commit();
+                    }else{
+                        Toast.makeText(getContext(), "Reached maximum amount of saved places for Fire Departments", Toast.LENGTH_LONG).show();
+                    }
+
+                }else if(args.equals("veterinary_care")){
+                    savedVet = preferences.getString("savedFire", "");
+
+                    if(savedVet.split(" ").length >= 0 && savedVet.split(" ").length <= 3){
+                        savedVet.concat(MapsFragment.placeName + "," + MapsFragment.vicinity + " ");
+
+                        editor.putString("savedHospital", savedVet).commit();
+                    }else{
+                        Toast.makeText(getContext(), "Reached maximum amount of saved places for Veterinaries", Toast.LENGTH_LONG).show();
+                    }
+                }
                 Toast.makeText(getContext(), "Saved!", Toast.LENGTH_SHORT).show();
-
-                getFragmentManager().beginTransaction().add(R.id.pagerID, savedPlacesFragment).addToBackStack(null).commit();
-
-                /*SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
-
-                if(preferences.getString("hospital1", "").equals(MapsFragment.placeName + ":" + MapsFragment.vicinity + ":" + MapsFragment.strDistance)){
-                    Toast.makeText(getContext(), "Already Saved!", Toast.LENGTH_SHORT).show();
-                }else{
-                    SharedPreferences.Editor editor = preferences.edit();
-
-                    editor.putString("hospital1", MapsFragment.placeName + ":" + MapsFragment.vicinity + ":" + MapsFragment.strDistance);
-                    editor.commit();
-                    
-                    Toast.makeText(getContext(), "Saved!", Toast.LENGTH_SHORT).show();
-                }*/
             }
         });
 

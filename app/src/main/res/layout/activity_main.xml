@@ -37,13 +37,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
         android:layout_marginBottom="@dimen/bottom_navigation_height"
-        android:layout_marginEnd="29dp"
+        android:layout_marginStart="29dp"
         android:clickable="true"
         app:backgroundTint="@android:color/holo_green_dark"
         app:layout_anchor="@+id/myBottomNavigation_ID"
         app:layout_anchorGravity="right|top"
-        app:srcCompat="@drawable/sosicon" />
+        android:src="@drawable/sosicon" />
 
 </RelativeLayout>
