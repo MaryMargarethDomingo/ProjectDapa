@@ -59,11 +59,12 @@ public class SavedPlacesFragment extends Fragment {
     public void onStart() {
         super.onStart();
 
-        args = getArguments().getString("data");
+        if(args != null){
+            args = getArguments().getString("data");
 
-        hospital1.setText(args);
-        Log.d("DATA RECEIVED", args);
-
+            hospital1.setText(args);
+            Log.d("DATA RECEIVED", args);
+        }
     }
 
 }
