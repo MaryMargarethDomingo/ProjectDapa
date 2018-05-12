@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter-mopub\\build\\intermediates\\res\\merged\\debug\\values-bn\\values-bn.xml",
+            "outputFile": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\twitter-mopub\\build\\intermediates\\res\\merged\\debug\\values-bn\\values-bn.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter-mopub\\src\\main\\res\\values-bn\\strings.xml",
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\twitter-mopub\\src\\main\\res\\values-bn\\strings.xml",
                     "from": {
                         "startLines": "20,21",
                         "startColumns": "4,4",
@@ -23,10 +23,10 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter-mopub\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-bn\\values-bn.xml",
+            "outputFile": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\twitter-mopub\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-bn\\values-bn.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter-mopub\\src\\main\\res\\values-bn\\strings.xml",
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\twitter-mopub\\src\\main\\res\\values-bn\\strings.xml",
                     "from": {
                         "startLines": "20,21",
                         "startColumns": "4,4",

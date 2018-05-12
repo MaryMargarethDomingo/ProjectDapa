@@ -1,74 +1,74 @@
 [
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\tw__gallery_activity.xml",
-        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\layout\\tw__gallery_activity.xml"
+        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "C:\\Users\\it.admin.IACADEMYLOC\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d570ee3c89cc61d0b0c3c32024eaac65\\res\\layout\\notification_template_part_time.xml"
     },
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\tw__media_badge.xml",
-        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\layout\\tw__media_badge.xml"
+        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\it.admin.IACADEMYLOC\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d570ee3c89cc61d0b0c3c32024eaac65\\res\\layout\\notification_template_icon_group.xml"
     },
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\tw__tweet.xml",
-        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\layout\\tw__tweet.xml"
+        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\it.admin.IACADEMYLOC\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d570ee3c89cc61d0b0c3c32024eaac65\\res\\layout\\notification_action_tombstone.xml"
     },
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\activity_invalid_tweet_id.xml",
-        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\src\\debug\\res\\layout\\activity_invalid_tweet_id.xml"
+        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\activity_tweet_actions_enabled.xml",
+        "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\src\\debug\\res\\layout\\activity_tweet_actions_enabled.xml"
     },
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
-        "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\9442ffa5b8d5c494b8236908816471fc\\res\\layout\\notification_template_icon_group.xml"
+        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\tw__tweet_quote.xml",
+        "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\src\\main\\res\\layout\\tw__tweet_quote.xml"
     },
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\tw__tweet_compact.xml",
-        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\layout\\tw__tweet_compact.xml"
+        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\tw__player_activity.xml",
+        "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\src\\main\\res\\layout\\tw__player_activity.xml"
     },
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\activity_tweet_view_test.xml",
-        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\src\\debug\\res\\layout\\activity_tweet_view_test.xml"
+        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\tw__tweet.xml",
+        "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\src\\main\\res\\layout\\tw__tweet.xml"
     },
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\tw__tweet_quote.xml",
-        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\layout\\tw__tweet_quote.xml"
+        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\tw__action_bar.xml",
+        "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\src\\main\\res\\layout\\tw__action_bar.xml"
     },
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\activity_tweet_actions_enabled.xml",
-        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\src\\debug\\res\\layout\\activity_tweet_actions_enabled.xml"
+        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\tw__gallery_activity.xml",
+        "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\src\\main\\res\\layout\\tw__gallery_activity.xml"
     },
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\tw__player_activity.xml",
-        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\layout\\tw__player_activity.xml"
+        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "C:\\Users\\it.admin.IACADEMYLOC\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d570ee3c89cc61d0b0c3c32024eaac65\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\tw__activity_oauth.xml",
-        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\layout\\tw__activity_oauth.xml"
+        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\activity_tweet_view_test.xml",
+        "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\src\\debug\\res\\layout\\activity_tweet_view_test.xml"
     },
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
-        "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\9442ffa5b8d5c494b8236908816471fc\\res\\layout\\notification_template_part_time.xml"
+        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\tw__video_control.xml",
+        "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\src\\main\\res\\layout\\tw__video_control.xml"
     },
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
-        "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\9442ffa5b8d5c494b8236908816471fc\\res\\layout\\notification_template_part_chronometer.xml"
+        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\tw__tweet_compact.xml",
+        "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\src\\main\\res\\layout\\tw__tweet_compact.xml"
     },
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\tw__video_control.xml",
-        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\layout\\tw__video_control.xml"
+        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
+        "source": "C:\\Users\\it.admin.IACADEMYLOC\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d570ee3c89cc61d0b0c3c32024eaac65\\res\\layout\\notification_action.xml"
     },
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\tw__action_bar.xml",
-        "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\layout\\tw__action_bar.xml"
+        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\activity_invalid_tweet_id.xml",
+        "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\src\\debug\\res\\layout\\activity_invalid_tweet_id.xml"
     },
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
-        "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\9442ffa5b8d5c494b8236908816471fc\\res\\layout\\notification_action.xml"
+        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\tw__activity_oauth.xml",
+        "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\layout\\tw__activity_oauth.xml"
     },
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
-        "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\9442ffa5b8d5c494b8236908816471fc\\res\\layout\\notification_action_tombstone.xml"
+        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\it.admin.IACADEMYLOC\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d570ee3c89cc61d0b0c3c32024eaac65\\res\\layout\\notification_template_custom_big.xml"
     },
     {
-        "merged": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_custom_big.xml",
-        "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\9442ffa5b8d5c494b8236908816471fc\\res\\layout\\notification_template_custom_big.xml"
+        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\layout\\tw__media_badge.xml",
+        "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\src\\main\\res\\layout\\tw__media_badge.xml"
     }
 ]

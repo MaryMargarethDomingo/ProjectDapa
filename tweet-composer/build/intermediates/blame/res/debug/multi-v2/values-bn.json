@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\values-bn\\values-bn.xml",
+            "outputFile": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\values-bn\\values-bn.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-bn\\values-bn.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "69",
-                        "endOffsets": "120"
-                    },
-                    "to": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "110",
-                        "endColumns": "69",
-                        "endOffsets": "175"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values-bn\\strings.xml",
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values-bn\\strings.xml",
                     "from": {
                         "startLines": "20,21,22",
                         "startColumns": "4,4,4",
@@ -35,32 +18,32 @@
                         "startOffsets": "55,180,232",
                         "endColumns": "54,51,47",
                         "endOffsets": "105,227,275"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-bn\\values-bn.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "69",
+                        "endOffsets": "120"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "110",
+                        "endColumns": "69",
+                        "endOffsets": "175"
                     }
                 }
             ]
         },
         {
-            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-bn\\values-bn.xml",
+            "outputFile": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-composer\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-bn\\values-bn.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-bn\\values-bn.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "69",
-                        "endOffsets": "120"
-                    },
-                    "to": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "110",
-                        "endColumns": "69",
-                        "endOffsets": "175"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values-bn\\strings.xml",
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values-bn\\strings.xml",
                     "from": {
                         "startLines": "20,21,22",
                         "startColumns": "4,4,4",
@@ -74,6 +57,23 @@
                         "startOffsets": "55,180,232",
                         "endColumns": "54,51,47",
                         "endOffsets": "105,227,275"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-bn\\values-bn.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "69",
+                        "endOffsets": "120"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "110",
+                        "endColumns": "69",
+                        "endOffsets": "175"
                     }
                 }
             ]

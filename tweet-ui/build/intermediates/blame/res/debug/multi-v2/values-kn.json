@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\values-kn\\values-kn.xml",
+            "outputFile": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\values-kn\\values-kn.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-kn\\values-kn.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "73",
-                        "endOffsets": "124"
-                    },
-                    "to": {
-                        "startLines": "18",
-                        "startColumns": "4",
-                        "startOffsets": "750",
-                        "endColumns": "73",
-                        "endOffsets": "819"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-kn\\plurals.xml",
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-kn\\plurals.xml",
                     "from": {
                         "startLines": "20,24,28",
                         "startColumns": "4,4,4",
@@ -40,7 +23,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-kn\\strings.xml",
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d570ee3c89cc61d0b0c3c32024eaac65\\res\\values-kn\\values-kn.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "14",
+                        "startColumns": "4",
+                        "startOffsets": "457",
+                        "endColumns": "100",
+                        "endOffsets": "553"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-kn\\strings.xml",
                     "from": {
                         "startLines": "20,21,22,23,24,25,26,27,28,29,30,31",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
@@ -57,46 +57,29 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\9442ffa5b8d5c494b8236908816471fc\\res\\values-kn\\values-kn.xml",
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-kn\\values-kn.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
+                        "endColumns": "73",
+                        "endOffsets": "124"
                     },
                     "to": {
-                        "startLines": "14",
+                        "startLines": "18",
                         "startColumns": "4",
-                        "startOffsets": "457",
-                        "endColumns": "100",
-                        "endOffsets": "553"
+                        "startOffsets": "750",
+                        "endColumns": "73",
+                        "endOffsets": "819"
                     }
                 }
             ]
         },
         {
-            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-kn\\values-kn.xml",
+            "outputFile": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-kn\\values-kn.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-kn\\values-kn.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "73",
-                        "endOffsets": "124"
-                    },
-                    "to": {
-                        "startLines": "18",
-                        "startColumns": "4",
-                        "startOffsets": "750",
-                        "endColumns": "73",
-                        "endOffsets": "819"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-kn\\plurals.xml",
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-kn\\plurals.xml",
                     "from": {
                         "startLines": "20,24,28",
                         "startColumns": "4,4,4",
@@ -115,7 +98,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-kn\\strings.xml",
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d570ee3c89cc61d0b0c3c32024eaac65\\res\\values-kn\\values-kn.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "14",
+                        "startColumns": "4",
+                        "startOffsets": "457",
+                        "endColumns": "100",
+                        "endOffsets": "553"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-kn\\strings.xml",
                     "from": {
                         "startLines": "20,21,22,23,24,25,26,27,28,29,30,31",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
@@ -132,20 +132,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\9442ffa5b8d5c494b8236908816471fc\\res\\values-kn\\values-kn.xml",
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-kn\\values-kn.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
+                        "endColumns": "73",
+                        "endOffsets": "124"
                     },
                     "to": {
-                        "startLines": "14",
+                        "startLines": "18",
                         "startColumns": "4",
-                        "startOffsets": "457",
-                        "endColumns": "100",
-                        "endOffsets": "553"
+                        "startOffsets": "750",
+                        "endColumns": "73",
+                        "endOffsets": "819"
                     }
                 }
             ]

@@ -28,9 +28,6 @@ public class SavedPlacesFragment extends Fragment {
     private TextView vet2;
     private TextView vet3;
 
-
-    private String args;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View view = inflater.inflate(R.layout.fragment_saved_places, container, false);
@@ -58,17 +55,6 @@ public class SavedPlacesFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-
-        args = getArguments().getString("data");
-
-        if(args.equals("")){
-
-        }else{
-            hospital1.setText(args);
-        }
-
-
-        Log.d("DATA RECEIVED", args);
 
     }
 

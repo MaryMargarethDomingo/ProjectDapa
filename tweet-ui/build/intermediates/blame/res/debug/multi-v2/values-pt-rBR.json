@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\values-pt-rBR\\values-pt-rBR.xml",
+            "outputFile": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pt-rBR\\values-pt-rBR.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\9442ffa5b8d5c494b8236908816471fc\\res\\values-pt-rBR\\values-pt-rBR.xml",
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d570ee3c89cc61d0b0c3c32024eaac65\\res\\values-pt-rBR\\values-pt-rBR.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\Michael\\AndroidStudioProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pt-rBR\\values-pt-rBR.xml",
+            "outputFile": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\values-pt-rBR\\values-pt-rBR.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Michael\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\9442ffa5b8d5c494b8236908816471fc\\res\\values-pt-rBR\\values-pt-rBR.xml",
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d570ee3c89cc61d0b0c3c32024eaac65\\res\\values-pt-rBR\\values-pt-rBR.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
