@@ -11,17 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="5">
-
-        <ToggleButton
-            android:id="@+id/togReports"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Reports"
-            android:textOff="Reports"
-            android:textOn="Reports"
-            android:textSize="10sp" />
+        android:weightSum="4">
 
         <ToggleButton
             android:id="@+id/togHospital"
