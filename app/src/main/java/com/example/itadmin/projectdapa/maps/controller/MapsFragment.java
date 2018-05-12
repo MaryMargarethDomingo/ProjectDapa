@@ -150,7 +150,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         togPolice.setOnCheckedChangeListener(changeChecker);
         togFire.setOnCheckedChangeListener(changeChecker);
         togVet.setOnCheckedChangeListener(changeChecker);
-        togReports.setOnCheckedChangeListener(changeChecker);
+        //togReports.setOnCheckedChangeListener(changeChecker);
         reportFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
