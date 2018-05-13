@@ -4,7 +4,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
+import android.database.Cursor;;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -25,9 +25,8 @@ import android.widget.Toast;
 import com.example.itadmin.projectdapa.R;
 import com.example.itadmin.projectdapa.maps.controller.MapsFragment;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
-import java.util.Calendar;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class SavedContactsFragment extends Fragment {
@@ -43,26 +42,24 @@ public class SavedContactsFragment extends Fragment {
     private ImageButton btnDeleteContact4;
     private ImageButton btnDeleteContact5;
 
+
     private TextView contact1;
     private TextView contact2;
     private TextView contact3;
     private TextView contact4;
     private TextView contact5;
 
-    private String cNumber;
-    private String message = "";
-
-    private String recipient1;
-    private String recipient2;
-    private String recipient3;
-    private String recipient4;
-    private String recipient5;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
 
+    String cNumber;
+    String message = "";
 
-    private static FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
+    String recipient1;
+    String recipient2;
+    String recipient3;
+    String recipient4;
+    String recipient5;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -119,20 +116,17 @@ public class SavedContactsFragment extends Fragment {
         btnDeleteContact1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                editor.putString("contact1", "No Contact");
-                editor.commit();
                 contact1.setText("No Contact");
+                editor.putString("contact1", "No Contact");
                 Toast.makeText(getActivity(), "Contact deleted", Toast.LENGTH_LONG).show();
-
             }
         });
 
         btnDeleteContact2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                editor.putString("contact2", "No Contact");
-                editor.commit();
                 contact2.setText("No Contact");
+                editor.putString("contact2", "No Contact");
                 Toast.makeText(getActivity(), "Contact deleted", Toast.LENGTH_LONG).show();
             }
         });
@@ -142,7 +136,6 @@ public class SavedContactsFragment extends Fragment {
             public void onClick(View view) {
                 contact3.setText("No Contact");
                 editor.putString("contact3", "No Contact");
-                editor.commit();
                 Toast.makeText(getActivity(), "Contact deleted", Toast.LENGTH_LONG).show();
             }
         });
@@ -152,7 +145,6 @@ public class SavedContactsFragment extends Fragment {
             public void onClick(View view) {
                 contact4.setText("No Contact");
                 editor.putString("contact4", "No Contact");
-                editor.commit();
                 Toast.makeText(getActivity(), "Contact deleted", Toast.LENGTH_LONG).show();
             }
         });
@@ -162,61 +154,62 @@ public class SavedContactsFragment extends Fragment {
             public void onClick(View view) {
                 contact5.setText("No Contact");
                 editor.putString("contact5", "No Contact");
-                editor.commit();
                 Toast.makeText(getActivity(), "Contact deleted", Toast.LENGTH_LONG).show();
             }
         });
 
-        Date dateAndTime = Calendar.getInstance().getTime();
+        Date date = new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("E yyyy-MM-dd ',' HH:mm a");
 
-        message = "SOS! " + user.getDisplayName() + " need help!\n" +
-                "Last recorded location: \n" +
-                "Latitude: " + MapsFragment.latitude + "\n" +
-                "Longitude: " + MapsFragment.longitude + "\n" +
-                "Time: " + dateAndTime + "\n" +
-                "\n\n-Sent from Project DAPA";
-
+        message = "SOS! " + FirebaseAuth.getInstance().getCurrentUser().getDisplayName() + "I need help!\n" +
+                "Last known location: \n" +
+                "http://maps.google.com/maps?q=" + MapsFragment.latitude + "," + MapsFragment.longitude + "\n" +
+                //"Time: " + dateFormat.format(date) + "\n" +
+                "\n -Sent from Project DAPA";
 
         sendSMS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if(!contact1.getText().toString().matches("No Contact")){
+                if(!contact1.getText().toString().equals("No Contact")){
                     recipient1 = contact1.getText().toString().replaceAll("[^0-9]", "");
-
                     SmsManager.getDefault().sendTextMessage(recipient1, null, message, null, null);
+                    Toast.makeText(getContext(), "SOS message sent", Toast.LENGTH_LONG).show();
+                    Log.d("SMS1", recipient1 + " = " + message);
                 }
 
-                if(!contact2.getText().toString().matches("No Contact")){
+                if(!contact2.getText().toString().equals("No Contact")){
                     recipient2 = contact2.getText().toString().replaceAll("[^0-9]", "");
-
                     SmsManager.getDefault().sendTextMessage(recipient2, null, message, null, null);
+                    Toast.makeText(getContext(), "SOS message sent", Toast.LENGTH_LONG).show();
+                    Log.d("SMS1", recipient2 + " = " + message);
                 }
 
-                if(!contact3.getText().toString().matches("No Contact")){
+                if(!contact3.getText().toString().equals("No Contact")){
                     recipient3 = contact3.getText().toString().replaceAll("[^0-9]", "");
-
                     SmsManager.getDefault().sendTextMessage(recipient3, null, message, null, null);
+                    Toast.makeText(getContext(), "SOS message sent", Toast.LENGTH_LONG).show();
+                    Log.d("SMS1", recipient3 + " = " + message);
                 }
 
-                if(!contact4.getText().toString().matches("No Contact")){
+                if(!contact4.getText().toString().equals("No Contact")){
                     recipient4 = contact4.getText().toString().replaceAll("[^0-9]", "");
-
                     SmsManager.getDefault().sendTextMessage(recipient4, null, message, null, null);
+                    Toast.makeText(getContext(), "SOS message sent", Toast.LENGTH_LONG).show();
+                    Log.d("SMS1", recipient4 + " = " + message);
                 }
 
-                if(!contact5.getText().toString().matches("No Contact")){
+                if(!contact5.getText().toString().equals("No Contact")){
                     recipient5 = contact5.getText().toString().replaceAll("[^0-9]", "");
-
                     SmsManager.getDefault().sendTextMessage(recipient5, null, message, null, null);
+                    Toast.makeText(getContext(), "SOS message sent", Toast.LENGTH_LONG).show();
+                    Log.d("SMS1", recipient5 + " = " + message);
                 }
 
-                if(contact1.getText().toString().matches("No Contact") && contact2.getText().toString().matches("No Contact") &&
-                        contact3.getText().toString().matches("No Contact") && contact4.getText().toString().matches("No Contact") && contact5.getText().toString().matches("No Contact")){
-                    Toast.makeText(getContext(), "No contacts available, add contacts first", Toast.LENGTH_LONG).show();
+                if(recipient1.equals("") && recipient2.equals("") && recipient3.equals("") &&
+                        recipient4.equals("") && recipient5.equals("")){
+                    Toast.makeText(getContext(), "No Contacts available, add contacts first", Toast.LENGTH_LONG).show();
                 }
-
-                Toast.makeText(getContext(), "SOS message sent", Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -233,6 +226,7 @@ public class SavedContactsFragment extends Fragment {
                     Cursor c = getActivity().getContentResolver().query(contactData, null, null, null, null);
                     if (c.moveToFirst()) {
 
+
                         String id = c.getString(c.getColumnIndexOrThrow(ContactsContract.Contacts._ID));
 
                         String hasPhone = c.getString(c.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER));
@@ -245,38 +239,31 @@ public class SavedContactsFragment extends Fragment {
                             phones.moveToFirst();
                             cNumber = phones.getString(phones.getColumnIndex("data1"));
                         }
+
                         String name = c.getString(c.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
 
                         if(contact1.getText().toString().matches("No Contact")){
                             editor.putString("contact1", name + ": \n" + cNumber);
                             contact1.setText(name + ": \n" + cNumber);
 
-                        }
-
-                        if(contact2.getText().toString().matches("No contact")){
+                        }else if(contact2.getText().toString().matches("No Contact")){
                             editor.putString("contact2", name + ": \n" + cNumber);
                             contact2.setText(name + ": \n" + cNumber);
 
-                        }
-
-                        if(contact3.getText().toString().matches("No contact")){
+                        }else if(contact3.getText().toString().matches("No Contact")){
                             editor.putString("contact3", name + ": \n" + cNumber);
                             contact3.setText(name + ": \n" + cNumber);
 
-                        }
-
-                        if(contact4.getText().toString().matches("No contact")){
+                        }else if(contact4.getText().toString().matches("No Contact")){
                             editor.putString("contact4", name + ": \n" + cNumber);
                             contact4.setText(name + ": \n" + cNumber);
 
-                        }
-
-                        if(contact5.getText().toString().matches("No contact")) {
+                        }else if(contact5.getText().toString().matches("No Contact")) {
                             editor.putString("contact5", name + ": \n" + cNumber);
                             contact5.setText(name + ": \n" + cNumber);
+
                         }
 
-                        editor.commit();
                         break;
                     }
                 }

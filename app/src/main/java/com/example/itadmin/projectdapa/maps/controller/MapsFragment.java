@@ -138,7 +138,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         togPolice = getView().findViewById(R.id.togPolice);
         togFire = getView().findViewById(R.id.togFire);
         togVet = getView().findViewById(R.id.togVet);
-        //togReports = getView().findViewById(R.id.togReports);
+        togReports = getView().findViewById(R.id.togReports);
         reportFab = getView().findViewById(R.id.floatingActionButton);
         fab1 = getView().findViewById(R.id.fab_1);
         fab2 = getView().findViewById(R.id.fab_2);
@@ -150,7 +150,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         togPolice.setOnCheckedChangeListener(changeChecker);
         togFire.setOnCheckedChangeListener(changeChecker);
         togVet.setOnCheckedChangeListener(changeChecker);
-        //togReports.setOnCheckedChangeListener(changeChecker);
+        togReports.setOnCheckedChangeListener(changeChecker);
+
         reportFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -543,13 +544,13 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     editor.putString("place", type).commit();
 
-                    for(DataSnapshot report: reports){
+/*                    for(DataSnapshot report: reports){
                         MarkerOptions markerOptions = new MarkerOptions();
                         markerOptions.position(new LatLng(Double.parseDouble(report.child("latitude").getValue().toString()),
                                 Double.parseDouble(report.child("longitude").getValue().toString())));
                         markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
                         mMap.addMarker(markerOptions);
-                    }
+                    }*/
                 }
 
                 if (compoundButton == togPolice) {
@@ -570,13 +571,13 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     editor.putString("place", type).commit();
 
-                    for(DataSnapshot report: reports){
+/*                    for(DataSnapshot report: reports){
                         MarkerOptions markerOptions = new MarkerOptions();
                         markerOptions.position(new LatLng(Double.parseDouble(report.child("latitude").getValue().toString()),
                                 Double.parseDouble(report.child("longitude").getValue().toString())));
                         markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
                         mMap.addMarker(markerOptions);
-                    }
+                    }*/
 
                 }
 
@@ -598,13 +599,13 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     editor.putString("place", type).commit();
 
-                    for(DataSnapshot report: reports){
+/*                    for(DataSnapshot report: reports){
                         MarkerOptions markerOptions = new MarkerOptions();
                         markerOptions.position(new LatLng(Double.parseDouble(report.child("latitude").getValue().toString()),
                                 Double.parseDouble(report.child("longitude").getValue().toString())));
                         markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
                         mMap.addMarker(markerOptions);
-                    }
+                    }*/
 
                 }
 
@@ -625,18 +626,18 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     Toast.makeText(getActivity(), "Showing nearby veterinary clinics", Toast.LENGTH_LONG).show();
 
                     editor.putString("place", type).commit();
-
+/*
                     for(DataSnapshot report: reports){
                         MarkerOptions markerOptions = new MarkerOptions();
                         markerOptions.position(new LatLng(Double.parseDouble(report.child("latitude").getValue().toString()),
                                 Double.parseDouble(report.child("longitude").getValue().toString())));
                         markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
                         mMap.addMarker(markerOptions);
-                    }
+                    }*/
 
                 }
 
-                if (compoundButton == null){
+                if (compoundButton == togReports){
                     togHospital.setChecked(false);
                     togPolice.setChecked(false);
                     togFire.setChecked(false);
