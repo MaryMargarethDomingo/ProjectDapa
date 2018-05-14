@@ -170,7 +170,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                         Reports reports = new Reports(latitude, longitude, user.getEmail(), "Earthquake");
                         database.child(database.push().getKey()).setValue(reports);
 
-                        Toast.makeText(getContext(), "Report clicked!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "Report Successful!", Toast.LENGTH_SHORT).show();
                     }
                 }else{
                     Toast.makeText(getContext(), "You've just reported! Please try again in few seconds", Toast.LENGTH_SHORT).show();
@@ -195,7 +195,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                         Reports reports = new Reports(latitude, longitude, user.getEmail(), "Storm");
                         database.child(database.push().getKey()).setValue(reports);
 
-                        Toast.makeText(getContext(), "Report clicked!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "Report Successful!", Toast.LENGTH_SHORT).show();
                     }
                 }else{
                     Toast.makeText(getContext(), "You've just reported! Please try again in few seconds", Toast.LENGTH_SHORT).show();
@@ -217,10 +217,10 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
             public void onClick(View v) {
                 if(!justClicked){
                     if(latitude != 0 || longitude != 0){
-                        Reports reports = new Reports(latitude, longitude, user.getEmail(), "Landslide");
+                        Reports reports = new Reports(latitude, longitude, user.getEmail(), "Fire");
                         database.child(database.push().getKey()).setValue(reports);
 
-                        Toast.makeText(getContext(), "Report clicked!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "Report Successful!", Toast.LENGTH_SHORT).show();
                     }
                 }else{
                     Toast.makeText(getContext(), "You've just reported! Please try again in few seconds", Toast.LENGTH_SHORT).show();
