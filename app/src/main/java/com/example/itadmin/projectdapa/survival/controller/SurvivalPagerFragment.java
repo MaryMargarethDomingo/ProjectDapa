@@ -46,6 +46,14 @@ public class SurvivalPagerFragment extends Fragment {
             case 5:
                 fileName = "volcano_";
                 break;
+
+            case 6:
+                fileName = "fire_";
+                break;
+
+            case 7:
+                fileName = "landslide_";
+                break;
         }
 
     }

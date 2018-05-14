@@ -151,6 +151,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         togFire.setOnCheckedChangeListener(changeChecker);
         togVet.setOnCheckedChangeListener(changeChecker);
         togReports.setOnCheckedChangeListener(changeChecker);
+
         reportFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -542,6 +543,14 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     Toast.makeText(getActivity(), "Showing nearby hospitals", Toast.LENGTH_LONG).show();
 
                     editor.putString("place", type).commit();
+
+/*                    for(DataSnapshot report: reports){
+                        MarkerOptions markerOptions = new MarkerOptions();
+                        markerOptions.position(new LatLng(Double.parseDouble(report.child("latitude").getValue().toString()),
+                                Double.parseDouble(report.child("longitude").getValue().toString())));
+                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
+                        mMap.addMarker(markerOptions);
+                    }*/
                 }
 
                 if (compoundButton == togPolice) {
@@ -561,6 +570,14 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     Toast.makeText(getActivity(), "Showing nearby police stations", Toast.LENGTH_LONG).show();
 
                     editor.putString("place", type).commit();
+
+/*                    for(DataSnapshot report: reports){
+                        MarkerOptions markerOptions = new MarkerOptions();
+                        markerOptions.position(new LatLng(Double.parseDouble(report.child("latitude").getValue().toString()),
+                                Double.parseDouble(report.child("longitude").getValue().toString())));
+                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
+                        mMap.addMarker(markerOptions);
+                    }*/
 
                 }
 
@@ -582,6 +599,14 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     editor.putString("place", type).commit();
 
+/*                    for(DataSnapshot report: reports){
+                        MarkerOptions markerOptions = new MarkerOptions();
+                        markerOptions.position(new LatLng(Double.parseDouble(report.child("latitude").getValue().toString()),
+                                Double.parseDouble(report.child("longitude").getValue().toString())));
+                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
+                        mMap.addMarker(markerOptions);
+                    }*/
+
                 }
 
                 if (compoundButton == togVet) {
@@ -601,6 +626,14 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     Toast.makeText(getActivity(), "Showing nearby veterinary clinics", Toast.LENGTH_LONG).show();
 
                     editor.putString("place", type).commit();
+/*
+                    for(DataSnapshot report: reports){
+                        MarkerOptions markerOptions = new MarkerOptions();
+                        markerOptions.position(new LatLng(Double.parseDouble(report.child("latitude").getValue().toString()),
+                                Double.parseDouble(report.child("longitude").getValue().toString())));
+                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
+                        mMap.addMarker(markerOptions);
+                    }*/
 
                 }
 

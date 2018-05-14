@@ -5,12 +5,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/cardview_light_background"
-    tools:context=".session.controller.SavedContactsFragment">
+    tools:context=".session.controller.SavedContactsFragment"
+    android:weightSum="100">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
         <ImageButton
@@ -32,7 +34,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="98"
         android:orientation="vertical">
 
         <TableLayout
@@ -51,7 +53,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="100"
-                    android:text="No contact"
+                    android:text="No Contact"
                     android:textSize="18sp" />
 
                 <ImageButton
@@ -74,7 +76,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="100"
-                    android:text="No contact"
+                    android:text="No Contact"
                     android:textSize="18sp" />
 
                 <ImageButton
@@ -96,7 +98,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="100"
-                    android:text="No contact"
+                    android:text="No Contact"
                     android:textSize="18sp" />
 
                 <ImageButton
@@ -118,7 +120,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="100"
-                    android:text="No contact"
+                    android:text="No Contact"
                     android:textSize="18sp" />
 
                 <ImageButton
@@ -140,7 +142,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="100"
-                    android:text="No contact"
+                    android:text="No Contact"
                     android:textSize="18sp" />
 
                 <ImageButton
@@ -158,14 +160,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnSendSMS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginBottom="@dimen/bottom_navigation_height"
+            android:layout_weight="1"
             android:text="Send SOS" />
     </LinearLayout>
 
