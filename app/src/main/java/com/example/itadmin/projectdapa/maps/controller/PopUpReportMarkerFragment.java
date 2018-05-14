@@ -18,14 +18,13 @@ import com.example.itadmin.projectdapa.session.controller.SavedPlacesFragment;
 
 public class PopUpReportMarkerFragment extends BottomSheetDialogFragment {
 
-    TextView description;
-    TextView distanceText;
-    TextView reporter;
+    private TextView description;
+    private TextView distanceText;
+    private TextView reporter;
 
-    ImageButton likeButton;
+    private ImageButton likeButton;
 
-    public PopUpReportMarkerFragment(){
-    }
+    public PopUpReportMarkerFragment(){ }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
