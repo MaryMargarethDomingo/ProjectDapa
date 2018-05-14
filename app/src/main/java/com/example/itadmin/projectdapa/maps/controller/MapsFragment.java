@@ -97,6 +97,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     private Animation show_fab3_menu;
     private Animation hide_fab3_menu;
     private static BottomSheetDialogFragment bottomSheetDialogFragment = new PopUpMarkerFragment();
+    private static BottomSheetDialogFragment bottomSheetReportDialogFragment = new PopUpReportMarkerFragment();
     private static ArrayList<DataSnapshot> reports = new ArrayList<>();
 
     public static final int REQUEST_LOCATION_CODE = 99;
@@ -669,23 +670,17 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         endMarkerLat = marker.getPosition().latitude;
         endMarkerLng = marker.getPosition().longitude;
 
-        String[] titleArr = marker.getTitle().split(" : ");
+        if(marker.getTitle() != null){
+            String[] titleArr = marker.getTitle().split(" : ");
 
-        placeName = titleArr[0];
-        vicinity = titleArr[1];
+            placeName = titleArr[0];
+            vicinity = titleArr[1];
 
-        if(isReportMarker()){
-
-        }else{
             bottomSheetDialogFragment.show(getActivity().getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
+        }else{
+            bottomSheetReportDialogFragment.show(getActivity().getSupportFragmentManager(), bottomSheetReportDialogFragment.getTag());
         }
 
-
-        return false;
-    }
-
-//check if marker is a report
-    private boolean isReportMarker(){
         return false;
     }
 

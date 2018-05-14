@@ -40,7 +40,7 @@ public class NotificationService extends BroadcastReceiver {
                 Notification.Builder builder = new Notification.Builder(context).
                         setSmallIcon(R.mipmap.ic_launcher).
                         setContentIntent(pendingIntent).
-                        setContentText("Hi " + ProfileFragment.user.getDisplayName().split(" ")[0] + "! Looks like there will be no rain today! Stay Safe!").
+                        setContentText("Hi " + user.getDisplayName().split(" ")[0] + "! Looks like there will be no rain today! Stay Safe!").
                         setContentTitle("Project DAPA").
                         setStyle(new Notification.BigTextStyle().bigText("Hi " + ProfileFragment.user.getDisplayName().split(" ")[0] + "! Looks like there will be no rain today! Stay Safe!")).
                         setSound(alarmSound).setAutoCancel(true);
