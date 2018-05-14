@@ -34,7 +34,7 @@
         android:layout_gravity="bottom|end"
         android:layout_marginBottom="35dp"
         android:layout_marginEnd="35dp"
-        android:src="@drawable/landslideicon"
+        android:src="@drawable/fireicon"
         android:visibility="invisible"
         app:backgroundTint="@color/colorFAB"
         app:fabSize="mini" />
