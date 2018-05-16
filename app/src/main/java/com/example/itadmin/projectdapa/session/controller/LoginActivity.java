@@ -58,7 +58,7 @@ import java.util.Arrays;
 public class LoginActivity extends AppCompatActivity {
 
     private SignInButton mGooglebtn;
-    private GoogleApiClient mGoogleApiClient;
+    public static GoogleApiClient mGoogleApiClient;
     private FirebaseAuth mAuth;
     private ProgressDialog progressDialog;
     private FirebaseAuth.AuthStateListener mAuthListener;

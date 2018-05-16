@@ -35,6 +35,12 @@ public class PopUpReportMarkerFragment extends BottomSheetDialogFragment {
         reporter = view.findViewById(R.id.reporter);
         likeButton = view.findViewById(R.id.likeButton);
 
+        description.setText(MapsFragment.reportDescription);
+
+        MapsFragment.getDistance();
+        distanceText.setText(MapsFragment.strDistance + " KM away");
+
+        reporter.setText("By: " + MapsFragment.reportBy.split("@")[0]);
 
         return view;
     }

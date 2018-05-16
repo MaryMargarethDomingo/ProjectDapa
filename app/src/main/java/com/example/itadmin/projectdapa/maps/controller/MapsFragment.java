@@ -272,6 +272,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                 for (DataSnapshot dsp : dataSnapshot.getChildren()){
                     reports.add(dsp);
                     MarkerOptions markerOptions = new MarkerOptions();
+                    markerOptions.title(dsp.child("disasterType").getValue().toString() + " : " + dsp.child("username").getValue().toString()
+                            + " : " + dsp.child("latitude").getValue().toString() + " : " + dsp.child("longitude").getValue().toString());
                     markerOptions.position(new LatLng(Double.parseDouble(dsp.child("latitude").getValue().toString()),
                             Double.parseDouble(dsp.child("longitude").getValue().toString())));
                     markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
@@ -648,6 +650,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     for(DataSnapshot report: reports){
                         MarkerOptions markerOptions = new MarkerOptions();
+                        markerOptions.title(report.child("disasterType").getValue().toString() + " : " + report.child("username").getValue().toString()
+                                + " : " + report.child("latitude").getValue().toString() + " : " + report.child("longitude").getValue().toString());
                         markerOptions.position(new LatLng(Double.parseDouble(report.child("latitude").getValue().toString()),
                                 Double.parseDouble(report.child("longitude").getValue().toString())));
                         markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
@@ -663,21 +667,29 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 //-------------------------------------------------- Marker click - METHODS --------------------------------------------------
     public static String placeName;
     public static String vicinity;
+    public static String reportDescription;
+    public static String reportBy;
 
     @Override
     public boolean onMarkerClick(Marker marker) {
 
         endMarkerLat = marker.getPosition().latitude;
         endMarkerLng = marker.getPosition().longitude;
+        String[] titleArr;
 
-        if(marker.getTitle() != null){
-            String[] titleArr = marker.getTitle().split(" : ");
+        if(marker.getTitle().split(" : ").length == 2){
+            titleArr = marker.getTitle().split(" : ");
 
             placeName = titleArr[0];
             vicinity = titleArr[1];
 
             bottomSheetDialogFragment.show(getActivity().getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
         }else{
+            titleArr = marker.getTitle().split(" : ");
+
+            reportDescription = titleArr[0];
+            reportBy = titleArr[1];
+
             bottomSheetReportDialogFragment.show(getActivity().getSupportFragmentManager(), bottomSheetReportDialogFragment.getTag());
         }
 

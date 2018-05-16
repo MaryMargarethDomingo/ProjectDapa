@@ -7,7 +7,7 @@ package com.example.itadmin.projectdapa.maps.model;
 public class Reports {
     private double latitude;
     private double longitude;
-    private String email;
+    private String username;
     private String disasterType;
     private String reportDateTime;
 
@@ -15,10 +15,10 @@ public class Reports {
 
     }
 
-    public Reports(double latitude, double longitude, String email, String disasterType){
+    public Reports(double latitude, double longitude, String username, String disasterType){
         this.latitude = latitude;
         this.longitude = longitude;
-        this.email = email;
+        this.username = username;
         this.disasterType = disasterType;
     }
 
@@ -38,12 +38,12 @@ public class Reports {
         this.longitude = longitude;
     }
 
-    public String getEmail() {
-        return email;
+    public String getUsername() {
+        return username;
     }
 
-    public void setEmsil(String email) {
-        this.email = email;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getDisasterType() {

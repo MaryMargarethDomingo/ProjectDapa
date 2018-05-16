@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.example.itadmin.projectdapa.R;
 import com.facebook.login.LoginManager;
+import com.google.android.gms.auth.api.Auth;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import java.io.IOException;
@@ -88,6 +89,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
+                Auth.GoogleSignInApi.signOut(LoginActivity.mGoogleApiClient);
 
                 if(LoginManager.getInstance() != null){
                     LoginManager.getInstance().logOut();
