@@ -276,7 +276,14 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                             + " : " + dsp.child("latitude").getValue().toString() + " : " + dsp.child("longitude").getValue().toString());
                     markerOptions.position(new LatLng(Double.parseDouble(dsp.child("latitude").getValue().toString()),
                             Double.parseDouble(dsp.child("longitude").getValue().toString())));
-                    markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
+                    if(dsp.child("disasterType").getValue().toString().equals("Fire")){
+                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerfire));
+                    }else if(dsp.child("disasterType").getValue().toString().equals("Storm")){
+                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerstorm));
+                    }else if(dsp.child("disasterType").getValue().toString().equals("Earthquake")){
+                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerearthquake));
+                    }
+
                     mMap.addMarker(markerOptions);
                 }
             }
@@ -654,7 +661,15 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                                 + " : " + report.child("latitude").getValue().toString() + " : " + report.child("longitude").getValue().toString());
                         markerOptions.position(new LatLng(Double.parseDouble(report.child("latitude").getValue().toString()),
                                 Double.parseDouble(report.child("longitude").getValue().toString())));
-                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
+
+                        if(report.child("disasterType").getValue().toString().equals("Fire")){
+                            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerfire));
+                        }else if(report.child("disasterType").getValue().toString().equals("Storm")){
+                            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerstorm));
+                        }else if(report.child("disasterType").getValue().toString().equals("Earthquake")){
+                            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerearthquake));
+                        }
+
                         mMap.addMarker(markerOptions);
                     }
 
