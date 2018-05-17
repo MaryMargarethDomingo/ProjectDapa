@@ -14,12 +14,6 @@
         android:text="Survival Kit"
         android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/findSelected"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Find checked list" />
-
     <ListView
         android:id="@+id/listView1"
         android:layout_width="fill_parent"
