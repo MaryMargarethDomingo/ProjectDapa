@@ -22,6 +22,7 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
     private TextView placeNameText;
     private TextView vicinityText;
     private TextView distanceText;
+    private TextView phoneNumber;
 
     private ImageButton callButton;
     private ImageButton directionButton;
@@ -51,6 +52,7 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
         placeNameText = view.findViewById(R.id.placeName);
         vicinityText = view.findViewById(R.id.vicinity);
         distanceText = view.findViewById(R.id.distance);
+        phoneNumber = view.findViewById(R.id.phone);
 
         placeNameText.setText(MapsFragment.placeName);
         vicinityText.setText(MapsFragment.vicinity);

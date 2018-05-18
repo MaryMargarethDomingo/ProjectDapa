@@ -12,7 +12,16 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.net.URL;
+import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.List;
 
@@ -20,8 +29,10 @@ import java.util.List;
 public class GetNearbyPlaces extends AsyncTask<Object, String, String> {
 
     private String googlePlacesData;
+    private String googlePlacesData1;
     private GoogleMap mMap;
     private String type;
+    private String phoneNumber;
     Context context = MainActivity.getContextOfApplication();
 
     @Override
@@ -54,7 +65,6 @@ public class GetNearbyPlaces extends AsyncTask<Object, String, String> {
         DataParser dataParser = new DataParser();
         nearbyPlaceList = dataParser.parse(s);
         showNearbyPlace(nearbyPlaceList);
-
     }
 
     private void showNearbyPlace(List<HashMap<String, String>> nearbyPlaceList){
@@ -65,8 +75,18 @@ public class GetNearbyPlaces extends AsyncTask<Object, String, String> {
 
             String placeName = googlePlace.get("place_name");
             String vicinity = googlePlace.get("vicinity");
+            String placeid = googlePlace.get("place_id");
             double lat = Double.parseDouble( googlePlace.get("lat"));
             double lng = Double.parseDouble( googlePlace.get("lng"));
+
+            /*try {
+                JSONObject placeDetails = readJsonFromUrl("https://maps.googleapis.com/maps/api/place/details/json?key=AIzaSyAI8AWBOjy-m-t281QDrwov3r2KImzc__A&placeid=" + placeid);
+                phoneNumber = placeDetails.get("formatted_phone_number").toString();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }*/
 
             LatLng latLng = new LatLng( lat, lng);
             markerOptions.position(latLng);
@@ -88,4 +108,26 @@ public class GetNearbyPlaces extends AsyncTask<Object, String, String> {
 
         }
     }
+
+    private static String readAll(Reader rd) throws IOException {
+        StringBuilder sb = new StringBuilder();
+        int cp;
+        while ((cp = rd.read()) != -1) {
+            sb.append((char) cp);
+        }
+        return sb.toString();
+    }
+
+    public static JSONObject readJsonFromUrl(String url) throws IOException, JSONException {
+        InputStream is = new URL(url).openStream();
+        try {
+            BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
+            String jsonText = readAll(rd);
+            JSONObject json = new JSONObject(jsonText);
+            return json;
+        } finally {
+            is.close();
+        }
+    }
+
 }
