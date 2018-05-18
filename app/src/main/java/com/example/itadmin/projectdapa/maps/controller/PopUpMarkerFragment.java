@@ -98,8 +98,8 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
 
                     if(savedHospital.split(".").length >= 0 && savedHospital.split(".").length <= 3){
                         savedHospital.concat(MapsFragment.placeName + "," + MapsFragment.vicinity + ".");
-
                         editor.putString("savedHospital", savedHospital).commit();
+
                     }else{
                         Toast.makeText(getContext(), "Reached maximum amount of saved places for Hospitals", Toast.LENGTH_LONG).show();
                     }
@@ -109,8 +109,8 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
 
                     if(savedPolice.split(".").length >= 0 && savedPolice.split(".").length <= 3){
                         savedPolice.concat(MapsFragment.placeName + "," + MapsFragment.vicinity + ".");
-
                         editor.putString("savedPolice", savedPolice).commit();
+
                     }else{
                         Toast.makeText(getContext(), "Reached maximum amount of saved places for Police", Toast.LENGTH_LONG).show();
                     }
@@ -120,8 +120,8 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
 
                     if(savedFire.split(".").length >= 0 && savedFire.split(".").length <= 3){
                         savedFire.concat(MapsFragment.placeName + "," + MapsFragment.vicinity + ".");
-
                         editor.putString("savedFire", savedFire).commit();
+
                     }else{
                         Toast.makeText(getContext(), "Reached maximum amount of saved places for Fire Departments", Toast.LENGTH_LONG).show();
                     }
@@ -131,8 +131,8 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
 
                     if(savedVet.split(".").length >= 0 && savedVet.split(".").length <= 3){
                         savedVet.concat(MapsFragment.placeName + "," + MapsFragment.vicinity + ".");
-
                         editor.putString("savedVet", savedVet).commit();
+
                     }else{
                         Toast.makeText(getContext(), "Reached maximum amount of saved places for Veterinaries", Toast.LENGTH_LONG).show();
                     }
