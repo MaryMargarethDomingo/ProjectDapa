@@ -110,7 +110,7 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
                     if(savedPolice.split(".").length >= 0 && savedPolice.split(".").length <= 3){
                         savedPolice.concat(MapsFragment.placeName + "," + MapsFragment.vicinity + ".");
 
-                        editor.putString("savedHospital", savedPolice).commit();
+                        editor.putString("savedPolice", savedPolice).commit();
                     }else{
                         Toast.makeText(getContext(), "Reached maximum amount of saved places for Police", Toast.LENGTH_LONG).show();
                     }
@@ -121,7 +121,7 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
                     if(savedFire.split(".").length >= 0 && savedFire.split(".").length <= 3){
                         savedFire.concat(MapsFragment.placeName + "," + MapsFragment.vicinity + ".");
 
-                        editor.putString("savedHospital", savedFire).commit();
+                        editor.putString("savedFire", savedFire).commit();
                     }else{
                         Toast.makeText(getContext(), "Reached maximum amount of saved places for Fire Departments", Toast.LENGTH_LONG).show();
                     }
@@ -132,7 +132,7 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
                     if(savedVet.split(".").length >= 0 && savedVet.split(".").length <= 3){
                         savedVet.concat(MapsFragment.placeName + "," + MapsFragment.vicinity + ".");
 
-                        editor.putString("savedHospital", savedVet).commit();
+                        editor.putString("savedVet", savedVet).commit();
                     }else{
                         Toast.makeText(getContext(), "Reached maximum amount of saved places for Veterinaries", Toast.LENGTH_LONG).show();
                     }
