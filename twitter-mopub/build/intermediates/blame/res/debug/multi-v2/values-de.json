@@ -1,0 +1,48 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\twitter-mopub\\build\\intermediates\\res\\merged\\debug\\values-de\\values-de.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\twitter-mopub\\src\\main\\res\\values-de\\strings.xml",
+                    "from": {
+                        "startLines": "20,21",
+                        "startColumns": "4,4",
+                        "startOffsets": "752,829",
+                        "endColumns": "75,75",
+                        "endOffsets": "823,900"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,131",
+                        "endColumns": "75,75",
+                        "endOffsets": "126,202"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\twitter-mopub\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-de\\values-de.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\HI FREQUENCY\\Documents\\Programming\\Android Studio\\THESIS - Project DAPA\\twitter-mopub\\src\\main\\res\\values-de\\strings.xml",
+                    "from": {
+                        "startLines": "20,21",
+                        "startColumns": "4,4",
+                        "startOffsets": "752,829",
+                        "endColumns": "75,75",
+                        "endOffsets": "823,900"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,131",
+                        "endColumns": "75,75",
+                        "endOffsets": "126,202"
+                    }
+                }
+            ]
+        }
+    ]
+}
