@@ -89,7 +89,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
-                Auth.GoogleSignInApi.signOut(LoginActivity.mGoogleApiClient);
+                //Auth.GoogleSignInApi.signOut(LoginActivity.mGoogleApiClient);
 
                 if(LoginManager.getInstance() != null){
                     LoginManager.getInstance().logOut();
