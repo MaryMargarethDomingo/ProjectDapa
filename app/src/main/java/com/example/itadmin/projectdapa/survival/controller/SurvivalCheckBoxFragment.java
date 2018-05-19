@@ -2,6 +2,7 @@ package com.example.itadmin.projectdapa.survival.controller;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
@@ -134,6 +135,7 @@ public class SurvivalCheckBoxFragment extends Fragment {
 
             holder.name.setText(disaster.getName());
             holder.name.setChecked(disaster.isSelected());
+            holder.name.setTextColor(Color.WHITE);
 
             holder.name.setTag(disaster);
 
