@@ -77,8 +77,8 @@ public class SavedPlacesFragment extends Fragment {
         fireCall3 = view.findViewById(R.id.fireCall3);
 
         vetCall1 = view.findViewById(R.id.vetCall1);
-        vetCall2 = view.findViewById(R.id.vetCall3);
-        vetCall3 = view.findViewById(R.id.vetCall2);
+        vetCall2 = view.findViewById(R.id.vetCall2);
+        vetCall3 = view.findViewById(R.id.vetCall3);
 
         return view;
 
@@ -96,55 +96,55 @@ public class SavedPlacesFragment extends Fragment {
         vet = sharedPreferences.getString("savedVet", "No saved place").split(" . ");
 
         if(hosptals.length == 1){
-            hospital1.setText(hosptals[0]);
+            hospital1.setText("1. " + hosptals[0]);
 
         }else if (hosptals.length == 2){
-            hospital1.setText(hosptals[0]);
-            hospital2.setText(hosptals[1]);
+            hospital1.setText("1. " + hosptals[0]);
+            hospital2.setText("2. " + hosptals[1]);
 
         }else if(hosptals.length == 3){
-            hospital1.setText(hosptals[0]);
-            hospital2.setText(hosptals[1]);
-            hospital3.setText(hosptals[2]);
+            hospital1.setText("1. " + hosptals[0]);
+            hospital2.setText("2. " + hosptals[1]);
+            hospital3.setText("3. " + hosptals[2]);
         }
 
         if(police.length == 1){
-            police1.setText(police[0]);
+            police1.setText("1. " + police[0]);
 
         }else if(police.length == 2){
-            police1.setText(police[0]);
-            police2.setText(police[1]);
+            police1.setText("1. " + police[0]);
+            police2.setText("2. " + police[1]);
 
         }else if(police.length == 3){
-            police1.setText(police[0]);
-            police2.setText(police[1]);
-            police3.setText(police[2]);
+            police1.setText("1. " + police[0]);
+            police2.setText("2. " + police[1]);
+            police3.setText("3. " + police[2]);
         }
 
         if(fire.length == 1){
-            fire1.setText(fire[0]);
+            fire1.setText("1. " + fire[0]);
 
         }else if(fire.length == 2){
-            fire1.setText(fire[0]);
-            fire2.setText(fire[1]);
+            fire1.setText("1. " + fire[0]);
+            fire2.setText("2. " + fire[1]);
 
         }else if(fire.length == 3){
-            fire1.setText(fire[0]);
-            fire2.setText(fire[1]);
-            fire3.setText(fire[2]);
+            fire1.setText("1. " + fire[0]);
+            fire2.setText("2. " + fire[1]);
+            fire3.setText("3. " + fire[2]);
         }
 
         if(vet.length == 1){
-            vet1.setText(vet[0]);
+            vet1.setText("1. " + vet[0]);
 
         }else if(vet.length == 2){
-            vet1.setText(vet[0]);
-            vet2.setText(vet[1]);
+            vet1.setText("1. " + vet[0]);
+            vet2.setText("2. " + vet[1]);
 
         }else if(vet.length == 3){
-            vet1.setText(vet[0]);
-            vet2.setText(vet[1]);
-            vet3.setText(vet[2]);
+            vet1.setText("1. " + vet[0]);
+            vet2.setText("2. " + vet[1]);
+            vet3.setText("3. " + vet[2]);
         }
 
     }

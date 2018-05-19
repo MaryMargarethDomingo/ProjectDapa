@@ -29,7 +29,6 @@ import java.util.List;
 public class GetNearbyPlaces extends AsyncTask<Object, String, String> {
 
     private String googlePlacesData;
-    private String googlePlacesData1;
     private GoogleMap mMap;
     private String type;
     private String phoneNumber;
