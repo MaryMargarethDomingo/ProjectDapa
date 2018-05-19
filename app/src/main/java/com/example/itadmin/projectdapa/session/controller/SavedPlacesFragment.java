@@ -102,7 +102,7 @@ public class SavedPlacesFragment extends Fragment {
             hospital1.setText("1. " + hosptals[0]);
             hospital2.setText("2. " + hosptals[1]);
 
-        }else if(hosptals.length == 3){
+        }else {
             hospital1.setText("1. " + hosptals[0]);
             hospital2.setText("2. " + hosptals[1]);
             hospital3.setText("3. " + hosptals[2]);
@@ -115,7 +115,7 @@ public class SavedPlacesFragment extends Fragment {
             police1.setText("1. " + police[0]);
             police2.setText("2. " + police[1]);
 
-        }else if(police.length == 3){
+        }else{
             police1.setText("1. " + police[0]);
             police2.setText("2. " + police[1]);
             police3.setText("3. " + police[2]);
@@ -128,7 +128,7 @@ public class SavedPlacesFragment extends Fragment {
             fire1.setText("1. " + fire[0]);
             fire2.setText("2. " + fire[1]);
 
-        }else if(fire.length == 3){
+        }else{
             fire1.setText("1. " + fire[0]);
             fire2.setText("2. " + fire[1]);
             fire3.setText("3. " + fire[2]);
@@ -141,7 +141,7 @@ public class SavedPlacesFragment extends Fragment {
             vet1.setText("1. " + vet[0]);
             vet2.setText("2. " + vet[1]);
 
-        }else if(vet.length == 3){
+        }else{
             vet1.setText("1. " + vet[0]);
             vet2.setText("2. " + vet[1]);
             vet3.setText("3. " + vet[2]);
