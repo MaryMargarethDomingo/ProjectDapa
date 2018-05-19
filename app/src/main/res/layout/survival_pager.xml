@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_marginBottom="@dimen/bottom_navigation_height"
     android:weightSum="3">
 
 
@@ -11,8 +12,9 @@
         android:id="@+id/btnBefore"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
         android:layout_weight="1"
-        android:background="@android:color/holo_orange_light"
+        android:textSize="30dp"
         android:text="Before" />
 
     <Button
@@ -20,7 +22,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="@android:color/holo_red_dark"
+        android:textSize="30dp"
+        android:backgroundTint="@color/red"
         android:text="During" />
 
     <Button
@@ -28,7 +31,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="@android:color/holo_orange_dark"
+        android:textSize="30dp"
+        android:backgroundTint="@color/green"
         android:text="After" />
 
 </LinearLayout>
