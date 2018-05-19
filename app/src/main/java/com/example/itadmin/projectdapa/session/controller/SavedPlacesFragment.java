@@ -90,10 +90,10 @@ public class SavedPlacesFragment extends Fragment {
     public void onStart() {
         super.onStart();
 
-        hosptals = sharedPreferences.getString("savedHospital", "No saved place").split(".");
-        police = sharedPreferences.getString("savedPolice", "No saved place").split(".");
-        fire = sharedPreferences.getString("savedFire", "No saved place").split(".");
-        vet = sharedPreferences.getString("savedVet", "No saved place").split(".");
+        hosptals = sharedPreferences.getString("savedHospital", "No saved place").split(" . ");
+        police = sharedPreferences.getString("savedPolice", "No saved place").split(" . ");
+        fire = sharedPreferences.getString("savedFire", "No saved place").split(" . ");
+        vet = sharedPreferences.getString("savedVet", "No saved place").split(" . ");
 
         if(hosptals.length == 1){
             hospital1.setText(hosptals[0]);
