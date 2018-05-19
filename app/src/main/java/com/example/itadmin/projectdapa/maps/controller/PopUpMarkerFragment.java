@@ -22,6 +22,7 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
     private TextView placeNameText;
     private TextView vicinityText;
     private TextView distanceText;
+    private TextView phoneNumber;
 
     private ImageButton callButton;
     private ImageButton directionButton;
@@ -51,6 +52,7 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
         placeNameText = view.findViewById(R.id.placeName);
         vicinityText = view.findViewById(R.id.vicinity);
         distanceText = view.findViewById(R.id.distance);
+        phoneNumber = view.findViewById(R.id.phone);
 
         placeNameText.setText(MapsFragment.placeName);
         vicinityText.setText(MapsFragment.vicinity);
@@ -96,8 +98,8 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
                 if(args.equals("hospital")){
                     savedHospital = preferences.getString("savedHospital", "");
 
-                    if(savedHospital.split(".").length >= 0 && savedHospital.split(".").length <= 3){
-                        savedHospital.concat(MapsFragment.placeName + "," + MapsFragment.vicinity + ".");
+                    if(savedHospital.split(" . ").length >= 0 && savedHospital.split(" . ").length <= 3){
+                        savedHospital.concat(MapsFragment.placeName + "," + MapsFragment.vicinity + " . ");
                         editor.putString("savedHospital", savedHospital).commit();
 
                     }else{
@@ -107,8 +109,8 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
                 }else if(args.equals("police")){
                     savedPolice = preferences.getString("savedPolice", "");
 
-                    if(savedPolice.split(".").length >= 0 && savedPolice.split(".").length <= 3){
-                        savedPolice.concat(MapsFragment.placeName + "," + MapsFragment.vicinity + ".");
+                    if(savedPolice.split(" . ").length >= 0 && savedPolice.split(" . ").length <= 3){
+                        savedPolice.concat(MapsFragment.placeName + "," + MapsFragment.vicinity + " . ");
                         editor.putString("savedPolice", savedPolice).commit();
 
                     }else{
@@ -118,8 +120,8 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
                 }else if(args.equals("fire_station")){
                     savedFire = preferences.getString("savedFire", "");
 
-                    if(savedFire.split(".").length >= 0 && savedFire.split(".").length <= 3){
-                        savedFire.concat(MapsFragment.placeName + "," + MapsFragment.vicinity + ".");
+                    if(savedFire.split(" . ").length >= 0 && savedFire.split(" . ").length <= 3){
+                        savedFire.concat(MapsFragment.placeName + "," + MapsFragment.vicinity + " . ");
                         editor.putString("savedFire", savedFire).commit();
 
                     }else{
@@ -129,8 +131,8 @@ public class PopUpMarkerFragment extends BottomSheetDialogFragment {
                 }else if(args.equals("veterinary_care")){
                     savedVet = preferences.getString("savedFire", "");
 
-                    if(savedVet.split(".").length >= 0 && savedVet.split(".").length <= 3){
-                        savedVet.concat(MapsFragment.placeName + "," + MapsFragment.vicinity + ".");
+                    if(savedVet.split(" . ").length >= 0 && savedVet.split(" . ").length <= 3){
+                        savedVet.concat(MapsFragment.placeName + "," + MapsFragment.vicinity + " . ");
                         editor.putString("savedVet", savedVet).commit();
 
                     }else{

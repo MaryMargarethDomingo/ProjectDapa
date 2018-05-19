@@ -40,7 +40,7 @@ public class PopUpReportMarkerFragment extends BottomSheetDialogFragment {
         MapsFragment.getDistance();
         distanceText.setText(MapsFragment.strDistance + " KM away");
 
-        reporter.setText("By: " + MapsFragment.reportBy.split("@")[0]);
+        reporter.setText("By: " + MapsFragment.reportBy);
 
         return view;
     }

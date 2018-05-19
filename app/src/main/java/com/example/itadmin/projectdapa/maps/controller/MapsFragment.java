@@ -272,16 +272,16 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                 for (DataSnapshot dsp : dataSnapshot.getChildren()){
                     reports.add(dsp);
                     MarkerOptions markerOptions = new MarkerOptions();
-                    markerOptions.title(dsp.child("disasterType").getValue().toString() + " : " + dsp.child("username").getValue().toString()
+                    markerOptions.title(dsp.child("disasterType").getValue().toString() + " : " + dsp.child("username").getValue().toString().split("@")[0]
                             + " : " + dsp.child("latitude").getValue().toString() + " : " + dsp.child("longitude").getValue().toString());
                     markerOptions.position(new LatLng(Double.parseDouble(dsp.child("latitude").getValue().toString()),
                             Double.parseDouble(dsp.child("longitude").getValue().toString())));
                     if(dsp.child("disasterType").getValue().toString().equals("Fire")){
                         markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerfire));
-                    }else if(dsp.child("disasterType").getValue().toString().equals("Storm")){
-                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerstorm));
-                    }else if(dsp.child("disasterType").getValue().toString().equals("Earthquake")){
-                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerearthquake));
+                    }else if(dsp.child("disasterType").getValue().toString().equals("Flood")){
+                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerflood));
+                    }else if(dsp.child("disasterType").getValue().toString().equals("Falling Debris")){
+                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerdebris));
                     }
 
                     mMap.addMarker(markerOptions);
@@ -657,17 +657,17 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     for(DataSnapshot report: reports){
                         MarkerOptions markerOptions = new MarkerOptions();
-                        markerOptions.title(report.child("disasterType").getValue().toString() + " : " + report.child("username").getValue().toString()
+                        markerOptions.title(report.child("disasterType").getValue().toString() + " : " + report.child("username").getValue().toString().split("@")[0]
                                 + " : " + report.child("latitude").getValue().toString() + " : " + report.child("longitude").getValue().toString());
                         markerOptions.position(new LatLng(Double.parseDouble(report.child("latitude").getValue().toString()),
                                 Double.parseDouble(report.child("longitude").getValue().toString())));
 
                         if(report.child("disasterType").getValue().toString().equals("Fire")){
                             markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerfire));
-                        }else if(report.child("disasterType").getValue().toString().equals("Storm")){
-                            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerstorm));
-                        }else if(report.child("disasterType").getValue().toString().equals("Earthquake")){
-                            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerearthquake));
+                        }else if(report.child("disasterType").getValue().toString().equals("Flood")){
+                            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerflood));
+                        }else if(report.child("disasterType").getValue().toString().equals("Falling Debris")){
+                            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerdebris));
                         }
 
                         mMap.addMarker(markerOptions);
