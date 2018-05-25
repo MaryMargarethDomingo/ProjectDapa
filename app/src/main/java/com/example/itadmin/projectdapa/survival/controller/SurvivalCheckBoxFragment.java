@@ -2,6 +2,7 @@ package com.example.itadmin.projectdapa.survival.controller;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
@@ -41,7 +42,7 @@ public class SurvivalCheckBoxFragment extends Fragment {
         super.onStart();
 
         displayListView();
-        checkButtonClick();
+        //checkButtonClick();
 
     }
 
@@ -65,13 +66,13 @@ public class SurvivalCheckBoxFragment extends Fragment {
         ListView listView = getView().findViewById(R.id.listView1);
         listView.setAdapter(dataAdapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        /*listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             public void onItemClick(AdapterView<?> parent, View view, int position, long id){
                 DisasterBean disaster = (DisasterBean) parent.getItemAtPosition(position);
                 Toast.makeText(getContext(),"Clicked on Row: " + disaster.getName(),Toast.LENGTH_LONG).show();
             }
-        });
+        });*/
     }
 
     private class MyCustomAdapter extends ArrayAdapter<DisasterBean>{
@@ -102,7 +103,7 @@ public class SurvivalCheckBoxFragment extends Fragment {
                 convertView = vi.inflate(R.layout.survival_info, null);
 
                 holder = new ViewHolder();
-                holder.name = (CheckBox) convertView.findViewById(R.id.checkBox1);
+                holder.name = convertView.findViewById(R.id.checkBox1);
 
                 convertView.setTag(holder);
 
@@ -112,7 +113,7 @@ public class SurvivalCheckBoxFragment extends Fragment {
                         CheckBox cb = (CheckBox) v;
                         DisasterBean disaster = (DisasterBean) cb.getTag();
 
-                        Toast.makeText(getContext(), "Clicked on Checkbox: " + cb.getText() ,Toast.LENGTH_LONG).show();
+                        //Toast.makeText(getContext(), "Clicked on Checkbox: " + cb.getText() ,Toast.LENGTH_LONG).show();
                         disaster.setSelected(cb.isChecked());
 
                         if(preferences.getBoolean(disaster.getName(), true)) {
@@ -134,6 +135,7 @@ public class SurvivalCheckBoxFragment extends Fragment {
 
             holder.name.setText(disaster.getName());
             holder.name.setChecked(disaster.isSelected());
+            holder.name.setTextColor(Color.WHITE);
 
             holder.name.setTag(disaster);
 
@@ -142,7 +144,7 @@ public class SurvivalCheckBoxFragment extends Fragment {
 
     }
 
-    private void checkButtonClick() {
+    /*private void checkButtonClick() {
 
         Button myButton = getView().findViewById(R.id.findSelected);
 
@@ -169,7 +171,7 @@ public class SurvivalCheckBoxFragment extends Fragment {
                 Toast.makeText(getContext(),responseText, Toast.LENGTH_LONG).show();
             }
         });
-    }
+    }*/
 
 
 

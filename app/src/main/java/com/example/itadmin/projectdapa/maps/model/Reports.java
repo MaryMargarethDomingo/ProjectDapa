@@ -9,6 +9,7 @@ public class Reports {
     private double longitude;
     private String username;
     private String disasterType;
+    private String reportDateTime;
 
     public Reports(){
 

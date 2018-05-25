@@ -15,12 +15,17 @@
     <color name="callBackground">#60D73C</color>
     <color name="btn1">#9C9B9B</color>
     <color name="btn2">#9C9B9B</color>
+
+
+
     <color name="text_light">#ffffff</color>
     <color name="text_dark">#000000</color>
     <color name="tab_indicator">#ffffff</color>
     <!--<color name="splashBackground">#607d8b</color>-->
     <color name="splashBackground">#7e1414</color>
-    <color name="yellow">#c2c200</color>
+    <color name="red">#92da5555</color>
+    <color name="yellow">#8af2e56a</color>
+    <color name="green">#aedf9f67</color>
 
 
     <color name="colorTintedBackground">#cdcdcd</color>

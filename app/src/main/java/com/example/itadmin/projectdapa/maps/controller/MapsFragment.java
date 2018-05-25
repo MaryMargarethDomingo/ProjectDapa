@@ -72,7 +72,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     LocationRequest locationRequest;
     Location lastLocation;
     Marker currentLocationMarker;
-    static int PROXIMITY_RADIUS = 2 * 1000;
+    static int PROXIMITY_RADIUS = 5 * 1000;
     public static double latitude = 0;
     public static double longitude = 0;
     public static String type;
@@ -97,6 +97,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     private Animation show_fab3_menu;
     private Animation hide_fab3_menu;
     private static BottomSheetDialogFragment bottomSheetDialogFragment = new PopUpMarkerFragment();
+    private static BottomSheetDialogFragment bottomSheetReportDialogFragment = new PopUpReportMarkerFragment();
     private static ArrayList<DataSnapshot> reports = new ArrayList<>();
 
     public static final int REQUEST_LOCATION_CODE = 99;
@@ -151,6 +152,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         togFire.setOnCheckedChangeListener(changeChecker);
         togVet.setOnCheckedChangeListener(changeChecker);
         togReports.setOnCheckedChangeListener(changeChecker);
+
         reportFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -170,7 +172,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                         Reports reports = new Reports(latitude, longitude, user.getEmail(), "Earthquake");
                         database.child(database.push().getKey()).setValue(reports);
 
-                        Toast.makeText(getContext(), "Report clicked!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "Report Successful!", Toast.LENGTH_SHORT).show();
                     }
                 }else{
                     Toast.makeText(getContext(), "You've just reported! Please try again in few seconds", Toast.LENGTH_SHORT).show();
@@ -195,7 +197,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                         Reports reports = new Reports(latitude, longitude, user.getEmail(), "Storm");
                         database.child(database.push().getKey()).setValue(reports);
 
-                        Toast.makeText(getContext(), "Report clicked!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "Report Successful!", Toast.LENGTH_SHORT).show();
                     }
                 }else{
                     Toast.makeText(getContext(), "You've just reported! Please try again in few seconds", Toast.LENGTH_SHORT).show();
@@ -217,10 +219,10 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
             public void onClick(View v) {
                 if(!justClicked){
                     if(latitude != 0 || longitude != 0){
-                        Reports reports = new Reports(latitude, longitude, user.getEmail(), "Landslide");
+                        Reports reports = new Reports(latitude, longitude, user.getEmail(), "Fire");
                         database.child(database.push().getKey()).setValue(reports);
 
-                        Toast.makeText(getContext(), "Report clicked!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "Report Successful!", Toast.LENGTH_SHORT).show();
                     }
                 }else{
                     Toast.makeText(getContext(), "You've just reported! Please try again in few seconds", Toast.LENGTH_SHORT).show();
@@ -270,9 +272,18 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                 for (DataSnapshot dsp : dataSnapshot.getChildren()){
                     reports.add(dsp);
                     MarkerOptions markerOptions = new MarkerOptions();
+                    markerOptions.title(dsp.child("disasterType").getValue().toString() + " : " + dsp.child("username").getValue().toString().split("@")[0]
+                            + " : " + dsp.child("latitude").getValue().toString() + " : " + dsp.child("longitude").getValue().toString());
                     markerOptions.position(new LatLng(Double.parseDouble(dsp.child("latitude").getValue().toString()),
                             Double.parseDouble(dsp.child("longitude").getValue().toString())));
-                    markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
+                    if(dsp.child("disasterType").getValue().toString().equals("Fire")){
+                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerfire));
+                    }else if(dsp.child("disasterType").getValue().toString().equals("Flood")){
+                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerflood));
+                    }else if(dsp.child("disasterType").getValue().toString().equals("Falling Debris")){
+                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerdebris));
+                    }
+
                     mMap.addMarker(markerOptions);
                 }
             }
@@ -542,6 +553,14 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     Toast.makeText(getActivity(), "Showing nearby hospitals", Toast.LENGTH_LONG).show();
 
                     editor.putString("place", type).commit();
+
+/*                    for(DataSnapshot report: reports){
+                        MarkerOptions markerOptions = new MarkerOptions();
+                        markerOptions.position(new LatLng(Double.parseDouble(report.child("latitude").getValue().toString()),
+                                Double.parseDouble(report.child("longitude").getValue().toString())));
+                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
+                        mMap.addMarker(markerOptions);
+                    }*/
                 }
 
                 if (compoundButton == togPolice) {
@@ -561,6 +580,14 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     Toast.makeText(getActivity(), "Showing nearby police stations", Toast.LENGTH_LONG).show();
 
                     editor.putString("place", type).commit();
+
+/*                    for(DataSnapshot report: reports){
+                        MarkerOptions markerOptions = new MarkerOptions();
+                        markerOptions.position(new LatLng(Double.parseDouble(report.child("latitude").getValue().toString()),
+                                Double.parseDouble(report.child("longitude").getValue().toString())));
+                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
+                        mMap.addMarker(markerOptions);
+                    }*/
 
                 }
 
@@ -582,6 +609,14 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     editor.putString("place", type).commit();
 
+/*                    for(DataSnapshot report: reports){
+                        MarkerOptions markerOptions = new MarkerOptions();
+                        markerOptions.position(new LatLng(Double.parseDouble(report.child("latitude").getValue().toString()),
+                                Double.parseDouble(report.child("longitude").getValue().toString())));
+                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
+                        mMap.addMarker(markerOptions);
+                    }*/
+
                 }
 
                 if (compoundButton == togVet) {
@@ -601,6 +636,14 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     Toast.makeText(getActivity(), "Showing nearby veterinary clinics", Toast.LENGTH_LONG).show();
 
                     editor.putString("place", type).commit();
+/*
+                    for(DataSnapshot report: reports){
+                        MarkerOptions markerOptions = new MarkerOptions();
+                        markerOptions.position(new LatLng(Double.parseDouble(report.child("latitude").getValue().toString()),
+                                Double.parseDouble(report.child("longitude").getValue().toString())));
+                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
+                        mMap.addMarker(markerOptions);
+                    }*/
 
                 }
 
@@ -614,9 +657,19 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     for(DataSnapshot report: reports){
                         MarkerOptions markerOptions = new MarkerOptions();
+                        markerOptions.title(report.child("disasterType").getValue().toString() + " : " + report.child("username").getValue().toString().split("@")[0]
+                                + " : " + report.child("latitude").getValue().toString() + " : " + report.child("longitude").getValue().toString());
                         markerOptions.position(new LatLng(Double.parseDouble(report.child("latitude").getValue().toString()),
                                 Double.parseDouble(report.child("longitude").getValue().toString())));
-                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
+
+                        if(report.child("disasterType").getValue().toString().equals("Fire")){
+                            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerfire));
+                        }else if(report.child("disasterType").getValue().toString().equals("Flood")){
+                            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerflood));
+                        }else if(report.child("disasterType").getValue().toString().equals("Falling Debris")){
+                            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerdebris));
+                        }
+
                         mMap.addMarker(markerOptions);
                     }
 
@@ -629,30 +682,32 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 //-------------------------------------------------- Marker click - METHODS --------------------------------------------------
     public static String placeName;
     public static String vicinity;
+    public static String reportDescription;
+    public static String reportBy;
 
     @Override
     public boolean onMarkerClick(Marker marker) {
 
         endMarkerLat = marker.getPosition().latitude;
         endMarkerLng = marker.getPosition().longitude;
+        String[] titleArr;
 
-        String[] titleArr = marker.getTitle().split(" : ");
+        if(marker.getTitle().split(" : ").length == 2){
+            titleArr = marker.getTitle().split(" : ");
 
-        placeName = titleArr[0];
-        vicinity = titleArr[1];
+            placeName = titleArr[0];
+            vicinity = titleArr[1];
 
-        if(isReportMarker()){
-
-        }else{
             bottomSheetDialogFragment.show(getActivity().getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
+        }else{
+            titleArr = marker.getTitle().split(" : ");
+
+            reportDescription = titleArr[0];
+            reportBy = titleArr[1];
+
+            bottomSheetReportDialogFragment.show(getActivity().getSupportFragmentManager(), bottomSheetReportDialogFragment.getTag());
         }
 
-
-        return false;
-    }
-
-//check if marker is a report
-    private boolean isReportMarker(){
         return false;
     }
 

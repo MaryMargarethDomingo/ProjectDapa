@@ -56,6 +56,8 @@ public class SurvivalFragment extends Fragment {
         cardDataList.add(new SurvivalBean("TYPHOON", R.drawable.storm));
         cardDataList.add(new SurvivalBean("TSUNAMI", R.drawable.tsunami));
         cardDataList.add(new SurvivalBean("VOLCANIC ERUPTION", R.drawable.volcano));
+        cardDataList.add(new SurvivalBean("FIRE", R.drawable.fire));
+        cardDataList.add(new SurvivalBean("LANDSLIDE", R.drawable.landslide));
         RecyclerView.Adapter mAdapter = new CardAdapter(getActivity(), cardDataList, getFragmentManager());
         recyclerView.setAdapter(mAdapter);
 
