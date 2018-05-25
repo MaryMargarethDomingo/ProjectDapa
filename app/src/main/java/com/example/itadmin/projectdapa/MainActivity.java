@@ -67,20 +67,6 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
 
         contextOfApplication = getApplicationContext();
 
-        try {
-            PackageInfo info = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES);
-            for (Signature signature : info.signatures) {
-                MessageDigest md = MessageDigest.getInstance("SHA");
-                md.update(signature.toByteArray());
-                String hashKey = new String(Base64.encode(md.digest(), 0));
-                Log.v("keytoolhash", "printHashKey() Hash Key: " + hashKey);
-            }
-        } catch (NoSuchAlgorithmException e) {
-            Log.e("keytoolhash", "printHashKey()", e);
-        } catch (Exception e) {
-            Log.e("keytoolhash", "printHashKey()", e);
-        }
-
         //if not logged in, go to loginActivity
         if (mAuth.getCurrentUser() == null) {
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
