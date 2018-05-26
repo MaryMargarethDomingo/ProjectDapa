@@ -41,7 +41,7 @@
         android:layout_marginBottom="@dimen/bottom_navigation_height"
         android:layout_marginStart="29dp"
         android:clickable="true"
-        app:backgroundTint="@android:color/holo_green_dark"
+        app:backgroundTint="@android:color/holo_orange_dark"
         app:layout_anchor="@+id/myBottomNavigation_ID"
         app:layout_anchorGravity="right|top"
         android:src="@drawable/sosicon" />
