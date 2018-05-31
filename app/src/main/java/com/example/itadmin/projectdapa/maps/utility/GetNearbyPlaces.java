@@ -100,6 +100,8 @@ public class GetNearbyPlaces extends AsyncTask<Object, String, String> {
                 markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.firemarker));
             }else if(type.equals("veterinary_care")){
                 markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.vetmarker));
+            }else if(type.equals("school")){
+                
             }
 
 

@@ -139,7 +139,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         togPolice = getView().findViewById(R.id.togPolice);
         togFire = getView().findViewById(R.id.togFire);
         togVet = getView().findViewById(R.id.togVet);
-        togReports = getView().findViewById(R.id.togReports);
+        togEvacuation = getView().findViewById(R.id.togEvacuation);
         reportFab = getView().findViewById(R.id.floatingActionButton);
         fab1 = getView().findViewById(R.id.fab_1);
         fab2 = getView().findViewById(R.id.fab_2);
@@ -151,7 +151,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         togPolice.setOnCheckedChangeListener(changeChecker);
         togFire.setOnCheckedChangeListener(changeChecker);
         togVet.setOnCheckedChangeListener(changeChecker);
-        togReports.setOnCheckedChangeListener(changeChecker);
+        togEvacuation.setOnCheckedChangeListener(changeChecker);
 
         reportFab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -169,7 +169,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
             public void onClick(View v) {
                 if(!justClicked){
                     if(latitude != 0 || longitude != 0){
-                        Reports reports = new Reports(latitude, longitude, user.getEmail(), "Earthquake");
+                        Reports reports = new Reports(latitude, longitude, user.getEmail(), "Falling Debris");
                         database.child(database.push().getKey()).setValue(reports);
 
                         Toast.makeText(getContext(), "Report Successful!", Toast.LENGTH_SHORT).show();
@@ -194,7 +194,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
             public void onClick(View v) {
                 if(!justClicked){
                     if(latitude != 0 || longitude != 0){
-                        Reports reports = new Reports(latitude, longitude, user.getEmail(), "Storm");
+                        Reports reports = new Reports(latitude, longitude, user.getEmail(), "Flood");
                         database.child(database.push().getKey()).setValue(reports);
 
                         Toast.makeText(getContext(), "Report Successful!", Toast.LENGTH_SHORT).show();
@@ -525,7 +525,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     private ToggleButton togPolice;
     private ToggleButton togFire;
     private ToggleButton togVet;
-    private ToggleButton togReports;
+    private ToggleButton togEvacuation;
 
 
     SavedPlacesFragment savedPlacesFragment = new SavedPlacesFragment();
@@ -541,7 +541,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     togPolice.setChecked(false);
                     togFire.setChecked(false);
                     togVet.setChecked(false);
-                    togReports.setChecked(false);
+                    togEvacuation.setChecked(false);
 
                     mMap.clear();
                     type = "hospital";
@@ -554,13 +554,23 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     editor.putString("place", type).commit();
 
-/*                    for(DataSnapshot report: reports){
+                    for(DataSnapshot report: reports){
                         MarkerOptions markerOptions = new MarkerOptions();
+                        markerOptions.title(report.child("disasterType").getValue().toString() + " : " + report.child("username").getValue().toString().split("@")[0]
+                                + " : " + report.child("latitude").getValue().toString() + " : " + report.child("longitude").getValue().toString());
                         markerOptions.position(new LatLng(Double.parseDouble(report.child("latitude").getValue().toString()),
                                 Double.parseDouble(report.child("longitude").getValue().toString())));
-                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
+
+                        if(report.child("disasterType").getValue().toString().equals("Fire")){
+                            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerfire));
+                        }else if(report.child("disasterType").getValue().toString().equals("Flood")){
+                            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerflood));
+                        }else if(report.child("disasterType").getValue().toString().equals("Falling Debris")){
+                            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerdebris));
+                        }
+
                         mMap.addMarker(markerOptions);
-                    }*/
+                    }
                 }
 
                 if (compoundButton == togPolice) {
@@ -568,7 +578,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     togHospital.setChecked(false);
                     togFire.setChecked(false);
                     togVet.setChecked(false);
-                    togReports.setChecked(false);
+                    togEvacuation.setChecked(false);
 
                     mMap.clear();
                     type = "police";
@@ -581,14 +591,23 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     editor.putString("place", type).commit();
 
-/*                    for(DataSnapshot report: reports){
+                    for(DataSnapshot report: reports){
                         MarkerOptions markerOptions = new MarkerOptions();
+                        markerOptions.title(report.child("disasterType").getValue().toString() + " : " + report.child("username").getValue().toString().split("@")[0]
+                                + " : " + report.child("latitude").getValue().toString() + " : " + report.child("longitude").getValue().toString());
                         markerOptions.position(new LatLng(Double.parseDouble(report.child("latitude").getValue().toString()),
                                 Double.parseDouble(report.child("longitude").getValue().toString())));
-                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
-                        mMap.addMarker(markerOptions);
-                    }*/
 
+                        if(report.child("disasterType").getValue().toString().equals("Fire")){
+                            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerfire));
+                        }else if(report.child("disasterType").getValue().toString().equals("Flood")){
+                            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerflood));
+                        }else if(report.child("disasterType").getValue().toString().equals("Falling Debris")){
+                            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerdebris));
+                        }
+
+                        mMap.addMarker(markerOptions);
+                    }
                 }
 
                 if (compoundButton == togFire) {
@@ -596,7 +615,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     togHospital.setChecked(false);
                     togPolice.setChecked(false);
                     togVet.setChecked(false);
-                    togReports.setChecked(false);
+                    togEvacuation.setChecked(false);
 
                     mMap.clear();
                     type = "fire_station";
@@ -609,14 +628,23 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
                     editor.putString("place", type).commit();
 
-/*                    for(DataSnapshot report: reports){
+                    for(DataSnapshot report: reports){
                         MarkerOptions markerOptions = new MarkerOptions();
+                        markerOptions.title(report.child("disasterType").getValue().toString() + " : " + report.child("username").getValue().toString().split("@")[0]
+                                + " : " + report.child("latitude").getValue().toString() + " : " + report.child("longitude").getValue().toString());
                         markerOptions.position(new LatLng(Double.parseDouble(report.child("latitude").getValue().toString()),
                                 Double.parseDouble(report.child("longitude").getValue().toString())));
-                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
-                        mMap.addMarker(markerOptions);
-                    }*/
 
+                        if(report.child("disasterType").getValue().toString().equals("Fire")){
+                            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerfire));
+                        }else if(report.child("disasterType").getValue().toString().equals("Flood")){
+                            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerflood));
+                        }else if(report.child("disasterType").getValue().toString().equals("Falling Debris")){
+                            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerdebris));
+                        }
+
+                        mMap.addMarker(markerOptions);
+                    }
                 }
 
                 if (compoundButton == togVet) {
@@ -624,7 +652,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     togHospital.setChecked(false);
                     togPolice.setChecked(false);
                     togFire.setChecked(false);
-                    togReports.setChecked(false);
+                    togEvacuation.setChecked(false);
 
                     mMap.clear();
                     type = "veterinary_care";
@@ -636,24 +664,6 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                     Toast.makeText(getActivity(), "Showing nearby veterinary clinics", Toast.LENGTH_LONG).show();
 
                     editor.putString("place", type).commit();
-/*
-                    for(DataSnapshot report: reports){
-                        MarkerOptions markerOptions = new MarkerOptions();
-                        markerOptions.position(new LatLng(Double.parseDouble(report.child("latitude").getValue().toString()),
-                                Double.parseDouble(report.child("longitude").getValue().toString())));
-                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.caution));
-                        mMap.addMarker(markerOptions);
-                    }*/
-
-                }
-
-                if (compoundButton == togReports){
-                    togHospital.setChecked(false);
-                    togPolice.setChecked(false);
-                    togFire.setChecked(false);
-                    togVet.setChecked(false);
-
-                    mMap.clear();
 
                     for(DataSnapshot report: reports){
                         MarkerOptions markerOptions = new MarkerOptions();
@@ -673,7 +683,42 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                         mMap.addMarker(markerOptions);
                     }
 
-                    Toast.makeText(getActivity(), "Showing reports", Toast.LENGTH_LONG).show();
+                }
+
+                if (compoundButton == togEvacuation){
+                    togHospital.setChecked(false);
+                    togPolice.setChecked(false);
+                    togFire.setChecked(false);
+                    togVet.setChecked(false);
+
+                    mMap.clear();
+                    type = "school";
+                    showPins();
+
+                    endMarkerLat = 0;
+                    endMarkerLng = 0;
+
+                    Toast.makeText(getActivity(), "Showing nearby Evacuation Centers", Toast.LENGTH_LONG).show();
+
+                    editor.putString("place", type).commit();
+
+                    for(DataSnapshot report: reports){
+                        MarkerOptions markerOptions = new MarkerOptions();
+                        markerOptions.title(report.child("disasterType").getValue().toString() + " : " + report.child("username").getValue().toString().split("@")[0]
+                                + " : " + report.child("latitude").getValue().toString() + " : " + report.child("longitude").getValue().toString());
+                        markerOptions.position(new LatLng(Double.parseDouble(report.child("latitude").getValue().toString()),
+                                Double.parseDouble(report.child("longitude").getValue().toString())));
+
+                        if(report.child("disasterType").getValue().toString().equals("Fire")){
+                            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerfire));
+                        }else if(report.child("disasterType").getValue().toString().equals("Flood")){
+                            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerflood));
+                        }else if(report.child("disasterType").getValue().toString().equals("Falling Debris")){
+                            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.reportmarkerdebris));
+                        }
+
+                        mMap.addMarker(markerOptions);
+                    }
                 }
             }
         }

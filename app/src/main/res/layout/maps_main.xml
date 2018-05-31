@@ -14,14 +14,14 @@
         android:weightSum="5">
 
         <ToggleButton
-            android:id="@+id/togReports"
+            android:id="@+id/togEvacuation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Reports"
             android:textAllCaps="false"
-            android:textOff="Reports"
-            android:textOn="Reports"
+            android:textOff="Evacuation"
+            android:textOn="Evacuation"
             android:textSize="9sp" />
 
         <ToggleButton
