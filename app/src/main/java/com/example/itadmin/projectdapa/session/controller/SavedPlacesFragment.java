@@ -16,6 +16,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.itadmin.projectdapa.R;
+import com.twitter.sdk.android.core.models.Image;
 
 public class SavedPlacesFragment extends Fragment {
 
@@ -39,6 +40,11 @@ public class SavedPlacesFragment extends Fragment {
     private ImageButton policeCall1, policeCall2, policeCall3;
     private ImageButton fireCall1, fireCall2, fireCall3;
     private ImageButton vetCall1, vetCall2, vetCall3;
+
+    private ImageButton hosp1Delete, hosp2Delete, hosp3Delete;
+    private ImageButton police1Delete, police2Delete, police3Delete;
+    private ImageButton fire1Delete, fire2Delete, fire3Delete;
+    private ImageButton vet1Delete, vet2Delete, vet3Delete;
 
     SharedPreferences sharedPreferences;
 
@@ -79,6 +85,22 @@ public class SavedPlacesFragment extends Fragment {
         vetCall1 = view.findViewById(R.id.vetCall1);
         vetCall2 = view.findViewById(R.id.vetCall2);
         vetCall3 = view.findViewById(R.id.vetCall3);
+
+        hosp1Delete = view.findViewById(R.id.hosp1Delete);
+        hosp2Delete = view.findViewById(R.id.hosp2Delete);
+        hosp3Delete = view.findViewById(R.id.hosp3Delete);
+
+        police1Delete = view.findViewById(R.id.police1Delete);
+        police2Delete = view.findViewById(R.id.police2Delete);
+        police3Delete = view.findViewById(R.id.police3Delete);
+
+        fire1Delete = view.findViewById(R.id.fire1Delete);
+        fire2Delete = view.findViewById(R.id.fire2Delete);
+        fire3Delete = view.findViewById(R.id.fire3Delete);
+
+        vet1Delete = view.findViewById(R.id.vet1Delete);
+        vet2Delete = view.findViewById(R.id.vet2Delete);
+        vet3Delete = view.findViewById(R.id.vet3Delete);
 
         return view;
 

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\layout\\tw__composer_view.xml",
+        "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-composer\\src\\main\\res\\layout\\tw__composer_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\layout\\tw__activity_composer.xml",
+        "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-composer\\src\\main\\res\\layout\\tw__activity_composer.xml"
+    },
+    {
+        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\layout\\tw__activity_oauth.xml",
+        "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\layout\\tw__activity_oauth.xml"
+    }
+]
