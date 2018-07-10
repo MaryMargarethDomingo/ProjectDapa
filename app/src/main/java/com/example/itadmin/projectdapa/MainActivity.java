@@ -132,14 +132,14 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
     {
         //CREATE ITEMS
         AHBottomNavigationItem tab1 = new AHBottomNavigationItem("Maps", R.drawable.mapsicon);
-        AHBottomNavigationItem tab2 = new AHBottomNavigationItem("Weather",R.drawable.weathericon);
+        //AHBottomNavigationItem tab2 = new AHBottomNavigationItem("Weather",R.drawable.weathericon);
         AHBottomNavigationItem tab3 = new AHBottomNavigationItem("News",R.drawable.newsicon);
         AHBottomNavigationItem tab4 = new AHBottomNavigationItem("Survival",R.drawable.survivalicon);
         AHBottomNavigationItem tab5 = new AHBottomNavigationItem("Profile",R.drawable.profileicon);
 
         //ADD THEM to bar
         bottomNavigation.addItem(tab1);
-        bottomNavigation.addItem(tab2);
+        //bottomNavigation.addItem(tab2);
         bottomNavigation.addItem(tab3);
         bottomNavigation.addItem(tab4);
         bottomNavigation.addItem(tab5);
