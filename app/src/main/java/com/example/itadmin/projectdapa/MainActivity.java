@@ -159,16 +159,16 @@ public class MainActivity extends AppCompatActivity implements AHBottomNavigatio
         if (position==0) {
             getSupportFragmentManager().beginTransaction().replace(R.id.include2, mapsFragment).commit();
             getSupportActionBar().hide();
-        }else  if (position==1) {
+        /*}else  if (position==1) {
             getSupportFragmentManager().beginTransaction().replace(R.id.include2, weatherFragment).commit();
-            getSupportActionBar().show();
-        }else  if (position==2) {
+            getSupportActionBar().show();*/
+        }else  if (position==1) {
             getSupportFragmentManager().beginTransaction().replace(R.id.include2, twitterFragment).commit();
             getSupportActionBar().hide();
-        }else  if (position==3) {
+        }else  if (position==2) {
             getSupportFragmentManager().beginTransaction().replace(R.id.include2, survivalFragment).commit();
             getSupportActionBar().hide();
-        }else  if (position==4) {
+        }else  if (position==3) {
             getSupportFragmentManager().beginTransaction().replace(R.id.include2, profileFragment).commit();
             getSupportActionBar().hide();
         }
