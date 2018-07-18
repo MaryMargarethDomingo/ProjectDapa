@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\values-hr\\values-hr.xml",
+            "outputFile": "C:\\Users\\Greg\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\values-hr\\values-hr.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values-hr\\strings.xml",
-                    "from": {
-                        "startLines": "20,21,22",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "752,814,867",
-                        "endColumns": "60,51,56",
-                        "endOffsets": "808,861,919"
-                    },
-                    "to": {
-                        "startLines": "2,4,5",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,190,242",
-                        "endColumns": "60,51,56",
-                        "endOffsets": "111,237,294"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-hr\\values-hr.xml",
+                    "source": "C:\\Users\\Greg\\AndroidStudioProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-hr\\values-hr.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -35,32 +18,32 @@
                         "startOffsets": "116",
                         "endColumns": "73",
                         "endOffsets": "185"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Greg\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values-hr\\strings.xml",
+                    "from": {
+                        "startLines": "20,21,22",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "752,814,867",
+                        "endColumns": "60,51,56",
+                        "endOffsets": "808,861,919"
+                    },
+                    "to": {
+                        "startLines": "2,4,5",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,190,242",
+                        "endColumns": "60,51,56",
+                        "endOffsets": "111,237,294"
                     }
                 }
             ]
         },
         {
-            "outputFile": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-composer\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hr\\values-hr.xml",
+            "outputFile": "C:\\Users\\Greg\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hr\\values-hr.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values-hr\\strings.xml",
-                    "from": {
-                        "startLines": "20,21,22",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "752,814,867",
-                        "endColumns": "60,51,56",
-                        "endOffsets": "808,861,919"
-                    },
-                    "to": {
-                        "startLines": "2,4,5",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,190,242",
-                        "endColumns": "60,51,56",
-                        "endOffsets": "111,237,294"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-hr\\values-hr.xml",
+                    "source": "C:\\Users\\Greg\\AndroidStudioProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-hr\\values-hr.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -74,6 +57,23 @@
                         "startOffsets": "116",
                         "endColumns": "73",
                         "endOffsets": "185"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Greg\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values-hr\\strings.xml",
+                    "from": {
+                        "startLines": "20,21,22",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "752,814,867",
+                        "endColumns": "60,51,56",
+                        "endOffsets": "808,861,919"
+                    },
+                    "to": {
+                        "startLines": "2,4,5",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,190,242",
+                        "endColumns": "60,51,56",
+                        "endOffsets": "111,237,294"
                     }
                 }
             ]

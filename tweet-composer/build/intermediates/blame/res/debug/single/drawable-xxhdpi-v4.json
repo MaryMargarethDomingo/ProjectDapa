@@ -1,18 +1,18 @@
 [
     {
-        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\tw__composer_logo_blue.png",
-        "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-composer\\src\\main\\res\\drawable-xxhdpi\\tw__composer_logo_blue.png"
+        "merged": "C:\\Users\\Greg\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\tw__composer_logo_blue.png",
+        "source": "C:\\Users\\Greg\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\src\\main\\res\\drawable-xxhdpi\\tw__composer_logo_blue.png"
     },
     {
-        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\tw__composer_logo_white.png",
-        "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-composer\\src\\main\\res\\drawable-xxhdpi\\tw__composer_logo_white.png"
+        "merged": "C:\\Users\\Greg\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\tw__ic_logo_default.png",
+        "source": "C:\\Users\\Greg\\AndroidStudioProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\tw__ic_logo_default.png"
     },
     {
-        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\tw__ic_logo_default.png",
-        "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\tw__ic_logo_default.png"
+        "merged": "C:\\Users\\Greg\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\tw__composer_logo_white.png",
+        "source": "C:\\Users\\Greg\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\src\\main\\res\\drawable-xxhdpi\\tw__composer_logo_white.png"
     },
     {
-        "merged": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\tw__composer_close.png",
-        "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\tweet-composer\\src\\main\\res\\drawable-xxhdpi\\tw__composer_close.png"
+        "merged": "C:\\Users\\Greg\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\tw__composer_close.png",
+        "source": "C:\\Users\\Greg\\AndroidStudioProjects\\ProjectDAPA\\tweet-composer\\src\\main\\res\\drawable-xxhdpi\\tw__composer_close.png"
     }
 ]

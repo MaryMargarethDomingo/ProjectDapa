@@ -50,9 +50,15 @@ public class IMReadyFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.twitter_timeline_recyclerview, container, false);
-        final RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
-        final SwipeRefreshLayout swipeLayout = view.findViewById(R.id.swipe_layout);
+        return inflater.inflate(R.layout.twitter_timeline_recyclerview, container, false);
+    }
+
+    @Override
+    public void onStart(){
+        super.onStart();
+
+        final RecyclerView recyclerView = getView().findViewById(R.id.recycler_view);
+        final SwipeRefreshLayout swipeLayout = getView().findViewById(R.id.swipe_layout);
 
         swipeLayout.setColorSchemeResources(R.color.twitter_blue, R.color.twitter_dark);
 
@@ -121,7 +127,6 @@ public class IMReadyFragment extends Fragment {
             });
         });
 
-        return view;
     }
 
 }
