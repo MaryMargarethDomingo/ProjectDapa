@@ -85,6 +85,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     private static double endMarkerLat;
     private static double endMarkerLng;
     private DatabaseReference database;
+    private DatabaseReference database1;
     private FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     private FloatingActionButton reportFab;
     private FloatingActionButton fab1;
@@ -105,6 +106,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         database = FirebaseDatabase.getInstance().getReference("reports");
+        database1 = FirebaseDatabase.getInstance().getReference("arduino");
 
         return inflater.inflate(R.layout.maps_main, container, false);
     }
@@ -170,7 +172,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                 if(!justClicked){
                     if(latitude != 0 || longitude != 0){
                         Reports reports = new Reports(latitude, longitude, user.getEmail(), "Falling Debris");
-                        database.child(database.push().getKey()).setValue(reports);
+                        database.child("reports").child(database.push().getKey()).setValue(reports);
 
                         Toast.makeText(getContext(), "Report Successful!", Toast.LENGTH_SHORT).show();
                     }
@@ -195,7 +197,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                 if(!justClicked){
                     if(latitude != 0 || longitude != 0){
                         Reports reports = new Reports(latitude, longitude, user.getEmail(), "Flood");
-                        database.child(database.push().getKey()).setValue(reports);
+                        database.child("reports").child(database.push().getKey()).setValue(reports);
 
                         Toast.makeText(getContext(), "Report Successful!", Toast.LENGTH_SHORT).show();
                     }
@@ -220,7 +222,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                 if(!justClicked){
                     if(latitude != 0 || longitude != 0){
                         Reports reports = new Reports(latitude, longitude, user.getEmail(), "Fire");
-                        database.child(database.push().getKey()).setValue(reports);
+                        database.child("reports").child(database.push().getKey()).setValue(reports);
 
                         Toast.makeText(getContext(), "Report Successful!", Toast.LENGTH_SHORT).show();
                     }
@@ -270,7 +272,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot dsp : dataSnapshot.getChildren()){
-                    reports.add(dsp);
+                    //reports.add(dsp);
                     MarkerOptions markerOptions = new MarkerOptions();
                     markerOptions.title(dsp.child("disasterType").getValue().toString() + " : " + dsp.child("username").getValue().toString().split("@")[0]
                             + " : " + dsp.child("latitude").getValue().toString() + " : " + dsp.child("longitude").getValue().toString());
@@ -290,7 +292,34 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
+                Toast.makeText(getContext(), "Connection Failed!", Toast.LENGTH_SHORT).show();
+            }
+        });
 
+        database1.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot dsp : dataSnapshot.getChildren()){
+                    //reports.add(dsp);
+                    MarkerOptions markerOptions = new MarkerOptions();
+                    markerOptions.title(dsp.child("disasterType").getValue().toString() + " : : " + dsp.child("latitude").getValue().toString() + " : " + dsp.child("longitude").getValue().toString());
+                    markerOptions.position(new LatLng(Double.parseDouble(dsp.child("latitude").getValue().toString()),
+                            Double.parseDouble(dsp.child("longitude").getValue().toString())));
+                    if(dsp.child("disasterType").getValue().toString().equals("Flood")){
+                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.arduinomarkerflood));
+                    }else if(dsp.child("disasterType").getValue().toString().equals("Fire")){
+                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.arduinomarkerfire));
+                    }else if(dsp.child("disasterType").getValue().toString().equals("Earthquake")){
+                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.arduinomarkerdebris));
+                    }
+
+                    mMap.addMarker(markerOptions);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Toast.makeText(getContext(), "Connection Failed!", Toast.LENGTH_SHORT).show();
             }
         });
     }
