@@ -7,69 +7,73 @@
     android:orientation="vertical">
 
 
-    <LinearLayout
+    <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="5">
+        android:layout_height="wrap_content">
 
-        <ToggleButton
-            android:id="@+id/togEvacuation"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Reports"
-            android:textAllCaps="false"
-            android:textOff="Evacuation"
-            android:textOn="Evacuation"
-            android:textSize="9sp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-        <ToggleButton
-            android:id="@+id/togHospital"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:checked="false"
-            android:text="hospital"
-            android:textAllCaps="false"
-            android:textOff="Hospital"
-            android:textOn="Hospital"
-            android:textSize="9sp" />
+            <ToggleButton
+                android:id="@+id/togEvacuation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Reports"
+                android:textAllCaps="false"
+                android:textOff="Evacuation"
+                android:textOn="Evacuation"
+                android:textSize="14sp" />
 
-        <ToggleButton
-            android:id="@+id/togPolice"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="police"
-            android:textAllCaps="false"
-            android:textOff="Police"
-            android:textOn="Police"
-            android:textSize="9sp" />
+            <ToggleButton
+                android:id="@+id/togHospital"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="hospital"
+                android:textAllCaps="false"
+                android:textOff="Hospital"
+                android:textOn="Hospital"
+                android:textSize="14sp" />
 
-        <ToggleButton
-            android:id="@+id/togFire"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="fire_department"
-            android:textAllCaps="false"
-            android:textOff="Fire Dept."
-            android:textOn="Fire Dept."
-            android:textSize="9sp" />
+            <ToggleButton
+                android:id="@+id/togPolice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="police"
+                android:textAllCaps="false"
+                android:textOff="Police"
+                android:textOn="Police"
+                android:textSize="14sp" />
 
-        <ToggleButton
-            android:id="@+id/togVet"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="veterinary_care"
-            android:textAllCaps="false"
-            android:textOff="Veterinary"
-            android:textOn="Veterinary"
-            android:textSize="9sp" />
+            <ToggleButton
+                android:id="@+id/togFire"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="fire_department"
+                android:textAllCaps="false"
+                android:textOff="Fire Dept."
+                android:textOn="Fire Dept."
+                android:textSize="14sp" />
 
-    </LinearLayout>
+            <ToggleButton
+                android:id="@+id/togVet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="veterinary_care"
+                android:textAllCaps="false"
+                android:textOff="Veterinary"
+                android:textOn="Veterinary"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
 
     <RelativeLayout
         android:layout_width="match_parent"
