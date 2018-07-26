@@ -1,0 +1,128 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700,400);
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.title{
+  text-align:center;
+  font-weight:35px;
+  font-size: 35px;
+  color: #acb0bc;
+
+
+}
+body {
+  padding: 2rem;
+  font-family: "Montserrat", sans-serif;
+  background-color: #272727;
+}
+
+.chart {
+  display: block;
+  width: 100%;
+  max-width: 45rem;
+  margin: 50px auto;
+  background-color: #3a3e48;
+  overflow: hidden;
+}
+
+.positions {
+  display: inline-block;
+  width: 100%;
+  list-style-type: none;
+}
+
+li[class^="item-"] {
+  position: relative;
+  width: 100%;
+  padding: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0;
+  background-image: linear-gradient(160deg, rgba(0, 0, 0, 0), #2f323a);
+  color: white;
+}
+@media (max-width: 30em) {
+  li[class^="item-"] {
+    text-align: center;
+  }
+}
+li[class^="item-"]:first-child {
+  border-top: none;
+}
+
+@media (max-width: 30em) {
+  li[class^="item-"]:before {
+    width: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+@media (max-width: 22em) {
+  li[class^="item-"]:before {
+    width: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+li[class^="item-"] span {
+  position: relative;
+  display:inline-flex;
+  vertical-align: middle;
+}
+li[class^="item-"] .val {
+  width: 32%;
+  font-size: 6rem;
+  text-align: right;
+  z-index: 3;
+}
+@media (max-width: 30em) {
+  li[class^="item-"] .val {
+    width: 50%;
+    padding-left: 10%;
+    text-align: left;
+    align-items: center;
+  }
+}
+@media (max-width: 22em) {
+  li[class^="item-"] .val {
+    font-size: 4rem;
+  }
+}
+li[class^="item-"] .desc {
+  width: 43%;
+  padding-left: 5%;
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  color: #acb0bc;
+  z-index: 5;
+}
+@media (max-width: 30em) {
+  li[class^="item-"] .desc {
+    width: 100%;
+    padding-top: 1.5rem;
+    padding-left: 0;
+    text-align: center;
+  }
+}
+li[class^="item-"] sup {
+  line-height: 0;
+}
+
+
+li[class$="gasoline"]:before {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/icon-gas.svg);
+}
+
+li[class$="nyse"]:before {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/icon-dollar.svg);
+}

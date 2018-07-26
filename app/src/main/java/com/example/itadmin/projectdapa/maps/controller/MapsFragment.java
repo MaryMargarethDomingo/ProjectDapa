@@ -333,7 +333,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
 
         client.connect();
     }
-
+/*
     public String currentCity(double lat, double lng){
         String currentCity = "";
 
@@ -356,7 +356,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         }
 
         return currentCity;
-    }
+    }*/
 
     @Override
     public void onLocationChanged(Location location) {
@@ -374,11 +374,11 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         }
 
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-        currentCity(latitude, longitude);
+//        currentCity(latitude, longitude);
 
-        //save lat lng for auto set of location of weather
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        prefs.edit().putFloat("lat", (float) latitude).putFloat("lng", (float) longitude).commit();
+//        //save lat lng for auto set of location of weather
+//        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
+//        prefs.edit().putFloat("lat", (float) latitude).putFloat("lng", (float) longitude).commit();
 
         /*MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(latLng);
