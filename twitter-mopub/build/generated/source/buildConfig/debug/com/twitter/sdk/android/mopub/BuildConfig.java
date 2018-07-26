@@ -13,6 +13,6 @@ public final class BuildConfig {
   // Fields from build type: debug
   public static final String ARTIFACT_ID = "twitter-mopub";
   public static final String BUILD_NUMBER = "dev";
-  public static final long BUILD_TIME = 1532497411020L;
+  public static final long BUILD_TIME = 1532564476241L;
   public static final String GROUP = "com.twitter.sdk.android";
 }
