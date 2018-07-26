@@ -1,0 +1,48 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\twitter-mopub\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-kn\\values-kn.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\twitter-mopub\\src\\main\\res\\values-kn\\strings.xml",
+                    "from": {
+                        "startLines": "20,21",
+                        "startColumns": "4,4",
+                        "startOffsets": "752,825",
+                        "endColumns": "71,68",
+                        "endOffsets": "819,889"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,127",
+                        "endColumns": "71,68",
+                        "endOffsets": "122,191"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\twitter-mopub\\build\\intermediates\\res\\merged\\debug\\values-kn\\values-kn.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\twitter-mopub\\src\\main\\res\\values-kn\\strings.xml",
+                    "from": {
+                        "startLines": "20,21",
+                        "startColumns": "4,4",
+                        "startOffsets": "752,825",
+                        "endColumns": "71,68",
+                        "endOffsets": "819,889"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,127",
+                        "endColumns": "71,68",
+                        "endOffsets": "122,191"
+                    }
+                }
+            ]
+        }
+    ]
+}

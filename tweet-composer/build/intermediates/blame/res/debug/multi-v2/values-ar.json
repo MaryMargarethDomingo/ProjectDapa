@@ -1,0 +1,82 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\values-ar\\values-ar.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-ar\\values-ar.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "70",
+                        "endOffsets": "121"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "112",
+                        "endColumns": "70",
+                        "endOffsets": "178"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values-ar\\strings.xml",
+                    "from": {
+                        "startLines": "20,21,22",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "752,810,863",
+                        "endColumns": "56,51,48",
+                        "endOffsets": "804,857,907"
+                    },
+                    "to": {
+                        "startLines": "2,4,5",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,183,235",
+                        "endColumns": "56,51,48",
+                        "endOffsets": "107,230,279"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-composer\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ar\\values-ar.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-ar\\values-ar.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "70",
+                        "endOffsets": "121"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "112",
+                        "endColumns": "70",
+                        "endOffsets": "178"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values-ar\\strings.xml",
+                    "from": {
+                        "startLines": "20,21,22",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "752,810,863",
+                        "endColumns": "56,51,48",
+                        "endOffsets": "804,857,907"
+                    },
+                    "to": {
+                        "startLines": "2,4,5",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,183,235",
+                        "endColumns": "56,51,48",
+                        "endOffsets": "107,230,279"
+                    }
+                }
+            ]
+        }
+    ]
+}

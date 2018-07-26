@@ -105,6 +105,8 @@ dependencies {
     implementation dependency.design
     implementation dependency.okHttpInterceptor
 
+    compile 'com.baoyz.swipemenulistview:library:1.3.0'
+
     androidTestImplementation dependency.spoon
     androidTestImplementation dependency.espresso
     androidTestImplementation dependency.androidTestingSupport

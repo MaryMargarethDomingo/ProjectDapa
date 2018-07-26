@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\values-pa\\values-pa.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Greg\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\ef8e06793eeb6895bafd364f5cd0e845\\res\\values-pa\\values-pa.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pa\\values-pa.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Greg\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\ef8e06793eeb6895bafd364f5cd0e845\\res\\values-pa\\values-pa.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}

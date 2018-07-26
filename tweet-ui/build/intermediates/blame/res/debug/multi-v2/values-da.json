@@ -1,0 +1,188 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-da\\values-da.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-da\\plurals.xml",
+                    "from": {
+                        "startLines": "20,24,28",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "752,888,1023",
+                        "endLines": "23,27,31",
+                        "endColumns": "14,14,14",
+                        "endOffsets": "882,1017,1152"
+                    },
+                    "to": {
+                        "startLines": "2,6,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,187,318",
+                        "endLines": "5,9,13",
+                        "endColumns": "14,14,14",
+                        "endOffsets": "182,313,444"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-da\\const_strings.xml",
+                    "from": {
+                        "startLines": "19,20",
+                        "startColumns": "4,4",
+                        "startOffsets": "698,763",
+                        "endColumns": "63,65",
+                        "endOffsets": "757,824"
+                    },
+                    "to": {
+                        "startLines": "21,22",
+                        "startColumns": "4,4",
+                        "startOffsets": "874,938",
+                        "endColumns": "63,65",
+                        "endOffsets": "933,999"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-da\\strings.xml",
+                    "from": {
+                        "startLines": "20,21,22,23,24,25,26,27,28,29,30,31",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "752,807,863,925,970,1015,1067,1138,1250,1328,1383,1460",
+                        "endColumns": "53,54,60,43,43,50,69,110,76,53,75,55",
+                        "endOffsets": "801,857,919,964,1009,1061,1132,1244,1322,1377,1454,1511"
+                    },
+                    "to": {
+                        "startLines": "15,16,17,19,20,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "550,604,659,786,830,1004,1055,1125,1236,1313,1367,1443",
+                        "endColumns": "53,54,60,43,43,50,69,110,76,53,75,55",
+                        "endOffsets": "599,654,715,825,869,1050,1120,1231,1308,1362,1438,1494"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-da\\values-da.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    },
+                    "to": {
+                        "startLines": "18",
+                        "startColumns": "4",
+                        "startOffsets": "720",
+                        "endColumns": "65",
+                        "endOffsets": "781"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Greg\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\ef8e06793eeb6895bafd364f5cd0e845\\res\\values-da\\values-da.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "14",
+                        "startColumns": "4",
+                        "startOffsets": "449",
+                        "endColumns": "100",
+                        "endOffsets": "545"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\values-da\\values-da.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-da\\plurals.xml",
+                    "from": {
+                        "startLines": "20,24,28",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "752,888,1023",
+                        "endLines": "23,27,31",
+                        "endColumns": "14,14,14",
+                        "endOffsets": "882,1017,1152"
+                    },
+                    "to": {
+                        "startLines": "2,6,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,187,318",
+                        "endLines": "5,9,13",
+                        "endColumns": "14,14,14",
+                        "endOffsets": "182,313,444"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-da\\const_strings.xml",
+                    "from": {
+                        "startLines": "19,20",
+                        "startColumns": "4,4",
+                        "startOffsets": "698,763",
+                        "endColumns": "63,65",
+                        "endOffsets": "757,824"
+                    },
+                    "to": {
+                        "startLines": "21,22",
+                        "startColumns": "4,4",
+                        "startOffsets": "874,938",
+                        "endColumns": "63,65",
+                        "endOffsets": "933,999"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-da\\strings.xml",
+                    "from": {
+                        "startLines": "20,21,22,23,24,25,26,27,28,29,30,31",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "752,807,863,925,970,1015,1067,1138,1250,1328,1383,1460",
+                        "endColumns": "53,54,60,43,43,50,69,110,76,53,75,55",
+                        "endOffsets": "801,857,919,964,1009,1061,1132,1244,1322,1377,1454,1511"
+                    },
+                    "to": {
+                        "startLines": "15,16,17,19,20,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "550,604,659,786,830,1004,1055,1125,1236,1313,1367,1443",
+                        "endColumns": "53,54,60,43,43,50,69,110,76,53,75,55",
+                        "endOffsets": "599,654,715,825,869,1050,1120,1231,1308,1362,1438,1494"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-da\\values-da.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    },
+                    "to": {
+                        "startLines": "18",
+                        "startColumns": "4",
+                        "startOffsets": "720",
+                        "endColumns": "65",
+                        "endOffsets": "781"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Greg\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\ef8e06793eeb6895bafd364f5cd0e845\\res\\values-da\\values-da.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "14",
+                        "startColumns": "4",
+                        "startOffsets": "449",
+                        "endColumns": "100",
+                        "endOffsets": "545"
+                    }
+                }
+            ]
+        }
+    ]
+}
