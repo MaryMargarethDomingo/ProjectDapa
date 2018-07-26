@@ -13,6 +13,10 @@ public final class BuildConfig {
   // Fields from build type: debug
   public static final String ARTIFACT_ID = "tweet-composer";
   public static final String BUILD_NUMBER = "dev";
+<<<<<<< HEAD
   public static final long BUILD_TIME = 1532564476962L;
+=======
+  public static final long BUILD_TIME = 1532508281155L;
+>>>>>>> 231fc81617b79ff9c3c5dd40c16ca56f26bf23b8
   public static final String GROUP = "com.twitter.sdk.android";
 }
