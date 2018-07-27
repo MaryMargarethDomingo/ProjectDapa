@@ -1,0 +1,124 @@
+body {
+  background:#313131;
+}
+
+
+
+ h2 {
+      font-family: 'Roboto Slab', serif;
+      font-size: 2em;
+      text-transform: uppercase;
+      margin: 30px 0 2px 20px;
+      font-weight: bold;
+      color: white;
+}
+h2 {
+  overflow: hidden;
+  text-align: center;
+}
+
+h2:before,
+h2:after {
+  content: '';
+  display: inline-block;
+  height: 2px;  
+  position: relative;
+  top: -2px;
+  vertical-align: middle;
+}
+
+h2:before {
+  background-color: blue;
+  left: -.5em;
+  margin-left: -100%;
+  width: 100%;
+}
+
+h2:after {
+  background-color: red;
+  left: .5em;
+  margin-right: -100%;
+  width: 100%;
+}
+
+h3{
+  color: white;
+  margin-top: 30px;
+}
+.infograph {
+  padding: 25px;
+  display: block;
+  margin-top: 60px;
+  color: white;
+}
+.infograph.addborder {
+  border: 2px solid #ddd;
+}
+.infograph-icon {
+  border-radius: 50%;
+  display: table;
+  height: 100px;
+  margin: 0 auto 20px;
+  width: 100px;
+  font-size: 2rem;
+}
+.infograph-icon.medium {
+  width: 175px;
+  height: 175px;
+  font-size: 4.5rem;
+}
+.infograph-icon.large {
+  width: 250px;
+  height: 250px;
+  font-size: 6rem;
+}
+
+.infograph-icon.gold {
+  background-color: #FFD700;
+  color: black;
+}
+
+.infograph-icon.red {
+  background-color: #8B0000;
+  color: black;
+}
+
+.infograph-icon.orange {
+  background-color: #FF8C00;
+  color: black;
+}
+
+.infograph-icon i {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.infograph-info .infograph-title {
+  font-size: 1em;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1em;
+  color: white;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.infograph-info p {
+  font-size: 16px;
+  padding-top: 10px;
+  text-align: center;
+  margin: 0;
+  color: white;
+}
+
+.infograph.wide .infograph-icon {
+  float: left;
+  margin-right: .10em;
+}
+.infograph.wide .infograph-info {
+  overflow: hidden;
+}
+.infograph.wide .infograph-title, .infograph.wide p {
+  text-align: left;
+}

@@ -18,7 +18,7 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 
 import com.example.itadmin.projectdapa.R;
-import com.example.itadmin.projectdapa.weather.fragments.WeatherFragment;
+import com.example.itadmin.projectdapa.weather.controller.WeatherFragment;
 
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -1,0 +1,48 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\twitter-mopub\\build\\intermediates\\res\\merged\\debug\\values-en-rSS\\values-en-rSS.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\twitter-mopub\\src\\main\\res\\values-en-rSS\\strings.xml",
+                    "from": {
+                        "startLines": "20,21",
+                        "startColumns": "4,4",
+                        "startOffsets": "752,835",
+                        "endColumns": "81,75",
+                        "endOffsets": "829,906"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,137",
+                        "endColumns": "81,75",
+                        "endOffsets": "132,208"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\twitter-mopub\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rSS\\values-en-rSS.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\it.admin.IACADEMYLOC\\Downloads\\ProjectDAPA\\twitter-mopub\\src\\main\\res\\values-en-rSS\\strings.xml",
+                    "from": {
+                        "startLines": "20,21",
+                        "startColumns": "4,4",
+                        "startOffsets": "752,835",
+                        "endColumns": "81,75",
+                        "endOffsets": "829,906"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,137",
+                        "endColumns": "81,75",
+                        "endOffsets": "132,208"
+                    }
+                }
+            ]
+        }
+    ]
+}

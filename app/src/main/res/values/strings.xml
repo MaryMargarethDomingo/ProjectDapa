@@ -3,6 +3,10 @@
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_login">Sign in</string>
 
+    <!--FB Strings-->
+    <string name="facebook_app_id">163563431144135</string>
+    <string name="fb_login_protocol_scheme">fb163563431144135</string>
+
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
@@ -173,8 +177,7 @@
     <string name="action_graphs">Graphs</string>
 
     <!--NEWS / TWITTER-->
-    <string name="twitter_app_name"
-        tools:ignore="UnusedResources">Twitter Sample</string>
+    <string name="twitter_app_name" tools:ignore="UnusedResources">Twitter Sample</string>
     <string name="kit_twittercore">Twitter Core</string>
     <string name="kit_tweetcomposer">Tweet Composer</string>
     <string name="kit_tweetui">Tweet Ui</string>
@@ -189,4 +192,5 @@
     <string name="user_recycler_view_timeline_title">DOST - PHIVOLCS</string>
     <string name="collection_timeline_title">IMReady</string>
     <string name="list_timeline_title">Walang Pasok</string>
+    <string name="timeline_empty">No tweets :(</string>
 </resources>

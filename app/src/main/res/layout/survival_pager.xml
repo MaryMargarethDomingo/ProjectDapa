@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pagerID"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/bottom_navigation_height"
+    android:weightSum="3">
+
+
+    <Button
+        android:id="@+id/btnBefore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
+        android:layout_weight="1"
+        android:textSize="30dp"
+        android:text="Before" />
+
+    <Button
+        android:id="@+id/btnDuring"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="30dp"
+        android:backgroundTint="@color/red"
+        android:text="During" />
+
+    <Button
+        android:id="@+id/btnAfter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="30dp"
+        android:backgroundTint="@color/green"
+        android:text="After" />
+
+</LinearLayout>

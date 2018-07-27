@@ -30,6 +30,7 @@
     </style>
 
     <style name="tw__TweetDarkStyle">
+        <!--<item name="tw__container_bg_color">@color/tw__tweet_dark_container_bg_color</item>-->
         <item name="tw__container_bg_color">@color/tw__tweet_dark_container_bg_color</item>
         <item name="tw__primary_text_color">@color/tw__tweet_dark_primary_text_color</item>
         <item name="tw__action_color">@color/tw__tweet_action_color</item>

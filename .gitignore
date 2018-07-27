@@ -7,3 +7,5 @@
 /build
 /captures
 .externalNativeBuild
+/BuildConfig.java
+/BuildConfig.class
