@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-composer\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
-                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values\\attrs.xml",
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values\\attrs.xml",
                     "from": {
                         "startLines": "18",
                         "startColumns": "4",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "18,20,19",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "693,809,759",
-                        "endColumns": "64,51,48",
-                        "endOffsets": "753,856,803"
-                    },
-                    "to": {
-                        "startLines": "32,34,35",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "1743,1874,1926",
-                        "endColumns": "64,51,48",
-                        "endOffsets": "1803,1921,1970"
-                    }
-                },
-                {
-                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values\\dimens.xml",
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values\\dimens.xml",
                     "from": {
                         "startLines": "21,25,18,22,33,19,20,30,29,28,23,24",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
@@ -55,26 +38,24 @@
                     }
                 },
                 {
-                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values\\tw__composer_styles.xml",
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values\\values.xml",
                     "from": {
-                        "startLines": "30,74,97,21,59,65,85,39",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "1251,3785,5148,774,3038,3322,4433,1819",
-                        "endLines": "37,83,99,28,63,72,95,57",
-                        "endColumns": "12,12,12,12,12,12,12,12",
-                        "endOffsets": "1811,4425,5308,1243,3314,3777,5140,3030"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,108,161,210,262,323,375,432,483,542,597",
+                        "endColumns": "52,52,48,51,60,51,56,50,58,54,65",
+                        "endOffsets": "103,156,205,257,318,370,427,478,537,592,658"
                     },
                     "to": {
-                        "startLines": "52,60,70,73,81,86,94,105",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "3001,3559,4195,4358,4825,5102,5555,6257",
-                        "endLines": "59,69,72,80,85,93,104,123",
-                        "endColumns": "12,12,12,12,12,12,12,12",
-                        "endOffsets": "3554,4190,4353,4820,5097,5550,6252,7450"
+                        "startLines": "3,4,12,13,26,27,28,29,30,31,33",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "110,163,611,660,1408,1469,1521,1578,1629,1688,1808",
+                        "endColumns": "52,52,48,51,60,51,56,50,58,54,65",
+                        "endOffsets": "158,211,655,707,1464,1516,1573,1624,1683,1738,1869"
                     }
                 },
                 {
-                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values\\themes.xml",
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values\\themes.xml",
                     "from": {
                         "startLines": "26,18",
                         "startColumns": "4,4",
@@ -93,7 +74,43 @@
                     }
                 },
                 {
-                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values\\colors.xml",
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "18,20,19",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "693,809,759",
+                        "endColumns": "64,51,48",
+                        "endOffsets": "753,856,803"
+                    },
+                    "to": {
+                        "startLines": "32,34,35",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "1743,1874,1926",
+                        "endColumns": "64,51,48",
+                        "endOffsets": "1803,1921,1970"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values\\tw__composer_styles.xml",
+                    "from": {
+                        "startLines": "30,74,97,21,59,65,85,39",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "1251,3785,5148,774,3038,3322,4433,1819",
+                        "endLines": "37,83,99,28,63,72,95,57",
+                        "endColumns": "12,12,12,12,12,12,12,12",
+                        "endOffsets": "1811,4425,5308,1243,3314,3777,5140,3030"
+                    },
+                    "to": {
+                        "startLines": "52,60,70,73,81,86,94,105",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "3001,3559,4195,4358,4825,5102,5555,6257",
+                        "endLines": "59,69,72,80,85,93,104,123",
+                        "endColumns": "12,12,12,12,12,12,12,12",
+                        "endOffsets": "3554,4190,4353,4820,5097,5550,6252,7450"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values\\colors.xml",
                     "from": {
                         "startLines": "21,18,19,22,23,24,20",
                         "startColumns": "4,4,4,4,4,4,4",
@@ -107,32 +124,15 @@
                         "startOffsets": "216,271,325,384,443,503,556",
                         "endColumns": "54,53,58,58,59,52,54",
                         "endOffsets": "266,320,379,438,498,551,606"
-                    }
-                },
-                {
-                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,108,161,210,262,323,375,432,483,542,597",
-                        "endColumns": "52,52,48,51,60,51,56,50,58,54,65",
-                        "endOffsets": "103,156,205,257,318,370,427,478,537,592,658"
-                    },
-                    "to": {
-                        "startLines": "3,4,12,13,26,27,28,29,30,31,33",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "110,163,611,660,1408,1469,1521,1578,1629,1688,1808",
-                        "endColumns": "52,52,48,51,60,51,56,50,58,54,65",
-                        "endOffsets": "158,211,655,707,1464,1516,1573,1624,1683,1738,1869"
                     }
                 }
             ]
         },
         {
-            "outputFile": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\values\\values.xml",
+            "outputFile": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\values\\values.xml",
             "map": [
                 {
-                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values\\attrs.xml",
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values\\attrs.xml",
                     "from": {
                         "startLines": "18",
                         "startColumns": "4",
@@ -149,24 +149,7 @@
                     }
                 },
                 {
-                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "18,20,19",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "693,809,759",
-                        "endColumns": "64,51,48",
-                        "endOffsets": "753,856,803"
-                    },
-                    "to": {
-                        "startLines": "32,34,35",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "1743,1874,1926",
-                        "endColumns": "64,51,48",
-                        "endOffsets": "1803,1921,1970"
-                    }
-                },
-                {
-                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values\\dimens.xml",
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values\\dimens.xml",
                     "from": {
                         "startLines": "21,25,18,22,33,19,20,30,29,28,23,24",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
@@ -183,26 +166,24 @@
                     }
                 },
                 {
-                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values\\tw__composer_styles.xml",
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values\\values.xml",
                     "from": {
-                        "startLines": "30,74,97,21,59,65,85,39",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "1251,3785,5148,774,3038,3322,4433,1819",
-                        "endLines": "37,83,99,28,63,72,95,57",
-                        "endColumns": "12,12,12,12,12,12,12,12",
-                        "endOffsets": "1811,4425,5308,1243,3314,3777,5140,3030"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,108,161,210,262,323,375,432,483,542,597",
+                        "endColumns": "52,52,48,51,60,51,56,50,58,54,65",
+                        "endOffsets": "103,156,205,257,318,370,427,478,537,592,658"
                     },
                     "to": {
-                        "startLines": "52,60,70,73,81,86,94,105",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "3001,3559,4195,4358,4825,5102,5555,6257",
-                        "endLines": "59,69,72,80,85,93,104,123",
-                        "endColumns": "12,12,12,12,12,12,12,12",
-                        "endOffsets": "3554,4190,4353,4820,5097,5550,6252,7450"
+                        "startLines": "3,4,12,13,26,27,28,29,30,31,33",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "110,163,611,660,1408,1469,1521,1578,1629,1688,1808",
+                        "endColumns": "52,52,48,51,60,51,56,50,58,54,65",
+                        "endOffsets": "158,211,655,707,1464,1516,1573,1624,1683,1738,1869"
                     }
                 },
                 {
-                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values\\themes.xml",
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values\\themes.xml",
                     "from": {
                         "startLines": "26,18",
                         "startColumns": "4,4",
@@ -221,7 +202,43 @@
                     }
                 },
                 {
-                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values\\colors.xml",
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "18,20,19",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "693,809,759",
+                        "endColumns": "64,51,48",
+                        "endOffsets": "753,856,803"
+                    },
+                    "to": {
+                        "startLines": "32,34,35",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "1743,1874,1926",
+                        "endColumns": "64,51,48",
+                        "endOffsets": "1803,1921,1970"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values\\tw__composer_styles.xml",
+                    "from": {
+                        "startLines": "30,74,97,21,59,65,85,39",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "1251,3785,5148,774,3038,3322,4433,1819",
+                        "endLines": "37,83,99,28,63,72,95,57",
+                        "endColumns": "12,12,12,12,12,12,12,12",
+                        "endOffsets": "1811,4425,5308,1243,3314,3777,5140,3030"
+                    },
+                    "to": {
+                        "startLines": "52,60,70,73,81,86,94,105",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "3001,3559,4195,4358,4825,5102,5555,6257",
+                        "endLines": "59,69,72,80,85,93,104,123",
+                        "endColumns": "12,12,12,12,12,12,12,12",
+                        "endOffsets": "3554,4190,4353,4820,5097,5550,6252,7450"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values\\colors.xml",
                     "from": {
                         "startLines": "21,18,19,22,23,24,20",
                         "startColumns": "4,4,4,4,4,4,4",
@@ -235,23 +252,6 @@
                         "startOffsets": "216,271,325,384,443,503,556",
                         "endColumns": "54,53,58,58,59,52,54",
                         "endOffsets": "266,320,379,438,498,551,606"
-                    }
-                },
-                {
-                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,108,161,210,262,323,375,432,483,542,597",
-                        "endColumns": "52,52,48,51,60,51,56,50,58,54,65",
-                        "endOffsets": "103,156,205,257,318,370,427,478,537,592,658"
-                    },
-                    "to": {
-                        "startLines": "3,4,12,13,26,27,28,29,30,31,33",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "110,163,611,660,1408,1469,1521,1578,1629,1688,1808",
-                        "endColumns": "52,52,48,51,60,51,56,50,58,54,65",
-                        "endOffsets": "158,211,655,707,1464,1516,1573,1624,1683,1738,1869"
                     }
                 }
             ]

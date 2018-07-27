@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\twitter-mopub\\build\\intermediates\\res\\merged\\debug\\values-en-rGB\\values-en-rGB.xml",
+            "outputFile": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\twitter-mopub\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rGB\\values-en-rGB.xml",
             "map": [
                 {
-                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\twitter-mopub\\src\\main\\res\\values-en-rGB\\strings.xml",
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\twitter-mopub\\src\\main\\res\\values-en-rGB\\strings.xml",
                     "from": {
                         "startLines": "20,21",
                         "startColumns": "4,4",
@@ -23,10 +23,10 @@
             ]
         },
         {
-            "outputFile": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\twitter-mopub\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rGB\\values-en-rGB.xml",
+            "outputFile": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\twitter-mopub\\build\\intermediates\\res\\merged\\debug\\values-en-rGB\\values-en-rGB.xml",
             "map": [
                 {
-                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\twitter-mopub\\src\\main\\res\\values-en-rGB\\strings.xml",
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\twitter-mopub\\src\\main\\res\\values-en-rGB\\strings.xml",
                     "from": {
                         "startLines": "20,21",
                         "startColumns": "4,4",

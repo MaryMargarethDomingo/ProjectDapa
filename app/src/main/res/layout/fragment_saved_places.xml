@@ -29,98 +29,10 @@
                 android:textSize="@dimen/bottom_navigation_icon"
                 android:textStyle="bold" />
 
-            <TableLayout
+            <com.example.itadmin.projectdapa.session.utility.NonScrollableListView
+                android:id="@+id/lvHospital"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="10">
-
-                    <TextView
-                        android:id="@+id/hospital1"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginBottom="5dp"
-                        android:layout_weight="9"
-                        android:text="1."
-                        android:textColor="@android:color/white"
-                        android:textSize="18sp" />
-
-                    <ImageButton
-                        android:id="@+id/hospCall1"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@android:drawable/sym_action_call" />
-
-                    <ImageButton
-                        android:id="@+id/hosp1Delete"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@android:drawable/ic_menu_delete" />
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="10">
-
-                    <TextView
-                        android:id="@+id/hospital2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:text="2."
-                        android:textColor="@android:color/white"
-                        android:textSize="18sp"
-                        android:layout_weight="9"/>
-
-                    <ImageButton
-                        android:id="@+id/hospCall2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@android:drawable/sym_action_call" />
-
-                    <ImageButton
-                        android:id="@+id/hosp2Delete"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@android:drawable/ic_menu_delete" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="10">
-
-                    <TextView
-                        android:id="@+id/hospital3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:text="3."
-                        android:textColor="@android:color/white"
-                        android:textSize="18sp"
-                        android:layout_weight="9"/>
-
-                    <ImageButton
-                        android:id="@+id/hospCall3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@android:drawable/sym_action_call" />
-
-                    <ImageButton
-                        android:id="@+id/hosp3Delete"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@android:drawable/ic_menu_delete" />
-                </TableRow>
-            </TableLayout>
+                android:layout_height="match_parent"/>
 
         </LinearLayout>
 
@@ -142,98 +54,10 @@
                 android:textSize="@dimen/bottom_navigation_icon"
                 android:textStyle="bold" />
 
-            <TableLayout
+            <com.example.itadmin.projectdapa.session.utility.NonScrollableListView
+                android:id="@+id/lvPolice"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="10">
-
-                    <TextView
-                        android:id="@+id/police1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:text="1."
-                        android:textColor="@android:color/white"
-                        android:textSize="18sp"
-                        android:layout_weight="9"/>
-
-                    <ImageButton
-                        android:id="@+id/policeCall1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@android:drawable/sym_action_call" />
-
-                    <ImageButton
-                        android:id="@+id/police1Delete"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@android:drawable/ic_menu_delete" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="10">
-
-                    <TextView
-                        android:id="@+id/police2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:text="2."
-                        android:textColor="@android:color/white"
-                        android:textSize="18sp"
-                        android:layout_weight="9"/>
-
-                    <ImageButton
-                        android:id="@+id/policeCall2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@android:drawable/sym_action_call" />
-
-                    <ImageButton
-                        android:id="@+id/police2Delete"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@android:drawable/ic_menu_delete" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="10">
-
-                    <TextView
-                        android:id="@+id/police3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:text="3."
-                        android:textColor="@android:color/white"
-                        android:textSize="18sp"
-                        android:layout_weight="9"/>
-
-                    <ImageButton
-                        android:id="@+id/policeCall3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@android:drawable/sym_action_call" />
-
-                    <ImageButton
-                        android:id="@+id/police3Delete"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@android:drawable/ic_menu_delete" />
-                </TableRow>
-
-            </TableLayout>
+                android:layout_height="match_parent"/>
 
         </LinearLayout>
 
@@ -254,98 +78,10 @@
                 android:textSize="@dimen/bottom_navigation_icon"
                 android:textStyle="bold" />
 
-            <TableLayout
+            <com.example.itadmin.projectdapa.session.utility.NonScrollableListView
+                android:id="@+id/lvFireDept"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="10">
-
-                    <TextView
-                        android:id="@+id/fireDept1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:text="1."
-                        android:textColor="@android:color/white"
-                        android:textSize="18sp"
-                        android:layout_weight="9"/>
-
-                    <ImageButton
-                        android:id="@+id/fireCall1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@android:drawable/sym_action_call" />
-
-                    <ImageButton
-                        android:id="@+id/fire1Delete"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@android:drawable/ic_menu_delete" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="10">
-
-                    <TextView
-                        android:id="@+id/fireDept2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:text="2."
-                        android:textColor="@android:color/white"
-                        android:textSize="18sp"
-                        android:layout_weight="9"/>
-
-                    <ImageButton
-                        android:id="@+id/fireCall2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@android:drawable/sym_action_call" />
-
-                    <ImageButton
-                        android:id="@+id/fire2Delete"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:src="@android:drawable/ic_menu_delete" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="10">
-
-                    <TextView
-                        android:id="@+id/fireDept3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:text="3."
-                        android:textColor="@android:color/white"
-                        android:textSize="18sp"
-                        android:layout_weight="9"/>
-
-                    <ImageButton
-                        android:id="@+id/fireCall3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@android:drawable/sym_action_call" />
-
-                    <ImageButton
-                        android:id="@+id/fire3Delete"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@android:drawable/ic_menu_delete" />
-                </TableRow>
-
-            </TableLayout>
+                android:layout_height="match_parent"/>
 
         </LinearLayout>
 
@@ -366,98 +102,10 @@
                 android:textSize="@dimen/bottom_navigation_icon"
                 android:textStyle="bold" />
 
-            <TableLayout
+            <com.example.itadmin.projectdapa.session.utility.NonScrollableListView
+                android:id="@+id/lvVeterinary"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="10">
-
-                    <TextView
-                        android:id="@+id/vet1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:layout_weight="9"
-                        android:text="1."
-                        android:textColor="@android:color/white"
-                        android:textSize="18sp" />
-
-                    <ImageButton
-                        android:id="@+id/vetCall1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@android:drawable/sym_action_call" />
-
-                    <ImageButton
-                        android:id="@+id/vet1Delete"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@android:drawable/ic_menu_delete" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="10">
-
-                    <TextView
-                        android:id="@+id/vet2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:layout_weight="9"
-                        android:text="2."
-                        android:textColor="@android:color/white"
-                        android:textSize="18sp" />
-
-                    <ImageButton
-                        android:id="@+id/vetCall2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@android:drawable/sym_action_call" />
-
-                    <ImageButton
-                        android:id="@+id/vet2Delete"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@android:drawable/ic_menu_delete" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="10">
-
-                    <TextView
-                        android:id="@+id/vet3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:layout_weight="9"
-                        android:text="3."
-                        android:textColor="@android:color/white"
-                        android:textSize="18sp" />
-
-                    <ImageButton
-                        android:id="@+id/vetCall3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@android:drawable/sym_action_call" />
-
-                    <ImageButton
-                        android:id="@+id/vet3Delete"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@android:drawable/ic_menu_delete" />
-                </TableRow>
-
-            </TableLayout>
+                android:layout_height="match_parent"/>
 
         </LinearLayout>
 

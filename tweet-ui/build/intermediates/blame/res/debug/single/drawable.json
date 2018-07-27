@@ -1,86 +1,86 @@
 [
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__login_btn_pressed.xml",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\drawable\\tw__login_btn_pressed.xml"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__bg_media_badge.xml",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__bg_media_badge.xml"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__video_seekbar.xml",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__video_seekbar.xml"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__gif_badge.xml",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__gif_badge.xml"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
-        "source": "C:\\Users\\MichaelCadavillo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\eafdcbe360a5157774a981cc126a72bf\\res\\drawable\\notification_icon_background.xml"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__vine_badge.xml",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__vine_badge.xml"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__login_btn_default.xml",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\drawable\\tw__login_btn_default.xml"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
+        "source": "C:\\Users\\Greg\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\ef8e06793eeb6895bafd364f5cd0e845\\res\\drawable\\notification_bg_low.xml"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__seekbar_thumb.xml",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__seekbar_thumb.xml"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__video_pause_btn.xml",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__video_pause_btn.xml"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__login_btn.xml",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\drawable\\tw__login_btn.xml"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__login_btn_disabled.xml",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\drawable\\tw__login_btn_disabled.xml"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
-        "source": "C:\\Users\\MichaelCadavillo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\eafdcbe360a5157774a981cc126a72bf\\res\\drawable\\notification_bg.xml"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
+        "source": "C:\\Users\\Greg\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\ef8e06793eeb6895bafd364f5cd0e845\\res\\drawable\\notification_icon_background.xml"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__quote_tweet_border.xml",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__quote_tweet_border.xml"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__video_play_btn.xml",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__video_play_btn.xml"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__like_action.xml",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__like_action.xml"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__player_overlay.xml",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__player_overlay.xml"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__share_action.xml",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__share_action.xml"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__call_to_action.xml",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__call_to_action.xml"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__video_replay_btn.xml",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__video_replay_btn.xml"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__login_btn_default.xml",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\drawable\\tw__login_btn_default.xml"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
-        "source": "C:\\Users\\MichaelCadavillo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\eafdcbe360a5157774a981cc126a72bf\\res\\drawable\\notification_bg_low.xml"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__seekbar_thumb.xml",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__seekbar_thumb.xml"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__video_play_btn.xml",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__video_play_btn.xml"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__login_btn_pressed.xml",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\drawable\\tw__login_btn_pressed.xml"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__video_pause_btn.xml",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__video_pause_btn.xml"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__like_action.xml",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__like_action.xml"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__login_btn_disabled.xml",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\drawable\\tw__login_btn_disabled.xml"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
+        "source": "C:\\Users\\Greg\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\ef8e06793eeb6895bafd364f5cd0e845\\res\\drawable\\notification_tile_bg.xml"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
-        "source": "C:\\Users\\MichaelCadavillo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\eafdcbe360a5157774a981cc126a72bf\\res\\drawable\\notification_tile_bg.xml"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__login_btn.xml",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\drawable\\tw__login_btn.xml"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__gif_badge.xml",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__gif_badge.xml"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__video_seekbar.xml",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__video_seekbar.xml"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__vine_badge.xml",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__vine_badge.xml"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__video_replay_btn.xml",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__video_replay_btn.xml"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__bg_media_badge.xml",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__bg_media_badge.xml"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__share_action.xml",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__share_action.xml"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__player_overlay.xml",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__player_overlay.xml"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
+        "source": "C:\\Users\\Greg\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\ef8e06793eeb6895bafd364f5cd0e845\\res\\drawable\\notification_bg.xml"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__call_to_action.xml",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__call_to_action.xml"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable\\tw__quote_tweet_border.xml",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable\\tw__quote_tweet_border.xml"
     }
 ]

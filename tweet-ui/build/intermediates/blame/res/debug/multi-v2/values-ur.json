@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ur\\values-ur.xml",
+            "outputFile": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ur\\values-ur.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\MichaelCadavillo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\eafdcbe360a5157774a981cc126a72bf\\res\\values-ur\\values-ur.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "102",
-                        "endOffsets": "153"
-                    },
-                    "to": {
-                        "startLines": "14",
-                        "startColumns": "4",
-                        "startOffsets": "469",
-                        "endColumns": "102",
-                        "endOffsets": "567"
-                    }
-                },
-                {
-                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-ur\\strings.xml",
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-ur\\strings.xml",
                     "from": {
                         "startLines": "20,21,22,23,24,25,26,27,28,29,30,31",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,24 +21,41 @@
                     }
                 },
                 {
-                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-ur\\values-ur.xml",
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-ur\\const_strings.xml",
+                    "from": {
+                        "startLines": "19,20",
+                        "startColumns": "4,4",
+                        "startOffsets": "698,763",
+                        "endColumns": "63,64",
+                        "endOffsets": "757,823"
+                    },
+                    "to": {
+                        "startLines": "21,22",
+                        "startColumns": "4,4",
+                        "startOffsets": "913,977",
+                        "endColumns": "63,64",
+                        "endOffsets": "972,1037"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Greg\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\ef8e06793eeb6895bafd364f5cd0e845\\res\\values-ur\\values-ur.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
-                        "endColumns": "66",
-                        "endOffsets": "117"
+                        "endColumns": "102",
+                        "endOffsets": "153"
                     },
                     "to": {
-                        "startLines": "18",
+                        "startLines": "14",
                         "startColumns": "4",
-                        "startOffsets": "758",
-                        "endColumns": "66",
-                        "endOffsets": "820"
+                        "startOffsets": "469",
+                        "endColumns": "102",
+                        "endOffsets": "567"
                     }
                 },
                 {
-                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-ur\\plurals.xml",
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-ur\\plurals.xml",
                     "from": {
                         "startLines": "20,24,28",
                         "startColumns": "4,4,4",
@@ -74,46 +74,29 @@
                     }
                 },
                 {
-                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-ur\\const_strings.xml",
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-ur\\values-ur.xml",
                     "from": {
-                        "startLines": "19,20",
-                        "startColumns": "4,4",
-                        "startOffsets": "698,763",
-                        "endColumns": "63,64",
-                        "endOffsets": "757,823"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
                     },
                     "to": {
-                        "startLines": "21,22",
-                        "startColumns": "4,4",
-                        "startOffsets": "913,977",
-                        "endColumns": "63,64",
-                        "endOffsets": "972,1037"
+                        "startLines": "18",
+                        "startColumns": "4",
+                        "startOffsets": "758",
+                        "endColumns": "66",
+                        "endOffsets": "820"
                     }
                 }
             ]
         },
         {
-            "outputFile": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\values-ur\\values-ur.xml",
+            "outputFile": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\values-ur\\values-ur.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\MichaelCadavillo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\eafdcbe360a5157774a981cc126a72bf\\res\\values-ur\\values-ur.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "102",
-                        "endOffsets": "153"
-                    },
-                    "to": {
-                        "startLines": "14",
-                        "startColumns": "4",
-                        "startOffsets": "469",
-                        "endColumns": "102",
-                        "endOffsets": "567"
-                    }
-                },
-                {
-                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-ur\\strings.xml",
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-ur\\strings.xml",
                     "from": {
                         "startLines": "20,21,22,23,24,25,26,27,28,29,30,31",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
@@ -130,24 +113,41 @@
                     }
                 },
                 {
-                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-ur\\values-ur.xml",
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-ur\\const_strings.xml",
+                    "from": {
+                        "startLines": "19,20",
+                        "startColumns": "4,4",
+                        "startOffsets": "698,763",
+                        "endColumns": "63,64",
+                        "endOffsets": "757,823"
+                    },
+                    "to": {
+                        "startLines": "21,22",
+                        "startColumns": "4,4",
+                        "startOffsets": "913,977",
+                        "endColumns": "63,64",
+                        "endOffsets": "972,1037"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Greg\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\ef8e06793eeb6895bafd364f5cd0e845\\res\\values-ur\\values-ur.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
-                        "endColumns": "66",
-                        "endOffsets": "117"
+                        "endColumns": "102",
+                        "endOffsets": "153"
                     },
                     "to": {
-                        "startLines": "18",
+                        "startLines": "14",
                         "startColumns": "4",
-                        "startOffsets": "758",
-                        "endColumns": "66",
-                        "endOffsets": "820"
+                        "startOffsets": "469",
+                        "endColumns": "102",
+                        "endOffsets": "567"
                     }
                 },
                 {
-                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-ur\\plurals.xml",
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-ur\\plurals.xml",
                     "from": {
                         "startLines": "20,24,28",
                         "startColumns": "4,4,4",
@@ -166,20 +166,20 @@
                     }
                 },
                 {
-                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\values-ur\\const_strings.xml",
+                    "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-ur\\values-ur.xml",
                     "from": {
-                        "startLines": "19,20",
-                        "startColumns": "4,4",
-                        "startOffsets": "698,763",
-                        "endColumns": "63,64",
-                        "endOffsets": "757,823"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
                     },
                     "to": {
-                        "startLines": "21,22",
-                        "startColumns": "4,4",
-                        "startOffsets": "913,977",
-                        "endColumns": "63,64",
-                        "endOffsets": "972,1037"
+                        "startLines": "18",
+                        "startColumns": "4",
+                        "startOffsets": "758",
+                        "endColumns": "66",
+                        "endOffsets": "820"
                     }
                 }
             ]

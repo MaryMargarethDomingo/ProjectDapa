@@ -1,118 +1,118 @@
 [
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_play_pressed.png",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_play_pressed.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_tweet_photo_error_dark.png",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_tweet_photo_error_dark.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_seekbar_bg.9.png",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_seekbar_bg.9.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_video_pause.png",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_video_pause.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_tweet_photo_error_dark.png",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_tweet_photo_error_dark.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_play_default.png",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_play_default.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_video_replay.png",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_video_replay.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_seekbar_secondary_bg.9.png",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_seekbar_secondary_bg.9.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_gif_badge.png",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_gif_badge.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\notification_bg_normal.9.png",
+        "source": "C:\\Users\\Greg\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\ef8e06793eeb6895bafd364f5cd0e845\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_logo_white.png",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_logo_white.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\notification_bg_low_normal.9.png",
+        "source": "C:\\Users\\Greg\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\ef8e06793eeb6895bafd364f5cd0e845\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_video_play_pressed.png",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_video_play_pressed.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_logo_white.png",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_logo_white.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_video_pause_pressed.png",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_video_pause_pressed.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png",
+        "source": "C:\\Users\\Greg\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\ef8e06793eeb6895bafd364f5cd0e845\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_seekbar_secondary_bg.9.png",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_seekbar_secondary_bg.9.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_gif_badge.png",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_gif_badge.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png",
-        "source": "C:\\Users\\MichaelCadavillo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\eafdcbe360a5157774a981cc126a72bf\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_video_replay_pressed.png",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_video_replay_pressed.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_retweet_dark.png",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_retweet_dark.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_inline_share.png",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_inline_share.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_video_replay_pressed.png",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_video_replay_pressed.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_retweet_light.png",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_retweet_light.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png",
-        "source": "C:\\Users\\MichaelCadavillo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\eafdcbe360a5157774a981cc126a72bf\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_tweet_verified.png",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_tweet_verified.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_tweet_photo_error_light.png",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_tweet_photo_error_light.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_video_replay.png",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_video_replay.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\notification_bg_normal.9.png",
-        "source": "C:\\Users\\MichaelCadavillo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\eafdcbe360a5157774a981cc126a72bf\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_logo_default.png",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\drawable-mdpi-v4\\tw__ic_logo_default.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_seekbar_progress_bg.9.png",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_seekbar_progress_bg.9.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_logo_blue.png",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_logo_blue.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_tweet_verified.png",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_tweet_verified.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_seekbar_bg.9.png",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_seekbar_bg.9.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__action_heart_off_default.png",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__action_heart_off_default.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png",
+        "source": "C:\\Users\\Greg\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\ef8e06793eeb6895bafd364f5cd0e845\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_logo_default.png",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\drawable-mdpi-v4\\tw__ic_logo_default.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_seekbar_progress_bg.9.png",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_seekbar_progress_bg.9.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\notification_bg_low_normal.9.png",
-        "source": "C:\\Users\\MichaelCadavillo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\eafdcbe360a5157774a981cc126a72bf\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_tweet_photo_error_light.png",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_tweet_photo_error_light.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_retweet_light.png",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_retweet_light.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_retweet_dark.png",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_retweet_dark.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_vine_badge.png",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_vine_badge.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_video_pause_pressed.png",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_video_pause_pressed.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__action_heart_on_default.png",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__action_heart_on_default.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_vine_badge.png",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_vine_badge.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_video_play.png",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_video_play.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__action_heart_off_default.png",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__action_heart_off_default.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_inline_share.png",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_inline_share.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_video_play.png",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_video_play.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_video_pause.png",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_video_pause.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__action_heart_on_default.png",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__action_heart_on_default.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_play_default.png",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_play_default.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png",
+        "source": "C:\\Users\\Greg\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\ef8e06793eeb6895bafd364f5cd0e845\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png",
-        "source": "C:\\Users\\MichaelCadavillo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\eafdcbe360a5157774a981cc126a72bf\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_play_pressed.png",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_play_pressed.png"
     },
     {
-        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_logo_blue.png",
-        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_logo_blue.png"
+        "merged": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\tw__ic_video_play_pressed.png",
+        "source": "C:\\Users\\Greg\\Desktop\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-mdpi\\tw__ic_video_play_pressed.png"
     }
 ]
