@@ -61,7 +61,6 @@ public class SavedPlacesFragment extends Fragment {
         ArrayList fireDeptList = new ArrayList();
         ArrayList veterinaryList = new ArrayList();
 
-
         if(hosptals.length == 1){
             hospitalList.add("1. " + hosptals[0]);
 
@@ -139,7 +138,7 @@ public class SavedPlacesFragment extends Fragment {
 
                 openItem.setWidth(170);
 
-                openItem.setIcon(R.drawable.ic_magnify_black_48dp);
+                openItem.setIcon(android.R.drawable.sym_action_call);
 
                 openItem.setTitleSize(18);
 
@@ -156,7 +155,7 @@ public class SavedPlacesFragment extends Fragment {
 
                 deleteItem.setWidth(170);
 
-                deleteItem.setIcon(R.drawable.ic_magnify_black_48dp);
+                deleteItem.setIcon(android.R.drawable.ic_menu_delete);
 
                 menu.addMenuItem(deleteItem);
             }

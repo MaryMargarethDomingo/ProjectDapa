@@ -50,6 +50,7 @@ public class CustomPlacesAdapter extends BaseAdapter{
 
         TextView tvPlace = convertView.findViewById(R.id.tvPlace);
 
+        tvPlace.setText(places.get(position));
 
         notifyDataSetChanged();
         return convertView;
