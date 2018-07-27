@@ -55,6 +55,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.text.DecimalFormat;
@@ -317,7 +318,6 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                         builder.setIcon(R.drawable.alerticon);
                         AlertDialog alert1 = builder.create();
                         alert1.show();
-
                     }else if(dsp.child("disasterType").getValue().toString().equals("Earthquake")){
                         markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.arduinomarkerdebris));
 
