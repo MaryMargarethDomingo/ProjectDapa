@@ -172,7 +172,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                 if(!justClicked){
                     if(latitude != 0 || longitude != 0){
                         Reports reports = new Reports(latitude, longitude, user.getEmail(), "Falling Debris");
-                        database.child("reports").child(database.push().getKey()).setValue(reports);
+                        database.child(database.push().getKey()).setValue(reports);
 
                         Toast.makeText(getContext(), "Report Successful!", Toast.LENGTH_SHORT).show();
                     }
@@ -197,7 +197,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                 if(!justClicked){
                     if(latitude != 0 || longitude != 0){
                         Reports reports = new Reports(latitude, longitude, user.getEmail(), "Flood");
-                        database.child("reports").child(database.push().getKey()).setValue(reports);
+                        database.child(database.push().getKey()).setValue(reports);
 
                         Toast.makeText(getContext(), "Report Successful!", Toast.LENGTH_SHORT).show();
                     }
@@ -222,7 +222,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                 if(!justClicked){
                     if(latitude != 0 || longitude != 0){
                         Reports reports = new Reports(latitude, longitude, user.getEmail(), "Fire");
-                        database.child("reports").child(database.push().getKey()).setValue(reports);
+                        database.child(database.push().getKey()).setValue(reports);
 
                         Toast.makeText(getContext(), "Report Successful!", Toast.LENGTH_SHORT).show();
                     }
