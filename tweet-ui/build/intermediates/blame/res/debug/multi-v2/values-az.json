@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\values-az\\values-az.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\MichaelCadavillo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\eafdcbe360a5157774a981cc126a72bf\\res\\values-az\\values-az.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-az\\values-az.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\MichaelCadavillo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\eafdcbe360a5157774a981cc126a72bf\\res\\values-az\\values-az.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\twitter-mopub\\build\\intermediates\\res\\merged\\debug\\values-sr\\values-sr.xml",
+            "map": [
+                {
+                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\twitter-mopub\\src\\main\\res\\values-sr\\strings.xml",
+                    "from": {
+                        "startLines": "20,21",
+                        "startColumns": "4,4",
+                        "startOffsets": "752,831",
+                        "endColumns": "77,67",
+                        "endOffsets": "825,894"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,133",
+                        "endColumns": "77,67",
+                        "endOffsets": "128,196"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\twitter-mopub\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sr\\values-sr.xml",
+            "map": [
+                {
+                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\twitter-mopub\\src\\main\\res\\values-sr\\strings.xml",
+                    "from": {
+                        "startLines": "20,21",
+                        "startColumns": "4,4",
+                        "startOffsets": "752,831",
+                        "endColumns": "77,67",
+                        "endOffsets": "825,894"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,133",
+                        "endColumns": "77,67",
+                        "endOffsets": "128,196"
+                    }
+                }
+            ]
+        }
+    ]
+}

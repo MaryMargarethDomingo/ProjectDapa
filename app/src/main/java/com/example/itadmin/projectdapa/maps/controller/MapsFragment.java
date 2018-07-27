@@ -1,6 +1,7 @@
 package com.example.itadmin.projectdapa.maps.controller;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Address;
@@ -130,7 +131,6 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         hide_fab3_menu = AnimationUtils.loadAnimation(getActivity().getApplication(), R.anim.reportfab3_hide);
 
     }
-
         private boolean justClicked = false;
 
     @Override
@@ -309,8 +309,25 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
                         markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.arduinomarkerflood));
                     }else if(dsp.child("disasterType").getValue().toString().equals("Fire")){
                         markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.arduinomarkerfire));
+
+                        //AlertDialog
+                        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                        builder.setTitle("Fire Detected!");
+                        builder.setMessage("There is a fire near your vicinity! Keep safe!");
+                        builder.setIcon(R.drawable.alerticon);
+                        AlertDialog alert1 = builder.create();
+                        alert1.show();
+
                     }else if(dsp.child("disasterType").getValue().toString().equals("Earthquake")){
                         markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.arduinomarkerdebris));
+
+                        //AlertDialog
+                        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                        builder.setTitle("Earthquake Detected!");
+                        builder.setMessage("Magnitude 6.4 Detected! Keep safe!");
+                        builder.setIcon(R.drawable.alerticon);
+                        AlertDialog alert1 = builder.create();
+                        alert1.show();
                     }
 
                     mMap.addMarker(markerOptions);
@@ -496,7 +513,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback,
         showPins();
         mMap.clear();
         bottomSheetDialogFragment.dismiss();
-        
+
     }
 
    /*GOOGLE PLACES TYPES:

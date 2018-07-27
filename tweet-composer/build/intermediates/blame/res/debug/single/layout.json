@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\layout\\tw__activity_composer.xml",
+        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-composer\\src\\main\\res\\layout\\tw__activity_composer.xml"
+    },
+    {
+        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\layout\\tw__composer_view.xml",
+        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-composer\\src\\main\\res\\layout\\tw__composer_view.xml"
+    },
+    {
+        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\layout\\tw__activity_oauth.xml",
+        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\layout\\tw__activity_oauth.xml"
+    }
+]

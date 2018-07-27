@@ -1,0 +1,82 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\res\\merged\\debug\\values-ms\\values-ms.xml",
+            "map": [
+                {
+                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-ms\\values-ms.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "70",
+                        "endOffsets": "121"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "119",
+                        "endColumns": "70",
+                        "endOffsets": "185"
+                    }
+                },
+                {
+                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values-ms\\strings.xml",
+                    "from": {
+                        "startLines": "20,21,22",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "752,817,870",
+                        "endColumns": "63,51,48",
+                        "endOffsets": "811,864,914"
+                    },
+                    "to": {
+                        "startLines": "2,4,5",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,190,242",
+                        "endColumns": "63,51,48",
+                        "endOffsets": "114,237,286"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-composer\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ms\\values-ms.xml",
+            "map": [
+                {
+                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\twitter-core\\build\\intermediates\\packaged_res\\debug\\values-ms\\values-ms.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "70",
+                        "endOffsets": "121"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "119",
+                        "endColumns": "70",
+                        "endOffsets": "185"
+                    }
+                },
+                {
+                    "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-composer\\src\\main\\res\\values-ms\\strings.xml",
+                    "from": {
+                        "startLines": "20,21,22",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "752,817,870",
+                        "endColumns": "63,51,48",
+                        "endOffsets": "811,864,914"
+                    },
+                    "to": {
+                        "startLines": "2,4,5",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,190,242",
+                        "endColumns": "63,51,48",
+                        "endOffsets": "114,237,286"
+                    }
+                }
+            ]
+        }
+    ]
+}

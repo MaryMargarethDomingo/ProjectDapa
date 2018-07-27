@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\tw__like_action.xml",
+        "source": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\src\\main\\res\\drawable-v21\\tw__like_action.xml"
+    },
+    {
+        "merged": "D:\\Users\\MichaelCadavillo\\Documents\\Programming\\AndroidProjects\\ProjectDAPA\\tweet-ui\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\MichaelCadavillo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\eafdcbe360a5157774a981cc126a72bf\\res\\drawable-v21\\notification_action_background.xml"
+    }
+]
